@@ -1,6 +1,6 @@
 ---
 name: Update Issue Template
-about: Medio 기능 수정 이슈 템플릿입니다.
+about: 기능 수정 이슈
 title: "[Update] 기능 수정 이슈 제목을 적어주세요."
 labels: Update
 assignees: ''

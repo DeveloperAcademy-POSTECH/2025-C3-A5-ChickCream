@@ -1,6 +1,6 @@
 ---
 name: Feature Issue Template
-about: Medio 기능 구현 이슈 템플릿입니다.
+about: 기능 구현 이슈
 title: "[Feat] 새로운 기능 구현 이슈를 적어주세요."
 labels: Feat
 assignees: ''
