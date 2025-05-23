@@ -32,4 +32,4 @@ ex) <img src="https://img.shields.io/badge/Swift-FA7343?style=flat&logo=Swift&lo
 
 ## :people_hugging: Authors
 
-@0tak2, @m1nbol, @h22jun, @umtaehyung, @, @altol2
+@0tak2, @m1nbol, @h22jun, @umtaehyung, @Jeongin-c, @altol2
