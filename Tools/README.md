@@ -39,7 +39,7 @@ python csv2json.py "(1)CSV준비에서다운로드한CSV파일.csv"
 
 ### (3) 이미지 생성
 
-"2. 세팅"에서 만든 가상환경을 활성화해두고, 다음을 실행합니다. JSON 파일로의 변환이 완료된 상태여야 합니다.
+JSON 파일로의 변환이 완료된 상태에서 다음을 실행합니다.
 
 ```bash
 python gen_image.py "(2)CSVJSON변환결과JSON파일.json" GEMINI_API_KEY
@@ -51,6 +51,5 @@ python gen_image.py "(2)CSVJSON변환결과JSON파일.json" GEMINI_API_KEY
 이미지 생성이 완료된 상태에서 다음을 실행합니다.
 
 ```bash
-python gen_image.py "(2)CSVJSON변환결과JSON파일.json" GEMINI_API_KEY
-# GEMINI_API_KEY는 Bob에게 문의해주세요.
+python png2jpg.py image_output image_output_jpg
 ```
