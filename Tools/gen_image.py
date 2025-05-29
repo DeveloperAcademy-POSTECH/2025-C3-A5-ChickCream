@@ -67,7 +67,7 @@ def request_and_save_image(client: genai.Client, menu: dict):
         elif part.inline_data is not None:
             image = Image.open(BytesIO((part.inline_data.data)))
             image.save(f'./image_output/{menu["id"]}.png')
-            image.show()
+            # image.show()
 
     print("-> completed.")
     time.sleep(3)
