@@ -62,7 +62,7 @@ def read_csv(file_path: str) -> list[dict]:
             if idx == 0:
                 continue
 
-            if row[1] == "":
+            if row[1] == "": # 메뉴명이 공백이면 건너뛴다
                 continue
 
             menuList.append({
