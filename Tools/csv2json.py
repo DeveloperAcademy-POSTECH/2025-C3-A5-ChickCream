@@ -42,8 +42,6 @@ def main():
         sys.exit(1)
 
     input_file_path = sys.argv[1]
-    output_file_path = input_file_path.split(".")
-
 
     data = read_csv(input_file_path)
     write_json(data, change_file_extension(input_file_path))
