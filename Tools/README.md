@@ -53,3 +53,5 @@ python gen_image.py "(2)CSVJSON변환결과JSON파일.json" GEMINI_API_KEY
 ```bash
 python png2jpg.py image_output image_output_jpg
 ```
+
+- 더 구체적인 설명은 각 스크립트의 주석을 참고하세요.

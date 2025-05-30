@@ -4,7 +4,11 @@ gen_image.py
 csv 파일을 json으로 변환한다.
 
 - 사용 방법
-    python get_image.py database.json GEMINI_API_KEY
+    - 처음부터 시작하는 경우
+        python get_image.py database.json GEMINI_API_KEY
+
+    - 중간부터 재개하는 경우: 시작 인덱스를 뒤에 포함
+        python get_image.py database.json GEMINI_API_KEY 75
 
 - 소스 json 파일 형식
     [
@@ -65,8 +69,8 @@ def read_json(file_path: str) -> list[dict]:
         return data
 
 def main():
-    if len(sys.argv) != 3:
-        print("usage: python get_image.py database.json GEMINI_API_KEY")
+    if len(sys.argv) < 3:
+        print("usage: python get_image.py database.json GEMINI_API_KEY (START_INDEX)")
         sys.exit(1)
 
     try:
@@ -76,10 +80,17 @@ def main():
 
     input_file_path = sys.argv[1]
     api_key = sys.argv[2]
+    start_index = 0
+    if len(sys.argv) == 4:
+        start_index = int(sys.argv[3])
+
     client = create_client(api_key)
 
     menus = read_json(input_file_path)
     for idx, menu in enumerate(menus):
+        if idx < start_index:
+            continue
+
         uid = menu["id"]
         title = menu["title"]
         request_and_save_image(client, menu)
