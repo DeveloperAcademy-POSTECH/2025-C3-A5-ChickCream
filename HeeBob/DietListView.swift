@@ -49,6 +49,16 @@ struct DietListView: View {
 
 extension DietListView {
     private func viewDidAppear() {
+        loadDietList()
+    }
+    
+    private func dietDidSelect(_ diet: Diet) {
+        print("\(diet.id) \(diet.title) selected")
+        selectedDiet = diet
+        showSheet.toggle()
+    }
+    
+    private func loadDietList() {
         guard let rawDataPath = Bundle.main.url(forResource: "example", withExtension: "json") else {
             fatalError("로우데이터를 찾을 수 없습니다")
         }
@@ -60,12 +70,6 @@ extension DietListView {
         } catch {
             print("error: \(error)")
         }
-    }
-    
-    private func dietDidSelect(_ diet: Diet) {
-        print("\(diet.id) \(diet.title) selected")
-        selectedDiet = diet
-        showSheet.toggle()
     }
     
     private func getDietImageData(for diet: Diet) -> Data? {
