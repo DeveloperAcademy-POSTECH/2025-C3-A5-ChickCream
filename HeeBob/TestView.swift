@@ -13,6 +13,16 @@ import SwiftData
 struct TestView: View {
     @Query(sort: \Food.title, order: .forward) var foods: [Food]
     
+    init() {
+        let targetIngredientRawValue = FoodAttribute.FoodIngredient.meat.rawValue
+        let predicate = #Predicate<Food> { food in
+            food.attribute.isCookable == true
+            && food.attribute.isPortable == false
+            && food.attribute._mainIngredient == targetIngredientRawValue
+        }
+        self._foods = Query(filter: predicate, sort: \Food.title, order: .forward)
+    }
+    
     var body: some View {
         VStack {
             List {
