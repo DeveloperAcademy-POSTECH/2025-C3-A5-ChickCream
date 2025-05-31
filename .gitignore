@@ -47,3 +47,8 @@ xcuserdata/
 !*.xcworkspace/contents.xcworkspacedata
 /*.gcno
 **/xcshareddata/WorkspaceSettings.xcsettings
+
+### Tools ###
+heebob_venv/
+image_output/
+image_output_jpg/
