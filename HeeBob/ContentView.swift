@@ -7,10 +7,13 @@
 
 import SwiftUI
 import SwiftData
+import OSLog
 
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
     @State var isLoading: Bool = false
+    
+    let logger = Logger.category("ContentView")
     
     var body: some View {
         VStack {
@@ -33,7 +36,7 @@ extension ContentView {
     
     private func migrateData() {
         guard getIsMigated() == false else {
-            print("이미 마이그레이션이 되어있습니다")
+            logger.info("✔️ 이미 마이그레이션이 되어있습니다")
             return
         }
         
