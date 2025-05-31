@@ -19,24 +19,15 @@ struct MenuDetailView: View {
         }
     }
     
-    var mainComment: AttributedString {
-        var string = AttributedString("여름에는 먹고 겨울에는 안먹음")
-      if let this = string.range(of: "겨울에는 안먹음") {
-        string[this].font = .title3.weight(.bold)
-        string[this].backgroundColor = .red
-      }
-      return string
-    }
-    //TODO: Enum 써서 각각 분류해버리면 될 듯?
     
-//    func makeHighlightedComment() -> AttributedString {
-//        var string = AttributedString("여름에는 먹고 겨울에는 안먹음")
-//        if let range = string.range(of: "겨울에는 안먹음") {
-//            string[range].font = .title3.weight(.bold)
-//            string[range].backgroundColor = .red
-//        }
-//        return string
-//    }
+    func makeHighlightedComment(fullText: String, highlightText: String) -> AttributedString {
+        var string = AttributedString(fullText)
+        if let range = string.range(of: highlightText) {
+            string[range].font = .title3.weight(.bold)
+            string[range].backgroundColor = .red
+        }
+        return string
+    }
 
     
     var body: some View {
@@ -80,17 +71,17 @@ struct MenuDetailView: View {
                     VStack {
                         HStack {
                             Image(systemName: "checkmark")
-                            Text(mainComment)}
+                            Text("대충 휴대성 설명")}
                         .padding(.bottom, 4)
                         .padding(.top, 21)
                         HStack {
                             Image(systemName: "checkmark")
-                            Text(mainComment)}
+                            Text("대충 요리유무 설명")}
                         .padding(.bottom, 4)
                         .padding(.top, 4)
                         HStack {
                             Image(systemName: "checkmark")
-                            Text(mainComment)}
+                            Text("대충 주재료 설명")}
                         .padding(.top, 4)
                     }
                 )
