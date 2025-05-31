@@ -6,16 +6,55 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ContentView: View {
+    @Environment(\.modelContext) private var modelContext
+    @State var isLoading: Bool = false
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            if isLoading {
+                ProgressView()
+            } else {
+                TestView()
+            }
         }
-        .padding()
+        .onAppear {
+            viewDidAppear()
+        }
+    }
+}
+
+extension ContentView {
+    private func viewDidAppear() {
+        migrateData()
+    }
+    
+    private func migrateData() {
+        guard getIsMigated() == false else {
+            print("이미 마이그레이션이 되어있습니다")
+            return
+        }
+        
+        isLoading = true
+        let migrator = Migrator(modelContainer: modelContext.container)
+        Task.detached {
+            try await migrator.migrate()
+            
+            await MainActor.run {
+                setIsMigated()
+                isLoading = false
+            }
+        }
+    }
+    
+    private func getIsMigated() -> Bool {
+        UserDefaults.standard.bool(forKey: UserDefaultsKey.migrateSucceeded.rawValue)
+    }
+    
+    private func setIsMigated() {
+        UserDefaults.standard.set(true, forKey: UserDefaultsKey.migrateSucceeded.rawValue)
     }
 }
 
