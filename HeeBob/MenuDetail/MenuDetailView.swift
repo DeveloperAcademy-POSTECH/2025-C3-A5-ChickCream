@@ -18,26 +18,16 @@ struct MenuDetailView: View {
             }
         }
     }
-    
-    
-    func makeHighlightedComment(fullText: String, highlightText: String) -> AttributedString {
-        var string = AttributedString(fullText)
-        if let range = string.range(of: highlightText) {
-            string[range].font = .title3.weight(.bold)
-            string[range].backgroundColor = .red
-        }
-        return string
-    }
-
-    
     var body: some View {
         VStack {
             Rectangle()
             .foregroundColor(.clear)
-            .frame(maxWidth: .infinity, maxHeight: .infinity , alignment: .topLeading)
-            .background(Color(red: 0.85, green: 0.85, blue: 0.85))
+            .frame(maxWidth: .infinity, maxHeight: 361 , alignment: .topLeading)
+            .background(Color.gray)
             .cornerRadius(16)
-            .padding(.horizontal, 20)
+            .padding(.top, 0)
+            .padding(.horizontal, 16)
+            .padding(.bottom, 0)
             .overlay(Text("Menu Detail Img"))
             
             VStack {
@@ -45,18 +35,19 @@ struct MenuDetailView: View {
                     .fill(Color(red: 1, green: 0.86, blue: 0.8))
                     .frame(width: 20, height: 15)
                     .padding(.bottom, -10)
-                    .padding(.trailing, 280)
+                    .padding(.top, 0)
+                    .padding(.trailing, 300)
                 Rectangle()
                     .foregroundColor(.clear)
-                    .frame(maxWidth: .infinity, maxHeight: 100, alignment: .topLeading)
-                    .background(Color(red: 1, green: 0.86, blue: 0.8))
+                    .frame(maxWidth: .infinity, maxHeight: 66, alignment: .topLeading)
+                    .background(Color.hbPrimaryLighten)
                     .cornerRadius(16)
                     .padding(.top, 0)
                     .padding(.bottom, 0)
-                    .padding(.horizontal, 20)
+                    .padding(.horizontal, 16)
                     .overlay(
                         Text("여름에는 덥게 겨울에는 춥게")
-                            .font(.title)
+                            .font(.hbBody1)
                             .foregroundColor(.black)
                     )
             }
@@ -64,9 +55,9 @@ struct MenuDetailView: View {
             RoundedRectangle(cornerRadius: 16)
                 .strokeBorder(Color.gray, lineWidth: 1)
                 .foregroundColor(.clear)
-                .frame(maxWidth: .infinity,maxHeight: 200, alignment: .topLeading)
+                .frame(maxWidth: .infinity,maxHeight: 148, alignment: .topLeading)
                 .padding(.top, 16)
-                .padding(.horizontal, 20)
+                .padding(.horizontal, 16)
                 .overlay(
                     VStack {
                         HStack {
@@ -76,7 +67,7 @@ struct MenuDetailView: View {
                         .padding(.top, 21)
                         HStack {
                             Image(systemName: "checkmark")
-                            Text("대충 요리유무 설명")}
+                            Text("대충 요리해먹기 설명")}
                         .padding(.bottom, 4)
                         .padding(.top, 4)
                         HStack {
@@ -89,9 +80,9 @@ struct MenuDetailView: View {
             Button(action: { print("찜 삭제, 모달 띄울거임") },
                    label: { Text("찜에서 삭제하기") }
             )
-            .padding()
-            .font(.title2)
-            .foregroundStyle(.gray)
+            .padding(.top, 40)
+            .font(.hbSubtitle)
+            .foregroundStyle(Color.hbDisabled)
         }
     }
 }
