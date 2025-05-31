@@ -54,5 +54,5 @@ extension Color {
     static let hbButtonSecondary = Color(hex: "#C7BFB8")
     static let hbDisabled = Color(hex: "#D6D1CB")
     static let hbBackground = Color(hex: "#FFFDF9")
-//    static let hbWhite = Color(hex: "#FCFAF8") // 확정 아니라서 주석 처리해두었습니다.
+//    static let hbWhite = Color(hex: "#FCFAF8") // FIXME: 색상 추가 예정입니다.
 }
