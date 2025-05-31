@@ -4,7 +4,7 @@
 //
 //  Created by 산들 on 5/31/25.
 //
-
+//TODO: Food 엔티티 주입 후 완전 완성하고 pr 후 머지하기~
 import SwiftUI
 
 struct MenuDetailView: View {
@@ -22,7 +22,7 @@ struct MenuDetailView: View {
         VStack {
             Rectangle()
             .foregroundColor(.clear)
-            .frame(maxWidth: .infinity, maxHeight: 361 , alignment: .topLeading)
+            .frame(maxHeight: 361 , alignment: .topLeading)
             .background(Color.gray)
             .cornerRadius(16)
             .padding(.top, 0)
@@ -49,6 +49,7 @@ struct MenuDetailView: View {
                         Text("여름에는 덥게 겨울에는 춥게")
                             .font(.hbBody1)
                             .foregroundColor(.black)
+                            .padding(.trailing, 110)
                     )
             }
             
@@ -59,22 +60,23 @@ struct MenuDetailView: View {
                 .padding(.top, 16)
                 .padding(.horizontal, 16)
                 .overlay(
-                    VStack {
+                    VStack(alignment: .leading) {
                         HStack {
                             Image(systemName: "checkmark")
-                            Text("대충 휴대성 설명")}
+                            Text(" 대충 휴대성 설명")}
                         .padding(.bottom, 4)
                         .padding(.top, 21)
                         HStack {
                             Image(systemName: "checkmark")
-                            Text("대충 요리해먹기 설명")}
+                            Text(" 대충 요리해먹기 설명")}
                         .padding(.bottom, 4)
                         .padding(.top, 4)
                         HStack {
                             Image(systemName: "checkmark")
-                            Text("대충 주재료 설명")}
+                            Text(" 대충 주재료 설명")}
                         .padding(.top, 4)
                     }
+                        .padding(.trailing, 150)
                 )
                     
             Button(action: { print("찜 삭제, 모달 띄울거임") },
