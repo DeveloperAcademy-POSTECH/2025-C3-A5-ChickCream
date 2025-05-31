@@ -35,7 +35,7 @@ extension ContentView {
     }
     
     private func migrateData() {
-        guard getIsMigated() == false else {
+        guard getIsMigrated() == false else {
             logger.info("✔️ 이미 마이그레이션이 되어있습니다")
             return
         }
@@ -46,17 +46,17 @@ extension ContentView {
             try await migrator.migrate()
             
             await MainActor.run {
-                setIsMigated()
+                setIsMigrated()
                 isLoading = false
             }
         }
     }
     
-    private func getIsMigated() -> Bool {
+    private func getIsMigrated() -> Bool {
         UserDefaults.standard.bool(forKey: UserDefaultsKey.migrateSucceeded.rawValue)
     }
     
-    private func setIsMigated() {
+    private func setIsMigrated() {
         UserDefaults.standard.set(true, forKey: UserDefaultsKey.migrateSucceeded.rawValue)
     }
 }
