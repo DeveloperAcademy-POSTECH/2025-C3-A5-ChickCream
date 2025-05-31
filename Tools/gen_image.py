@@ -15,9 +15,12 @@ csv 파일을 json으로 변환한다.
         {
             "id": "7307fa7c-1987-481e-9c7e-d581986b4e97",
             "title": "훈제 메추리알",
-            "isPortable": true,
-            "isCookable": false,
-            "mainIngredient": "달걀",
+            "uniquePoint": "단백질이 풍부해요",
+            "attributes": {
+                "isPortable": true,
+                "isCookable": false,
+                "mainIngredient": "달걀",
+            }
             "author": "밥"
         }
     ]
