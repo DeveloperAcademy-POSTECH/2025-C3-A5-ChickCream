@@ -12,7 +12,7 @@ struct RawDataEntry: Decodable {
     let title: String
     let uniquePoint: String
     let attribute: RawDataAttribute
-    let author: String
+    let author: String // not used
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -27,7 +27,6 @@ struct RawDataEntry: Decodable {
             id: id,
             title: title,
             uniquePoint: uniquePoint,
-            author: author,
             attribute: FoodAttribute(
                 id: id,
                 isPortable: attribute.isPortable,
