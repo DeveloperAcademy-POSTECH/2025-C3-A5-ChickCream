@@ -8,40 +8,53 @@
 import SwiftUI
 
 struct ResultCard: View {
-    let image: Image
-    let title: String
-    let description: String
-
-    var body: some View {
-        // FIXME: 레이아웃 확정되면 수정해야 함.
-        VStack(alignment: .leading, spacing: 0) {
-            image
-                .resizable()
-                .scaledToFill()
-                .frame(height: 180)
-                .clipped()
-            VStack(alignment: .leading, spacing: 8) {
-                Text(title)
-                    .frame(alignment: .leading)
-                    .font(.headline)
-                    .foregroundColor(.black)
-                    .lineLimit(1)
-
-                Text(description)
-                    .font(.subheadline)
-                    .foregroundColor(.gray)
-                    .lineLimit(2)
-            }
-            .padding()
-            .frame(maxWidth: .infinity)
-            .background(Color.white)
-        }
-        .cornerRadius(15)
-        .shadow(color: .black.opacity(0.25), radius: 5, x: 0, y: 4)
-        .padding(.horizontal)
+    let food: Food
+    let action: () -> Void
+    
+    init(food: Food, action: @escaping () -> Void) {
+        self.food = food
+        self.action = action
     }
-}
-
-#Preview {
-    ResultCard(image: Image("Sample 1"), title: "닭갈비", description: "부드럽고 살짝 매콤해요")
+    
+    var body: some View {
+        VStack(spacing: 0) {
+            // FIXME: 이미지 저장 형식 및 uuid 확인 후 수정 예정
+            Image("Sample 1")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .clipped()
+            
+            HStack {
+                VStack(alignment: .leading, spacing: 0){
+                    Text(food.title)
+                        .font(.hbTitle)
+                        .foregroundStyle(Color.hbTextPrimary)
+                        .lineLimit(1)
+                    // TODO: 전체 회의 내용 토대로 넣을지 말지 결정
+//                    Text(food.uniquePoint)
+//                        .font(.hbSubtitle)
+//                        .foregroundColor(Color.hbTextSecondary)
+//                        .lineLimit(2)
+//                        .multilineTextAlignment(.leading)
+                }
+                Spacer()
+                Image(.heart)
+                    .frame(width: 40, height: 40)
+            }
+            .padding(.horizontal, 20)
+            .padding(.vertical, 18)
+        }
+        .background(Color.hbBackground)
+        .cornerRadius(16)
+        .shadow(color: .black.opacity(0.1), radius: 5, x: 0, y: 2)
+        .overlay(
+            RoundedRectangle(cornerRadius: 16)
+                .inset(by: 0.5)
+                .stroke(Color.hbButtonSecondary, lineWidth: 1)
+        )
+        .padding()
+        .onTapGesture {
+            action()
+        }
+    }
 }
