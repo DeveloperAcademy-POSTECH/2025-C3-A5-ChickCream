@@ -12,7 +12,7 @@ struct RawDataEntry: Decodable {
     let title: String
     let uniquePoint: String
     let attribute: RawDataAttribute
-    let author: String
+    let author: String // not used
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -27,24 +27,13 @@ struct RawDataEntry: Decodable {
             id: id,
             title: title,
             uniquePoint: uniquePoint,
-            author: author,
             attribute: FoodAttribute(
                 id: id,
                 isPortable: attribute.isPortable,
                 isCookable: attribute.isCookable,
-                mainIngredient: toEntityIngredient() ?? .meat
+                mainIngredient: FoodIngredient.fromLocalizedName(attribute.mainIngredient) ?? .meat
             )
         )
-    }
-    
-    private func toEntityIngredient() -> FoodAttribute.FoodIngredient? {
-        switch attribute.mainIngredient {
-        case "달걀": .egg
-        case "육고기": .meat
-        case "수산물": .fish
-        case "두부": .tofu
-        default : nil
-        }
     }
     
     struct RawDataAttribute: Decodable {
