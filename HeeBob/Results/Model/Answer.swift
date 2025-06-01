@@ -7,11 +7,6 @@
 
 import Foundation
 
-struct ResultModel: Identifiable {
-    var id: UUID = .init()
-    var image: String
-}
-
 // TODO: 삭제 예정
 var foods: [Food] = [
     Food(id: UUID(), title: "닭갈비", uniquePoint: "아따 맛있다", author: "-", attribute: FoodAttribute(id: UUID(), isPortable: true, isCookable: true, mainIngredient: .meat)),
