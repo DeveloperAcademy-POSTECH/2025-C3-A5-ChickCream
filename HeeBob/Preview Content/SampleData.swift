@@ -31,6 +31,8 @@ fileprivate extension SampleData {
                 modelContext.insert($0)
             }
             try? modelContext.save()
+            
+            print("✅ 프리뷰용 데이터가 준비되었습니다.")
         }
     }
     
