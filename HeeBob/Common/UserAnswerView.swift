@@ -9,12 +9,19 @@ import SwiftUI
 
 struct UserAnswerView: View {
     let userAnswer: UserAnswer
+    let borderColor: Color
     let backgroundColor: Color
+    
+    init(userAnswer: UserAnswer, borderColor: Color = .clear, backgroundColor: Color = .hbPrimaryLighten) {
+        self.userAnswer = userAnswer
+        self.borderColor = borderColor
+        self.backgroundColor = backgroundColor
+    }
     
     var body: some View {
         RoundedRectangle(cornerRadius: 16)
             .fill(backgroundColor)
-            .strokeBorder(Color.gray, lineWidth: 1)
+            .strokeBorder(borderColor, lineWidth: 1)
             .frame(maxWidth: .infinity, maxHeight: 148, alignment: .topLeading)
             .overlay(
                 VStack(alignment: .leading) {
@@ -76,7 +83,14 @@ fileprivate struct SentenceView: View {
 
 #Preview {
     UserAnswerView(
-        userAnswer: .init(isPortable: true, isCookable: false, mainIngredient: .meat),
-        backgroundColor: .hbPrimaryLighten
+        userAnswer: .init(isPortable: true, isCookable: false, mainIngredient: .meat)
     )
+    .padding()
+    
+    UserAnswerView(
+        userAnswer: .init(isPortable: true, isCookable: false, mainIngredient: .meat),
+        borderColor: .hbButtonSecondary,
+        backgroundColor: .clear
+    )
+    .padding()
 }
