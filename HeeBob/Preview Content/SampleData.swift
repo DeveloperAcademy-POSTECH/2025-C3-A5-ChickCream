@@ -22,20 +22,19 @@ struct SampleData: PreviewModifier {
     func body(content: Content, context: ModelContainer) -> some View {
         content.modelContainer(context)
     }
-    
+}
+
+fileprivate extension SampleData {
     static func createSampleData(into modelContext: ModelContext) {
         Task { @MainActor in
-            let sampleData = SampleDataProvider().sampleData
-            sampleData.forEach {
+            preparedDataForPreview.forEach {
                 modelContext.insert($0)
             }
             try? modelContext.save()
         }
     }
-}
-
-fileprivate struct SampleDataProvider {
-    let sampleData: [Food] = [
+    
+    static let preparedDataForPreview: [Food] = [
         .init(
             id: UUID(uuidString: "98d8f7b2-12ca-49c3-a0ef-000000000000")!,
             title: "훈제 메추리알",
