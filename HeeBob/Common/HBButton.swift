@@ -17,7 +17,11 @@ struct HBButton: View {
         } label: {
             ZStack {
                 RoundedRectangle(cornerRadius: 16)
-                    .foregroundStyle(configuration.backgroundColor)
+                    .foregroundStyle(
+                        configuration.disabled
+                            ? .hbDisabled
+                            : configuration.backgroundColor
+                    )
                 
                 // 이미지가 왼쪽에 있는 경우
                 if configuration.imagePosition == .left {
@@ -26,7 +30,6 @@ struct HBButton: View {
                            configuration.imageType == .system {
                             Image(systemName: imageName)
                                 .renderingMode(.template)
-                                .foregroundStyle(configuration.foregroundColor)
                                 .padding(.leading, 16)
                                 .padding(.trailing, 40)
                         }
@@ -39,7 +42,6 @@ struct HBButton: View {
                         
                         Text(configuration.title)
                             .font(.hbSubtitle)
-                            .foregroundColor(configuration.foregroundColor)
                         
                         Spacer()
                     }
@@ -52,13 +54,11 @@ struct HBButton: View {
                         
                         Text(configuration.title)
                             .font(.hbSubtitle)
-                            .foregroundColor(configuration.foregroundColor)
                         
                         if let imageName = configuration.imageName,
                            configuration.imageType == .system {
                             Image(systemName: imageName)
                                 .renderingMode(.template)
-                                .foregroundStyle(configuration.foregroundColor)
                                 .padding(.leading, 40)
                                 .padding(.trailing, 16)
                         }
@@ -75,10 +75,15 @@ struct HBButton: View {
                 if configuration.imagePosition == nil {
                     Text(configuration.title)
                         .font(.hbSubtitle)
-                        .foregroundColor(configuration.foregroundColor)
                 }
             }
         }
+        .foregroundStyle(
+            configuration.disabled
+                ? .white
+                : configuration.foregroundColor
+        )
+        .disabled(configuration.disabled)
         .frame(width: 173, height: 72)
     }
     
@@ -89,14 +94,16 @@ struct HBButton: View {
         let imagePosition: ImagePosition?
         let foregroundColor: Color
         let backgroundColor: Color
+        let disabled: Bool
         
-        init(title: String, imageName: String? = nil, imageType: ImageType? = nil, imagePosition: ImagePosition? = nil, foregroundColor: Color = .white, backgroundColor: Color = .hbPrimary) {
+        init(title: String, imageName: String? = nil, imageType: ImageType? = nil, imagePosition: ImagePosition? = nil, foregroundColor: Color = .white, backgroundColor: Color = .hbPrimary, disabled: Bool = false) {
             self.title = title
             self.imageName = imageName
             self.imageType = imageType
             self.imagePosition = imagePosition
             self.foregroundColor = foregroundColor
             self.backgroundColor = backgroundColor
+            self.disabled = disabled
         }
         
         enum ImageType {
@@ -143,9 +150,8 @@ struct HBButton: View {
     
     HBButton(
         configuration: .init(
-            title: "비활성",
-            foregroundColor: .white,
-            backgroundColor: .hbDisabled
+            title: "홈",
+            disabled: true
         )) {
             print("Button Tapped")
         }
