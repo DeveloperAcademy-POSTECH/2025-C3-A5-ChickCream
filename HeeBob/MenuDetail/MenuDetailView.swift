@@ -4,7 +4,7 @@
 //
 //  Created by 산들 on 5/31/25.
 //
-//TODO: Food 엔티티 주입 후 완전 완성하고 pr 후 머지하기~
+//TODO: Food 엔티티 주입 후 완전 완성할 것!
 import SwiftUI
 
 struct MenuDetailView: View {
