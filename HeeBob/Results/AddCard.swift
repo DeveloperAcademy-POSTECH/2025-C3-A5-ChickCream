@@ -25,7 +25,6 @@ struct AddCard: View {
         .padding(.vertical, 57)
         .padding(.horizontal, 98)
         .background(Color.hbBackground)
-//        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .cornerRadius(16)
         .shadow(color: .black.opacity(0.1), radius: 5, x: 0, y: 2)
         .overlay(
