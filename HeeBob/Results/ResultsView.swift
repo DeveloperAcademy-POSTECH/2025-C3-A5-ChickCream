@@ -13,7 +13,7 @@ struct ResultsView: View {
     
     var body: some View {
         VStack {
-            ResultsCarousel(config: .init(hasScale: true, cardWidth: UIScreen.main.bounds.width*0.81),
+            ResultsCarousel(config: .init(hasScale: true, cardWidth: UIScreen.main.bounds.width * 0.81),
                             selection: $activeID,
                             data: carouselItems) { item in
                 switch item {
@@ -27,7 +27,7 @@ struct ResultsView: View {
                     }
                 }
             }
-            .frame(height: UIScreen.main.bounds.height*0.4)
+            .frame(height: UIScreen.main.bounds.height * 0.4)
             
             VStack {
                 HStack {
