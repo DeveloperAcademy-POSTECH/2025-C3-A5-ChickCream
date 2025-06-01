@@ -6,8 +6,12 @@
 //
 //TODO: Food 엔티티 주입 후 완전 완성할 것!
 import SwiftUI
+import SwiftData
 
 struct MenuDetailView: View {
+    var food: Food
+    var favorite: Favorite
+    
     struct Triangle: Shape {
         func path(in rect: CGRect) -> Path {
             Path { path in
@@ -18,6 +22,7 @@ struct MenuDetailView: View {
             }
         }
     }
+    
     var body: some View {
         VStack {
             Rectangle()
@@ -46,7 +51,7 @@ struct MenuDetailView: View {
                     .padding(.bottom, 0)
                     .padding(.horizontal, 16)
                     .overlay(
-                        Text("여름에는 덥게 겨울에는 춥게")
+                        Text(food.uniquePoint)
                             .font(.hbBody1)
                             .foregroundColor(.black)
                             .padding(.trailing, 110)
@@ -89,6 +94,6 @@ struct MenuDetailView: View {
     }
 }
 
-#Preview {
-    MenuDetailView()
-}
+//#Preview {
+//    MenuDetailView()
+//}

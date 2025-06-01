@@ -24,10 +24,10 @@ class MenuDetailViewModel: ObservableObject {
 }
 
 //TODO: 뷰모델, 익스텐션으로 고민
-var descriptions: [AttributedString] {
-    return [
-        isPortable ? makeHighlightedComment(fullText: "챙겨 다니기 편해요!", highlightText: "챙겨 다니기") : makeHighlightedComment(fullText: "집에서 먹는 것을 추천해요!", highlightText: "집에서"),
-        isCookable ? makeHighlightedComment(fullText: "직접 요리해 먹기 좋아요!", highlightText: "직접 요리해") : makeHighlightedComment(fullText: "외식으로 먹는 것을 추천해요!", highlightText: "외식으로"),
-        makeHighlightedComment(fullText: "\(mainIngredient.getDescription())으로 만들어 든든해요!", highlightText: "\(mainIngredient.getDescription())"),
-    ]
-}
+//var descriptions: [AttributedString] {
+//    return [
+//        isPortable ? makeHighlightedComment(fullText: "챙겨 다니기 편해요!", highlightText: "챙겨 다니기") : makeHighlightedComment(fullText: "집에서 먹는 것을 추천해요!", highlightText: "집에서"),
+//        isCookable ? makeHighlightedComment(fullText: "직접 요리해 먹기 좋아요!", highlightText: "직접 요리해") : makeHighlightedComment(fullText: "외식으로 먹는 것을 추천해요!", highlightText: "외식으로"),
+//        makeHighlightedComment(fullText: "\(mainIngredient.getDescription())으로 만들어 든든해요!", highlightText: "\(mainIngredient.getDescription())"),
+//    ]
+//}
