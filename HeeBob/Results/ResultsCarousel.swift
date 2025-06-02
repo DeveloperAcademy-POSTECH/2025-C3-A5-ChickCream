@@ -20,11 +20,9 @@ struct ResultsCarousel<Content: View, Data: RandomAccessCollection>: View where 
                 HStack(spacing: config.spacing) {
                     ForEach(data) { item in
                         ItemView(item)
-                            .border(.red, width: 3)
                     }
                 }
                 .scrollTargetLayout()
-                
             }
             .safeAreaPadding(.horizontal, max((size.width - config.cardWidth) / 2, 0)) // 중앙에서 시작하고 끝내기 위함
             .scrollPosition(id: $selection) // Position 고정하기 위함
