@@ -17,13 +17,50 @@ struct TestView: View {
         VStack {
             List {
                 ForEach(foods) { food in
-                    Text(food.title)
+                    VStack(alignment: .leading) {
+                        Text(food.title)
+                        
+                        Text("isCookable: \(food.attribute.isCookable)")
+                        Text("isPortable: \(food.attribute.isPortable)")
+                        Text("mainIngredient: \(food.attribute.mainIngredient)")
+                        
+                        if let imageData = getDietImageData(for: food),
+                           let uiImage = UIImage(data: imageData) {
+                            Image(uiImage: uiImage)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 200, height: 200)
+                        } else {
+                            Image(systemName: "questionmark.app.dashed")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 200, height: 200)
+                        }
+                    }
                 }
             }
         }
     }
 }
 
-#Preview {
+extension TestView {
+    private func getDietImageData(for food: Food) -> Data? {
+        guard let url = Bundle.main.url(forResource: food.id.uuidString.lowercased(), withExtension: "jpg") else {
+            print("cannot find image file \(food.id.uuidString.lowercased()).jpg")
+            return nil
+        }
+        
+        do {
+            let data = try Data(contentsOf: url)
+            print(data)
+            return data
+        } catch {
+            print("error: \(error)")
+            return nil
+        }
+    }
+}
+
+#Preview(traits: .sampleData) {
     TestView()
 }
