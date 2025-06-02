@@ -63,11 +63,15 @@ struct QuestionView: View {
             
             HStack {
                 HBButton(configuration: .init(title: "이전", imageName: "chevron.left", imageType: .system, imagePosition: .left, foregroundColor: .hbPrimary, backgroundColor: .hbPrimaryLighten, disabled: viewModel.selectedIndex == 0)) {
-                    viewModel.previousButtonTapped()
+                    viewModel.showPreviousQuestion()
                 }
                 
                 HBButton(configuration: .init(title: viewModel.selectedIndex == viewModel.questions.count - 1 ? "결과 보기" : "다음", imageName: "chevron.right", imageType: .system, imagePosition: .right, disabled: viewModel.selectedQuestion.selectedOptionIndex == nil)) {
-                    viewModel.nextButtonTapped()
+                    if viewModel.selectedIndex == viewModel.questions.count - 1 {
+                        print(viewModel.synthesizedAnswer) // TODO: UserModel을 결과 로딩 뷰로 넘김
+                    } else {
+                        viewModel.showNextQuestion()
+                    }
                 }
             }
         }
