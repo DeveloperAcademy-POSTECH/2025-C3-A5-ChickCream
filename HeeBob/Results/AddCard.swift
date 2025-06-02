@@ -32,7 +32,6 @@ struct AddCard: View {
                 .inset(by: 0.5)
                 .stroke(Color.hbButtonSecondary, lineWidth: 1)
         )
-        .padding()
         .onTapGesture {
             action()
         }
