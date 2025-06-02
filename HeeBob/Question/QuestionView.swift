@@ -8,75 +8,50 @@
 import SwiftUI
 
 struct QuestionView: View {
-    /// TODO: move to ViewModel
-    static let questions: [AnyQuestion] = [
-        Question(
-            id: .isPortable,
-            title: "휴대성이\n필요하신가요?",
-            optionsWithType: [
-                QuestionOption(title: "네", value: true),
-                QuestionOption(title: "아니오", value: false),
-            ]
-        ),
-        Question(
-            id: .isCookable,
-            title: "배달이나 외식 어때요?",
-            optionsWithType: [
-                QuestionOption(title: "좋아요", value: true),
-                QuestionOption(title: "직접\n조리할래요", value: false),
-            ]
-        ),
-        Question(
-            id: .mainIngredient,
-            title: "어떤 재료가 좋을까요?",
-            optionsWithType: [
-                QuestionOption(title: "육고기", value: FoodIngredient.meat),
-                QuestionOption(title: "수산물", value: FoodIngredient.fish),
-                QuestionOption(title: "달걀", value: FoodIngredient.egg),
-                QuestionOption(title: "두부", value: FoodIngredient.tofu),
-            ]
-        ),
-    ]
-    
-    @State var selectedQuestion = questions[0]
-    var selectedIndex: Int {
-        QuestionView.questions.firstIndex { $0.id == selectedQuestion.id } ?? 0
-    }
+    @StateObject var viewModel = QuestionViewModel()
     
     var body: some View {
         VStack {
-            QuestionIndicatorView(lastPage: QuestionView.questions.count, currentPage: selectedIndex + 1)
-                .padding(.top, 23)
+            /// Navigation Bar
+//            HStack {
+//                Image(systemName: "chevron.left")
+//                Spacer()
+//            }
+//                .padding(.leading, 16)
+//                .background(.clear)
+//                .frame(height: 64)
+            
+            QuestionIndicatorView(lastPage: viewModel.questions.count, currentPage: viewModel.selectedIndex + 1)
             
             Spacer()
             
-            QuestionTitleView(selectedQuestion.title)
+            QuestionTitleView(viewModel.selectedQuestion.title)
             
             Spacer()
             
-            if selectedQuestion.options.count == 2 {
+            if viewModel.selectedQuestion.options.count == 2 {
                 HStack(spacing: 16) {
-                    ForEach(selectedQuestion.options.indices, id: \.self) { index in
-                        QuestionOptionButton(title: selectedQuestion.options[index], type: .half, isDisabled: selectedQuestion.selectedOptionIndex != index) {
-                            selectedQuestion.select(index: index)
+                    ForEach(viewModel.selectedQuestion.options.indices, id: \.self) { index in
+                        QuestionOptionButton(title: viewModel.selectedQuestion.options[index], type: .half, isDisabled: viewModel.selectedQuestion.selectedOptionIndex != index) {
+                            viewModel.selectOption(at: index)
                         }
                     }
                 }
                 .padding(.bottom, 204)
-            } else if selectedQuestion.options.count == 4 {
+            } else if viewModel.selectedQuestion.options.count == 4 {
                 VStack(spacing: 16) {
                     HStack(spacing: 16) {
-                        ForEach(selectedQuestion.options.indices[0..<2], id: \.self) { index in
-                            QuestionOptionButton(title: selectedQuestion.options[index], type: .quarter, isDisabled: selectedQuestion.selectedOptionIndex != index) {
-                                selectedQuestion.select(index: index)
+                        ForEach(viewModel.selectedQuestion.options.indices[0..<2], id: \.self) { index in
+                            QuestionOptionButton(title: viewModel.selectedQuestion.options[index], type: .quarter, isDisabled: viewModel.selectedQuestion.selectedOptionIndex != index) {
+                                viewModel.selectOption(at: index)
                             }
                         }
                     }
                     
                     HStack(spacing: 16) {
-                        ForEach(selectedQuestion.options.indices[2..<4], id: \.self) { index in
-                            QuestionOptionButton(title: selectedQuestion.options[index], type: .quarter, isDisabled: selectedQuestion.selectedOptionIndex != index) {
-                                selectedQuestion.select(index: index)
+                        ForEach(viewModel.selectedQuestion.options.indices[2..<4], id: \.self) { index in
+                            QuestionOptionButton(title: viewModel.selectedQuestion.options[index], type: .quarter, isDisabled: viewModel.selectedQuestion.selectedOptionIndex != index) {
+                                viewModel.selectOption(at: index)
                             }
                         }
                     }
@@ -87,25 +62,15 @@ struct QuestionView: View {
             }
             
             HStack {
-                HBButton(configuration: .init(title: "이전", imageName: "chevron.left", imageType: .system, imagePosition: .left, foregroundColor: .hbPrimary, backgroundColor: .hbPrimaryLighten, disabled: selectedIndex == 0)) {
-                    showPreviousQuestion()
+                HBButton(configuration: .init(title: "이전", imageName: "chevron.left", imageType: .system, imagePosition: .left, foregroundColor: .hbPrimary, backgroundColor: .hbPrimaryLighten, disabled: viewModel.selectedIndex == 0)) {
+                    viewModel.previousButtonTapped()
                 }
                 
-                HBButton(configuration: .init(title: selectedIndex == QuestionView.questions.count - 1 ? "결과 보기" : "다음", imageName: "chevron.right", imageType: .system, imagePosition: .right, disabled: selectedQuestion.selectedOptionIndex == nil)) {
-                    showNextQuestion()
+                HBButton(configuration: .init(title: viewModel.selectedIndex == viewModel.questions.count - 1 ? "결과 보기" : "다음", imageName: "chevron.right", imageType: .system, imagePosition: .right, disabled: viewModel.selectedQuestion.selectedOptionIndex == nil)) {
+                    viewModel.nextButtonTapped()
                 }
             }
         }
-    }
-}
-
-extension QuestionView {
-    private func showPreviousQuestion() {
-        selectedQuestion = QuestionView.questions[max(0, selectedIndex - 1)]
-    }
-    
-    private func showNextQuestion() {
-        selectedQuestion = QuestionView.questions[min(QuestionView.questions.count - 1, selectedIndex + 1)]
     }
 }
 
