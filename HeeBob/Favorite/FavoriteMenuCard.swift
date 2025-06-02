@@ -9,49 +9,76 @@ import SwiftUI
 import SwiftData
 
 struct FavoriteMenuCard: View {
+//    let image: UIImage?
     var food: Food
     var favorite: Favorite
-    @Environment(\.modelContext) var modelContext
+//    @Environment(\.modelContext) var modelContext
     
     var body: some View {
         ZStack {
+//            Image(uiImage: <#T##UIImage#>)
+//            TODO: BOB이 만든 예제를 보고 이미지 넣기...
+
             RoundedRectangle(cornerRadius: 16)
                 .fill(Color(.systemGray6))
-                .frame(width: 170, height: 209)
+                .frame(width: 173, height: 206)
+                .shadow(radius: 8)
             
             VStack(spacing: 0) {
                 ZStack {
-                    Rectangle() //이미지 넣을 공간
-                        .fill(Color.gray)
-                        .frame(width: 170, height: 150)
-                        .padding(.bottom, 6)
-                        .padding(.top, -20)
+//                    Rectangle() //이미지 넣을 공간
+//                        .fill(Color.gray)
+//                        .frame(width: 170, height: 150)
+//                        .padding(.bottom, 6)
+//                        .padding(.top, -20)
+
+                    if let imageData = getDietImageData(for: food),
+                       let uiImage = UIImage(data: imageData) {
+                        Image(uiImage: uiImage)
+                            .resizable()
+//                            .scaledToFit()
+                            .frame(width: 173, height: 130)
+                            .padding(.bottom, 6)
+                            .padding(.top, -25)
+                            .cornerRadius(16)
+                    } else {
+                        Image(systemName: "questionmark.app.dashed")
+                            .resizable()
+//                            .scaledToFit()
+                            .frame(width: 173, height: 130)
+                            .padding(.bottom, 20)
+                            .padding(.top, -25)
+                    }
                 }
                 HStack {
-                Text(food.title)
-                    .font(.system(size: 24))
-                    .bold()
-                    .foregroundColor(.primary)
-                    .padding(.bottom, 4)
-                    .padding(.top, 1)
-                Button {
-                    print("찜 삭제임")
-                    do {
-                        modelContext.delete(favorite)
-                           try modelContext.save()
-                       } catch {
-                           print("삭제 중 오류 발생: \(error.localizedDescription)")
-                       }
-                } label: {
-                    Image(systemName: "x.circle.fill")//x모양임
-                        .frame(width: 30)
-                }}
-
+                    Text(food.title)
+                        .font(.system(size: 24))
+                        .bold()
+                        .foregroundColor(.primary)
+                        .padding(.bottom, 4)
+                        .padding(.top, 1)
+                }
             }
         }
     }
+    private func getDietImageData(for food: Food) -> Data? {
+        guard let url = Bundle.main.url(forResource: (food.id.uuidString.lowercased()), withExtension: "jpg") else {
+            print("cannot find image file \(food.id.uuidString.lowercased()).jpg")
+            return nil
+        }
+        
+        do {
+            let data = try Data(contentsOf: url)
+            print(data)
+            return data
+        } catch {
+            print("error: \(error)")
+            return nil
+        }
+    }
+
 }
 
-#Preview {
-    FavoriteMenuCard(food: Food(id: UUID(), title: "김치찌개", uniquePoint: "먹고싶은 음식", attribute: FoodAttribute(id: UUID(), isPortable: true, isCookable: true, mainIngredient: .meat)), favorite: Favorite(id: UUID(), food: Food(id: UUID(), title: "김치찌개", uniquePoint: "먹고싶은 음식", attribute: FoodAttribute(id: UUID(), isPortable: true, isCookable: true, mainIngredient: .meat)), createdAt: Date()))
-}
+//#Preview(traits: .sampleData) {
+//    FavoriteMenuCard()
+//}

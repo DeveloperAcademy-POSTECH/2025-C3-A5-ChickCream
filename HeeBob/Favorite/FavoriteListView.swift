@@ -9,9 +9,14 @@ import SwiftUI
 import SwiftData
 
 struct FavoriteListView: View {
+    //    var food: [Food]
     @Query var favorites: [Favorite]
+
+    
     var body: some View {
-        CardGrid(favorites: [Favorite])
+
+        FavoriteFilterButton()
+        CardGrid(favorites: favorites)
     }
 }
 
@@ -24,19 +29,21 @@ struct CardGrid: View {
     var favorites: [Favorite]
     
     var body: some View {
-        LazyVGrid(columns: columns, spacing: 16) {
-            ForEach(favorites) { favorite in
-//                NavigationLink {
-//                    FoodDetailView(food: food)
-//                        .toolbarRole(.editor)
-//                } label: {
-//                    LearnerCard(learner: learner)
-//                }
+        ScrollView {
+            LazyVGrid(columns: columns, spacing: 16) {
+                ForEach(favorites) { favorite in
+                    NavigationLink {
+                        //                    FoodDetailView(food: favorite.food)
+                        //                        .toolbarRole(.editor)
+                    } label: {
+                        FavoriteMenuCard(food: favorite.food, favorite: favorite)
+                    }
+                }
             }
         }
     }
 }
 
-//#Preview {
-//    FavoriteListView()
-//}
+#Preview(traits: .sampleData) {
+    FavoriteListView()
+}
