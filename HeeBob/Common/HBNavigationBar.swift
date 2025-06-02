@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HBNavigationBarModifier<L, C, R>: ViewModifier where L: View, C: View, R: View {
     @Environment(\.hbNavigationBarBackButtonHidden) private var hideBackButton
+    @Environment(\.dismiss) var dismiss
     
     let leftView: (() -> L)?
     let centerView: (() -> C)?
@@ -29,7 +30,7 @@ struct HBNavigationBarModifier<L, C, R>: ViewModifier where L: View, C: View, R:
                 HStack {
                     if !hideBackButton {
                         Button(action: {
-                            print("Back Button Pressed")
+                            dismiss()
                         }) {
                             Image(systemName: "chevron.left")
                                 .resizable()
