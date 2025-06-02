@@ -32,9 +32,35 @@ struct QuestionIndicatorView: View {
                     .frame(width: oneIndicatorWidth, height: 1)
             }
         }
+        .animation(.easeInOut, value: currentPage)
+        .animation(.easeInOut, value: lastPage)
     }
 }
 
 #Preview {
-    QuestionIndicatorView(lastPage: 5, currentPage: 1)
+    struct PreviewContainer: View {
+        @State var lastPage: Int = 5
+        @State var currentPage: Int = 1
+        
+        var body: some View {
+            Button {
+                lastPage += 1
+            } label: {
+                Text("전체 페이지 증가")
+            }
+            
+            Button {
+                if currentPage > 0 && currentPage < lastPage {
+                    currentPage += 1
+                }
+            } label: {
+                Text("현재 페이지 증가")
+            }
+
+            
+            QuestionIndicatorView(lastPage: lastPage, currentPage: currentPage)
+        }
+    }
+    
+    return PreviewContainer()
 }
