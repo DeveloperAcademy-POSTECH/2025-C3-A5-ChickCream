@@ -67,7 +67,7 @@ extension View {
     func HBNavigationBar<L, C, R> (
         leftView: @escaping (() -> L),
         centerView: @escaping (() -> C),
-        rightView: @escaping (() -> R),
+        rightView: @escaping (() -> R)
     ) -> some View where L: View, C: View, R: View {
         modifier(
             HBNavigationBarModifier(
@@ -80,7 +80,7 @@ extension View {
     
     func HBNavigatonBar<L, C> (
         leftView: @escaping (() -> L),
-        centerView: @escaping (() -> C),
+        centerView: @escaping (() -> C)
     ) -> some View where L: View, C: View {
         modifier(
             HBNavigationBarModifier(
@@ -94,7 +94,7 @@ extension View {
     }
     
     func HBNavigationBar<C> (
-        centerView: @escaping (() -> C),
+        centerView: @escaping (() -> C)
     ) -> some View where C: View {
         modifier(
             HBNavigationBarModifier(
@@ -109,7 +109,7 @@ extension View {
     }
     
     func HBNavigationBar<L> (
-        leftView: @escaping (() -> L),
+        leftView: @escaping (() -> L)
     ) -> some View where L: View {
         modifier(
             HBNavigationBarModifier(
