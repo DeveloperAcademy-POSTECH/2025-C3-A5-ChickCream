@@ -20,8 +20,8 @@ struct ResultsCarousel<Content: View, Data: RandomAccessCollection>: View where 
                 HStack(spacing: config.spacing) {
                     ForEach(data) { item in
                         ItemView(item)
+                            .border(.red, width: 3)
                     }
-                   
                 }
                 .scrollTargetLayout()
                 
@@ -60,7 +60,7 @@ struct ResultsCarousel<Content: View, Data: RandomAccessCollection>: View where 
         var scaleValue: CGFloat = 0.2
         
         var cardWidth: CGFloat = 150
-        var spacing: CGFloat = -20
+        var spacing: CGFloat = 0
         var cornerRadius: CGFloat = 15
     }
 }
