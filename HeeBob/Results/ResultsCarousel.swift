@@ -60,7 +60,7 @@ struct ResultsCarousel<Content: View, Data: RandomAccessCollection>: View where 
         var scaleValue: CGFloat = 0.2
         
         var cardWidth: CGFloat = 150
-        var spacing: CGFloat = 0
+        var spacing: CGFloat = -20
         var cornerRadius: CGFloat = 15
     }
 }
