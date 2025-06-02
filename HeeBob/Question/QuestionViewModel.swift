@@ -96,41 +96,4 @@ extension QuestionViewModel {
     func showNextQuestion() {
         selectedIndex = min(questions.count - 1, selectedIndex + 1)
     }
-    
-    private func submitAnswer() -> UserAnswer {
-        var isCookable = false
-        var isPortable = false
-        var mainIngredient = FoodIngredient.meat
-        
-        questions.forEach { question in
-            switch question.id {
-            case .isCookable:
-                if let question = question as? Question<QuestionOption<Bool>>,
-                   let answer = question.selected?.value {
-                    isCookable = answer
-                } else {
-                    isCookable = false
-                    logger.error("isCookable 답변을 확인하는데 문제가 발생했습니다. false로 지정했습니다.")
-                }
-            case .isPortable:
-                if let question = question as? Question<QuestionOption<Bool>>,
-                   let answer = question.selected?.value {
-                    isPortable = answer
-                } else {
-                    isPortable = false
-                    logger.error("isPortable 답변을 확인하는데 문제가 발생했습니다. false로 지정했습니다.")
-                }
-            case .mainIngredient:
-                if let question = question as? Question<QuestionOption<FoodIngredient>>,
-                   let answer = question.selected?.value {
-                    mainIngredient = answer
-                } else {
-                    mainIngredient = .meat
-                    logger.error("mainIngredient 답변을 확인하는데 문제가 발생했습니다. meat로 지정했습니다.")
-                }
-            }
-        }
-        
-        return UserAnswer(isPortable: isPortable, isCookable: isCookable, mainIngredient: mainIngredient)
-    }
 }
