@@ -25,7 +25,6 @@ struct OnboardingView: View {
                         OnboardingPageView(content: contents[index], showingForegroundImage: showingForegroundImage)
                         .id(index)
                         .frame(width: UIScreen.main.bounds.width)
-                        .background(backgroundView(for: contents[index].backgroundColor))
                     }
                 }
                 .scrollTargetLayout()
@@ -76,15 +75,6 @@ struct OnboardingView: View {
                 self.currentIndex = currentIndex
             }
         })
-    }
-    
-    @ViewBuilder
-    func backgroundView(for style: any ShapeStyle) -> some View {
-        if let color = style as? Color {
-            color
-        } else if let gradient = style as? LinearGradient {
-            gradient
-        }
     }
 }
 
