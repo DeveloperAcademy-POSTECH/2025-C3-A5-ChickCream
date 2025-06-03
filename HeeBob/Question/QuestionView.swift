@@ -10,6 +10,10 @@ import SwiftUI
 struct QuestionView: View {
     @StateObject var viewModel = QuestionViewModel()
     
+    let buttonsSpacing: CGFloat = 16
+    let halfButtonsBottomPadding: CGFloat = 204
+    let quarterButtonsBottomPadding: CGFloat = 128
+    
     var body: some View {
         VStack {
             QuestionIndicatorView(lastPage: viewModel.questions.count, currentPage: viewModel.selectedIndex + 1)
@@ -21,7 +25,7 @@ struct QuestionView: View {
             Spacer()
             
             if viewModel.selectedQuestion.options.count == 2 {
-                HStack(spacing: 16) {
+                HStack(spacing: buttonsSpacing) {
                     ForEach(viewModel.selectedQuestion.options.indices, id: \.self) { index in
                         QuestionOptionButton(
                             title: viewModel.selectedQuestion.options[index],
@@ -32,10 +36,10 @@ struct QuestionView: View {
                         }
                     }
                 }
-                .padding(.bottom, 204)
+                .padding(.bottom, halfButtonsBottomPadding)
             } else if viewModel.selectedQuestion.options.count == 4 {
-                VStack(spacing: 16) {
-                    HStack(spacing: 16) {
+                VStack(spacing: buttonsSpacing) {
+                    HStack(spacing: buttonsSpacing) {
                         ForEach(viewModel.selectedQuestion.options.indices[0..<2], id: \.self) { index in
                             QuestionOptionButton(
                                 title: viewModel.selectedQuestion.options[index],
@@ -47,7 +51,7 @@ struct QuestionView: View {
                         }
                     }
                     
-                    HStack(spacing: 16) {
+                    HStack(spacing: buttonsSpacing) {
                         ForEach(viewModel.selectedQuestion.options.indices[2..<4], id: \.self) { index in
                             QuestionOptionButton(
                                 title: viewModel.selectedQuestion.options[index],
@@ -59,7 +63,7 @@ struct QuestionView: View {
                         }
                     }
                 }
-                .padding(.bottom, 128)
+                .padding(.bottom, quarterButtonsBottomPadding)
             } else {
                 Text("렌더링할 수 없습니다")
             }
