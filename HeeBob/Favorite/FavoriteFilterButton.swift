@@ -14,8 +14,9 @@ struct FavoriteFilterButton: View {
     var body: some View {
         HStack {
             Button {
-                favoriteViewModel.favoriteSortType = .portable
+                favoriteViewModel.filterSelectButtonTapped(for: .portable)
             } label: {
+                // TODO: Extract
                 ZStack {
                     RoundedRectangle(cornerRadius: 99)
                         .stroke(Color.red, lineWidth: 2)
@@ -34,7 +35,7 @@ struct FavoriteFilterButton: View {
                 }
             }
             Button {
-                favoriteViewModel.favoriteSortType = .cookable
+                favoriteViewModel.filterSelectButtonTapped(for: .cookable)
             } label: {
                 ZStack {
                     RoundedRectangle(cornerRadius: 99)
@@ -52,25 +53,26 @@ struct FavoriteFilterButton: View {
                             }
                         )
                 }
-                Button {
-                    favoriteViewModel.favoriteSortType = .mainIngredient
-                } label: {
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 99)
-                            .stroke(Color.red, lineWidth: 2)
-                            .frame(width: 104, height: 50)
-                        RoundedRectangle(cornerRadius: 99)
-                            .fill(Color.clear)
-                            .frame(width: 104, height: 50)
-                            .overlay(
-                                HStack {
-                                    Text("주재료")
-                                        .foregroundStyle(Color.hbPrimary)
-                                    Image(systemName: "chevron.down")
-                                        .foregroundStyle(Color.hbPrimary)
-                                }
-                            )
-                    }
+                
+            }
+            Button {
+                favoriteViewModel.filterSelectButtonTapped(for: .mainIngredient)
+            } label: {
+                ZStack {
+                    RoundedRectangle(cornerRadius: 99)
+                        .stroke(Color.red, lineWidth: 2)
+                        .frame(width: 104, height: 50)
+                    RoundedRectangle(cornerRadius: 99)
+                        .fill(Color.clear)
+                        .frame(width: 104, height: 50)
+                        .overlay(
+                            HStack {
+                                Text("주재료")
+                                    .foregroundStyle(Color.hbPrimary)
+                                Image(systemName: "chevron.down")
+                                    .foregroundStyle(Color.hbPrimary)
+                            }
+                        )
                 }
             }
         }

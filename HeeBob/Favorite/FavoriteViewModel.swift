@@ -13,6 +13,10 @@ class FavoriteViewModel: ObservableObject {
     }
     
     @Published var favoriteSortType: FavoriteSortType? = nil
+    
+    func filterSelectButtonTapped(for sortType: FavoriteSortType) {
+        favoriteSortType = sortType
+    }
 }
 
 extension FavoriteViewModel.FavoriteSortType: Identifiable {
