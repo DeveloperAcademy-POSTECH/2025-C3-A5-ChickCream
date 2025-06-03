@@ -14,7 +14,6 @@ struct MenuDetailDeleteButton: View {
     
     var body: some View {
         Button("찜에서 삭제하기") {
-            print("찜 삭제, 모달 띄울거임")
             showFavoriteDeleteAlert = true
         }
         .alert("알림 제목", isPresented: $showFavoriteDeleteAlert) {

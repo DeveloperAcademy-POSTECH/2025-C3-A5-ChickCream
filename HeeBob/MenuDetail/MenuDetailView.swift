@@ -11,7 +11,6 @@ import SwiftData
 
 struct MenuDetailView: View {
     var food: Food
-    @Environment(\.modelContext) private var modelContext
      
     var body: some View {
         VStack {
