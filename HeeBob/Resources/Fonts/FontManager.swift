@@ -43,11 +43,11 @@ extension Font {
     }
     
     static var hbTitle: Font {
-        return .suite(type: .extraBold, size: 25)
+        return .suite(type: .extraBold, size: 26)
     }
     
     static var hbSubtitle: Font {
-        return .suite(type: .extraBold, size: 23)
+        return .suite(type: .extraBold, size: 24)
     }
     
     static var hbBody1: Font {
@@ -59,6 +59,6 @@ extension Font {
     }
     
     static var hbMinimum: Font {
-        return .suite(type: .semibold, size: 15)
+        return .suite(type: .semibold, size: 16)
     }
 }
