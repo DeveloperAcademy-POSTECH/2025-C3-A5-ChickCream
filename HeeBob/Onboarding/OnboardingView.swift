@@ -9,6 +9,7 @@ import SwiftUI
 
 struct OnboardingPageView: View {
     let content: OnboardingContent
+    let showingForegroundImage: Bool
     
     var body: some View {
         if let foregroundImageName =  content.foregroundImageName {
@@ -20,13 +21,19 @@ struct OnboardingPageView: View {
                     .padding(.vertical, 72)
                 
                 ZStack(alignment: .center) {
-                    Image(content.backgroundImageName)
-                        .frame(maxWidth: UIScreen.main.bounds.width)
-                        .clipped()
-                    
-                    Image(foregroundImageName)
-                        .frame(maxWidth: UIScreen.main.bounds.width)
-                        .clipped()
+                    if showingForegroundImage {
+                        Image(content.backgroundImageName)
+                            .frame(maxWidth: UIScreen.main.bounds.width)
+                            .clipped()
+                        
+                        Image(foregroundImageName)
+                            .frame(maxWidth: UIScreen.main.bounds.width)
+                            .clipped()
+                    } else {
+                        Image(content.backgroundImageName)
+                            .frame(maxWidth: UIScreen.main.bounds.width)
+                            .clipped()
+                    }
                 }
                 
                 Spacer()
@@ -54,19 +61,20 @@ struct OnboardingPageView: View {
 
 struct OnboardingView: View {
     @State var contents = OnboardingContent.contents
-    @State var scrollPosition = ScrollPosition(id: 0) {
+    @State var scrollPosition = ScrollPosition(id: 0)
+    @State var currentIndex: Int = 0 {
         didSet {
-            
+            showingForegroundImage = true
         }
     }
-    @State var currentIndex: Int = 0
+    @State var showingForegroundImage = true
     
     var body: some View {
         ZStack {
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHStack(spacing: 0) {
                     ForEach(contents.indices, id: \.self) { index in
-                        OnboardingPageView(content: contents[index])
+                        OnboardingPageView(content: contents[index], showingForegroundImage: showingForegroundImage)
                         .id(index)
                         .frame(width: UIScreen.main.bounds.width)
                         .background(contents[index].backgroundColor)
@@ -89,6 +97,13 @@ struct OnboardingView: View {
                     }
                     
                     scrollPosition = ScrollPosition(id: currentIndex + 1)
+                    
+                    showingForegroundImage = true
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                        withAnimation {
+                            showingForegroundImage = false
+                        }
+                    }
                 }
                 .padding(.horizontal, 16)
             }
