@@ -10,13 +10,13 @@ import SwiftUI
 struct FavoriteModalView: View {
     @ObservedObject var favoriteViewModel = FavoriteViewModel()
     var body: some View {
-        if favoriteViewModel.favoriteSortType == .portable {
+        if favoriteViewModel.showingfavoriteSortType == .portable {
             Text("Hello, portable!")
                 .presentationDetents([.fraction(0.5)])
-        } else if favoriteViewModel.favoriteSortType == .cookable {
+        } else if favoriteViewModel.showingfavoriteSortType == .cookable {
             Text("Hello, cookable!")
                 .presentationDetents([.fraction(0.5)])
-        } else if favoriteViewModel.favoriteSortType == .mainIngredient {
+        } else if favoriteViewModel.showingfavoriteSortType == .mainIngredient {
             Text("Hello, mainingredient!")
                 .presentationDetents([.fraction(0.5)])
         }

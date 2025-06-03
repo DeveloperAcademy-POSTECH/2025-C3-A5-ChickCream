@@ -1,0 +1,43 @@
+//
+//  FavoriteFilterButton.swift
+//  HeeBob
+//
+//  Created by 산들 on 6/3/25.
+//
+
+import SwiftUI
+
+struct FavoriteFilterControl: View {
+    @StateObject var favoriteViewModel = FavoriteViewModel()
+    @State var btnColorChange : Bool = false
+//    let filterType: FavoriteViewModel.FavoriteSortType
+    
+    var body: some View {
+        HStack {
+            ForEach(FavoriteViewModel.FavoriteSortType.allCases, id: \.self) { sortType in
+                FavoriteFilterButton(title: sortType.rawValue, isSelected: sortType == favoriteViewModel.showingfavoriteSortType) {
+                    favoriteViewModel.filterSelectButtonTapped(for: sortType)
+                }
+            }
+        }
+        .sheet(item: $favoriteViewModel.showingfavoriteSortType) { modalType in
+            switch modalType {
+            case .portable:
+                FavoriteModalView(favoriteViewModel: favoriteViewModel)
+            case .cookable:
+                FavoriteModalView(favoriteViewModel: favoriteViewModel)
+            case .mainIngredient:
+                FavoriteModalView(favoriteViewModel: favoriteViewModel)
+            }
+        }
+    }
+    
+    @ViewBuilder
+    func HellowWorldView() -> some View {
+        Text("Hello World")
+    }
+}
+
+#Preview {
+    FavoriteFilterControl()
+}

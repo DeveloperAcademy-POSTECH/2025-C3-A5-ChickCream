@@ -5,90 +5,55 @@
 //  Created by 산들 on 6/3/25.
 //
 
+import Foundation
 import SwiftUI
 
 struct FavoriteFilterButton: View {
-    @StateObject var favoriteViewModel = FavoriteViewModel()
-    @State var btnColorChange : Bool = false
+    @ObservedObject var favoriteViewModel = FavoriteViewModel()
+    let title: String
+    let isSelected: Bool
+    let action: () -> Void
+
+    var buttonColorChange: Color {
+        if isSelected {
+            print("change1")
+          return Color.hbPrimary
+        } else {
+            print("not change2")
+        return Color.hbButtonSecondary
+    }}
+
+    var textColorChange: Color {
+        if isSelected {
+            print("change3")
+          return Color.hbPrimary
+        } else {
+            print("not change4")
+        return Color.hbTextSecondary
+    }}
     
     var body: some View {
-        HStack {
-            Button {
-                favoriteViewModel.filterSelectButtonTapped(for: .portable)
-            } label: {
-                // TODO: Extract
-                ZStack {
-                    RoundedRectangle(cornerRadius: 99)
-                        .stroke(Color.red, lineWidth: 2)
-                        .frame(width: 104, height: 50)
-                    RoundedRectangle(cornerRadius: 99)
-                        .fill(Color.clear)
-                        .frame(width: 104, height: 50)
-                        .overlay(
-                            HStack{
-                                Text("휴대성")
-                                    .foregroundStyle(Color.hbPrimary)
-                                Image(systemName: "chevron.down")
-                                    .foregroundStyle(Color.hbPrimary)
-                            }
-                        )
-                }
-            }
-            Button {
-                favoriteViewModel.filterSelectButtonTapped(for: .cookable)
-            } label: {
-                ZStack {
-                    RoundedRectangle(cornerRadius: 99)
-                        .stroke(Color.red, lineWidth: 2)
-                        .frame(width: 104, height: 50)
-                    RoundedRectangle(cornerRadius: 99)
-                        .fill(Color.clear)
-                        .frame(width: 104, height: 50)
-                        .overlay(
-                            HStack {
-                                Text("식사 유형")
-                                    .foregroundStyle(Color.hbPrimary)
-                                Image(systemName: "chevron.down")
-                                    .foregroundStyle(Color.hbPrimary)
-                            }
-                        )
-                }
-                
-            }
-            Button {
-                favoriteViewModel.filterSelectButtonTapped(for: .mainIngredient)
-            } label: {
-                ZStack {
-                    RoundedRectangle(cornerRadius: 99)
-                        .stroke(Color.red, lineWidth: 2)
-                        .frame(width: 104, height: 50)
-                    RoundedRectangle(cornerRadius: 99)
-                        .fill(Color.clear)
-                        .frame(width: 104, height: 50)
-                        .overlay(
-                            HStack {
-                                Text("주재료")
-                                    .foregroundStyle(Color.hbPrimary)
-                                Image(systemName: "chevron.down")
-                                    .foregroundStyle(Color.hbPrimary)
-                            }
-                        )
-                }
-            }
-        }
-        .sheet(item: $favoriteViewModel.favoriteSortType) { modalType in
-            switch modalType {
-            case .portable:
-                FavoriteModalView(favoriteViewModel: favoriteViewModel)
-            case .cookable:
-                FavoriteModalView(favoriteViewModel: favoriteViewModel)
-            case .mainIngredient:
-                FavoriteModalView(favoriteViewModel: favoriteViewModel)
+        
+        Button {
+            action()
+        } label: {
+            ZStack {
+                RoundedRectangle(cornerRadius: 99)
+                    .stroke(buttonColorChange, lineWidth: 0.5)
+                    .frame(width: 104, height: 50)
+                RoundedRectangle(cornerRadius: 99)
+                    .fill(Color.clear)
+                    .frame(width: 104, height: 50)
+                    .overlay(
+                        HStack{
+                            Text(title)
+                                .foregroundStyle(textColorChange)
+                                .font(.hbMinimum)
+                            Image(systemName: "chevron.down")
+                                .foregroundStyle(textColorChange)
+                        }
+                    )
             }
         }
     }
-}
-
-#Preview {
-    FavoriteFilterButton()
 }

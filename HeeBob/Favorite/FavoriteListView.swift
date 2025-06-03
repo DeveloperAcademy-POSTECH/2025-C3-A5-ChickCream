@@ -15,7 +15,7 @@ struct FavoriteListView: View {
     
     var body: some View {
 
-        FavoriteFilterButton()
+        FavoriteFilterControl()
         CardGrid(favorites: favorites)
     }
 }
@@ -30,6 +30,7 @@ struct CardGrid: View {
     
     var body: some View {
         ScrollView {
+            Spacer()
             LazyVGrid(columns: columns, spacing: 16) {
                 ForEach(favorites) { favorite in
                     NavigationLink {
