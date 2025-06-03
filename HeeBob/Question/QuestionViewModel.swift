@@ -46,36 +46,40 @@ final class QuestionViewModel: ObservableObject {
         questions[selectedIndex]
     }
     
-    var synthesizedAnswer: UserAnswer {
+    var finalAnswer: UserAnswer? {
+        guard selectedIndex == questions.count - 1 else {
+            return nil
+        }
+        
         var isCookable = false
         var isPortable = false
         var mainIngredient = FoodIngredient.meat
         
-        questions.forEach { question in
+        for question in questions {
             switch question.id {
             case .isCookable:
                 if let question = question as? Question<QuestionOption<Bool>>,
                    let answer = question.selected?.value {
                     isCookable = answer
                 } else {
-                    isCookable = false
-                    logger.warning("isCookable 답변을 확인하는데 문제가 발생했습니다. false로 지정했습니다.")
+                    logger.warning("isCookable 답변을 확인하는데 문제가 발생했습니다.")
+                    return nil
                 }
             case .isPortable:
                 if let question = question as? Question<QuestionOption<Bool>>,
                    let answer = question.selected?.value {
                     isPortable = answer
                 } else {
-                    isPortable = false
-                    logger.warning("isPortable 답변을 확인하는데 문제가 발생했습니다. false로 지정했습니다.")
+                    logger.warning("isPortable 답변을 확인하는데 문제가 발생했습니다.")
+                    return nil
                 }
             case .mainIngredient:
                 if let question = question as? Question<QuestionOption<FoodIngredient>>,
                    let answer = question.selected?.value {
                     mainIngredient = answer
                 } else {
-                    mainIngredient = .meat
-                    logger.warning("mainIngredient 답변을 확인하는데 문제가 발생했습니다. meat로 지정했습니다.")
+                    logger.warning("mainIngredient 답변을 확인하는데 문제가 발생했습니다.")
+                    return nil
                 }
             }
         }

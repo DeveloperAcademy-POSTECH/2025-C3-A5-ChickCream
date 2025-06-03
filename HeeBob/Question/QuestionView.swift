@@ -87,8 +87,9 @@ struct QuestionView: View {
                         imagePosition: .right,
                         disabled: viewModel.selectedQuestion.selectedOptionIndex == nil)
                 ) {
-                    if viewModel.selectedIndex == viewModel.questions.count - 1 {
-                        print(viewModel.synthesizedAnswer) // TODO: UserModel을 결과 로딩 뷰로 넘김
+                    if viewModel.selectedIndex == viewModel.questions.count - 1,
+                       let userAnswer = viewModel.finalAnswer {
+                        print(userAnswer) // TODO: UserModel을 결과 로딩 뷰로 넘김
                     } else {
                         viewModel.showNextQuestion()
                     }
