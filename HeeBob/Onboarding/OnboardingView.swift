@@ -7,6 +7,51 @@
 
 import SwiftUI
 
+struct OnboardingPageView: View {
+    let content: OnboardingContent
+    
+    var body: some View {
+        if let foregroundImageName =  content.foregroundImageName {
+            VStack {
+                Text(content.title)
+                    .multilineTextAlignment(.center)
+                    .font(.hbTitle)
+                    .foregroundStyle(Color.hbTextPrimary)
+                    .padding(.vertical, 72)
+                
+                ZStack(alignment: .center) {
+                    Image(content.backgroundImageName)
+                        .frame(maxWidth: UIScreen.main.bounds.width)
+                        .clipped()
+                    
+                    Image(foregroundImageName)
+                        .frame(maxWidth: UIScreen.main.bounds.width)
+                        .clipped()
+                }
+                
+                Spacer()
+            }
+        } else {
+            VStack {
+                Spacer()
+                
+                ZStack {
+                    Image(content.backgroundImageName)
+                        .resizable()
+                        .scaledToFit()
+                    
+                    Text(content.title)
+                        .multilineTextAlignment(.center)
+                        .font(.hbTitle)
+                        .foregroundStyle(Color.hbTextPrimary)
+                }
+                
+                Spacer()
+            }
+        }
+    }
+}
+
 struct OnboardingView: View {
     @State var contents = OnboardingContent.contents
     @State var scrollPosition = ScrollPosition(id: 0) {
@@ -21,46 +66,7 @@ struct OnboardingView: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHStack(spacing: 0) {
                     ForEach(contents.indices, id: \.self) { index in
-                        Group {
-                            if let foregroundImageName =  contents[index].foregroundImageName {
-                                VStack {
-                                    Text(contents[index].title)
-                                        .multilineTextAlignment(.center)
-                                        .font(.hbTitle)
-                                        .foregroundStyle(Color.hbTextPrimary)
-                                        .padding(.vertical, 72)
-                                    
-                                    ZStack(alignment: .center) {
-                                        Image(contents[index].backgroundImageName)
-                                            .frame(maxWidth: UIScreen.main.bounds.width)
-                                            .clipped()
-                                        
-                                        Image(foregroundImageName)
-                                            .frame(maxWidth: UIScreen.main.bounds.width)
-                                            .clipped()
-                                    }
-                                    
-                                    Spacer()
-                                }
-                            } else {
-                                VStack {
-                                    Spacer()
-                                    
-                                    ZStack {
-                                        Image(contents[index].backgroundImageName)
-                                            .resizable()
-                                            .scaledToFit()
-                                        
-                                        Text(contents[index].title)
-                                            .multilineTextAlignment(.center)
-                                            .font(.hbTitle)
-                                            .foregroundStyle(Color.hbTextPrimary)
-                                    }
-                                    
-                                    Spacer()
-                                }
-                            }
-                        }
+                        OnboardingPageView(content: contents[index])
                         .id(index)
                         .frame(width: UIScreen.main.bounds.width)
                         .background(contents[index].backgroundColor)
@@ -105,7 +111,7 @@ struct OnboardingContent {
     let backgroundImageName: ImageResource
     let backgroundColor: Color
     
-    static let contents: [OnboardingContent] = [ // TODO: 하이파이 완료 후 이미지 추가
+    static let contents: [OnboardingContent] = [
         .init(
             title: "아버지의 기준에 맞춰\n한 분만을 위한 메뉴를 선정했어요",
             foregroundImageName: nil,
