@@ -17,33 +17,53 @@ struct OnboardingView: View {
     @State var currentIndex: Int = 0
     
     var body: some View {
-        VStack {
+        ZStack {
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHStack(spacing: 0) {
                     ForEach(contents.indices, id: \.self) { index in
-                        VStack {
-                            Text(contents[index].title)
-                                .multilineTextAlignment(.center)
-                                .font(.hbTitle)
-                                .foregroundStyle(Color.hbTextPrimary)
-                                .padding(.vertical, 72)
-                            
-                            if let imageName = contents[index].imageName {
-                                Image(imageName)
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 256) // TODO: 하이파이 완료 후 사이즈 픽스
+                        Group {
+                            if let foregroundImageName =  contents[index].foregroundImageName {
+                                VStack {
+                                    Text(contents[index].title)
+                                        .multilineTextAlignment(.center)
+                                        .font(.hbTitle)
+                                        .foregroundStyle(Color.hbTextPrimary)
+                                        .padding(.vertical, 72)
+                                    
+                                    ZStack(alignment: .center) {
+                                        Image(contents[index].backgroundImageName)
+                                            .frame(maxWidth: UIScreen.main.bounds.width)
+                                            .clipped()
+                                        
+                                        Image(foregroundImageName)
+                                            .frame(maxWidth: UIScreen.main.bounds.width)
+                                            .clipped()
+                                    }
+                                    
+                                    Spacer()
+                                }
                             } else {
-                                Image(systemName: "photo")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 256)
+                                VStack {
+                                    Spacer()
+                                    
+                                    ZStack {
+                                        Image(contents[index].backgroundImageName)
+                                            .resizable()
+                                            .scaledToFit()
+                                        
+                                        Text(contents[index].title)
+                                            .multilineTextAlignment(.center)
+                                            .font(.hbTitle)
+                                            .foregroundStyle(Color.hbTextPrimary)
+                                    }
+                                    
+                                    Spacer()
+                                }
                             }
-                            
-                            Spacer()
                         }
                         .id(index)
-                        .frame(width: UIScreen.main.bounds.width - 32)
+                        .frame(width: UIScreen.main.bounds.width)
+                        .background(contents[index].backgroundColor)
                     }
                 }
                 .scrollTargetLayout()
@@ -51,15 +71,20 @@ struct OnboardingView: View {
             .scrollPosition($scrollPosition)
             .scrollTargetBehavior(.viewAligned)
             
-            OnboardingPageIndicator(count: contents.count, currentPage: $currentIndex)
-                .padding(.bottom, 40)
-            
-            OnboardingNextButton(title: currentIndex == contents.count - 1 ? "메뉴 추천 받으러가기" : "다음") {
-                guard currentIndex < contents.count - 1 else {
-                    return
-                }
+            VStack(spacing: 0) {
+                Spacer()
                 
-                scrollPosition = ScrollPosition(id: currentIndex + 1)
+                OnboardingPageIndicator(count: contents.count, currentPage: $currentIndex)
+                    .padding(.bottom, 40)
+                
+                OnboardingNextButton(title: currentIndex == contents.count - 1 ? "메뉴 추천 받으러가기" : "다음") {
+                    guard currentIndex < contents.count - 1 else {
+                        return
+                    }
+                    
+                    scrollPosition = ScrollPosition(id: currentIndex + 1)
+                }
+                .padding(.horizontal, 16)
             }
         }
         .onChange(of: currentIndex, { oldValue, newValue in
@@ -71,21 +96,46 @@ struct OnboardingView: View {
                 self.currentIndex = currentIndex
             }
         })
-        
-        .padding(16)
     }
 }
 
 struct OnboardingContent {
     let title: String
-    let imageName: String?
+    let foregroundImageName: ImageResource?
+    let backgroundImageName: ImageResource
+    let backgroundColor: Color
     
     static let contents: [OnboardingContent] = [ // TODO: 하이파이 완료 후 이미지 추가
-        .init(title: "아버지의 기준에 맞춰\n한 분만을 위한 메뉴를 선정했어요", imageName: nil),
-        .init(title: "오래 씹으면 맛이 변하는\n밀가루 음식은 제외했어요", imageName: nil),
-        .init(title: "너무 자극적이거나\n심하게 매운 음식도 제외했어요", imageName: nil),
-        .init(title: "속에서 다시 뭉칠 수 있는\n떡 종류도 제외했답니다", imageName: nil),
-        .init(title: "앞으로의 메뉴 고민은\n희밥이 도와드릴게요", imageName: nil),
+        .init(
+            title: "아버지의 기준에 맞춰\n한 분만을 위한 메뉴를 선정했어요",
+            foregroundImageName: nil,
+            backgroundImageName: .onboardingTextBackground,
+            backgroundColor: .hbBackground
+        ),
+        .init(
+            title: "오래 씹으면 맛이 변하는\n밀가루 음식은 제외했어요",
+            foregroundImageName: .onboardingPage1Foreground,
+            backgroundImageName: .onboardingPage1Background,
+            backgroundColor: .init(hex: "FFF8EF")
+        ),
+        .init(
+            title: "너무 자극적이거나\n심하게 매운 음식도 제외했어요",
+            foregroundImageName: .onboardingPage2Foreground,
+            backgroundImageName: .onboardingPage2Background,
+            backgroundColor: .init(hex: "FFF4F0")
+        ),
+        .init(
+            title: "속에서 다시 뭉칠 수 있는\n떡 종류도 제외했답니다",
+            foregroundImageName: .onboardingPage3Foreground,
+            backgroundImageName: .onboardingPage3Background,
+            backgroundColor: .init(hex: "F2F6EE")
+        ),
+        .init(
+            title: "앞으로의 메뉴 고민은\n희밥이 도와드릴게요",
+            foregroundImageName: nil,
+            backgroundImageName: .onboardingTextBackground,
+            backgroundColor: .hbBackground
+        ),
     ]
 }
 
