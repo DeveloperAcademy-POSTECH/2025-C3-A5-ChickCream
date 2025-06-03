@@ -9,13 +9,20 @@ import SwiftUI
 
 struct ResultsView: View {
     @State private var activeID: String?
+    @State private var selectedIndex: Int = 0
     let carouselItems: [CarouselItem] = foods.map { .food($0) } + [.addCard]
     
     var body: some View {
         VStack {
-            ResultsCarousel(config: .init(hasScale: true, cardWidth: UIScreen.main.bounds.width * 0.81),
-                            selection: $activeID,
-                            data: carouselItems) { item in
+            ResultsCarousel(
+                config: .init(
+                    hasScale: true,
+                    cardWidth: UIScreen.main.bounds.width * 0.81
+                ),
+                selection: $activeID,
+                selectedIndex: $selectedIndex,
+                data: carouselItems
+            ) { item in
                 switch item {
                 case .food(let food):
                     ResultCard(food: food) {
