@@ -12,15 +12,6 @@ struct QuestionView: View {
     
     var body: some View {
         VStack {
-            /// Navigation Bar
-//            HStack {
-//                Image(systemName: "chevron.left")
-//                Spacer()
-//            }
-//                .padding(.leading, 16)
-//                .background(.clear)
-//                .frame(height: 64)
-            
             QuestionIndicatorView(lastPage: viewModel.questions.count, currentPage: viewModel.selectedIndex + 1)
             
             Spacer()
@@ -75,6 +66,8 @@ struct QuestionView: View {
                 }
             }
         }
+        .HBNavigationBar(centerView: { EmptyView() })
+        .HBNavigationBarBackButtonHidden(viewModel.selectedIndex != 0)
     }
 }
 
