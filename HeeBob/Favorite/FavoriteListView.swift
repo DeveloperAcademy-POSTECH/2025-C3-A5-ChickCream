@@ -14,28 +14,26 @@ struct FavoriteListView: View {
 
     
     var body: some View {
-
-        FavoriteFilterControl()
+        FavoriteFilterControl(fav)
         CardGrid(favorites: favorites)
     }
 }
 
 struct CardGrid: View {
+    var favorites: [Favorite]
+    
     let columns = [
         GridItem(.flexible()),
         GridItem(.flexible())
     ] // 열 혹은 행의 레이아웃 정의. flexible은 해당 열이나 행의 너비,높이가 유동적이게 지정.
-    
-    var favorites: [Favorite]
-    
     var body: some View {
         ScrollView {
             Spacer()
-            LazyVGrid(columns: columns, spacing: 16) {
+            LazyVGrid(columns: columns, spacing: 12) {
                 ForEach(favorites) { favorite in
                     NavigationLink {
-                        //                    FoodDetailView(food: favorite.food)
-                        //                        .toolbarRole(.editor)
+                        // FoodDetailView(food: favorite.food)
+                        //  .toolbarRole(.editor)
                     } label: {
                         FavoriteMenuCard(food: favorite.food, favorite: favorite)
                     }

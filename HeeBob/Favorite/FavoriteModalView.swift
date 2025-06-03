@@ -9,21 +9,44 @@ import SwiftUI
 
 struct FavoriteModalView: View {
     @ObservedObject var favoriteViewModel = FavoriteViewModel()
+    var favorite: Favorite
     var body: some View {
         if favoriteViewModel.showingfavoriteSortType == .portable {
-            Text("Hello, portable!")
+            VStack(alignment: .leading) {
+                Text("휴대성")
+                    .padding()
+                Divider()
+                //TODO: foreach써서 버튼 반복 돌리기... favorite받아온거 이용해서 
+                Button {
+                    print("모두 보기")
+                } label: {
+                    Text("모두 보기")
+                        .padding()
+                }
+                Button {
+                    print("챙겨 나가기 좋아요")
+                } label: {
+                    Text("챙겨 나가기 좋아요")
+                }
+                Button {
+                    print("자리에서 먹기 좋아요")
+                } label: {
+                    Text("자리에서 먹기 좋아요")
+                }
+            }
                 .presentationDetents([.fraction(0.5)])
         } else if favoriteViewModel.showingfavoriteSortType == .cookable {
-            Text("Hello, cookable!")
+            Text("식사 준비")
+            Divider()
                 .presentationDetents([.fraction(0.5)])
         } else if favoriteViewModel.showingfavoriteSortType == .mainIngredient {
-            Text("Hello, mainingredient!")
+            Text("주재료")
+            Divider()
                 .presentationDetents([.fraction(0.5)])
         }
-        
     }
 }
 
-#Preview {
-    FavoriteModalView()
-}
+//#Preview {
+//    FavoriteModalView()
+//}

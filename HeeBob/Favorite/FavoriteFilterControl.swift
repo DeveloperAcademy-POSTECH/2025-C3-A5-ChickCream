@@ -10,6 +10,7 @@ import SwiftUI
 struct FavoriteFilterControl: View {
     @StateObject var favoriteViewModel = FavoriteViewModel()
     @State var btnColorChange : Bool = false
+    var favorite: Favorite
 //    let filterType: FavoriteViewModel.FavoriteSortType
     
     var body: some View {
@@ -23,11 +24,11 @@ struct FavoriteFilterControl: View {
         .sheet(item: $favoriteViewModel.showingfavoriteSortType) { modalType in
             switch modalType {
             case .portable:
-                FavoriteModalView(favoriteViewModel: favoriteViewModel)
+                FavoriteModalView(favoriteViewModel: favoriteViewModel, favorite: favorite)
             case .cookable:
-                FavoriteModalView(favoriteViewModel: favoriteViewModel)
+                FavoriteModalView(favoriteViewModel: favoriteViewModel, favorite: favorite)
             case .mainIngredient:
-                FavoriteModalView(favoriteViewModel: favoriteViewModel)
+                FavoriteModalView(favoriteViewModel: favoriteViewModel, favorite: favorite)
             }
         }
     }
@@ -38,6 +39,6 @@ struct FavoriteFilterControl: View {
     }
 }
 
-#Preview {
-    FavoriteFilterControl()
-}
+//#Preview {
+//    FavoriteFilterControl()
+//}

@@ -17,17 +17,31 @@ struct FavoriteMenuCard: View {
     var body: some View {
         
         VStack(spacing: 0) {
-            Image(.placeholder)
-                .resizable()
-                .scaledToFit()
-                .frame(height: 130)
-                .cornerRadius(16)
+//            Image(.placeholder)
+//                .resizable()
+//                .scaledToFit()
+//                .frame(height: 130)
+//                .cornerRadius(16)
+            if let imageData = getDietImageData(for: food),
+               let uiImage = UIImage(data: imageData) {
+                Image(uiImage: uiImage)
+                    .resizable()
+//                    .scaledToFit()
+                    .frame(width: 173, height: 130)
+                    .cornerRadius(16)
+            } else {
+                Image(systemName: "questionmark.app.dashed")
+                    .resizable()
+//                    .scaledToFit()
+                    .frame(width: 173, height: 130)
+                    .cornerRadius(16)
+            }
             
-            Text("불고기 도시락")
+            Text(food.title)
                 .font(.hbBody2)
                 .frame(height: 66, alignment: .top)
                 .bold()
-                .foregroundColor(.primary)
+                .foregroundColor(.hbTextPrimary)
                 .lineLimit(2)
                 .padding(.top, 10)
         }
