@@ -44,12 +44,23 @@ struct OnboardingView: View {
                         return
                     }
                     
-                    scrollPosition = ScrollPosition(id: currentIndex + 1)
+                    // 1. 페이지 전환
+                    withAnimation(.easeInOut(duration: 0.5)) {
+                        currentIndex += 1
+                        scrollPosition = ScrollPosition(id: currentIndex)
+                    }
                     
-                    showingForegroundImage = true
+                    // 2. 페이지 전환 완료 후 foreground 이미지 표시
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                        withAnimation {
-                            showingForegroundImage = false
+                        withAnimation(.easeIn(duration: 0.2)) {
+                            showingForegroundImage = true
+                        }
+                        
+                        // 3. 1.5초 후 foreground 이미지 서서히 사라지게
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                            withAnimation(.easeOut(duration: 0.2)) {
+                                showingForegroundImage = false
+                            }
                         }
                     }
                 }
