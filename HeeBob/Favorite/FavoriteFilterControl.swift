@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct FavoriteFilterControl: View {
-    @StateObject var favoriteViewModel = FavoriteViewModel()
+    @ObservedObject var favoriteViewModel: FavoriteViewModel
     @State var btnColorChange : Bool = false
-    var favorite: Favorite
 //    let filterType: FavoriteViewModel.FavoriteSortType
     
     var body: some View {
@@ -24,18 +23,13 @@ struct FavoriteFilterControl: View {
         .sheet(item: $favoriteViewModel.showingfavoriteSortType) { modalType in
             switch modalType {
             case .portable:
-                FavoriteModalView(favoriteViewModel: favoriteViewModel, favorite: favorite)
+                FavoriteModalView(favoriteViewModel: favoriteViewModel)
             case .cookable:
-                FavoriteModalView(favoriteViewModel: favoriteViewModel, favorite: favorite)
+                FavoriteModalView(favoriteViewModel: favoriteViewModel)
             case .mainIngredient:
-                FavoriteModalView(favoriteViewModel: favoriteViewModel, favorite: favorite)
+                FavoriteModalView(favoriteViewModel: favoriteViewModel)
             }
         }
-    }
-    
-    @ViewBuilder
-    func HellowWorldView() -> some View {
-        Text("Hello World")
     }
 }
 

@@ -9,14 +9,13 @@ import SwiftUI
 
 struct FavoriteModalView: View {
     @ObservedObject var favoriteViewModel = FavoriteViewModel()
-    var favorite: Favorite
     var body: some View {
         if favoriteViewModel.showingfavoriteSortType == .portable {
             VStack(alignment: .leading) {
                 Text("휴대성")
                     .padding()
                 Divider()
-                //TODO: foreach써서 버튼 반복 돌리기... favorite받아온거 이용해서 
+                //TODO: foreach써서 버튼 반복 돌리기... favorite받아온거 이용해서
                 Button {
                     print("모두 보기")
                 } label: {
@@ -24,12 +23,12 @@ struct FavoriteModalView: View {
                         .padding()
                 }
                 Button {
-                    print("챙겨 나가기 좋아요")
+                    favoriteViewModel.portableSortTypeSelected(for: true)
                 } label: {
                     Text("챙겨 나가기 좋아요")
                 }
                 Button {
-                    print("자리에서 먹기 좋아요")
+                    favoriteViewModel.portableSortTypeSelected(for: false)
                 } label: {
                     Text("자리에서 먹기 좋아요")
                 }

@@ -9,13 +9,19 @@ import SwiftUI
 import SwiftData
 
 struct FavoriteListView: View {
+    @StateObject var favoriteViewModel = FavoriteViewModel()
     //    var food: [Food]
-    @Query var favorites: [Favorite]
-
+    
+    @Environment(\.modelContext) var modelContext
     
     var body: some View {
-        FavoriteFilterControl(fav)
-        CardGrid(favorites: favorites)
+        VStack(spacing: 0) {
+            FavoriteFilterControl(favoriteViewModel: favoriteViewModel)
+            CardGrid(favorites: favoriteViewModel.favorites)
+        }
+        .onAppear {
+            favoriteViewModel.listViewDidAppear(modelContext: modelContext)
+        }
     }
 }
 

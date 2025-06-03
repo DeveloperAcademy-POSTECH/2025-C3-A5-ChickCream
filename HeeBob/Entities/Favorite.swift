@@ -8,7 +8,11 @@
 import Foundation
 import SwiftData
 
-@Model final class Favorite {
+@Model final class Favorite: CustomStringConvertible {
+    var description: String {
+        "\(id) \(food.title) \(food.attribute.isPortable) \(food.attribute.isCookable) \(food.attribute.mainIngredient)"
+    }
+    
     @Attribute(.unique) var id: UUID
     @Relationship(deleteRule: .cascade) var food: Food
     @Attribute var createdAt: Date
