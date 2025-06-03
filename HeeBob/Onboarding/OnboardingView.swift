@@ -25,7 +25,7 @@ struct OnboardingView: View {
                         OnboardingPageView(content: contents[index], showingForegroundImage: showingForegroundImage)
                         .id(index)
                         .frame(width: UIScreen.main.bounds.width)
-                        .background(contents[index].backgroundColor)
+                        .background(backgroundView(for: contents[index].backgroundColor))
                     }
                 }
                 .scrollTargetLayout()
@@ -77,44 +77,77 @@ struct OnboardingView: View {
             }
         })
     }
+    
+    @ViewBuilder
+    func backgroundView(for style: any ShapeStyle) -> some View {
+        if let color = style as? Color {
+            color
+        } else if let gradient = style as? LinearGradient {
+            gradient
+        }
+    }
 }
 
 struct OnboardingContent {
     let title: String
     let foregroundImageName: ImageResource?
     let backgroundImageName: ImageResource
-    let backgroundColor: Color
+    let backgroundColor: any ShapeStyle
     
     static let contents: [OnboardingContent] = [
         .init(
             title: "아버지의 기준에 맞춰\n한 분만을 위한 메뉴를 선정했어요",
             foregroundImageName: nil,
             backgroundImageName: .onboardingTextBackground,
-            backgroundColor: .hbBackground
+            backgroundColor: Color.hbBackground
         ),
         .init(
             title: "오래 씹으면 맛이 변하는\n밀가루 음식은 제외했어요",
             foregroundImageName: .onboardingPage1Foreground,
             backgroundImageName: .onboardingPage1Background,
-            backgroundColor: .init(hex: "FFF8EF")
+            backgroundColor: LinearGradient(
+                stops: [
+                    .init(color: .init(hex: "#FFF8EF"), location: 0.0),
+                    .init(color: .init(hex: "#FFF8EF"), location: 0.8),
+                    .init(color: .init(hex: "#FFF4F0"), location: 1.0),
+                ],
+                startPoint: .leading,
+                endPoint: .trailing
+            )
         ),
         .init(
             title: "너무 자극적이거나\n심하게 매운 음식도 제외했어요",
             foregroundImageName: .onboardingPage2Foreground,
             backgroundImageName: .onboardingPage2Background,
-            backgroundColor: .init(hex: "FFF4F0")
+            backgroundColor: LinearGradient(
+                stops: [
+                    .init(color: .init(hex: "#FFF4F0"), location: 0.0),
+                    .init(color: .init(hex: "#FFF4F0"), location: 0.8),
+                    .init(color: .init(hex: "#F2F6EE"), location: 1.0),
+                ],
+                startPoint: .leading,
+                endPoint: .trailing
+            )
         ),
         .init(
             title: "속에서 다시 뭉칠 수 있는\n떡 종류도 제외했답니다",
             foregroundImageName: .onboardingPage3Foreground,
             backgroundImageName: .onboardingPage3Background,
-            backgroundColor: .init(hex: "F2F6EE")
+            backgroundColor: LinearGradient(
+                stops: [
+                    .init(color: .init(hex: "#F2F6EE"), location: 0.0),
+                    .init(color: .init(hex: "#F2F6EE"), location: 0.8),
+                    .init(color: .init(hex: "#FFFDF9"), location: 1.0),
+                ],
+                startPoint: .leading,
+                endPoint: .trailing
+            )
         ),
         .init(
             title: "앞으로의 메뉴 고민은\n희밥이 도와드릴게요",
             foregroundImageName: nil,
             backgroundImageName: .onboardingTextBackground,
-            backgroundColor: .hbBackground
+            backgroundColor: Color.hbBackground
         ),
     ]
 }
