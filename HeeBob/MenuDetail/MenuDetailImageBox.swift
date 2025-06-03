@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MenuDetailImageBox: View {
     var food: Food
+    
     var body: some View {
         if let imageData = getDietImageData(for: food),
            let uiImage = UIImage(data: imageData) {

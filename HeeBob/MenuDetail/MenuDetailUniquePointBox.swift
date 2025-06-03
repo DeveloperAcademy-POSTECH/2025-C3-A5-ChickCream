@@ -9,16 +9,7 @@ import SwiftUI
 
 struct MenuDetailUniquePointBox: View {
     var food: Food
-    struct Triangle: Shape {
-        func path(in rect: CGRect) -> Path {
-            Path { path in
-                path.move(to: CGPoint(x: rect.midX, y: rect.minY))
-                path.addLine(to: CGPoint(x: rect.maxX, y: rect.maxY))
-                path.addLine(to: CGPoint(x: rect.minX, y: rect.maxY))
-                path.addLine(to: CGPoint(x: rect.midX, y: rect.minY))
-            }
-        }
-    }
+    
     var body: some View {
         VStack {
             Triangle()
@@ -40,10 +31,21 @@ struct MenuDetailUniquePointBox: View {
                         .font(.hbBody1)
                         .foregroundColor(.black)
                         .padding(16)
-                        .padding(.leading, 20)
+                        .padding(.leading, 14)
                         .fixedSize(horizontal: false, vertical: true) //2줄 이상 가능하게
                         .frame(alignment: .leading)
                 }
+        }
+    }
+    
+    struct Triangle: Shape {
+        func path(in rect: CGRect) -> Path {
+            Path { path in
+                path.move(to: CGPoint(x: rect.midX, y: rect.minY))
+                path.addLine(to: CGPoint(x: rect.maxX, y: rect.maxY))
+                path.addLine(to: CGPoint(x: rect.minX, y: rect.maxY))
+                path.addLine(to: CGPoint(x: rect.midX, y: rect.minY))
+            }
         }
     }
 }

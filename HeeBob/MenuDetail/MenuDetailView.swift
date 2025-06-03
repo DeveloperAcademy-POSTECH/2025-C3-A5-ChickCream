@@ -11,7 +11,7 @@ import SwiftData
 
 struct MenuDetailView: View {
     var food: Food
-     
+    
     var body: some View {
         VStack {
             MenuDetailImageBox(food: food)
@@ -31,5 +31,5 @@ struct MenuDetailView: View {
 }
 
 #Preview {
-    MenuDetailView(food: .init(id: UUID(uuidString: "b9fbc325-de04-48a7-805b-000000000000")!, title: "김치찌개", uniquePoint: "새콤달큰매콤", attribute: .init(id: UUID(), isPortable: true, isCookable: true, mainIngredient: .meat)))
+    MenuDetailView(food: .init(id: UUID(uuidString: "b9fbc325-de04-48a7-805b-000000000000")!, title: "김치찌개", uniquePoint: "새콤달큰매콤새콤달큰매콤새콤달큰매콤새콤달큰매콤새콤달큰매콤새콤달큰매콤새콤달큰", attribute: .init(id: UUID(), isPortable: true, isCookable: true, mainIngredient: .meat)))
 }
