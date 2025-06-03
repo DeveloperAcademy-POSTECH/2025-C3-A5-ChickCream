@@ -25,20 +25,29 @@ struct HBButton: View {
                 
                 // 이미지가 왼쪽에 있는 경우
                 if configuration.imagePosition == .left {
-                    HStack(spacing: 0) {
-                        if let imageName = configuration.imageName,
-                           configuration.imageType == .system {
+                    if let imageName = configuration.imageName,
+                       configuration.imageType == .system {
+                        HStack(spacing: 0) {
                             Image(systemName: imageName)
                                 .renderingMode(.template)
                                 .padding(.leading, 16)
-                                .padding(.trailing, 40)
+                            
+                            Spacer()
                         }
-                        
-                        if let imageName = configuration.imageName,
-                           configuration.imageType == .asset {
+                    }
+                    
+                    if let imageName = configuration.imageName,
+                       configuration.imageType == .asset {
+                        HStack(spacing: 0) {
                             Image(imageName)
-                                .padding(.trailing, 40)
+                                .padding(.leading, 16)
+                            
+                            Spacer()
                         }
+                    }
+                    
+                    HStack(spacing: 0) {
+                        Spacer()
                         
                         Text(configuration.title)
                             .font(.hbSubtitle)
@@ -55,18 +64,25 @@ struct HBButton: View {
                         Text(configuration.title)
                             .font(.hbSubtitle)
                         
-                        if let imageName = configuration.imageName,
-                           configuration.imageType == .system {
+                        Spacer()
+                    }
+                    
+                    if let imageName = configuration.imageName,
+                       configuration.imageType == .system {
+                        HStack(spacing: 0) {
+                            Spacer()
                             Image(systemName: imageName)
                                 .renderingMode(.template)
-                                .padding(.leading, 40)
                                 .padding(.trailing, 16)
                         }
-                        
-                        if let imageName = configuration.imageName,
-                           configuration.imageType == .asset {
+                    }
+                    
+                    if let imageName = configuration.imageName,
+                       configuration.imageType == .asset {
+                        HStack(spacing: 0) {
+                            Spacer()
                             Image(imageName)
-                                .padding(.trailing, 40)
+                                .padding(.trailing, 16)
                         }
                     }
                 }
@@ -133,7 +149,29 @@ struct HBButton: View {
     
     HBButton(
         configuration: .init(
+            title: "조금 더 긴",
+            imageName: "chevron.left",
+            imageType: .system,
+            imagePosition: .left,
+            foregroundColor: .hbPrimary,
+            backgroundColor: .hbPrimaryLighten
+        )) {
+            print("Button Tapped")
+        }
+    
+    HBButton(
+        configuration: .init(
             title: "다음",
+            imageName: "chevron.right",
+            imageType: .system,
+            imagePosition: .right
+        )) {
+            print("Button Tapped")
+        }
+    
+    HBButton(
+        configuration: .init(
+            title: "결과 보기",
             imageName: "chevron.right",
             imageType: .system,
             imagePosition: .right
