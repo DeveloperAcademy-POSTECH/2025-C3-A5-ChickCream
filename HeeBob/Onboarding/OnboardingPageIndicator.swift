@@ -14,6 +14,13 @@ struct OnboardingPageIndicator: View {
     let circleSize: CGFloat = 10
     let padding: CGFloat = 2
     
+    var frameWidth: CGFloat {
+        circleSize * CGFloat(count - 1)
+        + circleSize * 2 // 캡슐
+        + padding * 4 * CGFloat(count)
+        + 24
+    }
+    
     var body: some View {
         HStack {
             ForEach(0..<count, id: \.self) { index in
@@ -28,17 +35,20 @@ struct OnboardingPageIndicator: View {
                             }
                         )
                 } else {
-                    Circle()
-                        .fill(Color.hbDisabled)
-                        .frame(width: circleSize, height: circleSize)
-                        .padding(.horizontal, padding)
-                        .onTapGesture {
-                            currentPage = index
-                        }
+                    Button {
+                        currentPage = index
+                    } label: {
+                        Circle()
+                            .fill(Color.hbDisabled)
+                    }
+                    .frame(width: circleSize, height: circleSize)
+                    .padding(.horizontal, padding)
                 }
             }
         }
         .animation(.bouncy, value: currentPage)
+        .frame(width: frameWidth)
+        .contentShape(Rectangle())
     }
 }
 
