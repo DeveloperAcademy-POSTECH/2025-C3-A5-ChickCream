@@ -14,6 +14,15 @@ struct ResultsView: View {
     
     var body: some View {
         VStack {
+            UserAnswerView(
+                userAnswer: viewModel.userAnswer,
+                borderColor: .hbButtonSecondary,
+                backgroundColor: .clear
+            )
+            .padding(.horizontal, 20)
+            .padding(.top, 10)
+            Spacer()
+                .frame(height: 39)
             ResultsCarousel(
                 config: .init(
                     hasScale: true,
