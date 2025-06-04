@@ -43,25 +43,27 @@ struct ResultsView: View {
                     }
                 }
             }
-            .frame(height: UIScreen.main.bounds.height * 0.4)
-            
-            VStack {
-                HStack {
-                    Button {
-                        
-                    } label: {
-                        Text("찜한 메뉴")
-                    }
-                    Spacer()
-                    Button {
-                        
-                    } label: {
-                        Text("홈")
-                    }
-
+            .frame(height: UIScreen.main.bounds.height * 0.38)
+            Spacer()
+            HStack {
+                HBButton(configuration: .init(
+                    title: "찜한 메뉴",
+                    foregroundColor: .hbPrimary,
+                    backgroundColor: .hbPrimaryLighten
+                )) {
+                    // TODO: 찜한 메뉴 연결
                 }
-                .padding()
+                Spacer()
+                HBButton(configuration: .init(
+                    title: "다시 추천받기",
+                    foregroundColor: .hbPrimary,
+                    backgroundColor: .hbPrimaryLighten
+                )) {
+                    // TODO: 다시 추천 받기 연결
+                }
             }
+            .padding(.horizontal, 20)
+            .padding(.bottom, 27)
         }
         .HBNavigationBar(centerView: {
             Text("추천 결과")
