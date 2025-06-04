@@ -10,7 +10,6 @@ import SwiftData
 
 struct FavoriteListView: View {
     @StateObject var favoriteViewModel = FavoriteViewModel()
-    //    var food: [Food]
     
     @Environment(\.modelContext) var modelContext
     

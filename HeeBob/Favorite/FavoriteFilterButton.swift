@@ -9,7 +9,6 @@ import Foundation
 import SwiftUI
 
 struct FavoriteFilterButton: View {
-    @ObservedObject var favoriteViewModel = FavoriteViewModel()
     let title: String
     let isSelected: Bool
     let action: () -> Void

@@ -1,5 +1,4 @@
 //
-//  FavoriteFilterButton.swift
 //  HeeBob
 //
 //  Created by 산들 on 6/3/25.
@@ -10,7 +9,6 @@ import SwiftUI
 struct FavoriteFilterControl: View {
     @ObservedObject var favoriteViewModel: FavoriteViewModel
     @State var btnColorChange : Bool = false
-//    let filterType: FavoriteViewModel.FavoriteSortType
     
     var body: some View {
         HStack {
@@ -32,7 +30,3 @@ struct FavoriteFilterControl: View {
         }
     }
 }
-
-//#Preview {
-//    FavoriteFilterControl()
-//}

@@ -25,11 +25,11 @@ struct FavoriteMainIngredientModalBtn: View {
                         Text("초기화")
                             .foregroundStyle(.white)
                     )
-            }// Hifi에 맞게 디자인해야함.
+            }// TODO: Hifi에 맞게 디자인해야함.
             Button {
                 print("확인")
                 dismiss()
-                // 왜 호들갑 떨면서 내려가는 지는 모르겠지만 닫히기는 합니다.
+                // FIXME: 왜 호들갑 떨면서 내려가는 지는 모르겠지만 닫히기는 합니다.
             } label: {
                 Rectangle()
                     .frame(width: 200, height: 50)

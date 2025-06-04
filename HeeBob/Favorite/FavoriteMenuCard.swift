@@ -9,30 +9,20 @@ import SwiftUI
 import SwiftData
 
 struct FavoriteMenuCard: View {
-//    let image: UIImage?
     var food: Food
     var favorite: Favorite
-//    @Environment(\.modelContext) var modelContext
     
     var body: some View {
         
-        VStack(spacing: 0) {
-//            Image(.placeholder)
-//                .resizable()
-//                .scaledToFit()
-//                .frame(height: 130)
-//                .cornerRadius(16)
-            if let imageData = getDietImageData(for: food),
+        VStack(spacing: 0) {ageData(for: food),
                let uiImage = UIImage(data: imageData) {
                 Image(uiImage: uiImage)
                     .resizable()
-//                    .scaledToFit()
                     .frame(width: 173, height: 130)
                     .cornerRadius(16)
             } else {
                 Image(systemName: "questionmark.app.dashed")
                     .resizable()
-//                    .scaledToFit()
                     .frame(width: 173, height: 130)
                     .cornerRadius(16)
             }
