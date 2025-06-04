@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum FoodIngredient: Int, Codable {
+enum FoodIngredient: Int, Codable, Hashable {
     case meat = 1
     case fish
     case egg
