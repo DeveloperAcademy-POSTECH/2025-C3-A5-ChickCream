@@ -20,7 +20,7 @@ struct ContentView: View {
             if isLoading {
                 ProgressView()
             } else {
-                TestView()
+                HomeView()
             }
         }
         .onAppear {
