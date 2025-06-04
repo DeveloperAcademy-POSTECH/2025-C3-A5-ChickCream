@@ -18,11 +18,18 @@ struct ResultCard: View {
     
     var body: some View {
         VStack(spacing: 0) {
-            // FIXME: 이미지 저장 형식 및 uuid 확인 후 수정 예정
-            Image("Sample 1")
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .clipped()
+            if let imageData = getFoodImageData(for: food),
+               let uiImage = UIImage(data: imageData) {
+                Image(uiImage: uiImage)
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .clipped()
+            } else {
+                Image(systemName: "questionmark.app.dashed")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .clipped()
+            }
             
             HStack {
                 VStack(alignment: .leading, spacing: 0){
@@ -48,6 +55,24 @@ struct ResultCard: View {
         )
         .onTapGesture {
             action()
+        }
+    }
+}
+
+extension ResultCard {
+    private func getFoodImageData(for food: Food) -> Data? {
+        guard let url = Bundle.main.url(forResource: food.id.uuidString.lowercased(), withExtension: "jpg") else {
+            print("cannot find image file \(food.id.uuidString.lowercased()).jpg")
+            return nil
+        }
+        
+        do {
+            let data = try Data(contentsOf: url)
+            print(data)
+            return data
+        } catch {
+            print("error: \(error)")
+            return nil
         }
     }
 }
