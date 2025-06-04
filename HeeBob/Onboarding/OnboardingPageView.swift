@@ -9,38 +9,29 @@ import SwiftUI
 
 struct OnboardingPageView: View {
     let content: OnboardingContent
-    let showingForegroundImage: Bool
     
     var body: some View {
         Group {
             if let foregroundImageName =  content.foregroundImageName {
-                VStack {
+                VStack(spacing: 0) {
                     Text(content.title)
                         .multilineTextAlignment(.center)
                         .font(.hbTitle)
                         .foregroundStyle(Color.hbTextPrimary)
-                        .padding(.vertical, 72)
+                        .padding(.top, 72)
                     
                     ZStack(alignment: .center) {
-                        if showingForegroundImage {
-                            Image(content.backgroundImageName)
-                                .resizable()
-                                .frame(maxWidth: UIScreen.main.bounds.width)
-                                .scaledToFit()
-                                .clipped()
-                            
-                            Image(foregroundImageName)
-                                .resizable()
-                                .frame(maxWidth: UIScreen.main.bounds.width)
-                                .scaledToFit()
-                                .clipped()
-                        } else {
-                            Image(content.backgroundImageName)
-                                .resizable()
-                                .frame(maxWidth: UIScreen.main.bounds.width)
-                                .scaledToFit()
-                                .clipped()
-                        }
+                        Image(content.backgroundImageName)
+                            .resizable()
+                            .frame(maxWidth: UIScreen.main.bounds.width, maxHeight: 450)
+                            .scaledToFill()
+                            .clipped()
+                        
+                        Image(foregroundImageName)
+                            .resizable()
+                            .frame(maxWidth: UIScreen.main.bounds.width, maxHeight: 450)
+                            .scaledToFill()
+                            .clipped()
                     }
                     
                     Spacer()
@@ -64,15 +55,6 @@ struct OnboardingPageView: View {
                 }
             }
         }
-        .background(backgroundView(for: content.backgroundColor).ignoresSafeArea())
-    }
-    
-    @ViewBuilder
-    func backgroundView(for style: any ShapeStyle) -> some View {
-        if let color = style as? Color {
-            color
-        } else if let gradient = style as? LinearGradient {
-            gradient
-        }
+        .background(Color.hbBackground)
     }
 }
