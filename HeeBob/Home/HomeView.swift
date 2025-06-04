@@ -16,8 +16,8 @@ struct HomeView: View {
                     .init(color: .init(hex: "#F9AC80"), location: 0.0),
                     .init(color: .init(hex: "#FF6933"), location: 1.0),
                 ],
-                startPoint: .top,
-                endPoint: .bottom
+                startPoint: UnitPoint(x: 0.33, y: 0),
+                endPoint: UnitPoint(x: 0.66, y: 1.0)
             )
             .ignoresSafeArea()
             
@@ -61,12 +61,23 @@ struct HomeButton: View {
     let titleColor = Color(hex: "#000000")
     
     var body: some View {
-        Button {
+        print(".top \(UnitPoint.top)")
+        print(".bottom \(UnitPoint.bottom)")
+        return Button {
             didTap()
         } label: {
             ZStack {
                 RoundedRectangle(cornerRadius: 16)
                     .fill(Color.hbPrimaryLighten)
+                    .stroke(LinearGradient(
+                        stops: [
+                            .init(color: .white, location: 0.0),
+                            .init(color: .clear, location: 1.0)
+                        ],
+                        startPoint: .top,
+                        endPoint: .bottom
+                    ), style: .init(lineWidth: 1))
+                    .shadow(color: .black.opacity(0.1), radius: 10, x: 0, y: 2)
                 
                 Text(title)
                     .foregroundStyle(titleColor)
