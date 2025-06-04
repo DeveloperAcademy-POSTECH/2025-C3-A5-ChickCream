@@ -19,7 +19,7 @@ struct MenuDetailView: View {
             MenuDetailUniquePointBox(food: food)
             
             UserAnswerView(
-                userAnswer: .init(isPortable: true, isCookable: false, mainIngredient: .meat),
+                userAnswer: .init(isPortable: true, isCookable: false, mainIngredient: .beefPork),
                 borderColor: .hbButtonSecondary,
                 backgroundColor: .clear
             )
@@ -31,5 +31,5 @@ struct MenuDetailView: View {
 }
 
 #Preview {
-    MenuDetailView(food: .init(id: UUID(uuidString: "b9fbc325-de04-48a7-805b-000000000000")!, title: "김치찌개", uniquePoint: "새콤달큰매콤새콤달큰매콤새콤달큰매콤새콤달큰매콤새콤달큰매콤새콤달큰매콤새콤달큰", attribute: .init(id: UUID(), isPortable: true, isCookable: true, mainIngredient: .meat)))
+    MenuDetailView(food: .init(id: UUID(uuidString: "b9fbc325-de04-48a7-805b-000000000000")!, title: "김치찌개", uniquePoint: "새콤달큰매콤새콤달큰매콤새콤달큰매콤새콤달큰매콤새콤달큰매콤새콤달큰매콤새콤달큰", attribute: .init(id: UUID(), isPortable: true, isCookable: true, mainIngredient: .beefPork)))
 }

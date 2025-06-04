@@ -45,7 +45,7 @@ fileprivate extension SampleData {
                 id: UUID(uuidString: "98d8f7b2-12ca-49c3-a0ef-000000000000")!,
                 isPortable: true,
                 isCookable: false,
-                mainIngredient: .egg
+                mainIngredient: .beanTofuEgg
             )
         ),
         .init(
@@ -56,7 +56,7 @@ fileprivate extension SampleData {
                 id: UUID(uuidString: "5ba93f1c-5821-45d7-b269-000000000000")!,
                 isPortable: true,
                 isCookable: false,
-                mainIngredient: .egg
+                mainIngredient: .beanTofuEgg
             )
         ),
         .init(
@@ -67,7 +67,7 @@ fileprivate extension SampleData {
                 id: UUID(uuidString: "3b390561-9bb3-4df9-9f5a-000000000000")!,
                 isPortable: true,
                 isCookable: false,
-                mainIngredient: .egg
+                mainIngredient: .beanTofuEgg
             )
         ),
         .init(
@@ -78,7 +78,7 @@ fileprivate extension SampleData {
                 id: UUID(uuidString: "0a447b05-c483-4012-a8be-000000000000")!,
                 isPortable: true,
                 isCookable: true,
-                mainIngredient: .meat
+                mainIngredient: .beefPork
             )
         ),
         .init(
@@ -89,7 +89,7 @@ fileprivate extension SampleData {
                 id: UUID(uuidString: "8a9bf6be-2dfc-4498-bd54-000000000000")!,
                 isPortable: true,
                 isCookable: true,
-                mainIngredient: .meat
+                mainIngredient: .chickenAndDuck
             )
         ),
         .init(
@@ -100,7 +100,7 @@ fileprivate extension SampleData {
                 id: UUID(uuidString: "fd9d42be-8e4d-43e8-b1c0-000000000000")!,
                 isPortable: true,
                 isCookable: true,
-                mainIngredient: .meat
+                mainIngredient: .chickenAndDuck
             )
         ),
         .init(
@@ -144,7 +144,7 @@ fileprivate extension SampleData {
                 id: UUID(uuidString: "a8481881-4d83-41ef-bcda-000000000000")!,
                 isPortable: true,
                 isCookable: false,
-                mainIngredient: .meat
+                mainIngredient: .chickenAndDuck
             )
         ),
         .init(
@@ -155,7 +155,7 @@ fileprivate extension SampleData {
                 id: UUID(uuidString: "a5a77c1d-8571-4eef-a4d4-000000000000")!,
                 isPortable: true,
                 isCookable: false,
-                mainIngredient: .meat
+                mainIngredient: .beefPork
             )
         ),
         .init(
@@ -166,7 +166,7 @@ fileprivate extension SampleData {
                 id: UUID(uuidString: "34c3009f-625b-4eca-b1b7-000000000000")!,
                 isPortable: true,
                 isCookable: false,
-                mainIngredient: .meat
+                mainIngredient: .chickenAndDuck
             )
         ),
         .init(
@@ -210,7 +210,7 @@ fileprivate extension SampleData {
                 id: UUID(uuidString: "8e7d7655-df69-45c9-a408-000000000000")!,
                 isPortable: true,
                 isCookable: false,
-                mainIngredient: .tofu
+                mainIngredient: .beanTofuEgg
             )
         ),
         .init(
@@ -221,7 +221,7 @@ fileprivate extension SampleData {
                 id: UUID(uuidString: "39bc2716-6017-4274-815f-000000000000")!,
                 isPortable: true,
                 isCookable: false,
-                mainIngredient: .tofu
+                mainIngredient: .beanTofuEgg
             )
         ),
         .init(
@@ -232,7 +232,7 @@ fileprivate extension SampleData {
                 id: UUID(uuidString: "2a0b6e70-e5b7-4e41-8c22-000000000000")!,
                 isPortable: true,
                 isCookable: false,
-                mainIngredient: .tofu
+                mainIngredient: .beanTofuEgg
             )
         ),
         .init(
@@ -243,7 +243,7 @@ fileprivate extension SampleData {
                 id: UUID(uuidString: "f039176d-8d2b-4883-aea5-000000000000")!,
                 isPortable: true,
                 isCookable: true,
-                mainIngredient: .tofu
+                mainIngredient: .beanTofuEgg
             )
         ),
         .init(
@@ -254,7 +254,7 @@ fileprivate extension SampleData {
                 id: UUID(uuidString: "b0767ce2-1e64-42b2-969a-000000000000")!,
                 isPortable: true,
                 isCookable: true,
-                mainIngredient: .tofu
+                mainIngredient: .beanTofuEgg
             )
         ),
         .init(
@@ -265,7 +265,7 @@ fileprivate extension SampleData {
                 id: UUID(uuidString: "ae24fbeb-9a32-4277-9849-000000000000")!,
                 isPortable: true,
                 isCookable: true,
-                mainIngredient: .tofu
+                mainIngredient: .beanTofuEgg
             )
         ),
         .init(
@@ -276,7 +276,7 @@ fileprivate extension SampleData {
                 id: UUID(uuidString: "272b4f03-6811-4a7b-929c-000000000000")!,
                 isPortable: true,
                 isCookable: true,
-                mainIngredient: .egg
+                mainIngredient: .beanTofuEgg
             )
         ),
         .init(
@@ -287,7 +287,7 @@ fileprivate extension SampleData {
                 id: UUID(uuidString: "b576f90b-ac50-48ba-8355-000000000000")!,
                 isPortable: true,
                 isCookable: true,
-                mainIngredient: .egg
+                mainIngredient: .beanTofuEgg
             )
         ),
         .init(
@@ -298,7 +298,7 @@ fileprivate extension SampleData {
                 id: UUID(uuidString: "d98d1ee0-e2fd-41c7-a388-000000000000")!,
                 isPortable: true,
                 isCookable: true,
-                mainIngredient: .egg
+                mainIngredient: .beanTofuEgg
             )
         ),
         .init(
@@ -309,7 +309,7 @@ fileprivate extension SampleData {
                 id: UUID(uuidString: "724ec180-7649-41e0-b822-000000000000")!,
                 isPortable: false,
                 isCookable: true,
-                mainIngredient: .meat
+                mainIngredient: .beefPork
             )
         ),
         .init(
@@ -320,7 +320,7 @@ fileprivate extension SampleData {
                 id: UUID(uuidString: "be5f4e8f-c044-4bec-a767-000000000000")!,
                 isPortable: false,
                 isCookable: true,
-                mainIngredient: .meat
+                mainIngredient: .beefPork
             )
         ),
         .init(
@@ -331,7 +331,7 @@ fileprivate extension SampleData {
                 id: UUID(uuidString: "b81c64f6-7fd2-4b22-8fe3-000000000000")!,
                 isPortable: false,
                 isCookable: true,
-                mainIngredient: .meat
+                mainIngredient: .beefPork
             )
         ),
         .init(
