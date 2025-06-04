@@ -16,7 +16,7 @@ struct MenuDetailDeleteButton: View {
         Button("찜에서 삭제하기") {
             showFavoriteDeleteAlert = true
         }
-        .alert("알림 제목", isPresented: $showFavoriteDeleteAlert) {
+        .alert("찜하기 삭제 버튼", isPresented: $showFavoriteDeleteAlert) {
             Button("삭제", role: .destructive) {
                 modelContext.delete(food)
             }

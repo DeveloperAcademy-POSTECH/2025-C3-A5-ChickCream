@@ -4,7 +4,6 @@
 //
 //  Created by 산들 on 5/31/25.
 //
-//TODO: Food 엔티티 주입 후 완전 완성할 것!
 import SwiftUI
 import SwiftData
 
@@ -13,6 +12,7 @@ struct MenuDetailView: View {
     var food: Food
     
     var body: some View {
+        
         VStack {
             MenuDetailImageBox(food: food)
             

@@ -11,7 +11,7 @@ struct MenuDetailImageBox: View {
     var food: Food
     
     var body: some View {
-        if let imageData = getDietImageData(for: food),
+        if let imageData = getFoodImageData(for: food),
            let uiImage = UIImage(data: imageData) {
             Image(uiImage: uiImage)
                 .resizable()
@@ -31,7 +31,7 @@ struct MenuDetailImageBox: View {
 }
 
 extension MenuDetailImageBox {
-    private func getDietImageData(for food: Food) -> Data? {
+    private func getFoodImageData(for food: Food) -> Data? {
         guard let url = Bundle.main.url(forResource: food.id.uuidString.lowercased(), withExtension: "jpg") else {
             print("cannot find image file \(food.id.uuidString.lowercased()).jpg")
             return nil

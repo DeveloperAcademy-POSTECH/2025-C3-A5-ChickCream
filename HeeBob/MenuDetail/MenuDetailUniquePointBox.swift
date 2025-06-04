@@ -32,7 +32,7 @@ struct MenuDetailUniquePointBox: View {
                         .foregroundColor(.black)
                         .padding(16)
                         .padding(.leading, 14)
-                        .fixedSize(horizontal: false, vertical: true) //2줄 이상 가능하게
+                        .fixedSize(horizontal: false, vertical: true) // 2줄 이상 가능하게
                         .frame(alignment: .leading)
                 }
         }
