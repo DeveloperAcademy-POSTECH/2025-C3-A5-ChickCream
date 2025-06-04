@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct OnboardingView: View {
+    @Binding var shouldShowOnboarding: Bool
     @State var contents = OnboardingContent.contents
     @State var scrollPosition = ScrollPosition(id: 0)
     @State var currentIndex: Int = 0
@@ -36,6 +37,8 @@ struct OnboardingView: View {
                 
                 OnboardingNextButton(title: currentIndex == contents.count - 1 ? "메뉴 추천 받으러가기" : "다음") {
                     guard currentIndex < contents.count - 1 else {
+                        UserDefaults.standard.set(true, forKey: UserDefaultsKey.onboardingShown.rawValue)
+                        shouldShowOnboarding = false
                         return
                     }
                     
@@ -94,5 +97,5 @@ struct OnboardingContent {
 }
 
 #Preview {
-    OnboardingView()
+    OnboardingView(shouldShowOnboarding: .constant(true))
 }
