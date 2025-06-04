@@ -11,6 +11,8 @@ import SwiftData
 struct MenuDetailView: View {
     var food: Food
     
+    @EnvironmentObject var router: NavigationRouter
+    
     var body: some View {
         
         VStack {

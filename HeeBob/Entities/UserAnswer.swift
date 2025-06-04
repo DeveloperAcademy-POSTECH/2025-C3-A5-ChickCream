@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct UserAnswer {
+struct UserAnswer: Hashable {
     let isPortable: Bool
     let isCookable: Bool
     let mainIngredient: FoodIngredient

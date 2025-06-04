@@ -9,6 +9,8 @@ import SwiftUI
 import SwiftData
 
 struct ResultsView: View {
+    @EnvironmentObject var router: NavigationRouter
+
     let userAnswer: UserAnswer
     
     @Environment(\.modelContext) var modelContext
@@ -41,7 +43,7 @@ struct ResultsView: View {
                 switch item {
                 case .food(let food):
                     ResultCard(food: food) {
-                        // TODO: 메뉴 상세 보기 연결
+                        router.push(.detail(food: food))
                     }
                 case .addCard:
                     AddCard {
@@ -57,7 +59,7 @@ struct ResultsView: View {
                     foregroundColor: .hbPrimary,
                     backgroundColor: .hbPrimaryLighten
                 )) {
-                    // TODO: 찜한 메뉴 연결
+                    router.push(.favorite)
                 }
                 Spacer()
                 HBButton(configuration: .init(
@@ -65,7 +67,7 @@ struct ResultsView: View {
                     foregroundColor: .hbPrimary,
                     backgroundColor: .hbPrimaryLighten
                 )) {
-                    // TODO: 다시 추천 받기 연결
+                    router.pop()
                 }
             }
             .padding(.horizontal, 20)
