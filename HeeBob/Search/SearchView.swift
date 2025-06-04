@@ -12,6 +12,8 @@ struct SearchView: View {
     @Environment(\.dismiss) var dismiss
     @Environment(\.modelContext) private var modelContext
     
+    @EnvironmentObject var router: NavigationRouter
+    
     @Query private var allFavorites: [Favorite]
     
     @State private var searchText: String = ""
@@ -72,6 +74,7 @@ struct SearchView: View {
             Spacer()
         }
         .padding(.horizontal, 16)
+        .navigationBarBackButtonHidden(true)
     }
 }
 
