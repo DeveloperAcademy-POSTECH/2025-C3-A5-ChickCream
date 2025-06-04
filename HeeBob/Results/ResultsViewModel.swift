@@ -11,14 +11,17 @@ import SwiftData
 final class ResultsViewModel: ObservableObject {
     @Published var carouselItems: [CarouselItem] = []
     
-    let modelContext: ModelContext
+    var modelContext: ModelContext
     let userAnswer: UserAnswer
     private var fetchedFoodIDs: Set<UUID> = []  // 이미 추천된 음식 추적용
     
-    init(modelContext: ModelContext, userAnswer: UserAnswer) {
-        self.modelContext = modelContext
+    init(userAnswer: UserAnswer) {
         self.userAnswer = userAnswer
         loadInitialRecommendations()
+    }
+    
+    func resultViewDidLoad(modelContext: ModelContext) {
+        self.modelContext = modelContext
     }
     
     func loadInitialRecommendations() {

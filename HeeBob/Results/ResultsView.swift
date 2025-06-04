@@ -10,6 +10,7 @@ import SwiftData
 
 struct ResultsView: View {
     @StateObject var viewModel: ResultsViewModel
+    @Environment(\.modelContext) var modelContext
     
     @State private var activeID: String?
     @State private var selectedIndex: Int = 0
@@ -41,9 +42,7 @@ struct ResultsView: View {
                     }
                 case .addCard:
                     AddCard {
-                        Task {
-                            await viewModel.loadOneMoreRecommendation()
-                        }
+                        viewModel.loadOneMoreRecommendation()
                     }
                 }
             }
@@ -75,5 +74,8 @@ struct ResultsView: View {
                 .foregroundStyle(Color.hbTextPrimary)
         })
         .HBNavigationBarBackButtonHidden(true)
+        .onAppear {
+            viewModel.resultViewDidLoad(modelContext: modelContext)
+        }
     }
 }
