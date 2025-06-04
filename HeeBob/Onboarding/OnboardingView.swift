@@ -10,19 +10,15 @@ import SwiftUI
 struct OnboardingView: View {
     @State var contents = OnboardingContent.contents
     @State var scrollPosition = ScrollPosition(id: 0)
-    @State var currentIndex: Int = 0 {
-        didSet {
-            showingForegroundImage = true
-        }
-    }
-    @State var showingForegroundImage = true
+    @State var currentIndex: Int = 0
+    @State var isPlayingLottie = false
     
     var body: some View {
         ZStack {
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHStack(spacing: 0) {
                     ForEach(contents.indices, id: \.self) { index in
-                        OnboardingPageView(content: contents[index], showingForegroundImage: showingForegroundImage)
+                        OnboardingPageView(content: contents[index])
                         .id(index)
                         .frame(width: UIScreen.main.bounds.width)
                     }
@@ -43,24 +39,9 @@ struct OnboardingView: View {
                         return
                     }
                     
-                    // 1. 페이지 전환
                     withAnimation(.easeInOut(duration: 0.5)) {
                         currentIndex += 1
                         scrollPosition = ScrollPosition(id: currentIndex)
-                    }
-                    
-                    // 2. 페이지 전환 완료 후 foreground 이미지 표시
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                        withAnimation(.easeIn(duration: 0.1)) {
-                            showingForegroundImage = true
-                        }
-                        
-                        // 3. 1.5초 후 foreground 이미지 서서히 사라지게
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                            withAnimation(.easeOut(duration: 0.2)) {
-                                showingForegroundImage = false
-                            }
-                        }
                     }
                 }
                 .padding(.horizontal, 16)
@@ -82,62 +63,32 @@ struct OnboardingContent {
     let title: String
     let foregroundImageName: ImageResource?
     let backgroundImageName: ImageResource
-    let backgroundColor: any ShapeStyle
     
     static let contents: [OnboardingContent] = [
         .init(
             title: "아버지의 기준에 맞춰\n한 분만을 위한 메뉴를 선정했어요",
             foregroundImageName: nil,
-            backgroundImageName: .commonTextBackground,
-            backgroundColor: Color.hbBackground
+            backgroundImageName: .commonTextBackground
         ),
         .init(
             title: "오래 씹으면 맛이 변하는\n밀가루 음식은 제외했어요",
             foregroundImageName: .onboardingPage1Foreground,
-            backgroundImageName: .onboardingPage1Background,
-            backgroundColor: LinearGradient(
-                stops: [
-                    .init(color: .init(hex: "#FFF8EF"), location: 0.0),
-                    .init(color: .init(hex: "#FFF8EF"), location: 0.8),
-                    .init(color: .init(hex: "#FFF4F0"), location: 1.0),
-                ],
-                startPoint: .leading,
-                endPoint: .trailing
-            )
+            backgroundImageName: .onboardingPage1Background
         ),
         .init(
             title: "너무 자극적이거나\n심하게 매운 음식도 제외했어요",
             foregroundImageName: .onboardingPage2Foreground,
-            backgroundImageName: .onboardingPage2Background,
-            backgroundColor: LinearGradient(
-                stops: [
-                    .init(color: .init(hex: "#FFF4F0"), location: 0.0),
-                    .init(color: .init(hex: "#FFF4F0"), location: 0.8),
-                    .init(color: .init(hex: "#F2F6EE"), location: 1.0),
-                ],
-                startPoint: .leading,
-                endPoint: .trailing
-            )
+            backgroundImageName: .onboardingPage2Background
         ),
         .init(
             title: "속에서 다시 뭉칠 수 있는\n떡 종류도 제외했답니다",
             foregroundImageName: .onboardingPage3Foreground,
-            backgroundImageName: .onboardingPage3Background,
-            backgroundColor: LinearGradient(
-                stops: [
-                    .init(color: .init(hex: "#F2F6EE"), location: 0.0),
-                    .init(color: .init(hex: "#F2F6EE"), location: 0.8),
-                    .init(color: .init(hex: "#FFFDF9"), location: 1.0),
-                ],
-                startPoint: .leading,
-                endPoint: .trailing
-            )
+            backgroundImageName: .onboardingPage3Background
         ),
         .init(
             title: "앞으로의 메뉴 고민은\n희밥이 도와드릴게요",
             foregroundImageName: nil,
-            backgroundImageName: .commonTextBackground,
-            backgroundColor: Color.hbBackground
+            backgroundImageName: .commonTextBackground
         ),
     ]
 }
