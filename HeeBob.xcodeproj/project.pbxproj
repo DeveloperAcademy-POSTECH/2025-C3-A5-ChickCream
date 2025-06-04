@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		3D43F01C2DEF13DD00F07FEC /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 3D43F01B2DEF13DD00F07FEC /* Lottie */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		3D407D272DE739F600E9AA4E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -65,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D43F01C2DEF13DD00F07FEC /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +130,7 @@
 			);
 			name = HeeBob;
 			packageProductDependencies = (
+				3D43F01B2DEF13DD00F07FEC /* Lottie */,
 			);
 			productName = HeeBob;
 			productReference = 3D407D162DE739F500E9AA4E /* HeeBob.app */;
@@ -208,6 +214,9 @@
 			);
 			mainGroup = 3D407D0D2DE739F500E9AA4E;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				3D43F01A2DEF13DD00F07FEC /* XCRemoteSwiftPackageReference "lottie-spm" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 3D407D172DE739F500E9AA4E /* Products */;
 			projectDirPath = "";
@@ -573,6 +582,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3D43F01A2DEF13DD00F07FEC /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				kind = exactVersion;
+				version = 4.5.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3D43F01B2DEF13DD00F07FEC /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3D43F01A2DEF13DD00F07FEC /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3D407D0E2DE739F500E9AA4E /* Project object */;
 }
