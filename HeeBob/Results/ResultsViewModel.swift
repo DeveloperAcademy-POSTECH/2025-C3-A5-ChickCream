@@ -18,14 +18,12 @@ final class ResultsViewModel: ObservableObject {
     init(modelContext: ModelContext, userAnswer: UserAnswer) {
         self.modelContext = modelContext
         self.userAnswer = userAnswer
-        Task {
-            await loadInitialRecommendations()
-        }
+        loadInitialRecommendations()
     }
     
-    func loadInitialRecommendations() async {
+    func loadInitialRecommendations() {
         do {
-            let foods = try await fetchMatchingFoods(limit: 3)
+            let foods = try fetchMatchingFoods(limit: 3)
             fetchedFoodIDs.formUnion(foods.map { $0.id })
             updateCarouselItems(with: foods)
         } catch {
@@ -34,9 +32,9 @@ final class ResultsViewModel: ObservableObject {
         }
     }
     
-    func loadOneMoreRecommendation() async {
+    func loadOneMoreRecommendation() {
         do {
-            let newFoods = try await fetchMatchingFoods(limit: 1, excluding: fetchedFoodIDs)
+            let newFoods = try fetchMatchingFoods(limit: 1, excluding: fetchedFoodIDs)
             guard let food = newFoods.first else { return }
             fetchedFoodIDs.insert(food.id)
             insertFoodBeforeAddCard(food)
@@ -45,7 +43,7 @@ final class ResultsViewModel: ObservableObject {
         }
     }
     
-    private func fetchMatchingFoods(limit: Int, excluding excludedIDs: Set<UUID> = []) async throws -> [Food] {
+    private func fetchMatchingFoods(limit: Int, excluding excludedIDs: Set<UUID> = []) throws -> [Food] {
         let portableAnswer = userAnswer.isPortable
         let cookableAnswer = userAnswer.isCookable
         let mainIngredientAnswer = userAnswer.mainIngredient.rawValue
