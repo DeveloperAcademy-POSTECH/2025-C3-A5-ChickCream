@@ -21,9 +21,11 @@ struct AddCard: View {
                 .multilineTextAlignment(.center)
                 .font(.hbTitle)
                 .foregroundStyle(Color.hbTextSecondary)
+                .frame(maxWidth: .infinity)
         }
-        .padding(.vertical, 57)
-        .padding(.horizontal, 98)
+        .padding(.vertical, 50)
+        .padding(.horizontal, 90)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.hbBackground)
         .cornerRadius(16)
         .shadow(color: .black.opacity(0.1), radius: 5, x: 0, y: 2)
