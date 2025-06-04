@@ -63,6 +63,12 @@ struct ResultsView: View {
                 .padding()
             }
         }
+        .HBNavigationBar(centerView: {
+            Text("추천 결과")
+                .font(.hbTitle)
+                .foregroundStyle(Color.hbTextPrimary)
+        })
+        .HBNavigationBarBackButtonHidden(true)
     }
 }
 
