@@ -29,7 +29,6 @@ struct FavoriteFilterButton: View {
     }}
     
     var body: some View {
-        
         Button {
             action()
         } label: {

@@ -36,7 +36,6 @@ class FavoriteViewModel: ObservableObject {
             return favorite.food.attribute.isCookable == true
                    && favorite.food.attribute._mainIngredient == mainIngredientRawValue
         })
-        
         loadFavorites(where: descriptor)
     }
     

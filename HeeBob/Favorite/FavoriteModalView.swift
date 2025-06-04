@@ -4,7 +4,7 @@
 //
 //  Created by 산들 on 6/3/25.
 //
-
+// TODO: Hifi에 맞게 모달 뷰 수정해야 함.
 import SwiftUI
 
 struct FilterButton {
@@ -18,8 +18,6 @@ struct ToggleInfo {
     let label: String
     let ingredient: FoodIngredient
 }
-
-
 
 struct FavoriteModalView: View {
     @ObservedObject var favoriteViewModel = FavoriteViewModel()
@@ -46,7 +44,6 @@ struct FavoriteModalView: View {
     
     var body: some View {
         
-        
         if favoriteViewModel.showingfavoriteSortType == .portable {
             FilterSectionView(
                 title: "휴대성",
@@ -58,7 +55,6 @@ struct FavoriteModalView: View {
             )
             .presentationDetents([.fraction(0.5)])
         }
-        
         // 조리 유형 섹션
         else if favoriteViewModel.showingfavoriteSortType == .cookable {
             FilterSectionView(
@@ -91,32 +87,7 @@ struct FavoriteModalView: View {
                         userSelectedMainIngredientUpdated()
                     }
                 }
-                HStack {
-                    Button {
-                        print("초기화")
-                    } label: {
-                        Rectangle()
-                            .frame(width: 100, height: 50)
-                            .foregroundColor(.blue)
-                            .overlay(
-                                Text("초기화")
-                                    .foregroundStyle(.white)
-                            )
-                    }
-                    Button {
-                        print("확인")
-                    } label: {
-                        Rectangle()
-                            .frame(width: 200, height: 50)
-                            .foregroundColor(.blue)
-                            .overlay(
-                                Text("확인")
-                                    .foregroundStyle(.white)
-                            )
-                    }
-                
-                }
-
+                FavoriteMainIngredientModalBtn()
             }
             .presentationDetents([.fraction(0.5)])
         }
