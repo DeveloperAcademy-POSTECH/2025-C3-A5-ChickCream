@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "onboarding.page1.background.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
