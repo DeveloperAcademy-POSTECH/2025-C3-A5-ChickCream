@@ -11,16 +11,22 @@ struct QuestionView: View {
     @StateObject var viewModel = QuestionViewModel()
     
     let buttonsSpacing: CGFloat = 16
-    let halfButtonsBottomPadding: CGFloat = 204
+    let halfButtonsBottomPadding: CGFloat = 179
     let quarterButtonsBottomPadding: CGFloat = 128
     
     var body: some View {
-        VStack {
+        VStack(spacing: 0) {
             QuestionIndicatorView(lastPage: viewModel.questions.count, currentPage: viewModel.selectedIndex + 1)
             
             Spacer()
             
             QuestionTitleView(viewModel.selectedQuestion.title)
+                .padding(.top, viewModel.selectedQuestion.titleTopPadding ?? 85)
+                .padding(.bottom, 16)
+            
+            if let subTitle = viewModel.selectedQuestion.subTitle {
+                QuestionSubTitleView(subTitle)
+            }
             
             Spacer()
             

@@ -10,6 +10,8 @@ import Foundation
 protocol AnyQuestion {
     var id: QuestionId { get }
     var title: String { get }
+    var subTitle: String? { get }
+    var titleTopPadding: CGFloat? { get }
     var options: [String] { get }
     var selectedOptionIndex: Int? { get }
     mutating func select(index: Int)
@@ -22,6 +24,8 @@ protocol AnyOption: Hashable {
 struct Question<Option: AnyOption>: AnyQuestion {
     let id: QuestionId
     let title: String
+    let subTitle: String?
+    let titleTopPadding: CGFloat?
     var options: [String] {
         return optionsWithType.map { "\($0)" }
     }

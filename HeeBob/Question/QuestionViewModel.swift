@@ -14,7 +14,9 @@ final class QuestionViewModel: ObservableObject {
     @Published private(set) var questions: [AnyQuestion] = [
         Question(
             id: .isPortable,
-            title: "휴대성이\n필요하신가요?",
+            title: "식사를 챙겨 나가야 하나요?",
+            subTitle: "챙겨 나갈 메뉴는 휴대가\n간편한 음식으로 추천해드려요.",
+            titleTopPadding: 104,
             optionsWithType: [
                 QuestionOption(title: "네", value: true),
                 QuestionOption(title: "아니오", value: false),
@@ -22,7 +24,9 @@ final class QuestionViewModel: ObservableObject {
         ),
         Question(
             id: .isCookable,
-            title: "배달이나 외식 어때요?",
+            title: "식사를 직접 준비할\n여유가 있으신가요?",
+            subTitle: "여유가 없으시다면, 사 드시기 편한\n메뉴로 추천해드릴게요.",
+            titleTopPadding: 84,
             optionsWithType: [
                 QuestionOption(title: "좋아요", value: true),
                 QuestionOption(title: "직접\n조리할래요", value: false),
@@ -31,6 +35,8 @@ final class QuestionViewModel: ObservableObject {
         Question(
             id: .mainIngredient,
             title: "어떤 재료가 좋을까요?",
+            subTitle: nil,
+            titleTopPadding: nil,
             optionsWithType: [
                 QuestionOption(title: "육고기", value: FoodIngredient.meat),
                 QuestionOption(title: "수산물", value: FoodIngredient.fish),
