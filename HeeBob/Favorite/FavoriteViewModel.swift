@@ -52,11 +52,11 @@ class FavoriteViewModel: ObservableObject {
     
     // MARK: - Core Logics
     
-    private func loadFavoritesByUserSelectedOption() {
-        let descriptor = FetchDescriptor<Favorite>(predicate: #Predicate { favorite in
-            // TODO: isPortableUserSelected,isCookableUserSelected,isMainIngredientUserSelected를 이용해 Predicate 작성
-        })
-    }
+//    private func loadFavoritesByUserSelectedOption() {
+//        let descriptor = FetchDescriptor<Favorite>(predicate: #Predicate { favorite in
+//            // TODO: isPortableUserSelected,isCookableUserSelected,isMainIngredientUserSelected를 이용해 Predicate 작성
+//        })
+//    }
     
     private func loadFavorites(where descriptor: FetchDescriptor<Favorite>) {
         do {
