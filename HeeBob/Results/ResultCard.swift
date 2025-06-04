@@ -30,12 +30,6 @@ struct ResultCard: View {
                         .font(.hbTitle)
                         .foregroundStyle(Color.hbTextPrimary)
                         .lineLimit(1)
-                    // TODO: 전체 회의 내용 토대로 넣을지 말지 결정
-//                    Text(food.uniquePoint)
-//                        .font(.hbSubtitle)
-//                        .foregroundColor(Color.hbTextSecondary)
-//                        .lineLimit(2)
-//                        .multilineTextAlignment(.leading)
                 }
                 Spacer()
                 Image(.heart)
