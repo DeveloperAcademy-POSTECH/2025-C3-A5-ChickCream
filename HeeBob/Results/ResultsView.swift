@@ -73,9 +73,3 @@ struct ResultsView: View {
         .HBNavigationBarBackButtonHidden(true)
     }
 }
-
-
-
-#Preview {
-    ResultsView()
-}
