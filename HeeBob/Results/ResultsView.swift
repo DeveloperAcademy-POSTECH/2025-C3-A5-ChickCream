@@ -51,7 +51,7 @@ struct ResultsView: View {
                     }
                 }
             }
-            .frame(height: UIScreen.main.bounds.height * 0.38)
+            .frame(height: UIScreen.main.bounds.height * 0.6)
             Spacer()
             HStack {
                 HBButton(configuration: .init(
