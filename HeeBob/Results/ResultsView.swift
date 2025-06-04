@@ -43,7 +43,7 @@ struct ResultsView: View {
                 switch item {
                 case .food(let food):
                     ResultCard(food: food) {
-                        // TODO: 메뉴 상세 보기 연결
+                        router.push(.detail(food: food))
                     }
                 case .addCard:
                     AddCard {
