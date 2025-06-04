@@ -27,6 +27,7 @@ struct HomeView: View {
                 HStack {
                     Text("희밥")
                         .font(.hbTitle)
+                        .foregroundStyle(Color.hbTextPrimary)
                     
                     Spacer()
                     
