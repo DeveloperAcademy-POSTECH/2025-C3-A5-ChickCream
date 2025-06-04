@@ -31,7 +31,7 @@ struct RawDataEntry: Decodable {
                 id: id,
                 isPortable: attribute.isPortable,
                 isCookable: attribute.isCookable,
-                mainIngredient: FoodIngredient.fromLocalizedName(attribute.mainIngredient) ?? .meat
+                mainIngredient: FoodIngredient.fromLocalizedName(attribute.mainIngredient) ?? .beefPork
             )
         )
     }

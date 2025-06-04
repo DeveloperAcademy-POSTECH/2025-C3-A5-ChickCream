@@ -38,10 +38,10 @@ final class QuestionViewModel: ObservableObject {
             subTitle: nil,
             titleTopPadding: nil,
             optionsWithType: [
-                QuestionOption(title: "육고기", value: FoodIngredient.meat),
-                QuestionOption(title: "수산물", value: FoodIngredient.fish),
-                QuestionOption(title: "달걀", value: FoodIngredient.egg),
-                QuestionOption(title: "두부", value: FoodIngredient.tofu),
+                QuestionOption(title: "소고기\n돼지고기", value: FoodIngredient.beefPork),
+                QuestionOption(title: "닭고기\n오리고기", value: FoodIngredient.chickenAndDuck),
+                QuestionOption(title: "생선\n해산물", value: FoodIngredient.fish),
+                QuestionOption(title: "콩·두부\n달걀", value: FoodIngredient.beanTofuEgg),
             ]
         ),
     ]
@@ -59,7 +59,7 @@ final class QuestionViewModel: ObservableObject {
         
         var isCookable = false
         var isPortable = false
-        var mainIngredient = FoodIngredient.meat
+        var mainIngredient = FoodIngredient.beefPork
         
         for question in questions {
             switch question.id {
