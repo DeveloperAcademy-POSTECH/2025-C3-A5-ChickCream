@@ -8,26 +8,26 @@
 import Foundation
 
 enum FoodIngredient: Int, Codable, Hashable {
-    case meat = 1
+    case beefPork = 1
+    case chickenAndDuck
     case fish
-    case egg
-    case tofu
+    case beanTofuEgg
     
     var localizedName: String {
         switch self {
-        case .meat: "육고기"
-        case .fish: "수산물"
-        case .tofu: "두부"
-        case .egg: "달걀"
+        case .beefPork: "소고기/돼지고기"
+        case .chickenAndDuck: "닭고기/오리고기"
+        case .fish: "생선/해산물"
+        case .beanTofuEgg: "콩·두부·계란"
         }
     }
     
     static func fromLocalizedName(_ localizedName: String) -> FoodIngredient? {
         switch localizedName {
-        case "육고기": .meat
-        case "수산물": .fish
-        case "두부": .tofu
-        case "달걀": .egg
+        case "소고기/돼지고기": .beefPork
+        case "닭고기/오리고기": .chickenAndDuck
+        case "생선/해산물": .fish
+        case "콩·두부·계란": .beanTofuEgg
         default : nil
         }
     }

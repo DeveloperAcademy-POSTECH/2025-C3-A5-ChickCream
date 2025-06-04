@@ -6,10 +6,18 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ResultCard: View {
     let food: Food
     let action: () -> Void
+    
+    @Environment(\.modelContext) private var modelContext
+    @Query private var favorites: [Favorite]
+    
+    var isFavorite: Bool {
+        favorites.contains(where: { $0.food.id == food.id })
+    }
     
     init(food: Food, action: @escaping () -> Void) {
         self.food = food
@@ -39,8 +47,13 @@ struct ResultCard: View {
                         .lineLimit(1)
                 }
                 Spacer()
-                Image(.heart)
-                    .frame(width: 40, height: 40)
+                Button(action: toggleFavorite) {
+                    Image(isFavorite ? .heartFill : .heart)
+                        .resizable()
+                        .frame(width: 40, height: 40)
+                }
+                .buttonStyle(.plain)
+                .contentShape(Rectangle())
             }
             .padding(.horizontal, 20)
             .padding(.vertical, 18)
@@ -60,6 +73,15 @@ struct ResultCard: View {
 }
 
 extension ResultCard {
+    private func toggleFavorite() {
+        if let existing = favorites.first(where: { $0.food.id == food.id }) {
+            modelContext.delete(existing)
+        } else {
+            let newFavorite = Favorite(id: UUID(), food: food, createdAt: Date())
+            modelContext.insert(newFavorite)
+        }
+    }
+    
     private func getFoodImageData(for food: Food) -> Data? {
         guard let url = Bundle.main.url(forResource: food.id.uuidString.lowercased(), withExtension: "jpg") else {
             print("cannot find image file \(food.id.uuidString.lowercased()).jpg")

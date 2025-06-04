@@ -10,7 +10,7 @@ import SwiftData
 
 struct ResultsView: View {
     @EnvironmentObject var router: NavigationRouter
-    
+
     let userAnswer: UserAnswer
     
     @Environment(\.modelContext) var modelContext
@@ -72,6 +72,9 @@ struct ResultsView: View {
             }
             .padding(.horizontal, 20)
             .padding(.bottom, 27)
+        }
+        .onAppear {
+            loadInitialRecommendations()
         }
         .HBNavigationBar(centerView: {
             Text("추천 결과")

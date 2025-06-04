@@ -38,10 +38,10 @@ final class QuestionViewModel: ObservableObject {
             subTitle: nil,
             titleTopPadding: nil,
             optionsWithType: [
-                QuestionOption(title: "육고기", value: FoodIngredient.meat),
-                QuestionOption(title: "수산물", value: FoodIngredient.fish),
-                QuestionOption(title: "달걀", value: FoodIngredient.egg),
-                QuestionOption(title: "두부", value: FoodIngredient.tofu),
+                QuestionOption(title: "소고기\n돼지고기", value: FoodIngredient.beefPork),
+                QuestionOption(title: "닭고기\n오리고기", value: FoodIngredient.chickenAndDuck),
+                QuestionOption(title: "생선\n해산물", value: FoodIngredient.fish),
+                QuestionOption(title: "콩·두부\n달걀", value: FoodIngredient.beanTofuEgg),
             ]
         ),
     ]
@@ -59,7 +59,7 @@ final class QuestionViewModel: ObservableObject {
         
         var isCookable = false
         var isPortable = false
-        var mainIngredient = FoodIngredient.meat
+        var mainIngredient = FoodIngredient.beefPork
         
         for question in questions {
             switch question.id {
@@ -94,9 +94,13 @@ final class QuestionViewModel: ObservableObject {
     }
 }
 
-extension QuestionViewModel {    
+extension QuestionViewModel {
+    func viewDidAppear() {
+        initPreviousAnswers()
+    }
+    
     func selectOption(at index: Int) {
-        questions[selectedIndex].select(index: index)
+        questions[selectedIndex].select(for: index)
     }
     
     func showPreviousQuestion() {
@@ -105,5 +109,11 @@ extension QuestionViewModel {
     
     func showNextQuestion() {
         selectedIndex = min(questions.count - 1, selectedIndex + 1)
+    }
+    
+    private func initPreviousAnswers() {
+        for i in questions.indices {
+            questions[i].select(for: nil)
+        }
     }
 }

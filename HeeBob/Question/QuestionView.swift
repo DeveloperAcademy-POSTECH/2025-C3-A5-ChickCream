@@ -112,6 +112,9 @@ struct QuestionView: View {
         }
         .HBNavigationBar(centerView: { EmptyView() })
         .HBNavigationBarBackButtonHidden(viewModel.selectedIndex != 0)
+        .onAppear {
+            viewModel.viewDidAppear()
+        }
     }
 }
 
