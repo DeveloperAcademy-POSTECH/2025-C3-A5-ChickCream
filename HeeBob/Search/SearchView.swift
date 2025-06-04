@@ -61,8 +61,7 @@ struct SearchView: View {
                     LazyVGrid(columns: columns, spacing: 12) {
                         ForEach(filteredFavorites) { favorite in
                             Button {
-                                // FoodDetailView(food: favorite.food)
-                                //  .toolbarRole(.editor)
+                                router.push(.detail(food: favorite.food))
                             } label: {
                                 // FIXME: 통합 후 주석 해제 예정
                                 // FavoriteMenuCard(food: favorite.food, favorite: favorite)
