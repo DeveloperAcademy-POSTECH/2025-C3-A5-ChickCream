@@ -1,5 +1,5 @@
 //
-//  QuestionTitleView.swift
+//  QuestionSubTitleView.swift
 //  HeeBob
 //
 //  Created by 임영택 on 6/3/25.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct QuestionTitleView: View {
+struct QuestionSubTitleView: View {
     let content: String
     
     init(_ content: String) {
@@ -16,9 +16,9 @@ struct QuestionTitleView: View {
     
     var body: some View {
         Text(content)
-            .font(.hbTitle)
-            .foregroundStyle(Color.hbTextPrimary)
-            .lineSpacing(1.4)
+            .font(.hbMinimum)
+            .foregroundStyle(Color.hbTextSecondary)
             .multilineTextAlignment(.center)
+            .lineSpacing(1.5)
     }
 }
