@@ -14,7 +14,7 @@ import SwiftData
     @Attribute var isCookable: Bool
     var mainIngredient: FoodIngredient {
         get {
-            .init(rawValue: _mainIngredient) ?? .egg
+            .init(rawValue: _mainIngredient) ?? .beefPork
         }
         
         set {

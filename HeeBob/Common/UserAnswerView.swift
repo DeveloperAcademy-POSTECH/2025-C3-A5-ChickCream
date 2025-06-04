@@ -42,20 +42,33 @@ struct UserAnswerView: View {
 
 extension UserAnswerView {
     private var answerSentences: [AttributedString] {
+        func ingredientToCustomString(from ingredient: FoodIngredient) -> String {
+            switch ingredient {
+            case .beefPork:
+                return "소고기나 돼지고기"
+            case .chickenAndDuck:
+                return "닭고기나 오리고기"
+            case .fish:
+                return "생선이나 해산물"
+            case .beanTofuEgg:
+                return "콩 · 두부 · 달걀"
+            }
+        }
+        
         let isPortable = userAnswer.isPortable
         let isCookable = userAnswer.isCookable
         let mainIngredient = userAnswer.mainIngredient
         
         return [
             isPortable
-                ? createAttributedString(fullText: "휴대하기 편한 메뉴면 좋겠어요", highlightText: "휴대하기 편한")
-                : createAttributedString(fullText: "휴대하기 어려운 메뉴도 괜찮아요", highlightText: "휴대하기 어려운"),
+                ? createAttributedString(fullText: "챙겨 나가야 할 메뉴에요", highlightText: "챙겨 나가야 할")
+                : createAttributedString(fullText: "자리에서 먹기 좋은 메뉴에요", highlightText: "자리에서 먹기 좋은"),
             isCookable
-                ? createAttributedString(fullText: "직접 조리할래요", highlightText: "직접 조리")
-                : createAttributedString(fullText: "배달이나 외식이 좋아요", highlightText: "배달이나 외식"),
+                ? createAttributedString(fullText: "직접 준비할 수 있는 메뉴에요", highlightText: "직접 준비할 수 있는")
+                : createAttributedString(fullText: "사먹기 좋은 메뉴에요", highlightText: "사먹기 좋은"),
             createAttributedString(
-                fullText: "주재료가 \(mainIngredient.localizedName)인 음식이 좋아요",
-                highlightText: "주재료가 \(mainIngredient.localizedName)인"
+                fullText: "\(ingredientToCustomString(from: mainIngredient)) 메뉴에요",
+                highlightText: "\(ingredientToCustomString(from: mainIngredient))"
             )
         ]
     }
@@ -83,12 +96,12 @@ fileprivate struct SentenceView: View {
 
 #Preview {
     UserAnswerView(
-        userAnswer: .init(isPortable: true, isCookable: false, mainIngredient: .meat)
+        userAnswer: .init(isPortable: true, isCookable: false, mainIngredient: .beefPork)
     )
     .padding()
     
     UserAnswerView(
-        userAnswer: .init(isPortable: true, isCookable: false, mainIngredient: .meat),
+        userAnswer: .init(isPortable: true, isCookable: false, mainIngredient: .beefPork),
         borderColor: .hbButtonSecondary,
         backgroundColor: .clear
     )
