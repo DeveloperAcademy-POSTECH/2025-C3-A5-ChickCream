@@ -49,11 +49,11 @@ struct HomeView: View {
                 
                 VStack(spacing: 16) {
                     HomeButton(title: "메뉴 추천받기") {
-                        print("메뉴 추천")
+                        print("메뉴 추천") // TODO: Navigate
                     }
                     
                     HomeButton(title: "찜한 메뉴 보러가기") {
-                        print("찜한 메뉴")
+                        print("찜한 메뉴") // TODO: Navigate
                     }
                 }
                 .padding(24)
