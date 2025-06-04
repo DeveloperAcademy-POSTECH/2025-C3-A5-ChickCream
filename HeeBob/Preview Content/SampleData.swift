@@ -30,6 +30,12 @@ fileprivate extension SampleData {
             preparedDataForPreview.forEach {
                 modelContext.insert($0)
             }
+            
+            preparedDataForPreview[0..<20]
+                .forEach { food in
+                    modelContext.insert(Favorite(id: food.id, food: food, createdAt: Date()))
+                }
+            
             try? modelContext.save()
             
             print("✅ 프리뷰용 데이터가 준비되었습니다.")
