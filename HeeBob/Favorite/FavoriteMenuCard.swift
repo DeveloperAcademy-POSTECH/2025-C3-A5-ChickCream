@@ -14,13 +14,16 @@ struct FavoriteMenuCard: View {
     
     var body: some View {
         
-        VStack(spacing: 0) {ageData(for: food),
+
+        
+        VStack(spacing: 0) {
+            if let imageData = getDietImageData(for: food),
                let uiImage = UIImage(data: imageData) {
                 Image(uiImage: uiImage)
-                    .resizable()
-                    .frame(width: 173, height: 130)
-                    .cornerRadius(16)
-            } else {
+                 .resizable()
+                 .frame(width: 173, height: 130)
+                 .cornerRadius(16)
+         }  else {
                 Image(systemName: "questionmark.app.dashed")
                     .resizable()
                     .frame(width: 173, height: 130)
