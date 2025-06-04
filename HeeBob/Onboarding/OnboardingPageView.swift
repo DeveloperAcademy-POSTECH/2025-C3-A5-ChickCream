@@ -6,14 +6,15 @@
 //
 
 import SwiftUI
+import Lottie
 
 struct OnboardingPageView: View {
     let content: OnboardingContent
-    let showingForegroundImage: Bool
+    let isLottiePlaying: Bool
     
     var body: some View {
         Group {
-            if let foregroundImageName =  content.foregroundImageName {
+            if let lottieAnimation =  content.lottieAnimation {
                 VStack {
                     Text(content.title)
                         .multilineTextAlignment(.center)
@@ -22,25 +23,14 @@ struct OnboardingPageView: View {
                         .padding(.vertical, 72)
                     
                     ZStack(alignment: .center) {
-                        if showingForegroundImage {
-                            Image(content.backgroundImageName)
-                                .resizable()
-                                .frame(maxWidth: UIScreen.main.bounds.width)
-                                .scaledToFit()
-                                .clipped()
-                            
-                            Image(foregroundImageName)
-                                .resizable()
-                                .frame(maxWidth: UIScreen.main.bounds.width)
-                                .scaledToFit()
-                                .clipped()
-                        } else {
-                            Image(content.backgroundImageName)
-                                .resizable()
-                                .frame(maxWidth: UIScreen.main.bounds.width)
-                                .scaledToFit()
-                                .clipped()
-                        }
+                        Image(content.backgroundImageName)
+                            .resizable()
+                            .frame(maxWidth: UIScreen.main.bounds.width)
+                            .scaledToFit()
+                            .clipped()
+                        
+                        LottieView(animation: lottieAnimation)
+                            .playbackMode(isLottiePlaying ? .playing(.fromProgress(0, toProgress: 1, loopMode: .loop)) : .paused(at: .progress(0)))
                     }
                     
                     Spacer()
