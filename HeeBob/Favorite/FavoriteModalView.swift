@@ -29,10 +29,10 @@ struct FavoriteModalView: View {
     
     func userSelectedMainIngredientUpdated() {
         let toggles = [
-            (isForkBeefToggle, FoodIngredient.meat),
-            (isChickenDuckMeatToggle, FoodIngredient.egg),
+            (isForkBeefToggle, FoodIngredient.beefPork),
+            (isChickenDuckMeatToggle, FoodIngredient.chickenAndDuck),
             (isFishToggle, FoodIngredient.fish),
-            (isTofuEggToggle, FoodIngredient.tofu)
+            (isTofuEggToggle, FoodIngredient.beanTofuEgg)
         ]
         
         favoriteViewModel.mainIngredientsUserSelected = toggles
@@ -73,10 +73,10 @@ struct FavoriteModalView: View {
                 Divider()
                 
                 ForEach([
-                    ToggleInfo(isOn: $isForkBeefToggle, label: "소고기 돼지고기", ingredient: .meat),
-                    ToggleInfo(isOn: $isChickenDuckMeatToggle, label: "닭고기 오리고기", ingredient: .egg),
+                    ToggleInfo(isOn: $isForkBeefToggle, label: "소고기 돼지고기", ingredient: .beefPork),
+                    ToggleInfo(isOn: $isChickenDuckMeatToggle, label: "닭고기 오리고기", ingredient: .chickenAndDuck),
                     ToggleInfo(isOn: $isFishToggle, label: "물고기 해산물", ingredient: .fish),
-                    ToggleInfo(isOn: $isTofuEggToggle, label: "콩 두부 달걀", ingredient: .tofu)
+                    ToggleInfo(isOn: $isTofuEggToggle, label: "콩 두부 달걀", ingredient: .beanTofuEgg)
                 ], id: \.ingredient) { toggle in
                     Toggle(isOn: toggle.isOn) {
                         Text(toggle.label)

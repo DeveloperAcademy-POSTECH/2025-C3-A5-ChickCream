@@ -31,7 +31,7 @@ class FavoriteViewModel: ObservableObject {
     }
     
     func testButtonDidTap() {
-        let mainIngredientRawValue = FoodIngredient.meat.rawValue
+        let mainIngredientRawValue = FoodIngredient.beefPork.rawValue
         let descriptor = FetchDescriptor<Favorite>(predicate: #Predicate { favorite in
             return favorite.food.attribute.isCookable == true
                    && favorite.food.attribute._mainIngredient == mainIngredientRawValue
