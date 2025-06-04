@@ -94,9 +94,13 @@ final class QuestionViewModel: ObservableObject {
     }
 }
 
-extension QuestionViewModel {    
+extension QuestionViewModel {
+    func viewDidAppear() {
+        initPreviousAnswers()
+    }
+    
     func selectOption(at index: Int) {
-        questions[selectedIndex].select(index: index)
+        questions[selectedIndex].select(for: index)
     }
     
     func showPreviousQuestion() {
@@ -105,5 +109,11 @@ extension QuestionViewModel {
     
     func showNextQuestion() {
         selectedIndex = min(questions.count - 1, selectedIndex + 1)
+    }
+    
+    private func initPreviousAnswers() {
+        for i in questions.indices {
+            questions[i].select(for: nil)
+        }
     }
 }
