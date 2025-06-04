@@ -9,16 +9,19 @@ import SwiftUI
 import SwiftData
 
 struct ResultsView: View {
-    @StateObject var viewModel: ResultsViewModel
+    let userAnswer: UserAnswer
+    
     @Environment(\.modelContext) var modelContext
     
     @State private var activeID: String?
     @State private var selectedIndex: Int = 0
+    @State private var carouselItems: [CarouselItem] = []
+    @State private var fetchedFoodIDs: Set<UUID> = []
     
     var body: some View {
         VStack {
             UserAnswerView(
-                userAnswer: viewModel.userAnswer,
+                userAnswer: userAnswer,
                 borderColor: .hbButtonSecondary,
                 backgroundColor: .clear
             )
@@ -33,7 +36,7 @@ struct ResultsView: View {
                 ),
                 selection: $activeID,
                 selectedIndex: $selectedIndex,
-                data: viewModel.carouselItems
+                data: carouselItems
             ) { item in
                 switch item {
                 case .food(let food):
@@ -42,7 +45,7 @@ struct ResultsView: View {
                     }
                 case .addCard:
                     AddCard {
-                        viewModel.loadOneMoreRecommendation()
+                        loadOneMoreRecommendation()
                     }
                 }
             }
@@ -74,8 +77,56 @@ struct ResultsView: View {
                 .foregroundStyle(Color.hbTextPrimary)
         })
         .HBNavigationBarBackButtonHidden(true)
-        .onAppear {
-            viewModel.resultViewDidLoad(modelContext: modelContext)
+    }
+}
+
+/// 음식 조건 및 SwiftData에서 가져오는 로직들
+extension ResultsView {
+    func loadInitialRecommendations() {
+        do {
+            let foods = try fetchMatchingFoods(limit: 3)
+            fetchedFoodIDs.formUnion(foods.map { $0.id })
+            updateCarouselItems(with: foods)
+        } catch {
+            print("❌ Initial fetch failed: \(error)")
+            self.carouselItems = [.addCard]
         }
+    }
+    
+    func loadOneMoreRecommendation() {
+        do {
+            let newFoods = try fetchMatchingFoods(limit: 1, excluding: fetchedFoodIDs)
+            guard let food = newFoods.first else { return }
+            fetchedFoodIDs.insert(food.id)
+            insertFoodBeforeAddCard(food)
+        } catch {
+            print("❌ Failed to load one more food: \(error)")
+        }
+    }
+    
+    private func fetchMatchingFoods(limit: Int, excluding excludedIDs: Set<UUID> = []) throws -> [Food] {
+        let portableAnswer = userAnswer.isPortable
+        let cookableAnswer = userAnswer.isCookable
+        let mainIngredientAnswer = userAnswer.mainIngredient.rawValue
+        
+        let descriptor = FetchDescriptor<Food>(
+            predicate: #Predicate { food in
+                food.attribute.isPortable == portableAnswer &&
+                food.attribute.isCookable == cookableAnswer &&
+                food.attribute._mainIngredient == mainIngredientAnswer &&
+                !excludedIDs.contains(food.id)
+            }
+        )
+        let matchingFoods = try modelContext.fetch(descriptor)
+        return Array(matchingFoods.shuffled().prefix(limit))
+    }
+
+    private func updateCarouselItems(with foods: [Food]) {
+        self.carouselItems = foods.map { .food($0) } + [.addCard]
+    }
+    
+    private func insertFoodBeforeAddCard(_ food: Food) {
+        let index = max(carouselItems.count - 1, 0)
+        carouselItems.insert(.food(food), at: index)
     }
 }
