@@ -51,7 +51,7 @@ struct OnboardingView: View {
                     
                     // 2. 페이지 전환 완료 후 foreground 이미지 표시
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                        withAnimation(.easeIn(duration: 0.2)) {
+                        withAnimation(.easeIn(duration: 0.1)) {
                             showingForegroundImage = true
                         }
                         
