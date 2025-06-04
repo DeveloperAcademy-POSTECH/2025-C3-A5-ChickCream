@@ -1,2180 +1,882 @@
 [
     {
-        "id": "98d8f7b2-12ca-49c3-a0ef-dea8e724c674",
-        "title": "훈제 메추리알",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": false,
-            "mainIngredient": "달걀"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "5ba93f1c-5821-45d7-b269-6b0a7a053286",
-        "title": "에그마요 샌드위치",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": false,
-            "mainIngredient": "달걀"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "3b390561-9bb3-4df9-9f5a-c2c0b65bcef8",
-        "title": "치즈 에그롤",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": false,
-            "mainIngredient": "달걀"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "d46aace4-2714-44b9-ac32-1ef6bafae655",
-        "title": "계란샐러드",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": false,
-            "mainIngredient": "달걀"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "917206bd-5a2a-46de-8281-da6dd2efb09e",
-        "title": "계란 김밥",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": false,
-            "mainIngredient": "달걀"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "575fb91a-ff17-4067-990a-4ffedad29158",
-        "title": "훈제란",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": false,
-            "mainIngredient": "달걀"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "63b8c600-829f-46de-a067-45116b02743d",
-        "title": "에그 머핀",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": false,
-            "mainIngredient": "달걀"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "a364293e-5eb8-4a68-b619-5739a4f35468",
-        "title": "구운 계란",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": false,
-            "mainIngredient": "달걀"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "4d8fe50d-3c35-49da-85fd-263d8360514a",
-        "title": "계란 꼬치",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": false,
-            "mainIngredient": "달걀"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "acc4bef4-2199-47de-997b-2d7eab9e9a10",
-        "title": "계란 튀김",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": false,
-            "mainIngredient": "달걀"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "20bf66b0-0655-4612-bd96-d75b0c5aa59b",
-        "title": "에그 베이컨 브리또",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": false,
-            "mainIngredient": "달걀"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "f22985d2-8f18-48b0-9eea-d834bef3746e",
-        "title": "에그 카츠",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": false,
-            "mainIngredient": "달걀"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "ffe3e342-fca3-4c09-aa15-f841523c7c9e",
-        "title": "즉석 계란찜",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": false,
-            "mainIngredient": "달걀"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "21c783c4-eef7-499f-8de2-a03a06619e21",
-        "title": "감동란",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": false,
-            "mainIngredient": "달걀"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "b28981e3-deeb-4b81-950f-b2910e31b633",
-        "title": "몬테크리스토 토스트",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": false,
-            "mainIngredient": "달걀"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "cd858d96-f283-4c24-9e26-4fa88ece1e56",
-        "title": "즉석 계란말이",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": false,
-            "mainIngredient": "달걀"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "28d77478-579e-4041-b31b-6096cdea2a92",
-        "title": "머랭쿠키",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": false,
-            "mainIngredient": "달걀"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "c6ef5308-b5c8-4b67-9c9e-d1ad518b44c3",
-        "title": "단백이 (달걀에서 흰자만 남긴 가공제품)",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": false,
-            "mainIngredient": "달걀"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "be3f0be2-65e2-4612-8b9f-86846e0e2505",
-        "title": "계란 유부초밥",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": false,
-            "mainIngredient": "달걀"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "0a447b05-c483-4012-a8be-9ecf382fe804",
-        "title": "소고기죽",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "육고기"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "8a9bf6be-2dfc-4498-bd54-43eee28ab6c7",
-        "title": "닭죽",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "육고기"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "fd9d42be-8e4d-43e8-b1c0-690f6f71fbf7",
-        "title": "닭가슴살 샐러드",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "육고기"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "f8caf7df-78fc-48d1-9aab-328a45523a6e",
-        "title": "베이컨 부추 말이",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "육고기"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "0c3ee1ba-0bb0-440f-a2b0-4d005c1ef87c",
-        "title": "소고기 파말이 구이",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "육고기"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "ee8c09cc-7645-40d7-a1a4-18ccba1025eb",
-        "title": "소고기 주먹밥",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "육고기"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "75345b67-1e71-4526-94cc-f3da1850e36e",
-        "title": "냉동 피카츄 돈까스",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "육고기"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "b85438d9-20eb-43c3-8639-f9d8d37e0208",
-        "title": "냉동 치킨너겟",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "육고기"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "2465df6e-794e-42ce-b1cc-873f12faa3f3",
-        "title": "냉동 동그랑땡",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "육고기"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "17819af2-d230-451f-baaa-801135cdd3ff",
-        "title": "오이고추전",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "육고기"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "0a5c3c9c-f542-47ff-a378-235d637b8900",
-        "title": "냉동 미니 돈까스",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "육고기"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "7ad300c3-9094-4596-8d90-e230ab364592",
-        "title": "모닝빵 햄버거",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "육고기"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "d072bfcd-4a59-45da-b428-d3ffd48b54af",
-        "title": "또띠아 치킨랩",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "육고기"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "81162d6a-9825-487f-ad52-f6688d258147",
-        "title": "치킨마요덮밥",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "육고기"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "875816b3-8fdc-4c4e-b7ea-8f38eefd3f42",
-        "title": "냉동 가라아게",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "육고기"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "5f2e15cc-9415-4367-8bb0-c96e24010f62",
-        "title": "소고기 유부초밥",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "육고기"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "f68706d4-c9db-4096-8540-6ed450d5a3e8",
-        "title": "깻잎스팸전",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "육고기"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "76a398f7-940d-49af-b839-37e7eb9f76e0",
-        "title": "스팸무스비",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "육고기"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "ec5919d1-d824-488c-ac49-5416b6939e76",
-        "title": "베이컨 양파 말이",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "육고기"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "da3898b9-6b89-4fc8-8a78-472f5f1c3749",
-        "title": "모닝빵 치킨버거",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "육고기"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "a2aeceaa-4b89-4176-a513-313b6db53b13",
-        "title": "날치알 주먹밥",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "수산물"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "b9fbc325-de04-48a7-805b-ab7df325302d",
-        "title": "참치마요 주먹밥",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "수산물"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "1e37ebf8-1a08-4224-a9ee-c166610828a4",
-        "title": "맛살전",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "수산물"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "54340bb8-969d-4e7b-a518-926b8d7ade5f",
-        "title": "계란참치전",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "수산물"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "3c02f494-e0dc-4b5e-93b5-c5a98adfedf8",
-        "title": "참치양배추롤",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "수산물"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "52962940-6acf-4090-b70b-f347336aa27a",
-        "title": "두부참치전",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "수산물"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "9ed34d7f-ea14-4034-98f7-22a299a9fbc1",
-        "title": "참치깻잎밥전",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "수산물"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "8d23cda9-d1db-4490-a815-c680c34a7b17",
-        "title": "참치쌈장을 곁을인 깻잎쌈밥",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "수산물"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "b60e5793-1bef-4911-be55-00f5b83d940f",
-        "title": "명란오이김밥",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "수산물"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "1871ebfb-fe38-4a0c-8492-702d5e35f8ae",
-        "title": "오징어밥전",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "수산물"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "ca10608b-c487-4537-8f12-8987fd8fba2d",
-        "title": "파래전",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "수산물"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "7ea4a106-3f05-47b8-ab16-d1ee8e06fed4",
-        "title": "냉동 미니생선까스",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "수산물"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "78dc1252-c250-452e-809c-666bf91197be",
-        "title": "냉동 새우까스",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "수산물"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "9a45f55a-cda1-49d6-b64b-8af12a2ed1e6",
-        "title": "냉동 멘보샤",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "수산물"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "342cc399-ff8b-44fa-aab3-d5d22bdd6143",
-        "title": "순살 고등어 샌드위치",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "수산물"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "dd5d6a1d-8bfc-4bbb-879b-20f8208c88a0",
-        "title": "모닝빵 새우버거",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "수산물"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "bb144d8f-0c57-4425-97be-daf210a7620c",
-        "title": "참치 야채 샌드위치",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "수산물"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "626f42ff-5b7a-4fe7-9db2-cbe9f98b721e",
-        "title": "잡채어묵",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "수산물"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "a8481881-4d83-41ef-bcda-2b5c6065ff25",
+        "id": "40949894-896c-4a62-acf0-9b69214601c9",
         "title": "닭강정",
-        "uniquePoint": "유니크 포인트 테스트",
+        "uniquePoint": "바삭바삭, 달콤한 맛을 느낄 수 있어요",
         "attributes": {
             "isPortable": true,
             "isCookable": false,
-            "mainIngredient": "육고기"
+            "mainIngredient": "닭고기/오리고기"
         },
         "author": "민볼"
     },
     {
-        "id": "a5a77c1d-8571-4eef-a4d4-207010113c6c",
-        "title": "불고기 도시락",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": false,
-            "mainIngredient": "육고기"
-        },
-        "author": "민볼"
-    },
-    {
-        "id": "34c3009f-625b-4eca-b1b7-5fe3b586ab26",
-        "title": "닭가슴살 샐러드",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": false,
-            "mainIngredient": "육고기"
-        },
-        "author": "민볼"
-    },
-    {
-        "id": "0c7b375f-4ad2-47fe-88e1-a9a00277198d",
-        "title": "닭꼬치",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": false,
-            "mainIngredient": "육고기"
-        },
-        "author": "민볼"
-    },
-    {
-        "id": "f9c6a26b-508b-430a-857e-0b43b7be1fea",
-        "title": "소고기 육포",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": false,
-            "mainIngredient": "육고기"
-        },
-        "author": "민볼"
-    },
-    {
-        "id": "677538ec-4ce2-4afb-b71b-85f662f4401b",
+        "id": "db7a9345-97b9-498e-b6ed-45b22eefe8c9",
         "title": "닭다리살 오븐구이",
-        "uniquePoint": "유니크 포인트 테스트",
+        "uniquePoint": "겉은 바삭하고, 속은 촉촉하고 부드러워 입안에서 육즙이 풍부하게 퍼져요.",
         "attributes": {
             "isPortable": true,
             "isCookable": false,
-            "mainIngredient": "육고기"
+            "mainIngredient": "닭고기/오리고기"
+        },
+        "author": ""
+    },
+    {
+        "id": "abe56bd0-a0c0-4127-b2ac-d861b05616ef",
+        "title": "닭가슴살 스틱",
+        "uniquePoint": "간편하게 단백질을 섭취하기 용이해요.",
+        "attributes": {
+            "isPortable": true,
+            "isCookable": false,
+            "mainIngredient": "닭고기/오리고기"
+        },
+        "author": ""
+    },
+    {
+        "id": "3be3613a-dd5b-4904-b96c-332572920fb6",
+        "title": "닭꼬치",
+        "uniquePoint": "양념에 따라 다양한 맛을 느낄수있어요.",
+        "attributes": {
+            "isPortable": true,
+            "isCookable": false,
+            "mainIngredient": "닭고기/오리고기"
         },
         "author": "민볼"
     },
     {
-        "id": "f1254722-336c-4070-99d0-c188be5a5592",
-        "title": "핫바(편의점)",
-        "uniquePoint": "유니크 포인트 테스트",
+        "id": "962566a8-42eb-4a24-8237-fe7f12f5dd5f",
+        "title": "불고기 또띠아 랩",
+        "uniquePoint": "불고기의 감칠맛 나는 양념과 다양한 재료로 맛과 영양, 휴대성을 모두 챙긴 메뉴에요.",
         "attributes": {
             "isPortable": true,
             "isCookable": false,
-            "mainIngredient": "육고기"
+            "mainIngredient": "소고기/돼지고기"
         },
         "author": "민볼"
     },
     {
-        "id": "033342ae-508e-4c81-885f-3564ea52c030",
-        "title": "닭가슴살 육포",
-        "uniquePoint": "유니크 포인트 테스트",
+        "id": "c14b0894-ea9f-4fd4-82e0-491304a7fa19",
+        "title": "미트볼",
+        "uniquePoint": "밥 반찬으로 간식으로도 용이해요.",
         "attributes": {
             "isPortable": true,
             "isCookable": false,
-            "mainIngredient": "육고기"
+            "mainIngredient": "소고기/돼지고기"
         },
-        "author": "민볼"
+        "author": ""
     },
     {
-        "id": "21ca32a0-bb76-4752-9e74-7398327cdcee",
-        "title": "불고기 또띠아",
-        "uniquePoint": "유니크 포인트 테스트",
+        "id": "6473cee4-5953-4652-ac93-9a5cc8e60450",
+        "title": "불고기 도시락",
+        "uniquePoint": "감칠맛나는 불고기가 입맛을 돋우는데 좋아요.",
         "attributes": {
             "isPortable": true,
             "isCookable": false,
-            "mainIngredient": "육고기"
+            "mainIngredient": "소고기/돼지고기"
         },
-        "author": "민볼"
+        "author": ""
     },
     {
-        "id": "069b2a4b-82b4-4cbf-9e3c-a48b59c642e5",
-        "title": "버터장조림비빔밥(컵밥)",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": false,
-            "mainIngredient": "육고기"
-        },
-        "author": "민볼"
-    },
-    {
-        "id": "62a102a6-dfb9-44a8-9419-ccdd3fe88d7e",
+        "id": "1d65370c-5aec-4708-840a-969f12a6de64",
         "title": "스팸마요덮밥(컵밥)",
-        "uniquePoint": "유니크 포인트 테스트",
+        "uniquePoint": "짭짤한 스팸과 마요네즈의 고소함이 어우러져요. 조리시간이 짧고, 쉬워요.",
         "attributes": {
             "isPortable": true,
             "isCookable": false,
-            "mainIngredient": "육고기"
+            "mainIngredient": "소고기/돼지고기"
+        },
+        "author": ""
+    },
+    {
+        "id": "f5ee2fbe-9ee2-4e28-afbc-3e89b37b773b",
+        "title": "버터장조림비빔밥(컵밥)",
+        "uniquePoint": "버터의 풍미와 장조림의 감칠맛이 어우러져 부드러운 풍미가 가득해요.",
+        "attributes": {
+            "isPortable": true,
+            "isCookable": false,
+            "mainIngredient": "소고기/돼지고기"
         },
         "author": "민볼"
     },
     {
-        "id": "d613713d-66df-448c-bd3e-7002314a1d29",
-        "title": "제육덮밥(컵밥)",
-        "uniquePoint": "유니크 포인트 테스트",
+        "id": "c9e4169f-130e-4cef-a492-55d9ee61f432",
+        "title": "닭가슴살 또띠아 랩",
+        "uniquePoint": "소화가 편한 닭고기와 다양한 재료로 맛과 영양, 휴대성을 모두 챙긴 메뉴에요.",
         "attributes": {
             "isPortable": true,
             "isCookable": false,
-            "mainIngredient": "육고기"
+            "mainIngredient": "닭고기/오리고기"
         },
         "author": "민볼"
     },
     {
-        "id": "727d3ae8-8a02-4324-b4cd-75f733071287",
-        "title": "전주비빔삼각김밥",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": false,
-            "mainIngredient": "육고기"
-        },
-        "author": "민볼"
-    },
-    {
-        "id": "f2c4c581-e38c-469b-8863-2916dd62ff4a",
-        "title": "바삭통다리치킨(편의점)",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": false,
-            "mainIngredient": "육고기"
-        },
-        "author": "민볼"
-    },
-    {
-        "id": "dcad75b5-0acd-436b-8fb9-18196d473484",
-        "title": "하하...",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": false,
-            "mainIngredient": "육고기"
-        },
-        "author": "민볼"
-    },
-    {
-        "id": "c9d7d632-e326-4f55-9945-cd77f4e41b6c",
-        "title": "삼치구이(렌지에 돌려먹는)",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": false,
-            "mainIngredient": "수산물"
-        },
-        "author": "민볼"
-    },
-    {
-        "id": "bac6c61a-548c-4a27-a9b4-5c704d810cee",
-        "title": "연어구이(렌지에 돌려먹는)",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": false,
-            "mainIngredient": "수산물"
-        },
-        "author": "민볼"
-    },
-    {
-        "id": "20b08623-fe5b-480d-a202-0957f6e0c6f3",
-        "title": "고등어구이(렌지에 돌려먹는)",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": false,
-            "mainIngredient": "수산물"
-        },
-        "author": "민볼"
-    },
-    {
-        "id": "f3399952-5e9f-4f07-b2fd-42416054bd8f",
-        "title": "꽁치구이(렌지에 돌려먹는)",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": false,
-            "mainIngredient": "수산물"
-        },
-        "author": "민볼"
-    },
-    {
-        "id": "63b7fbd6-cda6-4ae2-b342-9f5eec3f8dae",
-        "title": "임연수구이(렌지에 돌려먹는)",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": false,
-            "mainIngredient": "수산물"
-        },
-        "author": "민볼"
-    },
-    {
-        "id": "c2fcc4cd-b21a-48e6-b8d0-969f036dc674",
-        "title": "새우볶음밥",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": false,
-            "mainIngredient": "수산물"
-        },
-        "author": "민볼"
-    },
-    {
-        "id": "59a40758-6946-4d45-bbf8-61ad619e74f7",
-        "title": "초밥",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": false,
-            "mainIngredient": "수산물"
-        },
-        "author": "민볼"
-    },
-    {
-        "id": "98517a96-2560-41df-81aa-73c4aa7f6322",
+        "id": "602949e3-e059-42f3-9324-6e4027b36212",
         "title": "오징어순대",
-        "uniquePoint": "유니크 포인트 테스트",
+        "uniquePoint": "바삭한 밥전과 탱글한 오징어의 식감이 어우러져 든든하면서도 색다른 한끼를 즐길 수 있어요",
         "attributes": {
             "isPortable": true,
             "isCookable": false,
-            "mainIngredient": "수산물"
+            "mainIngredient": "생선/해산물"
         },
         "author": "민볼"
     },
     {
-        "id": "041c4f6b-599e-4c12-95ca-bf69ba682673",
-        "title": "참치마요덮밥(컵밥)",
-        "uniquePoint": "유니크 포인트 테스트",
+        "id": "a8b49db2-ee92-42cd-8da1-f5ccfaf17ffe",
+        "title": "참치 김밥",
+        "uniquePoint": "참치의 풍부한 단백질과 오메가3 등 다양한 영양소를 김밥으로 간편하게 즐길 수 있어요",
         "attributes": {
             "isPortable": true,
             "isCookable": false,
-            "mainIngredient": "수산물"
+            "mainIngredient": "생선/해산물"
         },
         "author": "민볼"
     },
     {
-        "id": "e64f5e82-309d-46ed-bb66-de19d260b964",
-        "title": "게살샐러드",
-        "uniquePoint": "유니크 포인트 테스트",
+        "id": "768a7035-5efe-4c38-adc5-afd5eb1b5959",
+        "title": "연어포케",
+        "uniquePoint": "깍둑썰기한 연어회를 각종 채소 샐러드, 견과류, 현미밥, 소스와 곁들여 먹는 한끼 식사에요 ",
         "attributes": {
             "isPortable": true,
             "isCookable": false,
-            "mainIngredient": "수산물"
+            "mainIngredient": "생선/해산물"
         },
         "author": "민볼"
     },
     {
-        "id": "e8b187ac-6f6c-4c99-b353-2bb25600e397",
-        "title": "참치마요삼각김밥",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": false,
-            "mainIngredient": "수산물"
-        },
-        "author": "민볼"
-    },
-    {
-        "id": "d7900684-f2b1-43d5-a292-1ecbef897b6a",
-        "title": "연어포케ㅋㅋ...",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": false,
-            "mainIngredient": "수산물"
-        },
-        "author": "민볼"
-    },
-    {
-        "id": "d5cf349b-d36a-4361-b5a6-14cd58c87c59",
-        "title": "꼬막비빔밥(편의점에도 팜)",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": false,
-            "mainIngredient": "수산물"
-        },
-        "author": "민볼"
-    },
-    {
-        "id": "9c748e77-a1fa-411d-acb9-07db30fbc44d",
+        "id": "c455e116-6b3f-45dc-a8d6-aedf9619411f",
         "title": "참치포케",
-        "uniquePoint": "유니크 포인트 테스트",
+        "uniquePoint": "깍둑썰기한 참치회를 각종 채소 샐러드, 견과류, 현미밥, 소스와 곁들여 먹는 한끼 식사에요",
         "attributes": {
             "isPortable": true,
             "isCookable": false,
-            "mainIngredient": "수산물"
+            "mainIngredient": "생선/해산물"
         },
         "author": "민볼"
     },
     {
-        "id": "a366c57e-a217-4d2e-956f-d89048a9d820",
-        "title": "유부초밥",
-        "uniquePoint": "유니크 포인트 테스트",
+        "id": "325ae61d-1d73-4039-a883-8c48b21b7d76",
+        "title": "연어초밥",
+        "uniquePoint": "오메가3와 단백질이 풍부한 연어 초밥은 혈관 건강과 면역력 강화에 좋아요",
         "attributes": {
             "isPortable": true,
             "isCookable": false,
-            "mainIngredient": "두부"
+            "mainIngredient": "생선/해산물"
         },
         "author": "민볼"
     },
     {
-        "id": "8e7d7655-df69-45c9-a408-d8e0299d93d1",
-        "title": "마파두부덮밥(컵밥)",
-        "uniquePoint": "유니크 포인트 테스트",
+        "id": "a1b012c6-f3b0-497a-a3d7-1fb9859352b5",
+        "title": "프렌치토스트",
+        "uniquePoint": "우유와 계란에 빵을 적셔서 버터에 두른 팬에 구워낸 음식으로 부드러운 식감이 특징이에요",
         "attributes": {
             "isPortable": true,
             "isCookable": false,
-            "mainIngredient": "두부"
+            "mainIngredient": "콩·두부·계란"
         },
-        "author": "민볼"
+        "author": ""
     },
     {
-        "id": "39bc2716-6017-4274-815f-11b9e45ffdb1",
-        "title": "두부텐더",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": false,
-            "mainIngredient": "두부"
-        },
-        "author": "민볼"
-    },
-    {
-        "id": "2a0b6e70-e5b7-4e41-8c22-4bdb6bf841f7",
-        "title": "두부순대...",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": false,
-            "mainIngredient": "두부"
-        },
-        "author": "민볼"
-    },
-    {
-        "id": "dbd2134d-4a04-4b24-83e5-74b9e64c552b",
-        "title": "두부스낵",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": false,
-            "mainIngredient": "두부"
-        },
-        "author": "민볼"
-    },
-    {
-        "id": "3916ec35-3f78-4928-9774-7a0a0e7a9ef2",
-        "title": "강된장보리비빔밥(컵밥)",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": false,
-            "mainIngredient": "두부"
-        },
-        "author": "민볼"
-    },
-    {
-        "id": "468fe81a-c3f0-4f9e-9ee1-802dafba71d6",
-        "title": "두부샐러드",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": false,
-            "mainIngredient": "두부"
-        },
-        "author": "민볼"
-    },
-    {
-        "id": "30536af8-04af-40b1-8ae3-3f461db7451e",
-        "title": "두부함박스테이크",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": false,
-            "mainIngredient": "두부"
-        },
-        "author": "민볼"
-    },
-    {
-        "id": "ac54d91f-c895-4928-8e82-e723966f23e9",
-        "title": "두부강정",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": false,
-            "mainIngredient": "두부"
-        },
-        "author": "민볼"
-    },
-    {
-        "id": "a959c5a5-1760-41d8-bc00-e500d9fa300f",
+        "id": "92c3b301-4316-4fbe-ac02-7bbc06ce9353",
         "title": "두부김밥",
-        "uniquePoint": "유니크 포인트 테스트",
+        "uniquePoint": "야채와 두부를 넣어 담백하면서도 건강을 챙길 수 있는 웰빙 김밥이에요",
         "attributes": {
             "isPortable": true,
             "isCookable": false,
-            "mainIngredient": "두부"
+            "mainIngredient": "콩·두부·계란"
         },
         "author": "민볼"
     },
     {
-        "id": "0c7b6b03-594d-4c41-9cf9-492ba4d1e384",
+        "id": "5ac21efc-11b0-4ced-a5ba-28d26e1c8630",
         "title": "두부포케",
-        "uniquePoint": "유니크 포인트 테스트",
+        "uniquePoint": "두부를 각종 채소 샐러드, 견과류, 현미밥, 소스와 곁들여 먹는 한끼 식사에요 ",
         "attributes": {
             "isPortable": true,
             "isCookable": false,
-            "mainIngredient": "두부"
+            "mainIngredient": "콩·두부·계란"
         },
         "author": "민볼"
     },
     {
-        "id": "108f7143-437b-4c11-9225-27a2f5c413d6",
-        "title": "순두부 치즈그라탕",
-        "uniquePoint": "유니크 포인트 테스트",
+        "id": "15b8d038-1a19-4b6c-98da-9cb316974e56",
+        "title": "계란빵",
+        "uniquePoint": "부드럽고 촉촉한 식감에 단백질과 탄수화물이 어우러져 누구나 즐길 수 있는 간편한 음식이에요",
         "attributes": {
             "isPortable": true,
             "isCookable": false,
-            "mainIngredient": "두부"
+            "mainIngredient": "콩·두부·계란"
         },
-        "author": "민볼"
+        "author": "밥"
     },
     {
-        "id": "84c0338c-3429-4c49-91cd-82e62fa7995b",
-        "title": "두부김치",
-        "uniquePoint": "유니크 포인트 테스트",
+        "id": "339a3df9-cb56-4fe9-8a40-faee866a634d",
+        "title": "키토 김밥",
+        "uniquePoint": "밥 대신 계란 지단을 넣어 다이어트와 혈당 조절에 효과적인 김밥이에요",
         "attributes": {
             "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "두부"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "cf4fad37-ece3-439e-8cd4-f97c94cf78af",
-        "title": "두부강정",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "두부"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "f039176d-8d2b-4883-aea5-2c966d26c4bc",
-        "title": "두부샐러드",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "두부"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "b0767ce2-1e64-42b2-969a-b38646895305",
-        "title": "두부덮밥",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "두부"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "ae24fbeb-9a32-4277-9849-45feafb9734b",
-        "title": "두부김밥",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "두부"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "f7333e7c-48de-47e6-85da-51c10f7c26a2",
-        "title": "두부브로콜리덮밥",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "두부"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "7a358a7c-b82f-4636-8936-78e29b746ac2",
-        "title": "두부샌드위치",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "두부"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "041a1b34-908d-4c54-8538-cba6f9c2dcf0",
-        "title": "두부탕수육",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "두부"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "c6508902-3951-429f-bdd0-ff8584de6aa7",
-        "title": "두부유부초밥",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "두부"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "cfe6ea3d-60b3-4d7e-83d8-739c2d77b382",
-        "title": "두부고기완자",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "두부"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "7fce75b6-a296-4c8d-9de2-e801d9914e55",
-        "title": "두부볶음밥",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "두부"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "5a06ee03-0e1f-4dc9-8d64-272d81e16ed5",
-        "title": "두부면 김밥",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "두부"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "a34ae1d8-9bba-4d8b-b2a1-0f0b08225148",
-        "title": "두부김밥 (볶은 두부+닭가슴살)",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "두부"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "f6886675-4588-4d0d-97cc-ba1cf34c469c",
-        "title": "두부소보로덮밥",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "두부"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "262fff0e-52bd-4949-af6a-300227fb0c4b",
-        "title": "두부크로켓",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "두부"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "bced1c4e-b9de-46f7-a195-9742aa6ee449",
-        "title": "두부계란말이",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "두부"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "015f009c-7b18-4ecc-bede-0f170a7cb4ec",
-        "title": "두부김치볶음밥",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "두부"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "9dcd1175-14d4-4745-8fc8-6589089c2ca8",
-        "title": "두부참치주먹밥",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "두부"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "bbaa0744-d2fa-424b-be51-7ffb5fd83164",
-        "title": "두부샐러드볼 (밥+두부)",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "두부"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "c04bfd3c-f256-43c0-a0f7-9ceb8bed2113",
-        "title": "두부카프레제",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "두부"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "e2d951b7-de8b-46f2-b0d2-c7a3bee4a7e1",
-        "title": "마파두부",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "두부"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "8510455d-b373-453f-9cae-cf22b5bc8670",
-        "title": "일본식 두부 덮밥",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "두부"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "c028aaf3-e4f3-422f-9a3f-737064d5dee2",
-        "title": "두부김치볼",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "두부"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "4b7aba6a-3765-4c5b-ba72-d17891bb3369",
-        "title": "두부채소말이",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "두부"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "37d53486-5c1e-4867-b80e-231b450339c6",
-        "title": "두부김치말이",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "두부"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "ff7a8e62-2aae-4614-af12-15292d3671ba",
-        "title": "두부장아찌",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "두부"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "2d8e5e1d-bac4-428a-b291-92b550624ec5",
-        "title": "두부면 비빔국수",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "두부"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "5409cfdf-d08e-4ef9-ac66-f1216cd522c7",
-        "title": "두부면 콩국수",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "두부"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "ad2fdc04-4d1d-4bb7-a7fc-9826d1cb0f9a",
-        "title": "두부 두루치기",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "두부"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "e8bd8f2d-8a54-4791-8af6-e5360bb7a01d",
-        "title": "계란 두부 조림",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "두부"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "b185be3a-24fa-4a8e-af8c-c64234158d29",
-        "title": "계란 샌드위치",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "달걀"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "272b4f03-6811-4a7b-929c-d3711f1aa5b0",
-        "title": "달걀 샐러드",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "달걀"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "b576f90b-ac50-48ba-8355-0106fa0b51c2",
-        "title": "에그마요 주먹밥",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "달걀"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "d98d1ee0-e2fd-41c7-a388-02c2c8accabd",
-        "title": "계란 카레 주먹밥",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "달걀"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "8f3e2818-56e6-4bb6-a8eb-d31222593edf",
-        "title": "계란 크로켓",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "달걀"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "ac444e24-931a-4865-92b6-1d09559f9440",
-        "title": "계란 토스트",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "달걀"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "267e5a00-c6a0-4c35-bf9d-42a6aee6e213",
-        "title": "계란 샐러드 랩",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "달걀"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "33e756f6-5a28-42ab-b6fb-58c93f16c6f7",
-        "title": "계란 김밥",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "달걀"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "d92253ee-e577-40fe-b491-0d619daa6e52",
-        "title": "계란 주먹밥",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "달걀"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "bbe911a7-5748-45a4-9efc-38b8f001b774",
-        "title": "계란 치즈롤",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "달걀"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "d28c2960-a8bb-4f31-b2f9-9f66506784cf",
-        "title": "계란 샐러드 베이글 샌드위치",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "달걀"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "3f9dd1f4-f02e-4e3c-ac8c-2ccd9fe324c9",
-        "title": "계란 오이 샌드위치",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "달걀"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "2ea768d8-28f9-4764-a403-ebe16f76671a",
-        "title": "계란 핫도그",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "달걀"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "18650001-abb5-4138-8111-0ed9c74111d6",
-        "title": "계란 야채말이",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "달걀"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "8950c30f-2395-4b58-8717-990ed3af8158",
-        "title": "계란 베이컨롤",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "달걀"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "531b73a4-0217-4e20-896a-2042a4f0c147",
-        "title": "계란 치즈볼",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "달걀"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "5bd9a616-5ace-4002-a254-8f9a901f2a1c",
-        "title": "계란 크래커 카나페",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "달걀"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "d3abf1ac-8660-475e-bfc4-26b23449821c",
-        "title": "계란 만두",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "달걀"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "9afd63ae-1eac-4c23-9935-3c94bd724d9d",
-        "title": "계란 샐러드 김밥",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "달걀"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "8d5e9cd7-4d7a-43ef-9123-8a3c321276cf",
-        "title": "계란 토르티야 롤",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "달걀"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "49b20deb-ac18-4bfd-a726-af10146311cd",
-        "title": "계란 치즈 샌드위치",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "달걀"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "3002a5b5-5b31-47a8-a627-45f721d6f20f",
-        "title": "계란 미니 타르트",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "달걀"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "08db5d59-20a1-476b-b646-fc2c98e8597f",
-        "title": "토마토 에그 커리 볶음",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "달걀"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "8a78a3ea-6638-47a2-a631-8239dbae4156",
-        "title": "명란 달걀덮밥",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "달걀"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "9b8b7dab-a4e6-42d5-abba-1a463b83cd4f",
-        "title": "마약 토스트",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "달걀"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "0c470a23-c672-4f90-bcd9-b6690075f17a",
-        "title": "달걀 피타브레드 샌드위치",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "달걀"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "8163cae9-20ea-4605-8d66-b6648c04a34d",
-        "title": "달걀·아보카도 샌드위치",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "달걀"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "6aa5b934-a4f4-43f2-bf72-6aa5c2bb0f1f",
-        "title": "토마토계란피자",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "달걀"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "af09106b-b6ef-42c9-8798-1edc40906acd",
-        "title": "계란김치 오믈렛",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "달걀"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "4090068f-126d-42ce-b57c-55280166e842",
-        "title": "크래미 계란볶음",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "달걀"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "f7b6d1f4-ff59-47ed-b6d9-ac1709833c5b",
-        "title": "명란 달걀덮밥",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "달걀"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "7c315ad3-9f0a-44dd-80a1-0d3bad8eca63",
-        "title": "마약 토스트",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "달걀"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "9b22baa1-17b7-4cb5-b2ce-9466d53c0723",
-        "title": "달걀 피타브레드 샌드위치",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "달걀"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "3d796d55-63b7-4dba-ba4d-659e85badff3",
-        "title": "달걀·아보카도 샌드위치",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "달걀"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "7fb7f2f2-2d85-4d3c-af58-00bf71c4c446",
-        "title": "토마토계란피자",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "달걀"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "957fd8f2-8668-4ed1-ac5a-1a6742edb9e4",
-        "title": "계란김치 오믈렛",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "달걀"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "461ca8cb-91db-4516-a931-edd518e661e3",
-        "title": "크래미 계란볶음",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "달걀"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "392ff854-0abd-484b-a1de-3992e5783db5",
-        "title": "오므라이스",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": false,
             "isCookable": false,
-            "mainIngredient": "달걀"
+            "mainIngredient": "콩·두부·계란"
         },
-        "author": "에린"
+        "author": ""
     },
     {
-        "id": "0bf020ad-4014-435e-a358-d5f46959aad7",
-        "title": "에그 인 헬",
-        "uniquePoint": "유니크 포인트 테스트",
+        "id": "6e3ecbc6-b681-4312-ac4e-e210d6993e4b",
+        "title": "닭가슴살 샌드위치",
+        "uniquePoint": "소화가 편해서 부담없이 먹을 수 있어요.",
         "attributes": {
-            "isPortable": false,
-            "isCookable": false,
-            "mainIngredient": "달걀"
-        },
-        "author": "에린"
-    },
-    {
-        "id": "e8431cb0-96a5-4db0-bf0c-fefb103037f9",
-        "title": "달걀 카레 덮밥",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": false,
-            "isCookable": false,
-            "mainIngredient": "달걀"
-        },
-        "author": "에린"
-    },
-    {
-        "id": "6070602a-f7e3-4b44-a0ad-b1fca8f85be4",
-        "title": "계란 타마고야끼(일본식 계란말이) 도시락",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": false,
-            "isCookable": false,
-            "mainIngredient": "달걀"
-        },
-        "author": "에린"
-    },
-    {
-        "id": "f376e8fe-e569-4e50-9e81-517b5280ae0b",
-        "title": "계란 오야코동(일본식 닭고기계란덮밥)",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": false,
-            "isCookable": false,
-            "mainIngredient": "달걀"
-        },
-        "author": "에린"
-    },
-    {
-        "id": "75fd53da-7dfc-4648-8f79-5b6880037c67",
-        "title": "에그베네딕트샌드위치",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": false,
-            "isCookable": false,
-            "mainIngredient": "달걀"
-        },
-        "author": "에린"
-    },
-    {
-        "id": "11db3ddd-6bf1-443b-8a9e-11e3a6aeb069",
-        "title": "에그스프레드 오픈 샌드위치",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": false,
-            "isCookable": false,
-            "mainIngredient": "달걀"
-        },
-        "author": "에린"
-    },
-    {
-        "id": "3b58d8f8-01fe-4d64-ae4d-6dcd6c022a60",
-        "title": "키토김밥",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": false,
-            "isCookable": false,
-            "mainIngredient": "달걀"
-        },
-        "author": "에린"
-    },
-    {
-        "id": "2654bb16-373d-4808-9c26-cecb0de43838",
-        "title": "야채치즈계란말이",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": false,
-            "isCookable": false,
-            "mainIngredient": "달걀"
-        },
-        "author": "에린"
-    },
-    {
-        "id": "724ec180-7649-41e0-b822-4566b9382189",
-        "title": "소고기 육전",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": false,
+            "isPortable": true,
             "isCookable": true,
-            "mainIngredient": "육고기"
+            "mainIngredient": "닭고기/오리고기"
         },
-        "author": "에린"
+        "author": "밥"
     },
     {
-        "id": "be5f4e8f-c044-4bec-a767-a6a419097849",
-        "title": "소고기 덮밥",
-        "uniquePoint": "유니크 포인트 테스트",
+        "id": "e4874438-0974-43f5-a54b-5d141c5e2f88",
+        "title": "냉동 가라아게",
+        "uniquePoint": "바삭바삭 재밌는 식감을 간단한 조리로 느낄 수 있어요",
         "attributes": {
-            "isPortable": false,
+            "isPortable": true,
             "isCookable": true,
-            "mainIngredient": "육고기"
+            "mainIngredient": "닭고기/오리고기"
         },
-        "author": "에린"
+        "author": ""
     },
     {
-        "id": "b81c64f6-7fd2-4b22-8fe3-9f093b3d57a0",
-        "title": "수육",
-        "uniquePoint": "유니크 포인트 테스트",
+        "id": "1d51ef22-4278-4887-bb7b-988901413870",
+        "title": "닭가슴살 동그랑땡",
+        "uniquePoint": "한 입에 쏙 들어가는 닭가슴살 동그랑땡, 담백하면서도 씹는 재미가 있어요.",
         "attributes": {
-            "isPortable": false,
+            "isPortable": true,
             "isCookable": true,
-            "mainIngredient": "육고기"
+            "mainIngredient": "닭고기/오리고기"
         },
-        "author": "에린"
+        "author": ""
     },
     {
-        "id": "6361e06b-cd73-4f2d-bc2d-53041b32ebfc",
-        "title": "찹스테이크",
-        "uniquePoint": "유니크 포인트 테스트",
+        "id": "1ccd4ec4-1b0c-4067-9524-d9fb65fb92bf",
+        "title": "오리 훈제 샐러드",
+        "uniquePoint": "훈제향이 입맛을 돋우며, 채소와의 조합으로 식감과 영양을 모두 잡았어요.",
         "attributes": {
-            "isPortable": false,
+            "isPortable": true,
             "isCookable": true,
-            "mainIngredient": "육고기"
+            "mainIngredient": "닭고기/오리고기"
         },
-        "author": "에린"
+        "author": ""
     },
     {
-        "id": "190c20ef-7388-41bd-b28c-a82351bd34a3",
-        "title": "훈제오리야채찜",
-        "uniquePoint": "유니크 포인트 테스트",
+        "id": "0f93ef89-545d-4968-bf37-3d528e2df39a",
+        "title": "닭가슴살 샐러드",
+        "uniquePoint": "닭가슴살에 아삭한 야채가 곁들여져 다채로운 식감",
         "attributes": {
-            "isPortable": false,
+            "isPortable": true,
             "isCookable": true,
-            "mainIngredient": "육고기"
+            "mainIngredient": "닭고기/오리고기"
         },
-        "author": "에린"
+        "author": "밥"
     },
     {
-        "id": "cd812b38-3e3e-4f63-861a-f62645620df9",
-        "title": "목살양념갈비",
-        "uniquePoint": "유니크 포인트 테스트",
+        "id": "018650a0-ab18-41ab-9301-ecb8b89647ca",
+        "title": "스팸 무스비",
+        "uniquePoint": "뭉쳐놓은 밥 위에 스팸을 올려두고 김으로 싸서 주먹밥 형태로 만든 음식이에요",
         "attributes": {
-            "isPortable": false,
+            "isPortable": true,
             "isCookable": true,
-            "mainIngredient": "육고기"
+            "mainIngredient": "소고기/돼지고기"
         },
-        "author": "에린"
+        "author": ""
     },
     {
-        "id": "dafa272e-c1a6-45ca-9d88-0c49e6a2e1de",
-        "title": "함박스테이크 (밀키트 or 시판)",
-        "uniquePoint": "유니크 포인트 테스트",
+        "id": "81e3b5fe-c375-4d70-b6ab-2c1977134f08",
+        "title": "베이컨 샌드위치",
+        "uniquePoint": "재료 손질이 쉬워요.",
         "attributes": {
-            "isPortable": false,
+            "isPortable": true,
             "isCookable": true,
-            "mainIngredient": "육고기"
+            "mainIngredient": "소고기/돼지고기"
         },
-        "author": "에린"
+        "author": ""
     },
     {
-        "id": "b8d6e545-f006-4693-bcaf-3174ecfee5b4",
-        "title": "소고기 그라탕",
-        "uniquePoint": "유니크 포인트 테스트",
+        "id": "c7e0d5be-3f09-48c7-b1d5-fe1e938604c3",
+        "title": "소고기 파말이 구이",
+        "uniquePoint": "생각보다 간단하게 준비할 수 있는 별미 간식",
         "attributes": {
-            "isPortable": false,
+            "isPortable": true,
             "isCookable": true,
-            "mainIngredient": "육고기"
+            "mainIngredient": "소고기/돼지고기"
         },
-        "author": "에린"
+        "author": "밥"
     },
     {
-        "id": "76891f39-c7f4-4d52-a5a2-7e44280d9f05",
-        "title": "고추장 계란조림",
-        "uniquePoint": "유니크 포인트 테스트",
+        "id": "6e4ef6ad-5b06-411e-b1bb-9de2769e5fae",
+        "title": "소고기 주먹밥",
+        "uniquePoint": "간편하면서도 든든해요",
         "attributes": {
-            "isPortable": false,
+            "isPortable": true,
             "isCookable": true,
-            "mainIngredient": "육고기"
+            "mainIngredient": "소고기/돼지고기"
         },
-        "author": "에린"
+        "author": "밥"
     },
     {
-        "id": "5f6b466b-06c4-45d3-ad83-d16b47391f91",
-        "title": "돼지불백",
-        "uniquePoint": "유니크 포인트 테스트",
+        "id": "49790f51-f8ab-4a16-936b-fd025efda9ce",
+        "title": "냉동 미니 돈까스",
+        "uniquePoint": "프라이팬 한 개로 조리할 수 있어요",
         "attributes": {
-            "isPortable": false,
+            "isPortable": true,
             "isCookable": true,
-            "mainIngredient": "육고기"
+            "mainIngredient": "소고기/돼지고기"
         },
-        "author": "에린"
+        "author": "밥"
     },
     {
-        "id": "dd4a0021-db23-4d4f-8106-86e522884ee2",
-        "title": "돼지고기김치찜",
-        "uniquePoint": "유니크 포인트 테스트",
+        "id": "5d042aa5-5902-434c-870d-8ec065df6001",
+        "title": "날치알 주먹밥",
+        "uniquePoint": "톡톡 터지는 날치알의 식감이 밥과 어우러져 간편하면서도 재미있는 맛을 제공해요",
         "attributes": {
-            "isPortable": false,
+            "isPortable": true,
             "isCookable": true,
-            "mainIngredient": "육고기"
+            "mainIngredient": "생선/해산물"
         },
-        "author": "에린"
+        "author": "밥"
     },
     {
-        "id": "06c7ab3d-7020-4677-a5b5-d2cfe7dcb8e9",
-        "title": "소고기메추리알장조림",
-        "uniquePoint": "유니크 포인트 테스트",
+        "id": "0fdeb52a-6cf0-43ff-ac45-da27f50e467b",
+        "title": "참치마요 주먹밥",
+        "uniquePoint": "참치와 마요네즈의 조화로 고소하고 영양이 풍부하며 간편하게 즐길 수 있어요",
         "attributes": {
-            "isPortable": false,
+            "isPortable": true,
             "isCookable": true,
-            "mainIngredient": "육고기"
+            "mainIngredient": "생선/해산물"
         },
-        "author": "에린"
+        "author": "밥"
     },
     {
-        "id": "ceb0f274-1be3-4770-83e5-7d732a43fb56",
-        "title": "오야꼬동",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": false,
-            "isCookable": true,
-            "mainIngredient": "육고기"
-        },
-        "author": "에린"
-    },
-    {
-        "id": "142cff1b-f6b8-4c52-91d1-92372b0aca47",
-        "title": "규동",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": false,
-            "isCookable": true,
-            "mainIngredient": "육고기"
-        },
-        "author": "에린"
-    },
-    {
-        "id": "053f9057-461f-4286-990c-ee3aac36fce5",
-        "title": "돈부리",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": false,
-            "isCookable": true,
-            "mainIngredient": "육고기"
-        },
-        "author": "에린"
-    },
-    {
-        "id": "f0e94623-4ddf-4709-b4f0-97bb98220c52",
-        "title": "새우 볶음밥",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": false,
-            "isCookable": true,
-            "mainIngredient": "수산물"
-        },
-        "author": "에린"
-    },
-    {
-        "id": "93c81eff-354e-416a-b47c-140b592963de",
-        "title": "게살 볶음밥",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": false,
-            "isCookable": true,
-            "mainIngredient": "수산물"
-        },
-        "author": "에린"
-    },
-    {
-        "id": "ac618e36-4d17-46d6-afb2-e677e00cbeee",
-        "title": "쭈꾸미볶음",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": false,
-            "isCookable": true,
-            "mainIngredient": "수산물"
-        },
-        "author": "에린"
-    },
-    {
-        "id": "2219d1d1-e443-4b35-92ea-b1854e3d6b61",
-        "title": "낚지볶음",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": false,
-            "isCookable": true,
-            "mainIngredient": "수산물"
-        },
-        "author": "에린"
-    },
-    {
-        "id": "f31e4fcf-8681-4bfa-9df3-84b2a9f0807c",
-        "title": "감바스 + 파스타면",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": false,
-            "isCookable": true,
-            "mainIngredient": "수산물"
-        },
-        "author": "에린"
-    },
-    {
-        "id": "6899c8be-2632-48ea-a8bb-d5d74dfa0e84",
-        "title": "고등어 솥밥",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": false,
-            "isCookable": true,
-            "mainIngredient": "수산물"
-        },
-        "author": "에린"
-    },
-    {
-        "id": "d4551f7b-a802-4a1d-a7b8-4ecc6bba6be2",
-        "title": "연어국수",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": false,
-            "isCookable": true,
-            "mainIngredient": "수산물"
-        },
-        "author": "에린"
-    },
-    {
-        "id": "4b4fcf84-52d1-49e4-a0f6-fba3041926e7",
-        "title": "새우완자전골",
-        "uniquePoint": "유니크 포인트 테스트",
-        "attributes": {
-            "isPortable": false,
-            "isCookable": true,
-            "mainIngredient": "수산물"
-        },
-        "author": "에린"
-    },
-    {
-        "id": "b9ea57bc-bed0-4a95-9542-ba15074228f6",
+        "id": "eda498ac-dc5c-4c6a-bd68-8431f62821d6",
         "title": "크래미전",
-        "uniquePoint": "유니크 포인트 테스트",
+        "uniquePoint": "달달한 크래미의 기본 맛과 간단한 조리법으로 누구나 쉽게 만들 수 있는 간편 음식이에요",
         "attributes": {
             "isPortable": false,
             "isCookable": true,
-            "mainIngredient": "수산물"
+            "mainIngredient": "생선/해산물"
         },
         "author": "에린"
+    },
+    {
+        "id": "b3856250-13ae-49d9-8e0c-495d8c4b50e4",
+        "title": "명란젓 주먹밥",
+        "uniquePoint": "단백질과 비타민B12가 풍부한 명란젓 주먹밥은 근육 형성과 뼈건강에 좋아요",
+        "attributes": {
+            "isPortable": true,
+            "isCookable": true,
+            "mainIngredient": "생선/해산물"
+        },
+        "author": "밥"
+    },
+    {
+        "id": "b1052810-61cb-4b99-b31f-db4dfd591d71",
+        "title": "참치 야채 샌드위치",
+        "uniquePoint": "고단백, 저지방 참치와 신선한 채소가 어우러져 간편하면서도 균형 잡힌 영양을 섭취할 수 있어요",
+        "attributes": {
+            "isPortable": true,
+            "isCookable": true,
+            "mainIngredient": "생선/해산물"
+        },
+        "author": "밥"
+    },
+    {
+        "id": "89da1829-86f4-42b2-87e5-1573236cfd91",
+        "title": "유부초밥",
+        "uniquePoint": "바쁜 일상에 간편하게 만들 수 있으며 든든한 한 끼 식사로 손색이 없어요",
+        "attributes": {
+            "isPortable": true,
+            "isCookable": true,
+            "mainIngredient": "콩·두부·계란"
+        },
+        "author": "민볼"
+    },
+    {
+        "id": "e95b12ab-7352-480b-a3f9-582446f69fa8",
+        "title": "계란 샌드위치",
+        "uniquePoint": "고소한 계란이 듬뿍 들어가 단백질을 풍부하게 섭취할 수 있어요",
+        "attributes": {
+            "isPortable": true,
+            "isCookable": true,
+            "mainIngredient": "콩·두부·계란"
+        },
+        "author": "산들"
+    },
+    {
+        "id": "255c90aa-cd6d-4207-924d-a972a6c7d558",
+        "title": "삶은계란 샐러드",
+        "uniquePoint": "간단하게 만들 수 있으면서도 신선한 채소와 계란으로 영양 밸런스를 맞출 수 있어요",
+        "attributes": {
+            "isPortable": true,
+            "isCookable": true,
+            "mainIngredient": "콩·두부·계란"
+        },
+        "author": "산들"
+    },
+    {
+        "id": "2caabc88-27b0-4ef9-a7c7-419455b1cbd9",
+        "title": "야채 계란말이",
+        "uniquePoint": "다양한 채소와 계란이 어우러져 색감과 식감이 뛰어나요",
+        "attributes": {
+            "isPortable": true,
+            "isCookable": true,
+            "mainIngredient": "콩·두부·계란"
+        },
+        "author": ""
+    },
+    {
+        "id": "50f93403-3579-4507-8357-8cab3697be05",
+        "title": "계란 주먹밥",
+        "uniquePoint": "한입 크기로 간편하게 먹을 수 있어 도시락이나 간식으로 적합해요",
+        "attributes": {
+            "isPortable": true,
+            "isCookable": true,
+            "mainIngredient": "콩·두부·계란"
+        },
+        "author": "산들"
+    },
+    {
+        "id": "18b96977-9cbe-44d1-9929-3baf5779659a",
+        "title": "닭볶음탕",
+        "uniquePoint": "닭고기와 채소를 함께 끓여 부드럽게 먹을 수 있어요.",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": false,
+            "mainIngredient": "닭고기/오리고기"
+        },
+        "author": "요시"
+    },
+    {
+        "id": "4a7492f3-9f57-4bc9-9c8f-c8865d35c89b",
+        "title": "족발",
+        "uniquePoint": "풍부한 콜라겐과 젤라틴이 피부와 관절건강에 좋아요.",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": false,
+            "mainIngredient": "소고기/돼지고기"
+        },
+        "author": ""
+    },
+    {
+        "id": "9de6d7e4-2714-46ae-aa55-30a260dcfe0b",
+        "title": "보쌈",
+        "uniquePoint": "담백한 맛과 부드러운 식감을 가지고있어요.",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": false,
+            "mainIngredient": "소고기/돼지고기"
+        },
+        "author": ""
+    },
+    {
+        "id": "2c2a99c9-cbf6-4cc3-95b9-ee522454dffe",
+        "title": "삼겹살 구이",
+        "uniquePoint": "씹을수록 고소한 풍미, 채소와 곁들이면 더 건강한 한끼에요.",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": false,
+            "mainIngredient": "소고기/돼지고기"
+        },
+        "author": ""
+    },
+    {
+        "id": "66be07f1-d2bb-49aa-8fda-12be893adb28",
+        "title": "함박 스테이크",
+        "uniquePoint": "다진 고기라서 씹기 편하고, 소화에 부담이 덜해요.",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": false,
+            "mainIngredient": "소고기/돼지고기"
+        },
+        "author": "요시"
+    },
+    {
+        "id": "64d85a53-f460-41f7-93fa-8c9edd47a19b",
+        "title": "제육볶음",
+        "uniquePoint": "삶은 고기라 기름기가 적고 소화에 부담이 덜해요.",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": false,
+            "mainIngredient": "소고기/돼지고기"
+        },
+        "author": "요시"
+    },
+    {
+        "id": "07e23be3-4228-4561-95e5-8bfd9e3a9421",
+        "title": "닭갈비",
+        "uniquePoint": "매콤한 양념으로 느끼하지 않게, 닭고기와 채소를 함께 먹을 수 있어요.",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": false,
+            "mainIngredient": "닭고기/오리고기"
+        },
+        "author": "요시"
+    },
+    {
+        "id": "08443300-2cce-46bf-8fe0-73fda9f07d63",
+        "title": "오리백숙",
+        "uniquePoint": "진한 보양섭취에 좋아요.",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": false,
+            "mainIngredient": "닭고기/오리고기"
+        },
+        "author": ""
+    },
+    {
+        "id": "d0ba6af0-fdce-486d-ba7b-5d09b798813e",
+        "title": "삼계탕",
+        "uniquePoint": "속 편한 영양으로 부담없이 즐기기 좋은 보양식이에요.",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": false,
+            "mainIngredient": "닭고기/오리고기"
+        },
+        "author": ""
+    },
+    {
+        "id": "9d561be2-ec4c-4aec-a508-0fee820e67d0",
+        "title": "찜닭",
+        "uniquePoint": "자극적이지 않게 닭고기와 채소를 함께 먹을 수 있어요.",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": false,
+            "mainIngredient": "닭고기/오리고기"
+        },
+        "author": "요시"
+    },
+    {
+        "id": "b2f01a43-2424-486d-9851-d8bd40cc46dd",
+        "title": "고등어조림",
+        "uniquePoint": "오메가3와 단백질이 풍부해 심혈관 건강에 좋고, 무의 감칠맛을 함께 즐기며 포만감이 오래가요",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": false,
+            "mainIngredient": "생선/해산물"
+        },
+        "author": "요시"
+    },
+    {
+        "id": "d84eb159-4362-4c7d-a9c7-bd3092f9fb66",
+        "title": "낙곱새",
+        "uniquePoint": "낙지, 곱창, 새우의 다양한 식감이 어우러져 씹는 재미와 감칠맛을 동시에 느낄 수 있어요",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": false,
+            "mainIngredient": "생선/해산물"
+        },
+        "author": "요시"
+    },
+    {
+        "id": "b7d986da-ab33-4ca1-b6ed-c431cac343a2",
+        "title": "전복죽",
+        "uniquePoint": "전복에 풍부한 단백질과 무기질이 있어 영양 보양식이며, 소화가 잘 되고 회복식으로도 좋아요",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": false,
+            "mainIngredient": "생선/해산물"
+        },
+        "author": "요시"
+    },
+    {
+        "id": "17628ef1-1650-49af-80a8-5a3ab05c1ef7",
+        "title": "간장게장, 양념게장",
+        "uniquePoint": "고단백, 저칼로리 게살과 발효 간장 또는 매콤한 양념의 조화로 밥도둑이라 불릴 만큼 감칠맛이 뛰어나요",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": false,
+            "mainIngredient": "생선/해산물"
+        },
+        "author": "요시"
+    },
+    {
+        "id": "a154e4cb-0512-4273-be14-0f1de1614c48",
+        "title": "아귀찜",
+        "uniquePoint": "고단백, 저칼로리 아귀와 미더덕, 콩나물 등 다양한 재료가 어우러져 영양과 포만감 모두 느낄 수 있어요",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": false,
+            "mainIngredient": "생선/해산물"
+        },
+        "author": "요시"
+    },
+    {
+        "id": "92c18eda-7a14-4ff0-9b7f-87f9452949d0",
+        "title": "마파두부",
+        "uniquePoint": "부드러운 두부와 매콤한 소스가 어우러져 입맛을 돋우어요",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": false,
+            "mainIngredient": "콩·두부·계란"
+        },
+        "author": "산들"
+    },
+    {
+        "id": "6097615d-fa70-486b-ab93-31f23643143b",
+        "title": "유부전골",
+        "uniquePoint": "유부와 각종 재료가 국물에 우러나 깊고 담백한 맛을 즐길 수 있어요",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": false,
+            "mainIngredient": "콩·두부·계란"
+        },
+        "author": "요시"
+    },
+    {
+        "id": "394baf35-a08f-4b62-a25d-4c11d54284f9",
+        "title": "두부조림",
+        "uniquePoint": "단백질이 풍부하고, 고소한 두부를 졸여 감칠맛을 느낄 수 있어요",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": false,
+            "mainIngredient": "콩·두부·계란"
+        },
+        "author": ""
+    },
+    {
+        "id": "8efcb63b-7008-4e46-a8b0-e16a7a6126aa",
+        "title": "오므라이스",
+        "uniquePoint": "볶음밥과 계란이 조화되어 한 그릇에 다양한 맛과 영양을 담았어요",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": false,
+            "mainIngredient": "콩·두부·계란"
+        },
+        "author": "에린"
+    },
+    {
+        "id": "d609b908-b41b-4ef8-a391-eb8f5dbf042e",
+        "title": "에그 인 헬",
+        "uniquePoint": "토마토 소스에 반숙 계란을 넣어 만든 음식으로 부드러운 식빵과 밥에 곁들여 먹는 이국적이면서도 든든한 한끼에요",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": false,
+            "mainIngredient": "콩·두부·계란"
+        },
+        "author": "에린"
+    },
+    {
+        "id": "3dd8a264-5bc9-4118-8e09-67a084e9342d",
+        "title": "소고기 메추리알 장조림",
+        "uniquePoint": "오래 보관하기 좋아요.",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": true,
+            "mainIngredient": "소고기/돼지고기"
+        },
+        "author": ""
+    },
+    {
+        "id": "f47d1fda-921e-402b-ad8a-4fdee9ef854f",
+        "title": "샤브샤브",
+        "uniquePoint": "다양한 영양소를 골고루 섭취할수있어요.",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": true,
+            "mainIngredient": "소고기/돼지고기"
+        },
+        "author": ""
+    },
+    {
+        "id": "9d98dba9-708b-4fad-ab6e-1fd2c86c8231",
+        "title": "소고기죽",
+        "uniquePoint": "씹기 편하고 간 소고기로 단백질을 챙길수있어요.",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": true,
+            "mainIngredient": "소고기/돼지고기"
+        },
+        "author": ""
+    },
+    {
+        "id": "1b790757-a49c-4f0a-8ace-f1adb1724c8e",
+        "title": "소고기 육전",
+        "uniquePoint": "부드러운 소고기를 계란으로 부쳐내 단백질이 가득해요.",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": true,
+            "mainIngredient": "소고기/돼지고기"
+        },
+        "author": "에린"
+    },
+    {
+        "id": "d8807110-d7a1-412e-a01e-bd14d95606c6",
+        "title": "찹스테이크",
+        "uniquePoint": "한 입 크기로 썰어낸 고기와 채소가 씹기 편하고 맛도 다채로워요.",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": true,
+            "mainIngredient": "소고기/돼지고기"
+        },
+        "author": "에린"
+    },
+    {
+        "id": "6326c8e1-ee06-443e-890f-9fe87a651f1b",
+        "title": "닭날개 간장조림",
+        "uniquePoint": "보관하고 먹기 좋아요.",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": true,
+            "mainIngredient": "닭고기/오리고기"
+        },
+        "author": ""
+    },
+    {
+        "id": "07944ea8-9b9f-4e50-960f-5b1ef6ba2947",
+        "title": "훈제오리야채찜",
+        "uniquePoint": "훈제오리의 훈제향이 야채와 어우러져 깊은맛을 느낄수있어요. ",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": true,
+            "mainIngredient": "닭고기/오리고기"
+        },
+        "author": "에린"
+    },
+    {
+        "id": "d833c697-8395-416c-bb7a-cbd7afbf9799",
+        "title": "닭곰탕",
+        "uniquePoint": "푹 삶아 속까지 촉촉한 닭살로 속이 편안해요.",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": true,
+            "mainIngredient": "닭고기/오리고기"
+        },
+        "author": ""
+    },
+    {
+        "id": "93034e91-0e53-44b1-92d6-88dd8c875530",
+        "title": "닭죽",
+        "uniquePoint": "소화가 편해서 부담없이 먹을 수 있어요",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": true,
+            "mainIngredient": "닭고기/오리고기"
+        },
+        "author": "밥"
+    },
+    {
+        "id": "bcc80ed7-8963-41e3-a813-37205b4744ad",
+        "title": "오리무쌈말이",
+        "uniquePoint": "오리고기의 담백함과 쌈무의 새콤함이 어우러져 맛이 오래 지속돼요.",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": true,
+            "mainIngredient": "닭고기/오리고기"
+        },
+        "author": "에린"
+    },
+    {
+        "id": "5ddf2d9a-de8a-45cc-a077-3fc3b03c3bc2",
+        "title": "새우 볶음밥",
+        "uniquePoint": "새우와 채소가 어우러져 다양한 영양소를 한 번에 섭취할 수 있으며, 여러 식감을 느낄 수 있어요",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": true,
+            "mainIngredient": "생선/해산물"
+        },
+        "author": "에린"
+    },
+    {
+        "id": "e765a230-f180-45e3-9a2d-0a59ec272d4a",
+        "title": "게살 볶음밥",
+        "uniquePoint": "부드러운 게살과 고소한 밥이 어우러져 누구나 부담 없이 즐길 수 있어요",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": true,
+            "mainIngredient": "생선/해산물"
+        },
+        "author": "에린"
+    },
+    {
+        "id": "0d0fa190-2967-4264-8d77-c328bae50b57",
+        "title": "해물 누룽지탕",
+        "uniquePoint": "누룽지에 여러 가지 해물을 기호에 맞게 넣어 걸쭉하게 끓인 탕으로 별미에요",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": true,
+            "mainIngredient": "생선/해산물"
+        },
+        "author": "에린"
+    },
+    {
+        "id": "2b71c7ee-d56b-45e6-8488-862bedcded79",
+        "title": "골뱅이 무침",
+        "uniquePoint": "고단백·저지방 골뱅이와 채소가 어우러져 단백질 보충과 피부 건강에 효과적이에요",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": true,
+            "mainIngredient": "생선/해산물"
+        },
+        "author": "에린"
+    },
+    {
+        "id": "5b5d51a1-08d9-47d5-8f20-87647d1b09fc",
+        "title": "훈제 연어 월남쌈",
+        "uniquePoint": "신선한 채소와 훈제 연어가 어우러져 가볍고 산뜻하게 즐길 수 있는 건강식이에요",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": true,
+            "mainIngredient": "생선/해산물"
+        },
+        "author": "에린"
+    },
+    {
+        "id": "8000086b-8c3a-4ddc-81dd-52332c6c8e97",
+        "title": "순두부찌개",
+        "uniquePoint": "부드러운 순두부와 얼큰한 국물이 속을 편안하게 해주어요",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": true,
+            "mainIngredient": "콩·두부·계란"
+        },
+        "author": "웬디"
+    },
+    {
+        "id": "368d623f-2043-4b59-9e84-56795f9cb18c",
+        "title": "두부김치",
+        "uniquePoint": "담백한 두부와 매콤한 김치가 어우러져 부드러우면서도 아삭한 식감을 동시에 느낄 수 있어요",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": true,
+            "mainIngredient": "콩·두부·계란"
+        },
+        "author": "웬디"
+    },
+    {
+        "id": "6fb333c7-ffb6-46bb-87a0-b581c075977b",
+        "title": "계란찜",
+        "uniquePoint": "부드럽고 촉촉한 식감으로 누구나 부담 없이 먹을 수 있어요",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": true,
+            "mainIngredient": "콩·두부·계란"
+        },
+        "author": "웬디"
+    },
+    {
+        "id": "8d4b23c9-5abd-418d-9dc5-f4b4178f9329",
+        "title": "계란카레덮밥",
+        "uniquePoint": "카레와 계란이 어우러져 풍미와 영양을 동시에 잡았어요",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": true,
+            "mainIngredient": "콩·두부·계란"
+        },
+        "author": "웬디"
+    },
+    {
+        "id": "c3484389-c632-4cd4-99ff-c6c933f259e4",
+        "title": "계란죽",
+        "uniquePoint": "소화가 잘 되고 부담이 없어 아플 때나 아침 식사로 적합해요",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": true,
+            "mainIngredient": "콩·두부·계란"
+        },
+        "author": "웬디"
     }
 ]
