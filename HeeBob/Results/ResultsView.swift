@@ -6,11 +6,13 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ResultsView: View {
+    @StateObject var viewModel: ResultsViewModel
+    
     @State private var activeID: String?
     @State private var selectedIndex: Int = 0
-    let carouselItems: [CarouselItem] = foods.map { .food($0) } + [.addCard]
     
     var body: some View {
         VStack {
@@ -30,16 +32,18 @@ struct ResultsView: View {
                 ),
                 selection: $activeID,
                 selectedIndex: $selectedIndex,
-                data: carouselItems
+                data: viewModel.carouselItems
             ) { item in
                 switch item {
                 case .food(let food):
                     ResultCard(food: food) {
-                        print(food.title)
+                        // TODO: 메뉴 상세 보기 연결
                     }
                 case .addCard:
                     AddCard {
-                        print("아이템 추가 누름")
+                        Task {
+                            await viewModel.loadOneMoreRecommendation()
+                        }
                     }
                 }
             }
