@@ -88,7 +88,7 @@ struct OnboardingContent {
         .init(
             title: "아버지의 기준에 맞춰\n한 분만을 위한 메뉴를 선정했어요",
             foregroundImageName: nil,
-            backgroundImageName: .onboardingTextBackground,
+            backgroundImageName: .commonTextBackground,
             backgroundColor: Color.hbBackground
         ),
         .init(
@@ -136,7 +136,7 @@ struct OnboardingContent {
         .init(
             title: "앞으로의 메뉴 고민은\n희밥이 도와드릴게요",
             foregroundImageName: nil,
-            backgroundImageName: .onboardingTextBackground,
+            backgroundImageName: .commonTextBackground,
             backgroundColor: Color.hbBackground
         ),
     ]
