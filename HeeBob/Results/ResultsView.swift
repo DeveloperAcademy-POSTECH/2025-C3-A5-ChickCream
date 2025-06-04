@@ -71,6 +71,9 @@ struct ResultsView: View {
             .padding(.horizontal, 20)
             .padding(.bottom, 27)
         }
+        .onAppear {
+            loadInitialRecommendations()
+        }
         .HBNavigationBar(centerView: {
             Text("추천 결과")
                 .font(.hbTitle)
