@@ -15,7 +15,7 @@ class FavoriteViewModel: ObservableObject {
     
     @Published var isPortableUserSelected: Bool? = nil
     @Published var isCookableUserSelected: Bool? = nil
-    @Published var isMainIngredientUserSelected: [FoodIngredient] = []
+    @Published var mainIngredientsUserSelected: [FoodIngredient] = []
     
     
     var modelContext: ModelContext!
@@ -85,13 +85,13 @@ class FavoriteViewModel: ObservableObject {
     
 //    private func loadFavoritesByUserSelectedOption() {
 //        let descriptor = FetchDescriptor<Favorite>(predicate: #Predicate { favorite in
-//            // TODO: isPortableUserSelected,isCookableUserSelected,isMainIngredientUserSelected를 이용해 Predicate 작성
+//            // TODO: isPortableUserSelected,isCookableUserSelected,mainIngredientsUserSelected를 이용해 Predicate 작성
 //        })
 //    }
     private func loadFavoritesByUserSelectedOption() {
         let portableFilter = isPortableUserSelected
         let cookableFilter = isCookableUserSelected
-        let mainIngredients = isMainIngredientUserSelected.map { $0.rawValue }
+        let mainIngredients = mainIngredientsUserSelected.map { $0.rawValue }
         
         let predicate = #Predicate<Favorite> { favorite in
             // 휴대성 필터 조건 (옵셔널 처리)
