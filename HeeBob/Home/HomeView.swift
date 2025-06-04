@@ -9,6 +9,8 @@ import SwiftUI
 import Lottie
 
 struct HomeView: View {
+    let onboardingButtonColor = Color(hex: "#1C1B1F")
+    
     var body: some View {
         ZStack {
             LinearGradient(
@@ -28,9 +30,15 @@ struct HomeView: View {
                     
                     Spacer()
                     
-                    Image(systemName: "questionmark.circle")
-                        .resizable()
-                        .frame(width: 24, height: 24)
+                    Button {
+                        print("온보딩 보기") // TODO: Navigate
+                    } label: {
+                        Image(systemName: "questionmark.circle")
+                            .resizable()
+                            .renderingMode(.template)
+                            .foregroundStyle(onboardingButtonColor)
+                            .frame(width: 24, height: 24)
+                    }
                 }
                 .padding(24)
                 
