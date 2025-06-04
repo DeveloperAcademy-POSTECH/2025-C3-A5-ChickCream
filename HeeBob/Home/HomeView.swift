@@ -77,6 +77,9 @@ struct HomeView: View {
                     FavoriteViewPlaceHolder().environmentObject(router)
                 case .search:
                     SearchViewPlaceHolder().environmentObject(router)
+                case .detail(let Food):
+                    MenuDetailView(food: Food)
+                        .environmentObject(router)
                 }
             }
         }
