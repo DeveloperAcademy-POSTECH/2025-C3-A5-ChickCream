@@ -9,6 +9,17 @@ import SwiftUI
 
 struct FavoriteModalView: View {
     @ObservedObject var favoriteViewModel = FavoriteViewModel()
+    
+    @State private var isForkBeef: Int? = 1
+    @State private var isChickenDuckMeat: Int? = 2
+    @State private var isFish: Int? = 3
+    @State private var isTofuEgg: Int? = 4
+    
+    @State private var isForkBeefToggle: Bool = false
+    @State private var isChickenDuckMeatToggle: Bool = false
+    @State private var isFishToggle: Bool = false
+    @State private var isTofuEggToggle: Bool = false
+    
     var body: some View {
         if favoriteViewModel.showingfavoriteSortType == .portable {
             VStack(alignment: .leading) {
@@ -16,8 +27,10 @@ struct FavoriteModalView: View {
                     .padding()
                 Divider()
                 //TODO: foreach써서 버튼 반복 돌리기... favorite받아온거 이용해서
+                
                 Button {
                     print("모두 보기")
+                    favoriteViewModel.portableSortTypeSelected(for: nil)
                 } label: {
                     Text("모두 보기")
                         .padding()
@@ -37,10 +50,80 @@ struct FavoriteModalView: View {
         } else if favoriteViewModel.showingfavoriteSortType == .cookable {
             Text("식사 준비")
             Divider()
+            
+            Button {
+                print("모두 보기")
+                favoriteViewModel.cookableSortTypeSelected(for: nil)
+            } label: {
+                Text("모두 보기")
+                    .padding()
+            }
+            Button {
+                favoriteViewModel.cookableSortTypeSelected(for: true)
+            } label: {
+                Text("직접 준비할래요")
+            }
+            Button {
+                favoriteViewModel.cookableSortTypeSelected(for: false)
+            } label: {
+                Text("사서 먹을래요")
+            }
                 .presentationDetents([.fraction(0.5)])
         } else if favoriteViewModel.showingfavoriteSortType == .mainIngredient {
             Text("주재료")
             Divider()
+            
+            Toggle(isOn: $isForkBeefToggle) {
+                Text("소고기 돼지고기")
+            }
+            .toggleStyle(CheckboxToggleStyle()) // 체크박스 스타일 적용
+            .padding()
+            .onChange(of: isForkBeef) {
+                if isForkBeefToggle {
+                    favoriteViewModel.mainIngredientSortTypeSelected(for: isForkBeef)
+                } else {
+                    favoriteViewModel.mainIngredientSortTypeSelected(for: nil)
+                }
+            }
+            
+            Toggle(isOn: $isChickenDuckMeatToggle) {
+                Text("닭고기 오리고기")
+            }
+            .toggleStyle(CheckboxToggleStyle()) // 체크박스 스타일 적용
+            .padding()
+            .onChange(of: isChickenDuckMeat) {
+                if isChickenDuckMeatToggle {
+                    favoriteViewModel.mainIngredientSortTypeSelected(for: isChickenDuckMeat)
+                } else {
+                    favoriteViewModel.mainIngredientSortTypeSelected(for: nil)
+                }
+            }
+            
+            Toggle(isOn: $isFishToggle) {
+                Text("물고기 해산물")
+            }
+            .toggleStyle(CheckboxToggleStyle()) // 체크박스 스타일 적용
+            .padding()
+            .onChange(of: isFish) {
+                if isFishToggle {
+                    favoriteViewModel.mainIngredientSortTypeSelected(for: isFish)
+                } else {
+                    favoriteViewModel.mainIngredientSortTypeSelected(for: nil)
+                }
+            }
+            
+            Toggle(isOn: $isTofuEggToggle) {
+                Text("콩 두부 달걀")
+            }
+            .toggleStyle(CheckboxToggleStyle()) // 체크박스 스타일 적용
+            .padding()
+            .onChange(of: isTofuEgg) {
+                if isTofuEggToggle {
+                    favoriteViewModel.mainIngredientSortTypeSelected(for: isTofuEgg)
+                } else {
+                    favoriteViewModel.mainIngredientSortTypeSelected(for: nil)
+                }
+            }
                 .presentationDetents([.fraction(0.5)])
         }
     }
