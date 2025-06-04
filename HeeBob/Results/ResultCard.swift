@@ -76,9 +76,11 @@ extension ResultCard {
     private func toggleFavorite() {
         if let existing = favorites.first(where: { $0.food.id == food.id }) {
             modelContext.delete(existing)
+            try! modelContext.save()
         } else {
             let newFavorite = Favorite(id: UUID(), food: food, createdAt: Date())
             modelContext.insert(newFavorite)
+            try! modelContext.save()
         }
     }
     

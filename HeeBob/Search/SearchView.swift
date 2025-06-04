@@ -12,6 +12,8 @@ struct SearchView: View {
     @Environment(\.dismiss) var dismiss
     @Environment(\.modelContext) private var modelContext
     
+    @EnvironmentObject var router: NavigationRouter
+    
     @Query private var allFavorites: [Favorite]
     
     @State private var searchText: String = ""
@@ -59,8 +61,7 @@ struct SearchView: View {
                     LazyVGrid(columns: columns, spacing: 12) {
                         ForEach(filteredFavorites) { favorite in
                             Button {
-                                // FoodDetailView(food: favorite.food)
-                                //  .toolbarRole(.editor)
+                                router.push(.detail(food: favorite.food))
                             } label: {
                                 // FIXME: 통합 후 주석 해제 예정
                                 // FavoriteMenuCard(food: favorite.food, favorite: favorite)
@@ -72,6 +73,7 @@ struct SearchView: View {
             Spacer()
         }
         .padding(.horizontal, 16)
+        .navigationBarBackButtonHidden(true)
     }
 }
 
