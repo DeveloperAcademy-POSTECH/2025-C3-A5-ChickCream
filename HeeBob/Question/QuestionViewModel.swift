@@ -112,6 +112,7 @@ extension QuestionViewModel {
     }
     
     private func initPreviousAnswers() {
+        selectedIndex = 0
         for i in questions.indices {
             questions[i].select(for: nil)
         }
