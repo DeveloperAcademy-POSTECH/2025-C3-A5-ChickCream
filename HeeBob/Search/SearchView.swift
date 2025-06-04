@@ -17,7 +17,7 @@ struct SearchView: View {
     @State private var searchText: String = ""
     
     var filteredFavorites: [Favorite] {
-        guard !searchText.isEmpty else { return allFavorites }
+        guard !searchText.isEmpty else { return [] }
         return allFavorites.filter {
             $0.food.title.localizedCaseInsensitiveContains(searchText)
         }
