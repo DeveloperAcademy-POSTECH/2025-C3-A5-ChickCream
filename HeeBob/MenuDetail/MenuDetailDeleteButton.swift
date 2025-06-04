@@ -16,13 +16,11 @@ struct MenuDetailDeleteButton: View {
         Button("찜에서 삭제하기") {
             showFavoriteDeleteAlert = true
         }
-        .alert("찜하기 삭제 버튼", isPresented: $showFavoriteDeleteAlert) {
+        .alert("정말 삭제 하시겠습니까?", isPresented: $showFavoriteDeleteAlert) {
             Button("삭제", role: .destructive) {
                 modelContext.delete(food)
             }
             Button("취소", role: .cancel) { }
-        } message: {
-            Text("정말 삭제 하시겠습니까?")
         }
         .padding(.top, 40)
         .font(.hbSubtitle)
