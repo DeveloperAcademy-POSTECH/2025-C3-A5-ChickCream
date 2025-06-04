@@ -17,7 +17,6 @@ class FavoriteViewModel: ObservableObject {
     @Published var isCookableUserSelected: Bool? = nil
     @Published var mainIngredientsUserSelected: [FoodIngredient] = []
     
-    
     var modelContext: ModelContext!
     
     func filterSelectButtonTapped(for sortType: FavoriteSortType) {
@@ -43,52 +42,25 @@ class FavoriteViewModel: ObservableObject {
     
     // MARK: - Sort Control View
     func portableSortTypeSelected(for value: Bool?) {
-        if let value = value {
-            let descriptor = FetchDescriptor<Favorite>(predicate: #Predicate { favorite in
-                favorite.food.attribute.isPortable == value
-            })
-            loadFavorites(where: descriptor)
-        } else {
-            // predicate 없이 전체 fetch
-            let descriptor = FetchDescriptor<Favorite>()
-            loadFavorites(where: descriptor)
-        }
+        isPortableUserSelected = value
+        loadFavoritesByUserSelectedOption()
     }
     
     func cookableSortTypeSelected(for value: Bool?) {
-        if let value = value {
-            let descriptor = FetchDescriptor<Favorite>(predicate: #Predicate { favorite in
-                favorite.food.attribute.isCookable == value
-            })
-            loadFavorites(where: descriptor)
-        } else {
-            // predicate 없이 전체 fetch
-            let descriptor = FetchDescriptor<Favorite>()
-            loadFavorites(where: descriptor)
-        }
+        isCookableUserSelected = value
+        loadFavoritesByUserSelectedOption()
     }
-    
-    func mainIngredientSortTypeSelected(for value: Int?) {
-        if let value = value {
-            let descriptor = FetchDescriptor<Favorite>(predicate: #Predicate { favorite in
-                favorite.food.attribute._mainIngredient == value
-            })
-            loadFavorites(where: descriptor)
-        } else {
-            // predicate 없이 전체 fetch
-            let descriptor = FetchDescriptor<Favorite>()
-            loadFavorites(where: descriptor)
-        }
+
+    // 메인 재료 필터링 메서드 개선
+    func mainIngredientSortTypeSelected(for ingredients: [FoodIngredient]) {
+        mainIngredientsUserSelected = ingredients
+        loadFavoritesByUserSelectedOption()
     }
+
     
     // MARK: - Core Logics
     
-//    private func loadFavoritesByUserSelectedOption() {
-//        let descriptor = FetchDescriptor<Favorite>(predicate: #Predicate { favorite in
-//            // TODO: isPortableUserSelected,isCookableUserSelected,mainIngredientsUserSelected를 이용해 Predicate 작성
-//        })
-//    }
-    private func loadFavoritesByUserSelectedOption() {
+    func loadFavoritesByUserSelectedOption() {
         let portableFilter = isPortableUserSelected
         let cookableFilter = isCookableUserSelected
         let mainIngredients = mainIngredientsUserSelected.map { $0.rawValue }
@@ -105,7 +77,6 @@ class FavoriteViewModel: ObservableObject {
         let descriptor = FetchDescriptor<Favorite>(predicate: predicate)
         loadFavorites(where: descriptor)
     }
-
     
     private func loadFavorites(where descriptor: FetchDescriptor<Favorite>) {
         do {
@@ -121,7 +92,6 @@ class FavoriteViewModel: ObservableObject {
         case mainIngredient = "주재료"
     }
 }
-
 
 extension FavoriteViewModel.FavoriteSortType: Identifiable {
     var id: Self { self }

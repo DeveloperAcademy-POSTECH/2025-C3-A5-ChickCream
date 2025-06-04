@@ -16,19 +16,15 @@ struct FavoriteFilterButton: View {
 
     var buttonColorChange: Color {
         if isSelected {
-            print("change1")
           return Color.hbPrimary
         } else {
-            print("not change2")
         return Color.hbButtonSecondary
     }}
 
     var textColorChange: Color {
         if isSelected {
-            print("change3")
           return Color.hbPrimary
         } else {
-            print("not change4")
         return Color.hbTextSecondary
     }}
     
