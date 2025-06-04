@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct QuestionView: View {
+    @EnvironmentObject var router: NavigationRouter
+    
     @StateObject var viewModel = QuestionViewModel()
     
     let buttonsSpacing: CGFloat = 16
@@ -99,7 +101,9 @@ struct QuestionView: View {
                 ) {
                     if viewModel.selectedIndex == viewModel.questions.count - 1,
                        let userAnswer = viewModel.finalAnswer {
-                        print(userAnswer) // TODO: UserModel을 결과 로딩 뷰로 넘김
+                        print(userAnswer)
+                        
+                        router.push(.result(userAnswer: userAnswer))
                     } else {
                         viewModel.showNextQuestion()
                     }
