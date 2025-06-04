@@ -21,25 +21,30 @@ struct LottieTestView: View {
         Bundle.main.url(forResource: "home_lottie2", withExtension: "json")
     }
     
+    var loadingLottieURL4: URL? {
+        Bundle.main.url(forResource: "loading_new", withExtension: "json")
+    }
+    
     var body: some View {
         ZStack {
-            LinearGradient(
-                stops: [
-                    .init(color: .init(hex: "#F9AC80"), location: 0.0),
-                    .init(color: .init(hex: "#FF6933"), location: 1.0),
-                ],
-                startPoint: .top,
-                endPoint: .bottom
-            )
+//            LinearGradient(
+//                stops: [
+//                    .init(color: .init(hex: "#F9AC80"), location: 0.0),
+//                    .init(color: .init(hex: "#FF6933"), location: 1.0),
+//                ],
+//                startPoint: .top,
+//                endPoint: .bottom
+//            )
+            Color.hbWhite
             .ignoresSafeArea()
             
             VStack {
-                if let url = loadingLottieURL3 {
+                if let url = loadingLottieURL4 {
                     LottieView {
                         try! await LottieAnimation.loadedFrom(url: url)
                     }
                     .playing(loopMode: .loop)
-                    .padding(48)
+//                    .padding(48)
                 }
             }
         }
