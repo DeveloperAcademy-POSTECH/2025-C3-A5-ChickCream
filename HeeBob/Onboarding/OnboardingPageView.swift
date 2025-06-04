@@ -24,15 +24,21 @@ struct OnboardingPageView: View {
                     ZStack(alignment: .center) {
                         if showingForegroundImage {
                             Image(content.backgroundImageName)
+                                .resizable()
                                 .frame(maxWidth: UIScreen.main.bounds.width)
+                                .scaledToFit()
                                 .clipped()
                             
                             Image(foregroundImageName)
+                                .resizable()
                                 .frame(maxWidth: UIScreen.main.bounds.width)
+                                .scaledToFit()
                                 .clipped()
                         } else {
                             Image(content.backgroundImageName)
+                                .resizable()
                                 .frame(maxWidth: UIScreen.main.bounds.width)
+                                .scaledToFit()
                                 .clipped()
                         }
                     }
