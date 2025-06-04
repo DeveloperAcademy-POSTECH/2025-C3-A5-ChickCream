@@ -14,7 +14,7 @@ protocol AnyQuestion {
     var titleTopPadding: CGFloat? { get }
     var options: [String] { get }
     var selectedOptionIndex: Int? { get }
-    mutating func select(index: Int)
+    mutating func select(for index: Int?)
 }
 
 protocol AnyOption: Hashable {
@@ -40,7 +40,12 @@ struct Question<Option: AnyOption>: AnyQuestion {
     let optionsWithType: [Option]
     var selected: Option?
     
-    mutating func select(index: Int) {
+    mutating func select(for index: Int?) {
+        guard let index = index else {
+            selected = nil
+            return
+        }
+        
         selected = optionsWithType[index]
     }
 }
