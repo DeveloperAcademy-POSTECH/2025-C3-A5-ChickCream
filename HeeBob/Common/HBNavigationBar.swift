@@ -25,7 +25,7 @@ struct HBNavigationBarModifier<L, C, R>: ViewModifier where L: View, C: View, R:
         }
     
     func body(content: Content) -> some View {
-        VStack {
+        VStack(spacing: 0) {
             ZStack {
                 HStack {
                     if !hideBackButton {
