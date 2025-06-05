@@ -19,6 +19,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
+## [0.0.4] - 2025-06-05
+
+### Added
+
+- 찜 리스트 뷰 - 검색 뷰 네비게이팅
+
 ## [0.0.3] - 2025-06-05
 
 ### Added
@@ -45,7 +51,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - MVP 기능 구현
 - 디자인 약 80% 반영
 
-[unreleased]: hhttps://github.com/DeveloperAcademy-POSTECH/2025-C3-A5-ChickCream/compare/v0.0.3...HEAD
+[unreleased]: hhttps://github.com/DeveloperAcademy-POSTECH/2025-C3-A5-ChickCream/compare/v0.0.4...HEAD
+[0.0.4]: hhttps://github.com/DeveloperAcademy-POSTECH/2025-C3-A5-ChickCream/releases/tag/v0.0.4
 [0.0.3]: hhttps://github.com/DeveloperAcademy-POSTECH/2025-C3-A5-ChickCream/releases/tag/v0.0.3
 [0.0.2]: hhttps://github.com/DeveloperAcademy-POSTECH/2025-C3-A5-ChickCream/releases/tag/v0.0.2
 [0.0.1]: hhttps://github.com/DeveloperAcademy-POSTECH/2025-C3-A5-ChickCream/releases/tag/v0.0.1
