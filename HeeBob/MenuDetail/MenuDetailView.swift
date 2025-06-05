@@ -12,6 +12,8 @@ struct MenuDetailView: View {
     var food: Food
     
     @EnvironmentObject var router: NavigationRouter
+    @Environment(\.modelContext) var modelContext
+    @State var relatedFavorite: Favorite?
     
     var body: some View {
         
@@ -27,7 +29,31 @@ struct MenuDetailView: View {
             )
             .padding()
             
-            MenuDetailDeleteButton(food: food)
+            if let relatedFavorite = relatedFavorite {
+                MenuDetailDeleteButton(favorite: relatedFavorite)
+            }
+        }
+        .onAppear {
+            viewDidAppear()
+        }
+    }
+}
+
+extension MenuDetailView {
+    func viewDidAppear() {
+        loadFavorite()
+    }
+    
+    private func loadFavorite() {
+        let foodId = food.id
+        let descriptor = FetchDescriptor<Favorite>(predicate: #Predicate { favorite in
+            return favorite.food.id == foodId
+        })
+        
+        do {
+            relatedFavorite = try modelContext.fetch(descriptor).first
+        } catch {
+            print("오류남 \(error)")
         }
     }
 }

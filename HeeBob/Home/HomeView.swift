@@ -80,7 +80,7 @@ struct HomeView: View {
                 case .result(let userAnswer):
                     ResultsView(userAnswer: userAnswer).environmentObject(router)
                 case .favorite:
-                    FavoriteViewPlaceHolder().environmentObject(router)
+                    FavoriteListView().environmentObject(router)
                 case .search:
                     SearchView().environmentObject(router)
                 case .detail(let Food):
