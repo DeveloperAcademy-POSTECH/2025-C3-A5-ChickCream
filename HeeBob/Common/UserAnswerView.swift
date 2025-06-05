@@ -90,6 +90,7 @@ fileprivate struct SentenceView: View {
         HStack(spacing: 16) {
             Image(systemName: "checkmark")
             Text(content)
+                .foregroundStyle(Color.hbTextPrimary)
         }
     }
 }
