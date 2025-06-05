@@ -28,8 +28,8 @@ final class QuestionViewModel: ObservableObject {
             subTitle: "여유가 없으시다면, 사 드시기 편한\n메뉴로 추천해드릴게요.",
             titleTopPadding: 84,
             optionsWithType: [
-                QuestionOption(title: "좋아요", value: true),
-                QuestionOption(title: "직접\n조리할래요", value: false),
+                QuestionOption(title: "네", value: true),
+                QuestionOption(title: "아니오", value: false),
             ]
         ),
         Question(
