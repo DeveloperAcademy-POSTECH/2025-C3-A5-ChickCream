@@ -13,9 +13,6 @@ struct FavoriteMenuCard: View {
     var favorite: Favorite
     
     var body: some View {
-        
-
-        
         VStack(spacing: 0) {
             if let imageData = getDietImageData(for: food),
                let uiImage = UIImage(data: imageData) {

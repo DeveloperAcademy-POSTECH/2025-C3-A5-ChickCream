@@ -63,8 +63,7 @@ struct SearchView: View {
                             Button {
                                 router.push(.detail(food: favorite.food))
                             } label: {
-                                // FIXME: 통합 후 주석 해제 예정
-                                // FavoriteMenuCard(food: favorite.food, favorite: favorite)
+                                 FavoriteMenuCard(food: favorite.food, favorite: favorite)
                             }
                         }
                     }
