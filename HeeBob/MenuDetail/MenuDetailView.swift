@@ -23,7 +23,11 @@ struct MenuDetailView: View {
             MenuDetailUniquePointBox(food: food)
             
             UserAnswerView(
-                userAnswer: .init(isPortable: true, isCookable: false, mainIngredient: .beefPork),
+                userAnswer: .init(
+                    isPortable: food.attribute.isPortable,
+                    isCookable: food.attribute.isCookable,
+                    mainIngredient: food.attribute.mainIngredient
+                ),
                 borderColor: .hbButtonSecondary,
                 backgroundColor: .clear
             )
