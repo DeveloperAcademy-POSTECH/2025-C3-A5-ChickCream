@@ -19,7 +19,7 @@ struct FavoriteListView: View {
         VStack(spacing: 0) {
             FavoriteFilterControl(favoriteViewModel: favoriteViewModel)
             CardGrid(favorites: favoriteViewModel.favorites) { favorite in
-                router.push(.detail(favorite: favorite))
+                router.push(.detail(food: favorite.food))
             }
         }
         .onAppear {
