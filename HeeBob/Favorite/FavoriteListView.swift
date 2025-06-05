@@ -59,6 +59,8 @@ struct CardGrid: View {
     }
 }
 
+#if DEBUG
 #Preview(traits: .sampleData) {
     FavoriteListView()
 }
+#endif

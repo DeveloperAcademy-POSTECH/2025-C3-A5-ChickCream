@@ -61,6 +61,8 @@ extension TestView {
     }
 }
 
+#if DEBUG
 #Preview(traits: .sampleData) {
     TestView()
 }
+#endif
