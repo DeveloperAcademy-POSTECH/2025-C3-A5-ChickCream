@@ -14,7 +14,7 @@ import SwiftData
     }
     
     @Attribute(.unique) var id: UUID
-    @Relationship(deleteRule: .cascade) var food: Food
+    @Relationship(deleteRule: .nullify) var food: Food
     @Attribute var createdAt: Date
     
     init(id: UUID, food: Food, createdAt: Date) {
