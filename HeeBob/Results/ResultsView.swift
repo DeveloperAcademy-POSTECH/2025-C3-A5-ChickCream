@@ -15,6 +15,8 @@ struct ResultsView: View {
     
     @Environment(\.modelContext) var modelContext
     
+    @State private var hasLoaded = false
+    
     @State private var activeID: String?
     @State private var selectedIndex: Int = 0
     @State private var carouselItems: [CarouselItem] = []
@@ -67,6 +69,7 @@ struct ResultsView: View {
                     foregroundColor: .hbPrimary,
                     backgroundColor: .hbPrimaryLighten
                 )) {
+                    hasLoaded = false
                     router.pop()
                 }
             }
@@ -74,7 +77,10 @@ struct ResultsView: View {
             .padding(.bottom, 27)
         }
         .onAppear {
-            loadInitialRecommendations()
+            if !hasLoaded {
+                loadInitialRecommendations()
+                hasLoaded = true
+            }
         }
         .HBNavigationBar(centerView: {
             Text("추천 결과")
