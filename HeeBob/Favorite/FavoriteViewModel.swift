@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftData
+import SwiftUICore
 
 class FavoriteViewModel: ObservableObject {
     @Published var favorites: [Favorite] = []
@@ -14,9 +15,13 @@ class FavoriteViewModel: ObservableObject {
     @Published var showingfavoriteSortType: FavoriteSortType? = nil
     
     @Published var isPortableUserSelected: Bool? = nil
+    @Published var userSelectedColor: [Color] = []
     @Published var isCookableUserSelected: Bool? = nil
     @Published var mainIngredientsUserSelected: [FoodIngredient] = []
-    
+    // ✅ 선택된 값 상태 저장
+    @Published var selectedPortableValue: Bool? = nil
+    @Published var selectedCookableValue: Bool? = nil
+
     var modelContext: ModelContext!
     
     func filterSelectButtonTapped(for sortType: FavoriteSortType) {
@@ -72,7 +77,6 @@ class FavoriteViewModel: ObservableObject {
             // 주재료 필터 조건 (배열이 비어있지 않은 경우만 적용)
             (mainIngredients.isEmpty || mainIngredients.contains(favorite.food.attribute._mainIngredient))
         }
-        
         let descriptor = FetchDescriptor<Favorite>(predicate: predicate)
         loadFavorites(where: descriptor)
     }
