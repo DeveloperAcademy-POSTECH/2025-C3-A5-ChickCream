@@ -40,6 +40,11 @@ struct MenuDetailView: View {
             viewDidAppear()
         }
         .padding(.top, 12)
+        .HBNavigationBar(centerView: {
+            Text(food.title)
+                .font(.hbSubtitle)
+                .foregroundStyle(Color.hbTextPrimary)
+        })
     }
 }
 
