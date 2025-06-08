@@ -39,6 +39,7 @@ struct MenuDetailView: View {
         .onAppear {
             viewDidAppear()
         }
+        .padding(.top, 12)
     }
 }
 
