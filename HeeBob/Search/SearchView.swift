@@ -7,23 +7,19 @@
 
 import SwiftUI
 import SwiftData
+import OSLog
 
 struct SearchView: View {
-    @Environment(\.dismiss) var dismiss
+    @Environment(\.dismiss) private var dismiss
     @Environment(\.modelContext) private var modelContext
     
     @EnvironmentObject var router: NavigationRouter
     
-    @Query private var allFavorites: [Favorite]
+    @State private var favorites: [Favorite] = []
     
     @State private var searchText: String = ""
     
-    var filteredFavorites: [Favorite] {
-        guard !searchText.isEmpty else { return [] }
-        return allFavorites.filter {
-            $0.food.title.localizedCaseInsensitiveContains(searchText)
-        }
-    }
+    private let logger = Logger.category("SearchView")
     
     let columns = [
         GridItem(.flexible()),
@@ -51,7 +47,7 @@ struct SearchView: View {
                     .cornerRadius(12)
                 
             }
-            if filteredFavorites.isEmpty {
+            if favorites.isEmpty {
                 Text("검색 결과가 없습니다.")
                     .font(.hbBody2)
                     .foregroundColor(.secondary)
@@ -60,7 +56,7 @@ struct SearchView: View {
                 ScrollView {
                     Spacer()
                     LazyVGrid(columns: columns, spacing: 12) {
-                        ForEach(filteredFavorites) { favorite in
+                        ForEach(favorites) { favorite in
                             Button {
                                 router.push(.detail(food: favorite.food))
                             } label: {
@@ -72,8 +68,29 @@ struct SearchView: View {
             }
             Spacer()
         }
+        .onChange(of: searchText, { _, searchText in
+            searchTextChanged(for: searchText)
+        })
         .padding(.horizontal, 16)
         .navigationBarBackButtonHidden(true)
+    }
+}
+
+extension SearchView {
+    private func searchTextChanged(for searchText: String) {
+        fetchSearchResults(containing: searchText)
+    }
+    
+    private func fetchSearchResults(containing searchText: String) {
+        let descriptor = FetchDescriptor<Favorite>(predicate: #Predicate { favorite in
+            favorite.food.title.localizedStandardContains(searchText)
+        })
+        
+        do {
+            favorites = try modelContext.fetch(descriptor)
+        } catch {
+            logger.error("❌ 찜 검색 중 문제가 발생했습니다. \(error)")
+        }
     }
 }
 
