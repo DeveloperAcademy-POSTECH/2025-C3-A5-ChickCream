@@ -19,6 +19,7 @@ struct QuestionView: View {
     var body: some View {
         VStack(spacing: 0) {
             QuestionIndicatorView(lastPage: viewModel.questions.count, currentPage: viewModel.selectedIndex + 1)
+                .padding(.vertical, 12)
             
             Spacer()
             
