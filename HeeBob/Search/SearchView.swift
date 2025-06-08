@@ -17,14 +17,13 @@ struct SearchView: View {
     
     @State private var favorites: [Favorite] = []
     
-    @State private var searchText: String = ""
+    @State private var searchText: String = "" // 현재 입력 중인 검색어
+    @State private var inputSearchText: String = "" // 사용자가 리턴한 검색어
     
-    @State private var recentSearchTextList: [String] = [
-        "검색어",
-        "제육볶음",
-        "불고기덮밥",
-        "새우볶음밥",
-    ]
+    @State private var recentSearchTextList: [String] = []
+    var recentSearchTextListSortedByDesc: [String] {
+        recentSearchTextList.reversed()
+    }
     
     private let logger = Logger.category("SearchView")
     
@@ -45,17 +44,20 @@ struct SearchView: View {
                         .foregroundColor(Color.hbTextPrimary)
                         .frame(width: 13)
                 }
-                TextField("내가 찜한 메뉴에서 검색하기", text: $searchText)
+                TextField("내가 찜한 메뉴에서 검색하기", text: $inputSearchText)
                     .font(.hbBody2)
                     .foregroundStyle(Color.hbTextPrimary)
                     .padding(.vertical, 9)
                     .padding(.horizontal, 12)
                     .background(Color(red: 0.96, green: 0.96, blue: 0.95))
                     .cornerRadius(12)
-                
+                    .onSubmit {
+                        searchTextFieldDidEndEditing()
+                    }
             }
+            
             if favorites.isEmpty {
-                if recentSearchTextList.isEmpty {
+                if !searchText.isEmpty {
                     Text("검색 결과가 없습니다.")
                         .font(.hbBody2)
                         .foregroundColor(.secondary)
@@ -79,12 +81,19 @@ struct SearchView: View {
                     .padding(.top, 24)
                     .padding(.bottom, 16)
                     
+                    if recentSearchTextList.isEmpty {
+                        Text("최근 검색 기록이 없습니다.")
+                            .font(.hbBody2)
+                            .foregroundColor(.secondary)
+                            .padding(.top, 16)
+                    }
+                    
                     LazyVStack(spacing: 16) {
-                        ForEach(recentSearchTextList.indices, id: \.self) { searchTextIndex in
-                            RecentSearchItemView(index: searchTextIndex, content: recentSearchTextList[searchTextIndex]) { index in
-                                print("did tap \(recentSearchTextList[index])")
+                        ForEach(recentSearchTextListSortedByDesc.indices, id: \.self) { searchTextIndex in
+                            RecentSearchItemView(index: searchTextIndex, content: recentSearchTextListSortedByDesc[searchTextIndex]) { index in
+                                print("did tap \(recentSearchTextListSortedByDesc[index])")
                             } didDeleteButtonTap: { index in
-                                print("did delete tap \(recentSearchTextList[index])")
+                                print("did delete tap \(recentSearchTextListSortedByDesc[index])")
                             }
                         }
                     }
@@ -105,8 +114,16 @@ struct SearchView: View {
             }
             Spacer()
         }
+        .onAppear {
+            viewDidAppear()
+        }
         .onChange(of: searchText, { _, searchText in
             searchTextChanged(for: searchText)
+        })
+        .onChange(of: inputSearchText, { _, inputSearchText in
+            if inputSearchText.isEmpty {
+                searchText = ""
+            }
         })
         .padding(.horizontal, 16)
         .navigationBarBackButtonHidden(true)
@@ -114,6 +131,28 @@ struct SearchView: View {
 }
 
 extension SearchView {
+    private func viewDidAppear() {
+        loadRecentSearchHistory()
+    }
+    
+    private func loadRecentSearchHistory() {
+        if let anyArray = UserDefaults.standard.array(forKey: UserDefaultsKey.recentSearchHistory.rawValue) {
+            recentSearchTextList = anyArray.compactMap { $0 as? String }
+        }
+    }
+    
+    private func searchTextFieldDidEndEditing() {
+        searchText = inputSearchText
+        
+        // 최근 검색 기록에 저장
+        recentSearchTextList.append(searchText)
+        saveRecentSearchHistory()
+    }
+    
+    private func saveRecentSearchHistory() {
+        UserDefaults.standard.set(recentSearchTextList, forKey: UserDefaultsKey.recentSearchHistory.rawValue)
+    }
+    
     private func searchTextChanged(for searchText: String) {
         fetchSearchResults(containing: searchText)
     }
