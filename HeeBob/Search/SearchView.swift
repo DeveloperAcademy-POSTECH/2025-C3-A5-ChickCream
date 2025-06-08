@@ -93,7 +93,7 @@ struct SearchView: View {
                             RecentSearchItemView(index: searchTextIndex, content: recentSearchTextListSortedByDesc[searchTextIndex]) { index in
                                 recentSearchItemDidTap(index: index)
                             } didDeleteButtonTap: { index in
-                                print("did delete tap \(recentSearchTextListSortedByDesc[index])")
+                                recentSearchItemDeleteButtonDidTap(index: index)
                             }
                         }
                     }
@@ -171,6 +171,14 @@ extension SearchView {
         inputSearchText = searchText
     }
     
+    private func recentSearchItemDeleteButtonDidTap(index: Int) {
+        let originalIndex = recentSearchTextList.count - 1 - index
+        guard recentSearchTextList.indices.contains(originalIndex) else { return }
+        
+        recentSearchTextList.remove(at: originalIndex)
+        saveRecentSearchHistory()
+    }
+    
     private func fetchSearchResults(containing searchText: String) {
         let descriptor = FetchDescriptor<Favorite>(predicate: #Predicate { favorite in
             favorite.food.title.localizedStandardContains(searchText)
@@ -206,7 +214,7 @@ struct RecentSearchItemView: View {
                     .font(.hbBody2)
                     .foregroundStyle(Color.hbTextPrimary)
             }
-
+            
             Spacer()
             
             Button {
