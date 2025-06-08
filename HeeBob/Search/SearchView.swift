@@ -53,6 +53,7 @@ struct SearchView: View {
             }
             if filteredFavorites.isEmpty {
                 Text("검색 결과가 없습니다.")
+                    .font(.hbBody2)
                     .foregroundColor(.secondary)
                     .padding(.top, 40)
             } else {
