@@ -7,14 +7,18 @@
 
 import SwiftUI
 import UIKit
+import OSLog
 
 struct HBNavigationBarModifier<L, C, R>: ViewModifier where L: View, C: View, R: View {
     @Environment(\.hbNavigationBarBackButtonHidden) private var hideBackButton
     @Environment(\.dismiss) var dismiss
+    @EnvironmentObject var router: NavigationRouter
     
     let leftView: (() -> L)?
     let centerView: (() -> C)?
     let rightView: (() -> R)?
+    
+    let logger = Logger.category("HBNavigationBarModifier")
     
     init(
         leftView: (() -> L)? = nil,
@@ -62,6 +66,14 @@ struct HBNavigationBarModifier<L, C, R>: ViewModifier where L: View, C: View, R:
             Spacer()
         }
         .navigationBarBackButtonHidden(true)
+        .onChange(of: hideBackButton) { _, hideBackButton in
+            logger.debug("👁️ hideBackButton changed => UINavigationController.isGestureDisabled \(hideBackButton)")
+            UINavigationController.isGestureDisabled = hideBackButton
+        }
+        .onChange(of: router.path) { _, path in
+            logger.debug("👁️ path changed => UINavigationController.isGestureDisabled false")
+            UINavigationController.isGestureDisabled = false // init for every foreground views
+        }
     }
 }
 
@@ -131,7 +143,9 @@ extension View {
     }
 }
 
-extension UINavigationController: ObservableObject, UIGestureRecognizerDelegate {
+extension UINavigationController: UIGestureRecognizerDelegate {
+    fileprivate static var isGestureDisabled: Bool = false
+    
     override open func viewDidLoad() {
         super.viewDidLoad()
         navigationBar.isHidden = true
@@ -139,6 +153,6 @@ extension UINavigationController: ObservableObject, UIGestureRecognizerDelegate 
     }
 
     public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
-        return viewControllers.count > 1
+        return viewControllers.count > 1 && !UINavigationController.isGestureDisabled
     }
 }
