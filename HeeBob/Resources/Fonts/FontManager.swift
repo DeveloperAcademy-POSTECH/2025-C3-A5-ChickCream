@@ -59,6 +59,6 @@ extension Font {
     }
     
     static var hbMinimum: Font {
-        return .suite(type: .semibold, size: 16)
+        return .suite(type: .extraBold, size: 16)
     }
 }
