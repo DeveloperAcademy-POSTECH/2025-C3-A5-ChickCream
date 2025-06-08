@@ -9,6 +9,8 @@ import Foundation
 import SwiftData
 
 @Model final class Food {
+    #Index<Food>([\.title])
+    
     @Attribute(.unique) var id: UUID
     @Attribute var title: String
     @Attribute var uniquePoint: String
