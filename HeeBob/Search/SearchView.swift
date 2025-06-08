@@ -71,7 +71,7 @@ struct SearchView: View {
                         Spacer()
                         
                         Button {
-                            //
+                            clearAllButtonDidTap()
                         } label: {
                             Text("전체 삭제")
                                 .font(.suite(type: .semibold, size: 16))
@@ -155,6 +155,15 @@ extension SearchView {
     
     private func searchTextChanged(for searchText: String) {
         fetchSearchResults(containing: searchText)
+    }
+    
+    private func clearAllButtonDidTap() {
+        clearRecentSearchHistory()
+    }
+    
+    private func clearRecentSearchHistory() {
+        recentSearchTextList.removeAll()
+        saveRecentSearchHistory()
     }
     
     private func fetchSearchResults(containing searchText: String) {
