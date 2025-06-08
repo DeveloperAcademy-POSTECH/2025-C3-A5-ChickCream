@@ -25,15 +25,12 @@ struct FavoriteListView: View {
         .onAppear {
             favoriteViewModel.listViewDidAppear(modelContext: modelContext)
         }
-        .toolbar {
-            ToolbarItem(placement: .topBarTrailing) {
                 Button {
                     router.push(.search)
                 } label: {
                     Image(systemName: "magnifyingglass")
                 }
             }
-        }
     }
 }
 
