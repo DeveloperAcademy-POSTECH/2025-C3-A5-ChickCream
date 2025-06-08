@@ -91,7 +91,7 @@ struct SearchView: View {
                     LazyVStack(spacing: 16) {
                         ForEach(recentSearchTextListSortedByDesc.indices, id: \.self) { searchTextIndex in
                             RecentSearchItemView(index: searchTextIndex, content: recentSearchTextListSortedByDesc[searchTextIndex]) { index in
-                                print("did tap \(recentSearchTextListSortedByDesc[index])")
+                                recentSearchItemDidTap(index: index)
                             } didDeleteButtonTap: { index in
                                 print("did delete tap \(recentSearchTextListSortedByDesc[index])")
                             }
@@ -164,6 +164,11 @@ extension SearchView {
     private func clearRecentSearchHistory() {
         recentSearchTextList.removeAll()
         saveRecentSearchHistory()
+    }
+    
+    private func recentSearchItemDidTap(index: Int) {
+        searchText = recentSearchTextListSortedByDesc[index]
+        inputSearchText = searchText
     }
     
     private func fetchSearchResults(containing searchText: String) {
