@@ -44,7 +44,7 @@ struct SearchView: View {
                 }
                 TextField("음식 이름 검색", text: $searchText)
                     .font(.hbBody2)
-                    .foregroundStyle(Color.hbDisabled)
+                    .foregroundStyle(Color.hbTextPrimary)
                     .padding(.vertical, 9)
                     .padding(.horizontal, 12)
                     .background(Color(red: 0.96, green: 0.96, blue: 0.95))
