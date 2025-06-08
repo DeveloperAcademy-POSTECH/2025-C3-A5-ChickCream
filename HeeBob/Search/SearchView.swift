@@ -19,6 +19,13 @@ struct SearchView: View {
     
     @State private var searchText: String = ""
     
+    @State private var recentSearchTextList: [String] = [
+        "검색어",
+        "제육볶음",
+        "불고기덮밥",
+        "새우볶음밥",
+    ]
+    
     private let logger = Logger.category("SearchView")
     
     let columns = [
@@ -48,10 +55,40 @@ struct SearchView: View {
                 
             }
             if favorites.isEmpty {
-                Text("검색 결과가 없습니다.")
-                    .font(.hbBody2)
-                    .foregroundColor(.secondary)
-                    .padding(.top, 40)
+                if recentSearchTextList.isEmpty {
+                    Text("검색 결과가 없습니다.")
+                        .font(.hbBody2)
+                        .foregroundColor(.secondary)
+                        .padding(.top, 40)
+                } else {
+                    HStack {
+                        Text("최근 검색")
+                            .font(.hbMinimum)
+                            .foregroundStyle(Color.hbTextPrimary)
+                        
+                        Spacer()
+                        
+                        Button {
+                            //
+                        } label: {
+                            Text("전체 삭제")
+                                .font(.suite(type: .semibold, size: 16))
+                                .foregroundStyle(Color.hbTextSecondary)
+                        }
+                    }
+                    .padding(.top, 24)
+                    .padding(.bottom, 16)
+                    
+                    LazyVStack(spacing: 16) {
+                        ForEach(recentSearchTextList.indices, id: \.self) { searchTextIndex in
+                            RecentSearchItemView(index: searchTextIndex, content: recentSearchTextList[searchTextIndex]) { index in
+                                print("did tap \(recentSearchTextList[index])")
+                            } didDeleteButtonTap: { index in
+                                print("did delete tap \(recentSearchTextList[index])")
+                            }
+                        }
+                    }
+                }
             } else {
                 ScrollView {
                     Spacer()
@@ -90,6 +127,42 @@ extension SearchView {
             favorites = try modelContext.fetch(descriptor)
         } catch {
             logger.error("❌ 찜 검색 중 문제가 발생했습니다. \(error)")
+        }
+    }
+}
+
+struct RecentSearchItemView: View {
+    let index: Int
+    let content: String
+    let didContentTap: (_ index: Int) -> Void
+    let didDeleteButtonTap: (_ index: Int) -> Void
+    
+    var body: some View {
+        HStack {
+            Image(systemName: "clock")
+                .renderingMode(.template)
+                .foregroundStyle(Color.hbTextSecondary)
+            
+            Spacer()
+                .frame(width: 16)
+            
+            Button {
+                didContentTap(index)
+            } label: {
+                Text(content)
+                    .font(.hbBody2)
+                    .foregroundStyle(Color.hbTextPrimary)
+            }
+
+            Spacer()
+            
+            Button {
+                didDeleteButtonTap(index)
+            } label: {
+                Image(systemName: "xmark")
+                    .renderingMode(.template)
+                    .foregroundStyle(Color.hbTextSecondary)
+            }
         }
     }
 }
