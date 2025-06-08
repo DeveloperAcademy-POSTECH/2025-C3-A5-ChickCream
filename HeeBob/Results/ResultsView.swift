@@ -19,8 +19,10 @@ struct ResultsView: View {
     
     @State private var activeID: String?
     @State private var selectedIndex: Int = 0
+    @State private var selectedItemID: UUID?
     @State private var carouselItems: [CarouselItem] = []
     @State private var fetchedFoodIDs: Set<UUID> = []
+    @State private var resultFoods: [Food] = []
     
     var body: some View {
         VStack {
@@ -32,28 +34,8 @@ struct ResultsView: View {
             .padding(.horizontal, 20)
             .padding(.top, 10)
             Spacer()
-                .frame(height: 39)
-            ResultsCarousel(
-                config: .init(
-                    hasScale: true,
-                    cardWidth: UIScreen.main.bounds.width * 0.81
-                ),
-                selection: $activeID,
-                selectedIndex: $selectedIndex,
-                data: carouselItems
-            ) { item in
-                switch item {
-                case .food(let food):
-                    ResultCard(food: food) {
-                        router.push(.detail(food: food))
-                    }
-                case .addCard:
-                    AddCard {
-                        loadOneMoreRecommendation()
-                    }
-                }
-            }
-            .frame(height: UIScreen.main.bounds.height * 0.5)
+            resultCarouselView
+            cardNumberView
             Spacer()
             HStack {
                 HBButton(configuration: .init(
@@ -91,12 +73,72 @@ struct ResultsView: View {
     }
 }
 
+extension ResultsView {
+    private var resultCarouselView: some View {
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack(spacing: 0) {
+                ForEach(carouselItems) { item in
+                    switch item {
+                    case .food(let food):
+                        ResultCard(food: food) {
+                            router.push(.detail(food: food))
+                        }
+                        .id(item.id)
+                        .scrollTransition(){ content, phase in
+                            content
+                                .scaleEffect(x: phase.isIdentity ? 1 : 0.8,
+                                             y: phase.isIdentity ? 1 : 0.8)
+                        }
+                        .frame(maxHeight: 320)
+                        .aspectRatio(CGSize(width: 321, height: 316), contentMode: .fit)
+                    case .addCard:
+                        AddCard {
+                            loadOneMoreRecommendation()
+                        }
+                        .id(item.id)
+                        .scrollTransition(){ content, phase in
+                            content
+                                .scaleEffect(x: phase.isIdentity ? 1 : 0.8,
+                                             y: phase.isIdentity ? 1 : 0.8)
+                        }
+                        .frame(maxHeight: 320)
+                        .aspectRatio(CGSize(width: 321, height: 316), contentMode: .fill)
+                    }
+                }
+            }
+            .scrollTargetLayout()
+        }
+        .contentMargins(.vertical, 16, for: .scrollContent)
+        .contentMargins(.horizontal, 36, for: .scrollContent)
+        .scrollTargetBehavior(.viewAligned) // 카드 중간 focus
+        .scrollPosition(id: $selectedItemID)
+        .onChange(of: selectedItemID) {
+            if let id = selectedItemID,
+               let index = carouselItems.firstIndex(where: { $0.id == id }) {
+                print("현재 인덱스: \(index)")
+                selectedIndex = index
+            }
+        }
+    }
+    
+    private var cardNumberView: some View {
+        HStack {
+            Spacer()
+            Text("\(selectedIndex + 1)/\(carouselItems.count)")
+                .font(.hbBody1)
+                .foregroundStyle(Color.hbTextSecondary)
+            Spacer()
+        }
+    }
+}
+
 /// 음식 조건 및 SwiftData에서 가져오는 로직들
 extension ResultsView {
     func loadInitialRecommendations() {
         do {
             let foods = try fetchMatchingFoods(limit: 3)
             fetchedFoodIDs.formUnion(foods.map { $0.id })
+            resultFoods = foods
             updateCarouselItems(with: foods)
         } catch {
             print("❌ Initial fetch failed: \(error)")
