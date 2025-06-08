@@ -10,13 +10,21 @@ import SwiftUI
 struct FavoriteMainIngredientModalBtn: View {
     @ObservedObject var favoriteViewModel = FavoriteViewModel()
     
+    @Binding var isForkBeefToggle: Bool
+    @Binding var isChickenDuckMeatToggle: Bool
+    @Binding var isFishToggle: Bool
+    @Binding var isTofuEggToggle: Bool
+    
     @Environment(\.dismiss) private var dismiss
     
     var body: some View {
         HStack {
             Button {
                 print("초기화")
-                // 체크박스 해제 + 주재료 모든 항목 보이게...
+                isForkBeefToggle = false
+                isChickenDuckMeatToggle = false
+                isFishToggle = false
+                isTofuEggToggle = false
             } label: {
                 Rectangle()
                     .frame(width: 116, height: 72)
