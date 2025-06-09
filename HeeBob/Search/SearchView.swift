@@ -210,9 +210,13 @@ struct RecentSearchItemView: View {
             Button {
                 didContentTap(index)
             } label: {
-                Text(content)
-                    .font(.hbBody2)
-                    .foregroundStyle(Color.hbTextPrimary)
+                HStack {
+                    Text(content)
+                        .font(.hbBody2)
+                        .foregroundStyle(Color.hbTextPrimary)
+                    
+                    Spacer()
+                }
             }
             
             Spacer()
