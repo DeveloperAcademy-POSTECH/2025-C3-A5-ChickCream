@@ -15,22 +15,8 @@ struct FavoriteFilterButton: View {
     let filterType: FavoriteViewModel.FavoriteSortType
     let action: () -> Void
 
-//    var buttonColorChange: Color {
-//        if isSelected {
-//          return Color.hbPrimary
-//        } else {
-//        return Color.hbButtonSecondary
-//    }}
-//
-//    var textColorChange: Color {
-//        if isSelected {
-//          return Color.hbPrimary
-//        } else {
-//        return Color.hbTextSecondary
-//    }}
-//    
-    // 뷰모델에 필터 타입을 넘겨주고 색상 값을 한번에 받아옵니다.
-    private var colors: (button: Color, text: Color) {
+    /// 뷰모델에 필터 타입을 넘겨주고 색상 값을 한번에 받아옵니다.
+    private var filterButtonColors: (button: Color, text: Color) {
         return favoriteViewModel.getFilterButtonColors(for: filterType)
     }
     
@@ -40,7 +26,7 @@ struct FavoriteFilterButton: View {
         } label: {
             ZStack {
                 RoundedRectangle(cornerRadius: 99)
-                    .stroke(colors.button, lineWidth: 0.5)
+                    .stroke(filterButtonColors.button, lineWidth: 0.5)
                     .frame(width: 104, height: 50)
                 RoundedRectangle(cornerRadius: 99)
                     .fill(Color.clear)
@@ -48,10 +34,10 @@ struct FavoriteFilterButton: View {
                     .overlay(
                         HStack{
                             Text(title)
-                                .foregroundStyle(colors.text)
+                                .foregroundStyle(filterButtonColors.text)
                                 .font(.hbMinimum)
                             Image(systemName: "chevron.down")
-                                .foregroundStyle(colors.text)
+                                .foregroundStyle(filterButtonColors.text)
                         }
                     )
             }

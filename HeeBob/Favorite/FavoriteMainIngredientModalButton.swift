@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FavoriteMainIngredientModalBtn: View {
+struct FavoriteMainIngredientModalButton: View {
     @ObservedObject var favoriteViewModel: FavoriteViewModel
     
     @Environment(\.dismiss) private var dismiss

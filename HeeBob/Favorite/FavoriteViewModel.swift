@@ -58,7 +58,6 @@ class FavoriteViewModel: ObservableObject {
     // MARK: - List View
     
     func listViewDidAppear(modelContext: ModelContext) {
-        print("listViewDidAppear")
         self.modelContext = modelContext
         loadFavorites(where: FetchDescriptor<Favorite>())
     }
@@ -130,8 +129,6 @@ class FavoriteViewModel: ObservableObject {
     }
     
     private func loadFavorites(where descriptor: FetchDescriptor<Favorite>) {
-        print("FavoriteViewModel loadFavorites called - \(ObjectIdentifier(self))")
-        
         guard let context = modelContext else {
             print("ModelContext가 초기화되지 않았습니다.")
             return // 또는 에러 처리

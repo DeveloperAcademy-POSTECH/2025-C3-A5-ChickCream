@@ -47,7 +47,7 @@ struct FavoriteModalView: View {
             VStack {
                 FavoriteToggle(favoriteViewModel: favoriteViewModel)
                 
-                FavoriteMainIngredientModalBtn(favoriteViewModel: favoriteViewModel)
+                FavoriteMainIngredientModalButton(favoriteViewModel: favoriteViewModel)
             }
             .presentationDetents([.fraction(0.5)])
         }

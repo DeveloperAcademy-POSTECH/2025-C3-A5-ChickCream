@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ToggleInfo {
+struct FavoriteMainIngredientToggleInfo {
     var isOn: Binding<Bool>
     let label: String
     let ingredient: FoodIngredient
@@ -22,10 +22,10 @@ struct FavoriteToggle: View {
             // TODO: 디자인 HIFI에 맞게 변경 예정
         VStack(alignment: .leading) {
             ForEach([
-                ToggleInfo(isOn: $favoriteViewModel.isForkBeefToggle, label: "소고기 돼지고기", ingredient: .beefPork),
-                ToggleInfo(isOn: $favoriteViewModel.isChickenDuckMeatToggle, label: "닭고기 오리고기", ingredient: .chickenAndDuck),
-                ToggleInfo(isOn: $favoriteViewModel.isFishToggle, label: "물고기 해산물", ingredient: .fish),
-                ToggleInfo(isOn: $favoriteViewModel.isTofuEggToggle, label: "콩 두부 달걀", ingredient: .beanTofuEgg)
+                FavoriteMainIngredientToggleInfo(isOn: $favoriteViewModel.isForkBeefToggle, label: "소고기 돼지고기", ingredient: .beefPork),
+                FavoriteMainIngredientToggleInfo(isOn: $favoriteViewModel.isChickenDuckMeatToggle, label: "닭고기 오리고기", ingredient: .chickenAndDuck),
+                FavoriteMainIngredientToggleInfo(isOn: $favoriteViewModel.isFishToggle, label: "물고기 해산물", ingredient: .fish),
+                FavoriteMainIngredientToggleInfo(isOn: $favoriteViewModel.isTofuEggToggle, label: "콩 두부 달걀", ingredient: .beanTofuEgg)
             ], id: \.ingredient) { toggle in
                 Toggle(isOn: toggle.isOn) {
                     Text(toggle.label)
