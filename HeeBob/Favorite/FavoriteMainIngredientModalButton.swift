@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct FavoriteMainIngredientModalBtn: View {
-    @ObservedObject var favoriteViewModel = FavoriteViewModel()
+struct FavoriteMainIngredientModalButton: View {
+    @ObservedObject var favoriteViewModel: FavoriteViewModel
     
     @Environment(\.dismiss) private var dismiss
     
@@ -16,14 +16,19 @@ struct FavoriteMainIngredientModalBtn: View {
         HStack {
             Button {
                 print("초기화")
-                // 체크박스 해제 + 주재료 모든 항목 보이게...
+                favoriteViewModel.isForkBeefToggle = false
+                favoriteViewModel.isChickenDuckMeatToggle = false
+                favoriteViewModel.isFishToggle = false
+                favoriteViewModel.isTofuEggToggle = false
             } label: {
                 Rectangle()
-                    .frame(width: 100, height: 50)
-                    .foregroundColor(.blue)
+                    .frame(width: 116, height: 72)
+                    .foregroundColor(.hbPrimaryLighten)
+                    .cornerRadius(16)
                     .overlay(
                         Text("초기화")
-                            .foregroundStyle(.white)
+                            .font(.hbSubtitle)
+                            .foregroundStyle(Color.hbPrimary)
                     )
             }// TODO: Hifi에 맞게 디자인해야함.
             Button {
@@ -32,10 +37,12 @@ struct FavoriteMainIngredientModalBtn: View {
                 // FIXME: 왜 호들갑 떨면서 내려가는 지는 모르겠지만 닫히기는 합니다.
             } label: {
                 Rectangle()
-                    .frame(width: 200, height: 50)
-                    .foregroundColor(.blue)
+                    .frame(width: 235, height: 72)
+                    .foregroundColor(.hbPrimary)
+                    .cornerRadius(16)
                     .overlay(
                         Text("확인")
+                            .font(.hbSubtitle)
                             .foregroundStyle(.white)
                     )
             }
