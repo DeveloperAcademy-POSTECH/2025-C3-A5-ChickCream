@@ -70,7 +70,10 @@ struct ResultsView: View {
                     backgroundColor: .hbPrimaryLighten
                 )) {
                     hasLoaded = false
+                    /// fixme: 뷰모델을 초기화하는 방법 고민
                     router.pop()
+                    router.pop()
+                    router.push(.question(id: UUID()))
                 }
             }
             .padding(.horizontal, 20)
