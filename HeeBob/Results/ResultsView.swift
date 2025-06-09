@@ -87,7 +87,7 @@ struct ResultsView: View {
                 .font(.hbTitle)
                 .foregroundStyle(Color.hbTextPrimary)
         })
-        .HBNavigationBarBackButtonHidden(true)
+        .HBNavigationBarBackButtonHidden(false)
     }
 }
 
