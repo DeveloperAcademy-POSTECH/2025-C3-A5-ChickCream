@@ -44,7 +44,13 @@ struct SearchView: View {
                         .foregroundColor(Color.hbTextPrimary)
                         .frame(width: 13)
                 }
-                TextField("내가 찜한 메뉴에서 검색하기", text: $inputSearchText)
+                TextField(
+                    "내가 찜한 메뉴에서 검색하기",
+                    text: $inputSearchText,
+                    prompt: Text("내가 찜한 메뉴에서 검색하기")
+                        .font(.hbBody2)
+                        .foregroundStyle(Color.hbDisabled)
+                )
                     .font(.hbBody2)
                     .foregroundStyle(Color.hbTextPrimary)
                     .padding(.vertical, 9)
