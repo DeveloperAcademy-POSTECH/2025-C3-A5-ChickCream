@@ -58,7 +58,7 @@ struct HomeView: View {
                             VStack(spacing: 16) {
                                 HomeButton(title: "메뉴 추천받기") {
                                     print("메뉴 추천")
-                                    router.push(.question)
+                                    router.push(.question(id: UUID()))
                                 }
                                 
                                 HomeButton(title: "찜한 메뉴 보러가기") {
@@ -73,8 +73,8 @@ struct HomeView: View {
             }
             .navigationDestination(for: Route.self) { route in
                 switch route {
-                case .question:
-                    QuestionView().environmentObject(router)
+                case .question(let id):
+                    QuestionView().environmentObject(router).id(id)
                 case .loading:
                     ResultLoadingView().environmentObject(router)
                 case .result(let userAnswer):
