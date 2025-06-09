@@ -10,7 +10,7 @@ import SwiftUI
 struct FavoriteMainIngredientModalButton: View {
     @ObservedObject var favoriteViewModel: FavoriteViewModel
     
-    @Environment(\.dismiss) private var dismiss
+//    @Environment(\.dismiss) private var dismiss
     
     var body: some View {
         HStack {
@@ -32,8 +32,9 @@ struct FavoriteMainIngredientModalButton: View {
                     )
             }// TODO: Hifi에 맞게 디자인해야함.
             Button {
-                print("확인")
-                dismiss()
+//                dismiss()
+                favoriteViewModel.dismissModal()
+                
                 // FIXME: 왜 호들갑 떨면서 내려가는 지는 모르겠지만 닫히기는 합니다.
             } label: {
                 Rectangle()
@@ -48,5 +49,6 @@ struct FavoriteMainIngredientModalButton: View {
             }
         
         }
+        .padding(.top, 16)
     }
 }

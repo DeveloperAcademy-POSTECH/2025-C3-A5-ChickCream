@@ -55,6 +55,9 @@ class FavoriteViewModel: ObservableObject {
         showingfavoriteSortType = sortType
     }
     
+    func dismissModal() {
+        showingfavoriteSortType = nil
+    }
     // MARK: - List View
     
     func listViewDidAppear(modelContext: ModelContext) {
