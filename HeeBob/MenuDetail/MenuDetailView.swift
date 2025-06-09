@@ -16,7 +16,6 @@ struct MenuDetailView: View {
     @State var relatedFavorite: Favorite?
     
     var body: some View {
-        
         VStack {
             MenuDetailImageBox(food: food)
             
@@ -40,6 +39,12 @@ struct MenuDetailView: View {
         .onAppear {
             viewDidAppear()
         }
+        .padding(.top, 12)
+        .HBNavigationBar(centerView: {
+            Text(food.title)
+                .font(.hbSubtitle)
+                .foregroundStyle(Color.hbTextPrimary)
+        })
     }
 }
 

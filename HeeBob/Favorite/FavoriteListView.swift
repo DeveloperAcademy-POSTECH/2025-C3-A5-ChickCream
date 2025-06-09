@@ -25,15 +25,26 @@ struct FavoriteListView: View {
         .onAppear {
             favoriteViewModel.listViewDidAppear(modelContext: modelContext)
         }
-        .toolbar {
-            ToolbarItem(placement: .topBarTrailing) {
+        .HBNavigationBar(
+            leftView: {
+                EmptyView()
+            },
+            centerView: {
+                Text("찜한 메뉴")
+                    .font(.hbSubtitle)
+                    .foregroundStyle(Color.hbTextPrimary)
+            },
+            rightView: {
                 Button {
                     router.push(.search)
                 } label: {
                     Image(systemName: "magnifyingglass")
+                        .foregroundStyle(Color.hbTextPrimary)
+                        .frame(width: 24, height: 24)
                 }
             }
-        }
+        )
+        .HBNavigationBarBackButtonHidden(false)
     }
 }
 
