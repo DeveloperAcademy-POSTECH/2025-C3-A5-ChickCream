@@ -10,4 +10,5 @@ import Foundation
 enum UserDefaultsKey: String {
     case migrateSucceeded
     case onboardingShown
+    case recentSearchHistory
 }
