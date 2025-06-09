@@ -14,12 +14,7 @@ struct FilterButton {
 
 // TODO: Hifi에 맞게 주재료 모달 뷰 수정
 struct FavoriteModalView: View {
-    @ObservedObject var favoriteViewModel = FavoriteViewModel()
-    
-    @State var isForkBeefToggle: Bool = false
-    @State var isChickenDuckMeatToggle: Bool = false
-    @State var isFishToggle: Bool = false
-    @State var isTofuEggToggle: Bool = false
+    @ObservedObject var favoriteViewModel: FavoriteViewModel
     
     var body: some View {
         
@@ -47,12 +42,12 @@ struct FavoriteModalView: View {
                 
             )
             .presentationDetents([.fraction(0.35)])
-        } // FIXME: 토글을 다른 뷰로 빼니까 토글 작동을 안함 ㅋㅋ;
+        }
         else if favoriteViewModel.showingfavoriteSortType == .mainIngredient {
             VStack {
-                FavoriteToggle(isForkBeefToggle: $isForkBeefToggle, isChickenDuckMeatToggle: $isChickenDuckMeatToggle, isFishToggle: $isFishToggle, isTofuEggToggle: $isTofuEggToggle)
+                FavoriteToggle(favoriteViewModel: favoriteViewModel)
                 
-                FavoriteMainIngredientModalBtn(isForkBeefToggle: $isForkBeefToggle, isChickenDuckMeatToggle: $isChickenDuckMeatToggle, isFishToggle: $isFishToggle, isTofuEggToggle: $isTofuEggToggle)
+                FavoriteMainIngredientModalBtn(favoriteViewModel: favoriteViewModel)
             }
             .presentationDetents([.fraction(0.5)])
         }

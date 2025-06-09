@@ -8,12 +8,7 @@
 import SwiftUI
 
 struct FavoriteMainIngredientModalBtn: View {
-    @ObservedObject var favoriteViewModel = FavoriteViewModel()
-    
-    @Binding var isForkBeefToggle: Bool
-    @Binding var isChickenDuckMeatToggle: Bool
-    @Binding var isFishToggle: Bool
-    @Binding var isTofuEggToggle: Bool
+    @ObservedObject var favoriteViewModel: FavoriteViewModel
     
     @Environment(\.dismiss) private var dismiss
     
@@ -21,10 +16,10 @@ struct FavoriteMainIngredientModalBtn: View {
         HStack {
             Button {
                 print("초기화")
-                isForkBeefToggle = false
-                isChickenDuckMeatToggle = false
-                isFishToggle = false
-                isTofuEggToggle = false
+                favoriteViewModel.isForkBeefToggle = false
+                favoriteViewModel.isChickenDuckMeatToggle = false
+                favoriteViewModel.isFishToggle = false
+                favoriteViewModel.isTofuEggToggle = false
             } label: {
                 Rectangle()
                     .frame(width: 116, height: 72)

@@ -14,22 +14,18 @@ struct ToggleInfo {
 }
 
 struct FavoriteToggle: View {
-    @ObservedObject var favoriteViewModel = FavoriteViewModel()
+    @ObservedObject var favoriteViewModel: FavoriteViewModel
 
-    @Binding var isForkBeefToggle: Bool
-    @Binding var isChickenDuckMeatToggle: Bool
-    @Binding var isFishToggle: Bool
-    @Binding var isTofuEggToggle: Bool
-    
     var body: some View {
             Text("주재료")
             Divider()
-            
+            // TODO: 디자인 HIFI에 맞게 변경 예정
+        VStack(alignment: .leading) {
             ForEach([
-                ToggleInfo(isOn: $isForkBeefToggle, label: "소고기 돼지고기", ingredient: .beefPork),
-                ToggleInfo(isOn: $isChickenDuckMeatToggle, label: "닭고기 오리고기", ingredient: .chickenAndDuck),
-                ToggleInfo(isOn: $isFishToggle, label: "물고기 해산물", ingredient: .fish),
-                ToggleInfo(isOn: $isTofuEggToggle, label: "콩 두부 달걀", ingredient: .beanTofuEgg)
+                ToggleInfo(isOn: $favoriteViewModel.isForkBeefToggle, label: "소고기 돼지고기", ingredient: .beefPork),
+                ToggleInfo(isOn: $favoriteViewModel.isChickenDuckMeatToggle, label: "닭고기 오리고기", ingredient: .chickenAndDuck),
+                ToggleInfo(isOn: $favoriteViewModel.isFishToggle, label: "물고기 해산물", ingredient: .fish),
+                ToggleInfo(isOn: $favoriteViewModel.isTofuEggToggle, label: "콩 두부 달걀", ingredient: .beanTofuEgg)
             ], id: \.ingredient) { toggle in
                 Toggle(isOn: toggle.isOn) {
                     Text(toggle.label)
@@ -40,14 +36,15 @@ struct FavoriteToggle: View {
                     userSelectedMainIngredientUpdated()
                 }
             }
+        }
     }
     
     func userSelectedMainIngredientUpdated() {
         let toggles = [
-            (isForkBeefToggle, FoodIngredient.beefPork),
-            (isChickenDuckMeatToggle, FoodIngredient.chickenAndDuck),
-            (isFishToggle, FoodIngredient.fish),
-            (isTofuEggToggle, FoodIngredient.beanTofuEgg)
+            (favoriteViewModel.isForkBeefToggle, FoodIngredient.beefPork),
+            (favoriteViewModel.isChickenDuckMeatToggle, FoodIngredient.chickenAndDuck),
+            (favoriteViewModel.isFishToggle, FoodIngredient.fish),
+            (favoriteViewModel.isTofuEggToggle, FoodIngredient.beanTofuEgg)
         ]
         
         favoriteViewModel.mainIngredientsUserSelected = toggles

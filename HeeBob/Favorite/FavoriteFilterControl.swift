@@ -13,7 +13,7 @@ struct FavoriteFilterControl: View {
     var body: some View {
         HStack {
             ForEach(FavoriteViewModel.FavoriteSortType.allCases, id: \.self) { sortType in
-                FavoriteFilterButton(title: sortType.rawValue, isSelected: sortType == favoriteViewModel.showingfavoriteSortType) {
+                FavoriteFilterButton(favoriteViewModel: favoriteViewModel, title: sortType.rawValue, filterType: sortType) {
                     favoriteViewModel.filterSelectButtonTapped(for: sortType)
                 }
             }
