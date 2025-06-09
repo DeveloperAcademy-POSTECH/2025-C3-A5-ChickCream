@@ -25,40 +25,45 @@ struct ResultCard: View {
     }
     
     var body: some View {
-        VStack(spacing: 0) {
-            if let imageData = getFoodImageData(for: food),
-               let uiImage = UIImage(data: imageData) {
-                Image(uiImage: uiImage)
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .clipped()
-            } else {
-                Image(systemName: "questionmark.app.dashed")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .clipped()
-            }
-            
-            HStack {
-                VStack(alignment: .leading, spacing: 0){
-                    Text(food.title)
-                        .font(.hbTitle)
-                        .foregroundStyle(Color.hbTextPrimary)
-                        .lineLimit(1)
+        ZStack {
+            VStack(spacing: 0) {
+                if let imageData = getFoodImageData(for: food),
+                   let uiImage = UIImage(data: imageData) {
+                    Image(uiImage: uiImage)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .clipped()
+                } else {
+                    Image(systemName: "questionmark.app.dashed")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .clipped()
                 }
                 Spacer()
-                Button(action: toggleFavorite) {
-                    Image(isFavorite ? .heartFill : .heart)
-                        .resizable()
-                        .frame(width: 40, height: 40)
-                }
-                .buttonStyle(.plain)
-                .contentShape(Rectangle())
             }
-            .padding(.horizontal, 20)
-            .padding(.vertical, 18)
+            VStack {
+                Spacer()
+                HStack {
+                    VStack(alignment: .leading, spacing: 0){
+                        Text(food.title)
+                            .font(.hbTitle)
+                            .foregroundStyle(Color.hbTextPrimary)
+                            .lineLimit(1)
+                    }
+                    Spacer()
+                    Button(action: toggleFavorite) {
+                        Image(isFavorite ? .heartFill : .heart)
+                            .resizable()
+                            .frame(width: 40, height: 40)
+                    }
+                    .buttonStyle(.plain)
+                    .contentShape(Rectangle())
+                }
+                .padding(.horizontal, 20)
+                .padding(.vertical, 18)
+                .background(Color.hbBackground)
+            }
         }
-        .background(Color.hbBackground)
         .cornerRadius(16)
         .shadow(color: .black.opacity(0.1), radius: 5, x: 0, y: 2)
         .overlay(

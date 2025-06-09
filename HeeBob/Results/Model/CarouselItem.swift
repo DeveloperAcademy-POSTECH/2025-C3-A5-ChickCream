@@ -11,12 +11,12 @@ enum CarouselItem: Identifiable {
     case food(Food)
     case addCard
 
-    var id: String {
+    var id: UUID {
         switch self {
         case .food(let food):
-            return food.id.uuidString
+            return food.id
         case .addCard:
-            return "addCard"
+            return UUID(uuidString: "00000000-0000-0000-0000-000000000001")!
         }
     }
 }
