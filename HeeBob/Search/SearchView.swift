@@ -54,6 +54,7 @@ struct SearchView: View {
                     .onSubmit {
                         searchTextFieldDidEndEditing()
                     }
+                    .submitLabel(.search)
             }
             
             if favorites.isEmpty {
