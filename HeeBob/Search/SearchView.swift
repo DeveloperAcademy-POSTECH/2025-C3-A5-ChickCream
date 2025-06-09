@@ -41,7 +41,7 @@ struct SearchView: View {
                     Image(systemName: "chevron.left")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .foregroundColor(Color.hbTextPrimary)
+                        .foregroundStyle(Color.hbTextPrimary)
                         .frame(width: 13)
                 }
                 TextField(
@@ -67,7 +67,7 @@ struct SearchView: View {
                 if !searchText.isEmpty {
                     Text("검색 결과가 없습니다.")
                         .font(.hbBody2)
-                        .foregroundColor(.hbDisabled)
+                        .foregroundStyle(Color.hbDisabled)
                         .padding(.top, 40)
                 } else {
                     HStack {
@@ -91,7 +91,7 @@ struct SearchView: View {
                     if recentSearchTextList.isEmpty {
                         Text("최근 검색 기록이 없습니다.")
                             .font(.hbBody2)
-                            .foregroundColor(.hbDisabled)
+                            .foregroundStyle(Color.hbDisabled)
                             .padding(.top, 16)
                     }
                     
