@@ -29,11 +29,13 @@ struct FavoriteMenuCard: View {
             
             Text(food.title)
                 .font(.hbBody2)
-                .frame(height: 66, alignment: .top)
+                .frame(maxWidth: .infinity, minHeight: 66, alignment: .topLeading)
                 .bold()
                 .foregroundColor(.hbTextPrimary)
                 .lineLimit(2)
-                .padding(.top, 10)
+                .padding(.top, 12)
+                .padding(.leading, 16)
+                .multilineTextAlignment(.leading)
         }
         .background(
             RoundedRectangle(cornerRadius: 16)
