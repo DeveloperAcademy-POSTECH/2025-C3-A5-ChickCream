@@ -118,7 +118,6 @@ extension ResultsView {
         .onChange(of: selectedItemID) {
             if let id = selectedItemID,
                let index = carouselItems.firstIndex(where: { $0.id == id }) {
-                print("현재 인덱스: \(index)")
                 selectedIndex = index
             }
         }
