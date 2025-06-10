@@ -37,8 +37,9 @@ struct FavoriteMenuCard: View {
         }
         .background(
             RoundedRectangle(cornerRadius: 16)
-                .fill(Color(.systemGray6))
-                .shadow(color: Color.gray.opacity(0.2), radius: 5, x: 0, y: 4)
+                .stroke(Color.hbButtonSecondary, lineWidth: 1)
+                .fill(Color.hbBackground)
+                .shadow(color: .black.opacity(0.1), radius: 5, x: 0, y: 2)
         )
         .frame(width: 173)
     }

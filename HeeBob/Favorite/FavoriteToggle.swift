@@ -15,12 +15,20 @@ struct FavoriteMainIngredientToggleInfo {
 
 struct FavoriteToggle: View {
     @ObservedObject var favoriteViewModel: FavoriteViewModel
-
+    
     var body: some View {
-            Text("주재료")
-            Divider()
-            // TODO: 디자인 HIFI에 맞게 변경 예정
-        VStack(alignment: .leading) {
+        Text("주재료")
+            .font(.hbSubtitle)
+            .foregroundStyle(Color.hbTextPrimary)
+            .padding(.bottom, 16)
+            .padding(.top, 0)
+            .padding(.leading, 16)
+            .frame(maxWidth: .infinity, alignment: .leading)
+        Divider()
+            .padding(.bottom, 16)
+            .padding(.top, 0)
+        // TODO: 디자인 HIFI에 맞게 변경 예정
+  
             ForEach([
                 FavoriteMainIngredientToggleInfo(isOn: $favoriteViewModel.isForkBeefToggle, label: "소고기 돼지고기", ingredient: .beefPork),
                 FavoriteMainIngredientToggleInfo(isOn: $favoriteViewModel.isChickenDuckMeatToggle, label: "닭고기 오리고기", ingredient: .chickenAndDuck),
@@ -29,14 +37,19 @@ struct FavoriteToggle: View {
             ], id: \.ingredient) { toggle in
                 Toggle(isOn: toggle.isOn) {
                     Text(toggle.label)
+                        .font(.hbBody2)
+                        .foregroundStyle(Color.hbTextPrimary)
                 }
                 .toggleStyle(CheckboxToggleStyle())
-                .padding()
+                .padding(.bottom, 16)
+                .padding(.top, 0)
+                .padding(.leading, 16)
+                .frame(maxWidth: .infinity, alignment: .leading)
                 .onChange(of: toggle.isOn.wrappedValue) {
                     userSelectedMainIngredientUpdated()
                 }
             }
-        }
+        
     }
     
     func userSelectedMainIngredientUpdated() {

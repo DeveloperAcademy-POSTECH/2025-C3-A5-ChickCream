@@ -7,7 +7,7 @@
 
 import Foundation
 import SwiftUI
-// TODO: 모두 보기 상태 = 회색. 하나라도 필터 선택되어 있으면 주황색. 모달뷰를 내려도 유지되어야함. 따라서 뷰모델의 상태에 따라서 버튼 색 지정... 기존의 있는거 가져다 쓰면 될 듯?
+
 struct FavoriteFilterButton: View {
     @ObservedObject var favoriteViewModel: FavoriteViewModel
     
@@ -41,6 +41,8 @@ struct FavoriteFilterButton: View {
                         }
                     )
             }
+            .padding(.top, 16)
+            .padding(.bottom, 8)
         }
     }
 }
