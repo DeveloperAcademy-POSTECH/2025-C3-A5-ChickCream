@@ -276,7 +276,7 @@ fileprivate extension SampleData {
         ),
         .init(
             id: UUID(uuidString: "272b4f03-6811-4a7b-929c-000000000000")!,
-            title: "달걀 샐러드",
+            title: "계란 샐러드",
             uniquePoint: "유니크 포인트 테스트",
             attribute: .init(
                 id: UUID(uuidString: "272b4f03-6811-4a7b-929c-000000000000")!,
