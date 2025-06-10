@@ -41,7 +41,7 @@ final class QuestionViewModel: ObservableObject {
                 QuestionOption(title: "소고기\n돼지고기", value: FoodIngredient.beefPork),
                 QuestionOption(title: "닭고기\n오리고기", value: FoodIngredient.chickenAndDuck),
                 QuestionOption(title: "생선\n해산물", value: FoodIngredient.fish),
-                QuestionOption(title: "콩·두부\n달걀", value: FoodIngredient.beanTofuEgg),
+                QuestionOption(title: "콩·두부\n계란", value: FoodIngredient.beanTofuEgg),
             ]
         ),
     ]
