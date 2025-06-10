@@ -12,9 +12,7 @@ struct HomeButton: View {
     let didTap: () -> Void
     
     var body: some View {
-        print(".top \(UnitPoint.top)")
-        print(".bottom \(UnitPoint.bottom)")
-        return Button {
+        Button {
             didTap()
         } label: {
             ZStack {
