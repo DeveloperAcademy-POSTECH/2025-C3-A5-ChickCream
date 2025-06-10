@@ -16,12 +16,14 @@ struct AddCard: View {
     
     var body: some View {
         VStack(spacing: 18) {
+            Spacer()
             Image(.addCircle)
             Text("또 다른 메뉴\n추천받기")
                 .multilineTextAlignment(.center)
                 .font(.hbTitle)
                 .foregroundStyle(Color.hbTextSecondary)
                 .frame(maxWidth: .infinity)
+            Spacer()
         }
         .background(Color.hbBackground)
         .cornerRadius(16)
