@@ -17,20 +17,17 @@ struct FavoriteMenuCard: View {
             if let imageData = getDietImageData(for: food),
                let uiImage = UIImage(data: imageData) {
                 Image(uiImage: uiImage)
-                 .resizable()
-                 .frame(width: 173, height: 130)
-                 .clipShape(RoundedTopCorners(radius: 16))
-                 .aspectRatio(contentMode: .fill)
-                 .clipped()
-         }  else {
-                Image(systemName: "questionmark.app.dashed")
                     .resizable()
+                    .aspectRatio(contentMode: .fill)
                     .frame(width: 173, height: 130)
                     .clipShape(RoundedTopCorners(radius: 16))
+            }  else {
+                Image(systemName: "questionmark.app.dashed")
+                    .resizable()
                     .aspectRatio(contentMode: .fill)
-                    .clipped() 
+                    .frame(width: 173, height: 130)
+                    .clipShape(RoundedTopCorners(radius: 16))
             }
-            
             Text(food.title)
                 .font(.hbBody2)
                 .frame(maxWidth: .infinity, minHeight: 66, alignment: .topLeading)
@@ -50,28 +47,28 @@ struct FavoriteMenuCard: View {
         .frame(width: 173)
     }
 }
-    private func getDietImageData(for food: Food) -> Data? {
-        guard let url = Bundle.main.url(forResource: (food.id.uuidString.lowercased()), withExtension: "jpg") else {
-            print("cannot find image file \(food.id.uuidString.lowercased()).jpg")
-            return nil
-        }
-        
-        do {
-            let data = try Data(contentsOf: url)
-            print(data)
-            return data
-        } catch {
-            print("error: \(error)")
-            return nil
-        }
+private func getDietImageData(for food: Food) -> Data? {
+    guard let url = Bundle.main.url(forResource: (food.id.uuidString.lowercased()), withExtension: "jpg") else {
+        print("cannot find image file \(food.id.uuidString.lowercased()).jpg")
+        return nil
     }
+    
+    do {
+        let data = try Data(contentsOf: url)
+        print(data)
+        return data
+    } catch {
+        print("error: \(error)")
+        return nil
+    }
+}
 
 struct RoundedTopCorners: Shape {
     var radius: CGFloat = 16
-
+    
     func path(in rect: CGRect) -> Path {
         var path = Path()
-
+        
         // 상단 좌/우 모서리만 둥글게
         path.move(to: CGPoint(x: rect.minX, y: rect.maxY)) // bottom left
         path.addLine(to: CGPoint(x: rect.minX, y: rect.minY + radius))
@@ -86,13 +83,8 @@ struct RoundedTopCorners: Shape {
         )
         path.addLine(to: CGPoint(x: rect.maxX, y: rect.maxY))
         path.addLine(to: CGPoint(x: rect.minX, y: rect.maxY))
-
+        
         path.closeSubpath()
         return path
     }
 }
-
-
-//#Preview(traits: .sampleData) {
-//    FavoriteMenuCard()
-//}
