@@ -43,7 +43,7 @@ struct FavoriteModalView: View {
             )
             .presentationDetents([.fraction(0.35)])
         }
-        else if favoriteViewModel.showingfavoriteSortType == .mainIngredient {
+        else if favoriteViewModel.showingfavoriteSortType == .mainIngredient || favoriteViewModel.showingfavoriteSortType == nil {
             VStack {
                 FavoriteToggle(favoriteViewModel: favoriteViewModel)
                 
