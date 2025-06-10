@@ -145,7 +145,7 @@ class FavoriteViewModel: ObservableObject {
 
     enum FavoriteSortType: String, CaseIterable {
         case portable = "휴대성"
-        case cookable = "식사 유형"
+        case cookable = "식사 준비"
         case mainIngredient = "주재료"
     }
 }

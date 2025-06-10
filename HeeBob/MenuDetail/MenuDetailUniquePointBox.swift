@@ -18,23 +18,21 @@ struct MenuDetailUniquePointBox: View {
                 .padding(.bottom, -10)
                 .padding(.top, 0)
                 .padding(.trailing, 300)
-            Rectangle()
-                .foregroundColor(.clear)
-                .frame(maxHeight: 66, alignment: .topLeading)
-                .background(Color.hbPrimaryLighten)
-                .cornerRadius(16)
-                .padding(.top, 0)
-                .padding(.bottom, 0)
-                .padding(.horizontal, 16)
-                .overlay(alignment: .leading) {
-                    Text(food.uniquePoint)
-                        .font(.hbBody1)
-                        .foregroundColor(.black)
-                        .padding(16)
-                        .padding(.leading, 14)
-                        .fixedSize(horizontal: false, vertical: true) // 2줄 이상 가능하게
-                        .frame(alignment: .leading)
-                }
+            
+            Text(food.uniquePoint)
+                .font(.hbBody1)
+                .foregroundColor(.black)
+                .padding(16)
+                .padding(.leading, 14)
+                .fixedSize(horizontal: false, vertical: true)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .lineLimit(3)
+                .background(
+                    RoundedRectangle(cornerRadius: 16)
+                        .fill(Color.hbPrimaryLighten)
+                        .frame(minHeight: 66, maxHeight: 120)
+                        .padding(.horizontal, 16)
+                )
         }
     }
     
@@ -49,3 +47,14 @@ struct MenuDetailUniquePointBox: View {
         }
     }
 }
+
+#Preview {
+    MenuDetailUniquePointBox(
+        food: Food(
+            id: UUID(),
+            title: "대표 메뉴",
+            uniquePoint: "가나다라마바사가가나다가나다라마바사가가나다라마바사가사바사가다라마바사가가나다라마바사가사바사가사사", attribute: FoodAttribute(id: UUID(), isPortable: true, isCookable: true, mainIngredient: .beanTofuEgg)
+        )
+    )
+}
+
