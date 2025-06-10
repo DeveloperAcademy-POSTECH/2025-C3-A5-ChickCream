@@ -51,7 +51,7 @@ extension UserAnswerView {
             case .fish:
                 return "생선이나 해산물"
             case .beanTofuEgg:
-                return "콩 · 두부 · 달걀"
+                return "콩 · 두부 · 계란"
             }
         }
         

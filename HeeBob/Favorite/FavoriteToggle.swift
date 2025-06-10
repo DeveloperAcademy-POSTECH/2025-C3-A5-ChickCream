@@ -25,7 +25,7 @@ struct FavoriteToggle: View {
                 FavoriteMainIngredientToggleInfo(isOn: $favoriteViewModel.isForkBeefToggle, label: "소고기 돼지고기", ingredient: .beefPork),
                 FavoriteMainIngredientToggleInfo(isOn: $favoriteViewModel.isChickenDuckMeatToggle, label: "닭고기 오리고기", ingredient: .chickenAndDuck),
                 FavoriteMainIngredientToggleInfo(isOn: $favoriteViewModel.isFishToggle, label: "물고기 해산물", ingredient: .fish),
-                FavoriteMainIngredientToggleInfo(isOn: $favoriteViewModel.isTofuEggToggle, label: "콩 두부 달걀", ingredient: .beanTofuEgg)
+                FavoriteMainIngredientToggleInfo(isOn: $favoriteViewModel.isTofuEggToggle, label: "콩 두부 계란", ingredient: .beanTofuEgg)
             ], id: \.ingredient) { toggle in
                 Toggle(isOn: toggle.isOn) {
                     Text(toggle.label)
