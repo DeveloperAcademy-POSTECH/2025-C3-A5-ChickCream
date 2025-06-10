@@ -53,7 +53,7 @@ struct CardGrid: View {
 
     let columns = [
         GridItem(.flexible()),
-        GridItem(.flexible())
+        GridItem(.flexible(), spacing: 6)
     ] // 열 혹은 행의 레이아웃 정의. flexible은 해당 열이나 행의 너비,높이가 유동적이게 지정.
     
     let didItemTap: (_ favorite: Favorite) -> Void
@@ -72,9 +72,11 @@ struct CardGrid: View {
                         didItemTap(favorite)
                     } label: {
                         FavoriteMenuCard(food: favorite.food, favorite: favorite)
+                            .padding(.horizontal, 8)
                     }
                 }
             }
+            .padding(.horizontal, 16)
         }
     }
 }
