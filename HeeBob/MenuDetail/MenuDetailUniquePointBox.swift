@@ -11,13 +11,14 @@ struct MenuDetailUniquePointBox: View {
     var food: Food
     
     var body: some View {
-        VStack {
+        VStack(spacing: 0) {
+            HStack {
             Triangle()
                 .fill(Color(red: 1, green: 0.86, blue: 0.8))
                 .frame(width: 20, height: 15)
-                .padding(.bottom, -10)
-                .padding(.top, 0)
-                .padding(.trailing, 300)
+            Spacer()
+        }
+        .padding(.leading, 32)
             
             Text(food.uniquePoint)
                 .font(.hbBody1)
@@ -26,7 +27,7 @@ struct MenuDetailUniquePointBox: View {
                 .padding(.leading, 14)
                 .fixedSize(horizontal: false, vertical: true)
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .lineLimit(3)
+                .lineLimit(4)
                 .background(
                     RoundedRectangle(cornerRadius: 16)
                         .fill(Color.hbPrimaryLighten)
@@ -53,7 +54,7 @@ struct MenuDetailUniquePointBox: View {
         food: Food(
             id: UUID(),
             title: "대표 메뉴",
-            uniquePoint: "가나다라마바사가가나다가나다라마바사가가나다라마바사가사바사가다라마바사가가나다라마바사가사바사가사사", attribute: FoodAttribute(id: UUID(), isPortable: true, isCookable: true, mainIngredient: .beanTofuEgg)
+            uniquePoint: "가나다라마바사가가나다가나가나다라마바사가가나다가나다라마바사가가나다라마바사가사바사가다라마바사가가나", attribute: FoodAttribute(id: UUID(), isPortable: true, isCookable: true, mainIngredient: .beanTofuEgg)
         )
     )
 }
