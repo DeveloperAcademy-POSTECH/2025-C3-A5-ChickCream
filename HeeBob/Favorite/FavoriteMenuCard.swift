@@ -19,12 +19,16 @@ struct FavoriteMenuCard: View {
                 Image(uiImage: uiImage)
                  .resizable()
                  .frame(width: 173, height: 130)
-                 .cornerRadius(16)
+                 .clipShape(RoundedTopCorners(radius: 16))
+                 .aspectRatio(contentMode: .fill)
+                 .clipped()
          }  else {
                 Image(systemName: "questionmark.app.dashed")
                     .resizable()
                     .frame(width: 173, height: 130)
-                    .cornerRadius(16)
+                    .clipShape(RoundedTopCorners(radius: 16))
+                    .aspectRatio(contentMode: .fill)
+                    .clipped() 
             }
             
             Text(food.title)
@@ -62,6 +66,31 @@ struct FavoriteMenuCard: View {
         }
     }
 
+struct RoundedTopCorners: Shape {
+    var radius: CGFloat = 16
+
+    func path(in rect: CGRect) -> Path {
+        var path = Path()
+
+        // 상단 좌/우 모서리만 둥글게
+        path.move(to: CGPoint(x: rect.minX, y: rect.maxY)) // bottom left
+        path.addLine(to: CGPoint(x: rect.minX, y: rect.minY + radius))
+        path.addQuadCurve(
+            to: CGPoint(x: rect.minX + radius, y: rect.minY),
+            control: CGPoint(x: rect.minX, y: rect.minY)
+        )
+        path.addLine(to: CGPoint(x: rect.maxX - radius, y: rect.minY))
+        path.addQuadCurve(
+            to: CGPoint(x: rect.maxX, y: rect.minY + radius),
+            control: CGPoint(x: rect.maxX, y: rect.minY)
+        )
+        path.addLine(to: CGPoint(x: rect.maxX, y: rect.maxY))
+        path.addLine(to: CGPoint(x: rect.minX, y: rect.maxY))
+
+        path.closeSubpath()
+        return path
+    }
+}
 
 
 //#Preview(traits: .sampleData) {
