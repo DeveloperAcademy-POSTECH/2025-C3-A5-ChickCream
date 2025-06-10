@@ -39,7 +39,7 @@ class FavoriteViewModel: ObservableObject {
            
            /// 조건에 따라 색상 튜플을 반환
            if isInactive {
-               return (button: .hbButtonSecondary, text: .hbTextSecondary)
+               return (button: .hbButtonSecondary, text: .hbTextPrimary)
            } else {
                return (button: .hbPrimary, text: .hbPrimary)
            }
