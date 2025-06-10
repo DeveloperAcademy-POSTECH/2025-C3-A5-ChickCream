@@ -89,6 +89,8 @@ fileprivate struct SentenceView: View {
     var body: some View {
         HStack(spacing: 16) {
             Image(systemName: "checkmark")
+                .renderingMode(.template)
+                .foregroundStyle(Color.hbTextPrimary)
             Text(content)
                 .foregroundStyle(Color.hbTextPrimary)
         }
