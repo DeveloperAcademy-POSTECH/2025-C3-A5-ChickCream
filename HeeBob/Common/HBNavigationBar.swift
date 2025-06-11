@@ -59,7 +59,7 @@ struct HBNavigationBarModifier<L, C, R>: ViewModifier where L: View, C: View, R:
                     Spacer()
                 }
             }
-            .background(Color.hbBackground) // FIXME: hbWhite로 수정
+            .background(Color.hbBackground)
             .ignoresSafeArea(.all, edges: .horizontal)
             .ignoresSafeArea(.all, edges: .bottom)
             content
