@@ -78,6 +78,7 @@ struct ResultsView: View {
                 hasLoaded = true
             }
         }
+        .hbBackground()
         .HBNavigationBar(centerView: {
             Text("추천 결과")
                 .font(.hbTitle)

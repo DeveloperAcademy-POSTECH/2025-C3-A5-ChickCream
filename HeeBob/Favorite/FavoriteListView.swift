@@ -45,6 +45,7 @@ struct FavoriteListView: View {
             }
         )
         .ignoresSafeArea(edges: .bottom)
+        .hbBackground()
         .HBNavigationBarBackButtonHidden(false)
     }
 }

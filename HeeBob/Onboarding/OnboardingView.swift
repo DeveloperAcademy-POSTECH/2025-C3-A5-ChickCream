@@ -55,6 +55,7 @@ struct OnboardingView: View {
                 self.currentIndex = currentIndex
             }
         })
+        .hbBackground()
     }
 }
 

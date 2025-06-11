@@ -133,6 +133,7 @@ struct SearchView: View {
             }
         })
         .padding(.horizontal, 16)
+        .hbBackground()
         .navigationBarBackButtonHidden(true)
     }
 }
