@@ -24,6 +24,9 @@ struct ResultsView: View {
     @State private var fetchedFoodIDs: Set<UUID> = []
     @State private var resultFoods: [Food] = []
     
+    private let cardWidth = UIScreen.main.bounds.width * 0.816
+    private let cardHeight = UIScreen.main.bounds.height * 0.37
+    
     var body: some View {
         VStack {
             UserAnswerView(
