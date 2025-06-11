@@ -40,29 +40,37 @@ struct ResultsView: View {
             resultCarouselView
             cardNumberView
             Spacer()
-            HStack {
-                HBButton(configuration: .init(
-                    title: "찜한 메뉴",
-                    foregroundColor: .hbPrimary,
-                    backgroundColor: .hbPrimaryLighten
-                )) {
+            HStack(spacing: 16) {
+                //FIXME: HBButton 수정 후 다시 사용
+                Button {
                     router.push(.favorite)
+                } label: {
+                    ZStack(alignment: .center) {
+                        RoundedRectangle(cornerRadius: 16)
+                            .foregroundStyle(Color.hbPrimaryLighten)
+                        Text("찜한 메뉴")
+                            .foregroundStyle(Color.hbPrimary)
+                            .font(.hbSubtitle)
+                    }
                 }
-                Spacer()
-                HBButton(configuration: .init(
-                    title: "다시 추천받기",
-                    foregroundColor: .hbPrimary,
-                    backgroundColor: .hbPrimaryLighten
-                )) {
+                Button {
                     hasLoaded = false
                     /// fixme: 뷰모델을 초기화하는 방법 고민
                     router.pop()
                     router.pop()
                     router.push(.question(id: UUID()))
+                } label: {
+                    ZStack(alignment: .center) {
+                        RoundedRectangle(cornerRadius: 16)
+                            .foregroundStyle(Color.hbPrimaryLighten)
+                        Text("다시 추천받기")
+                            .foregroundStyle(Color.hbPrimary)
+                            .font(.hbSubtitle)
+                    }
                 }
             }
-            .padding(.horizontal, 20)
-            .padding(.bottom, 27)
+            .frame(height: UIScreen.main.bounds.height * 0.0845)
+            .padding(.horizontal, 16)
         }
         .onAppear {
             if !hasLoaded {
