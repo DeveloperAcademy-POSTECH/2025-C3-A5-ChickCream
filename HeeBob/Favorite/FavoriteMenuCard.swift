@@ -11,6 +11,7 @@ import SwiftData
 struct FavoriteMenuCard: View {
     var food: Food
     var favorite: Favorite
+    var geometry: GeometryProxy
     
     var body: some View {
         VStack(spacing: 0) {
@@ -19,13 +20,13 @@ struct FavoriteMenuCard: View {
                 Image(uiImage: uiImage)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
-                    .frame(width: 173, height: 130)
+                    .frame(width: geometry.size.width * 0.44, height: geometry.size.height * 0.172)
                     .clipShape(RoundedTopCorners(radius: 16))
             }  else {
                 Image(systemName: "questionmark.app.dashed")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
-                    .frame(width: 173, height: 130)
+                    .frame(width: geometry.size.width * 0.44, height: geometry.size.height * 0.172)
                     .clipShape(RoundedTopCorners(radius: 16))
             }
             Text(food.title)
@@ -44,7 +45,6 @@ struct FavoriteMenuCard: View {
                 .fill(Color.hbBackground)
                 .shadow(color: .black.opacity(0.1), radius: 5, x: 0, y: 2)
         )
-        .frame(width: 173)
     }
 }
 private func getDietImageData(for food: Food) -> Data? {

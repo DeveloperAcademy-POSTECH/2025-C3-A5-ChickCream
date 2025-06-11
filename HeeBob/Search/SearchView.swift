@@ -106,14 +106,16 @@ struct SearchView: View {
                     }
                 }
             } else {
-                ScrollView {
-                    Spacer()
-                    LazyVGrid(columns: columns, spacing: 12) {
-                        ForEach(favorites) { favorite in
-                            Button {
-                                router.push(.detail(food: favorite.food))
-                            } label: {
-                                FavoriteMenuCard(food: favorite.food, favorite: favorite)
+                GeometryReader { geometry in
+                    ScrollView {
+                        Spacer()
+                        LazyVGrid(columns: columns, spacing: 12) {
+                            ForEach(favorites) { favorite in
+                                Button {
+                                    router.push(.detail(food: favorite.food))
+                                } label: {
+                                    FavoriteMenuCard(food: favorite.food, favorite: favorite, geometry: geometry)
+                                }
                             }
                         }
                     }
