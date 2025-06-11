@@ -95,8 +95,7 @@ extension ResultsView {
                                 .scaleEffect(x: phase.isIdentity ? 1 : 0.8,
                                              y: phase.isIdentity ? 1 : 0.8)
                         }
-                        .frame(maxHeight: 320)
-                        .aspectRatio(CGSize(width: 321, height: 316), contentMode: .fit)
+                        .frame(width: cardWidth, height: cardHeight)
                     case .addCard:
                         AddCard {
                             loadOneMoreRecommendation()
@@ -107,8 +106,7 @@ extension ResultsView {
                                 .scaleEffect(x: phase.isIdentity ? 1 : 0.8,
                                              y: phase.isIdentity ? 1 : 0.8)
                         }
-                        .frame(maxHeight: 320)
-                        .aspectRatio(CGSize(width: 321, height: 316), contentMode: .fill)
+                        .frame(width: cardWidth, height: cardHeight)
                     }
                 }
             }
