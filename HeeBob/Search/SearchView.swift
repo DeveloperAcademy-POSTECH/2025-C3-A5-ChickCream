@@ -51,16 +51,16 @@ struct SearchView: View {
                         .font(.hbBody2)
                         .foregroundStyle(Color.hbDisabled)
                 )
-                    .font(.hbBody2)
-                    .foregroundStyle(Color.hbTextPrimary)
-                    .padding(.vertical, 9)
-                    .padding(.horizontal, 12)
-                    .background(Color(red: 0.96, green: 0.96, blue: 0.95))
-                    .cornerRadius(12)
-                    .onSubmit {
-                        searchTextFieldDidEndEditing()
-                    }
-                    .submitLabel(.search)
+                .font(.hbBody2)
+                .foregroundStyle(Color.hbTextPrimary)
+                .padding(.vertical, 9)
+                .padding(.horizontal, 12)
+                .background(Color(red: 0.96, green: 0.96, blue: 0.95))
+                .cornerRadius(12)
+                .onSubmit {
+                    searchTextFieldDidEndEditing()
+                }
+                .submitLabel(.search)
             }
             
             if favorites.isEmpty {
