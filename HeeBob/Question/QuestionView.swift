@@ -111,6 +111,7 @@ struct QuestionView: View {
                 }
             }
         }
+        .hbBackground()
         .HBNavigationBar(centerView: { EmptyView() })
         .HBNavigationBarBackButtonHidden(viewModel.selectedIndex != 0)
     }
