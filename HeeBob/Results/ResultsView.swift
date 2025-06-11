@@ -113,7 +113,7 @@ extension ResultsView {
             .scrollTargetLayout()
         }
         .contentMargins(.vertical, 16, for: .scrollContent)
-        .contentMargins(.horizontal, 36, for: .scrollContent)
+        .contentMargins(.horizontal, (UIScreen.main.bounds.width - cardWidth) / 2, for: .scrollContent)
         .scrollTargetBehavior(.viewAligned) // 카드 중간 focus
         .scrollPosition(id: $selectedItemID)
         .onChange(of: selectedItemID) {
