@@ -19,6 +19,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
+## [1.0.0] - 2025-06-11
+
+## Changed
+
+- 데이터 셋 2025-06-11 기준으로 업데이트
+
+### Fixed
+
+- 하이파이 디자인과 맞지 않았던 부분 수정
+
 ## [0.0.6] - 2025-06-10
 
 - Academy Test
@@ -90,7 +100,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - MVP 기능 구현
 - 디자인 약 80% 반영
 
-[unreleased]: hhttps://github.com/DeveloperAcademy-POSTECH/2025-C3-A5-ChickCream/compare/v0.0.6...HEAD
+[unreleased]: hhttps://github.com/DeveloperAcademy-POSTECH/2025-C3-A5-ChickCream/compare/v1.0.0...HEAD
+[1.0.0]: hhttps://github.com/DeveloperAcademy-POSTECH/2025-C3-A5-ChickCream/releases/tag/v1.0.0
 [0.0.6]: hhttps://github.com/DeveloperAcademy-POSTECH/2025-C3-A5-ChickCream/releases/tag/v0.0.6
 [0.0.5]: hhttps://github.com/DeveloperAcademy-POSTECH/2025-C3-A5-ChickCream/releases/tag/v0.0.5
 [0.0.4]: hhttps://github.com/DeveloperAcademy-POSTECH/2025-C3-A5-ChickCream/releases/tag/v0.0.4
