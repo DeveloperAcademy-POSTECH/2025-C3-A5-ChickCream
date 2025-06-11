@@ -34,12 +34,12 @@ struct FavoriteMenuCard: View {
                 }
                 Text(food.title)
                     .font(.hbBody2)
-                    .frame(width: cardWidth - 16, alignment: .topLeading)
+                    .frame(width: cardWidth - 32, alignment: .topLeading)
                     .bold()
                     .foregroundColor(.hbTextPrimary)
                     .lineLimit(2)
                     .padding(.vertical, 12)
-                    .padding(.leading, 16)
+                    .padding(.horizontal, 16)
                     .multilineTextAlignment(.leading)
                     .fixedSize(horizontal: false, vertical: true)
             }
