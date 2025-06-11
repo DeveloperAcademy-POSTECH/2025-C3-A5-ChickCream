@@ -128,9 +128,7 @@ extension ResultsView {
     }
     
     private var cardNumberView: some View {
-        HStack {
             Spacer()
-            Text("\(selectedIndex + 1)/\(carouselItems.count)")
                 .font(.hbBody1)
                 .foregroundStyle(Color.hbTextSecondary)
             Spacer()
