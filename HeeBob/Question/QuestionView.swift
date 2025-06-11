@@ -77,7 +77,7 @@ struct QuestionView: View {
                 Text("렌더링할 수 없습니다")
             }
             
-            HStack {
+            HStack(spacing: 15) {
                 HBButton(
                     configuration: .init(
                         title: "이전",
