@@ -11,40 +11,46 @@ import SwiftData
 struct FavoriteMenuCard: View {
     var food: Food
     var favorite: Favorite
-    var geometry: GeometryProxy
+    
+    let cardWidth: CGFloat = UIScreen.main.bounds.width * 0.44
+    let cardHeight: CGFloat = UIScreen.main.bounds.height * 0.172
     
     var body: some View {
-        VStack(spacing: 0) {
-            if let imageData = getDietImageData(for: food),
-               let uiImage = UIImage(data: imageData) {
-                Image(uiImage: uiImage)
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: geometry.size.width * 0.44, height: geometry.size.height * 0.172)
-                    .clipShape(RoundedTopCorners(radius: 16))
-            }  else {
-                Image(systemName: "questionmark.app.dashed")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: geometry.size.width * 0.44, height: geometry.size.height * 0.172)
-                    .clipShape(RoundedTopCorners(radius: 16))
+        VStack {
+            VStack(spacing: 0) {
+                if let imageData = getDietImageData(for: food),
+                   let uiImage = UIImage(data: imageData) {
+                    Image(uiImage: uiImage)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: cardWidth, height: cardHeight)
+                        .clipShape(RoundedTopCorners(radius: 16))
+                }  else {
+                    Image(systemName: "questionmark.app.dashed")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: cardWidth, height: cardHeight)
+                        .clipShape(RoundedTopCorners(radius: 16))
+                }
+                Text(food.title)
+                    .font(.hbBody2)
+                    .frame(width: cardWidth - 16, alignment: .topLeading)
+                    .bold()
+                    .foregroundColor(.hbTextPrimary)
+                    .lineLimit(2)
+                    .padding(.vertical, 12)
+                    .padding(.leading, 16)
+                    .multilineTextAlignment(.leading)
+                    .fixedSize(horizontal: false, vertical: true)
             }
-            Text(food.title)
-                .font(.hbBody2)
-                .frame(width: geometry.size.width * 0.44 - 16, alignment: .topLeading)
-                .bold()
-                .foregroundColor(.hbTextPrimary)
-                .lineLimit(2)
-                .padding(.vertical, 12)
-                .padding(.leading, 16)
-                .multilineTextAlignment(.leading)
+            .background(
+                RoundedRectangle(cornerRadius: 16)
+                    .stroke(Color.hbButtonSecondary, lineWidth: 1)
+                    .fill(Color.hbBackground)
+                    .shadow(color: .black.opacity(0.1), radius: 5, x: 0, y: 2)
+            )
+            Spacer()
         }
-        .background(
-            RoundedRectangle(cornerRadius: 16)
-                .stroke(Color.hbButtonSecondary, lineWidth: 1)
-                .fill(Color.hbBackground)
-                .shadow(color: .black.opacity(0.1), radius: 5, x: 0, y: 2)
-        )
     }
 }
 private func getDietImageData(for food: Food) -> Data? {

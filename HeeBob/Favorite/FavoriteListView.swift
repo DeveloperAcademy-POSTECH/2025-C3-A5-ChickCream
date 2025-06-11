@@ -65,21 +65,19 @@ struct CardGrid: View {
     }
     
     var body: some View {
-        GeometryReader { geometry in
-            ScrollView {
-                Spacer()
-                LazyVGrid(columns: columns, spacing: 12) {
-                    ForEach(favorites) { favorite in
-                        Button {
-                            didItemTap(favorite)
-                        } label: {
-                            FavoriteMenuCard(food: favorite.food, favorite: favorite, geometry: geometry)
-                                .padding(.horizontal, 8)
-                        }
+        ScrollView {
+            Spacer()
+            LazyVGrid(columns: columns, spacing: 12) {
+                ForEach(favorites) { favorite in
+                    Button {
+                        didItemTap(favorite)
+                    } label: {
+                        FavoriteMenuCard(food: favorite.food, favorite: favorite)
+                            .padding(.horizontal, 8)
                     }
                 }
-                .padding(.horizontal, 16)
             }
+            .padding(.horizontal, 16)
         }
     }
 }

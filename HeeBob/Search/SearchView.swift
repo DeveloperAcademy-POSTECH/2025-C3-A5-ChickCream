@@ -114,7 +114,7 @@ struct SearchView: View {
                                 Button {
                                     router.push(.detail(food: favorite.food))
                                 } label: {
-                                    FavoriteMenuCard(food: favorite.food, favorite: favorite, geometry: geometry)
+                                    FavoriteMenuCard(food: favorite.food, favorite: favorite)
                                 }
                             }
                         }
