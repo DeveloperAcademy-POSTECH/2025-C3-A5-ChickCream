@@ -1,47 +1,663 @@
 [
     {
-        "id": "40949894-896c-4a62-acf0-9b69214601c9",
-        "title": "닭강정",
-        "uniquePoint": "바삭바삭, 달콤한 맛을 느낄 수 있어요",
+        "id": "a1b012c6-f3b0-497a-a3d7-1fb9859352b5",
+        "title": "프렌치토스트",
+        "uniquePoint": "우유와 계란에 빵을 적셔서 버터에 두른 팬에 구워낸 음식으로 부드러운 식감이 특징이에요",
         "attributes": {
             "isPortable": true,
             "isCookable": false,
-            "mainIngredient": "닭고기/오리고기"
-        },
-        "author": "민볼"
-    },
-    {
-        "id": "db7a9345-97b9-498e-b6ed-45b22eefe8c9",
-        "title": "닭다리살 오븐구이",
-        "uniquePoint": "겉은 바삭하고, 속은 촉촉하고 부드러워 입안에서 육즙이 풍부하게 퍼져요.",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": false,
-            "mainIngredient": "닭고기/오리고기"
+            "mainIngredient": "콩·두부·계란"
         },
         "author": ""
     },
     {
-        "id": "abe56bd0-a0c0-4127-b2ac-d861b05616ef",
-        "title": "닭가슴살 스틱",
-        "uniquePoint": "간편하게 단백질을 섭취하기 용이해요.",
+        "id": "92c3b301-4316-4fbe-ac02-7bbc06ce9353",
+        "title": "두부김밥",
+        "uniquePoint": "야채와 두부를 넣어 담백하면서도 건강을 챙길 수 있는 웰빙 김밥이에요",
         "attributes": {
             "isPortable": true,
             "isCookable": false,
-            "mainIngredient": "닭고기/오리고기"
+            "mainIngredient": "콩·두부·계란"
         },
         "author": ""
     },
     {
-        "id": "3be3613a-dd5b-4904-b96c-332572920fb6",
-        "title": "닭꼬치",
-        "uniquePoint": "양념에 따라 다양한 맛을 느낄수있어요.",
+        "id": "5ac21efc-11b0-4ced-a5ba-28d26e1c8630",
+        "title": "두부포케",
+        "uniquePoint": "두부를 각종 채소 샐러드, 견과류, 현미밥, 소스와 곁들여 먹는 한끼 식사에요 ",
         "attributes": {
             "isPortable": true,
             "isCookable": false,
-            "mainIngredient": "닭고기/오리고기"
+            "mainIngredient": "콩·두부·계란"
         },
-        "author": "민볼"
+        "author": ""
+    },
+    {
+        "id": "15b8d038-1a19-4b6c-98da-9cb316974e56",
+        "title": "계란빵",
+        "uniquePoint": "부드럽고 촉촉한 식감에 단백질과 탄수화물이 어우러져 누구나 즐길 수 있는 간편한 음식이에요",
+        "attributes": {
+            "isPortable": true,
+            "isCookable": false,
+            "mainIngredient": "콩·두부·계란"
+        },
+        "author": ""
+    },
+    {
+        "id": "339a3df9-cb56-4fe9-8a40-faee866a634d",
+        "title": "키토 김밥",
+        "uniquePoint": "밥 대신 계란 지단을 넣어 다이어트와 혈당 조절에 효과적인 김밥이에요",
+        "attributes": {
+            "isPortable": true,
+            "isCookable": false,
+            "mainIngredient": "콩·두부·계란"
+        },
+        "author": ""
+    },
+    {
+        "id": "e24e6c51-022e-4aca-9ea3-c7b54f46ef82",
+        "title": "두부 강정",
+        "uniquePoint": "달콤하고 쫀득한 양념과 바삭한 식감이 어우러진 채식 강정으로 두부의 식감을 색다르게 즐길 수 있어요",
+        "attributes": {
+            "isPortable": true,
+            "isCookable": false,
+            "mainIngredient": "콩·두부·계란"
+        },
+        "author": ""
+    },
+    {
+        "id": "0cdb077d-a82b-43e2-b262-139f059a5879",
+        "title": "두부 만두",
+        "uniquePoint": "고소한 두부와 채소가 어우러져 한 입에 쏙 들어오며 담백한 맛을 자랑해요",
+        "attributes": {
+            "isPortable": true,
+            "isCookable": false,
+            "mainIngredient": "콩·두부·계란"
+        },
+        "author": ""
+    },
+    {
+        "id": "0a534c45-b55e-477d-995e-ee2c83179d40",
+        "title": "낫토",
+        "uniquePoint": " 발효로 얻은 뛰어난 영양 성분과 장 건강에 좋은 유산균이 풍부해한 건강식이에요",
+        "attributes": {
+            "isPortable": true,
+            "isCookable": false,
+            "mainIngredient": "콩·두부·계란"
+        },
+        "author": ""
+    },
+    {
+        "id": "89da1829-86f4-42b2-87e5-1573236cfd91",
+        "title": "유부초밥",
+        "uniquePoint": "바쁜 일상에 간편하게 만들 수 있으며 든든한 한 끼 식사로 손색이 없어요",
+        "attributes": {
+            "isPortable": true,
+            "isCookable": true,
+            "mainIngredient": "콩·두부·계란"
+        },
+        "author": ""
+    },
+    {
+        "id": "e95b12ab-7352-480b-a3f9-582446f69fa8",
+        "title": "계란 샌드위치",
+        "uniquePoint": "고소한 계란이 듬뿍 들어가 단백질을 풍부하게 섭취할 수 있어요",
+        "attributes": {
+            "isPortable": true,
+            "isCookable": true,
+            "mainIngredient": "콩·두부·계란"
+        },
+        "author": ""
+    },
+    {
+        "id": "255c90aa-cd6d-4207-924d-a972a6c7d558",
+        "title": "삶은계란 샐러드",
+        "uniquePoint": "간단하게 만들 수 있으면서도 신선한 채소와 계란으로 영양 밸런스를 맞출 수 있어요",
+        "attributes": {
+            "isPortable": true,
+            "isCookable": true,
+            "mainIngredient": "콩·두부·계란"
+        },
+        "author": ""
+    },
+    {
+        "id": "2caabc88-27b0-4ef9-a7c7-419455b1cbd9",
+        "title": "야채 계란말이",
+        "uniquePoint": "다양한 채소와 계란이 어우러져 색감과 식감이 뛰어나요",
+        "attributes": {
+            "isPortable": true,
+            "isCookable": true,
+            "mainIngredient": "콩·두부·계란"
+        },
+        "author": ""
+    },
+    {
+        "id": "50f93403-3579-4507-8357-8cab3697be05",
+        "title": "계란 주먹밥",
+        "uniquePoint": "한입 크기로 간편하게 먹을 수 있어 도시락이나 간식으로 적합해요",
+        "attributes": {
+            "isPortable": true,
+            "isCookable": true,
+            "mainIngredient": "콩·두부·계란"
+        },
+        "author": ""
+    },
+    {
+        "id": "e764524e-f4a6-45de-b81c-80c2a8a0bd7f",
+        "title": "두부 계란 부침",
+        "uniquePoint": "두부와 계란이 부드럽게 어우러져 집밥 반찬으로 든든하고 포근한 맛을 선사해요",
+        "attributes": {
+            "isPortable": true,
+            "isCookable": true,
+            "mainIngredient": "콩·두부·계란"
+        },
+        "author": ""
+    },
+    {
+        "id": "6cf0e59c-32af-4cea-8cdd-49d72dfe55b7",
+        "title": "땅콩버터 두부쉐이크",
+        "uniquePoint": "두부 반모, 바나나 2개, 땅콩버터 두 스푼, 우유 300ml, 꿀과 소금은 취향껏 넣어 갈아 마시는 간편하지만 든든한 메뉴에요",
+        "attributes": {
+            "isPortable": true,
+            "isCookable": true,
+            "mainIngredient": "콩·두부·계란"
+        },
+        "author": ""
+    },
+    {
+        "id": "4ce492cb-ba86-4dc4-b550-6ccae74f6e9c",
+        "title": "연두부 샐러드",
+        "uniquePoint": "부드럽고 크리미한 연두부와 신선한 채소로 고단백 저칼로리의 건강한 한 끼예요",
+        "attributes": {
+            "isPortable": true,
+            "isCookable": true,
+            "mainIngredient": "콩·두부·계란"
+        },
+        "author": ""
+    },
+    {
+        "id": "92c18eda-7a14-4ff0-9b7f-87f9452949d0",
+        "title": "마파두부",
+        "uniquePoint": "부드러운 두부와 매콤한 소스가 어우러져 입맛을 돋우어요",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": false,
+            "mainIngredient": "콩·두부·계란"
+        },
+        "author": ""
+    },
+    {
+        "id": "6097615d-fa70-486b-ab93-31f23643143b",
+        "title": "유부전골",
+        "uniquePoint": "유부와 각종 재료가 국물에 우러나 깊고 담백한 맛을 즐길 수 있어요",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": false,
+            "mainIngredient": "콩·두부·계란"
+        },
+        "author": ""
+    },
+    {
+        "id": "394baf35-a08f-4b62-a25d-4c11d54284f9",
+        "title": "두부조림",
+        "uniquePoint": "단백질이 풍부하고, 고소한 두부를 졸여 감칠맛을 느낄 수 있어요",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": false,
+            "mainIngredient": "콩·두부·계란"
+        },
+        "author": ""
+    },
+    {
+        "id": "8efcb63b-7008-4e46-a8b0-e16a7a6126aa",
+        "title": "오므라이스",
+        "uniquePoint": "볶음밥과 계란이 조화되어 한 그릇에 다양한 맛과 영양을 담았어요",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": false,
+            "mainIngredient": "콩·두부·계란"
+        },
+        "author": ""
+    },
+    {
+        "id": "d609b908-b41b-4ef8-a391-eb8f5dbf042e",
+        "title": "에그 인 헬",
+        "uniquePoint": "토마토 소스에 반숙 계란을 넣어 만든 음식으로 부드러운 식빵과 밥에 곁들여 먹는 이국적이면서도 든든한 한끼에요",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": false,
+            "mainIngredient": "콩·두부·계란"
+        },
+        "author": ""
+    },
+    {
+        "id": "f2dfd921-3ab3-4099-80b1-09b6b1c66f67",
+        "title": "두부 강된장",
+        "uniquePoint": "두부와 된장, 고추장 등 다양한 재료로 만들어 입안 가득 퍼지는 고소하고 깊은 맛을 자랑해요",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": false,
+            "mainIngredient": "콩·두부·계란"
+        },
+        "author": ""
+    },
+    {
+        "id": "34d51fe0-65a1-46ab-9032-08d6b4ca1915",
+        "title": "두부 전골",
+        "uniquePoint": "다양한 재료와 깊은 국물이 어우러진 영양 가득한 전골 요리에요",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": false,
+            "mainIngredient": "콩·두부·계란"
+        },
+        "author": ""
+    },
+    {
+        "id": "ea805f63-1ab5-484c-87a1-4ef5f95563bb",
+        "title": "두부김치찜",
+        "uniquePoint": "두부와 묵은지가 조화되어 깊은 감칠맛과 함께 밥도둑으로 손색없어요",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": false,
+            "mainIngredient": "콩·두부·계란"
+        },
+        "author": ""
+    },
+    {
+        "id": "368d623f-2043-4b59-9e84-56795f9cb18c",
+        "title": "두부김치",
+        "uniquePoint": "담백한 두부와 매콤한 김치가 어우러져 부드러우면서도 아삭한 식감을 동시에 느낄 수 있어요",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": true,
+            "mainIngredient": "콩·두부·계란"
+        },
+        "author": ""
+    },
+    {
+        "id": "6fb333c7-ffb6-46bb-87a0-b581c075977b",
+        "title": "계란찜",
+        "uniquePoint": "부드럽고 촉촉한 식감으로 누구나 부담 없이 먹을 수 있어요",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": true,
+            "mainIngredient": "콩·두부·계란"
+        },
+        "author": ""
+    },
+    {
+        "id": "8d4b23c9-5abd-418d-9dc5-f4b4178f9329",
+        "title": "계란카레덮밥",
+        "uniquePoint": "카레와 계란이 어우러져 풍미와 영양을 동시에 잡았어요",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": true,
+            "mainIngredient": "콩·두부·계란"
+        },
+        "author": ""
+    },
+    {
+        "id": "c3484389-c632-4cd4-99ff-c6c933f259e4",
+        "title": "계란죽",
+        "uniquePoint": "소화가 잘 되고 부담이 없어 아플 때나 아침 식사로 적합해요",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": true,
+            "mainIngredient": "콩·두부·계란"
+        },
+        "author": ""
+    },
+    {
+        "id": "d4ff2635-439c-40a8-80a0-44a2f364ae9c",
+        "title": "두부 계란 볶음밥",
+        "uniquePoint": "두부의 담백함과 계란의 고소함이 만나 다이어트와 건강을 동시에 챙길 수 있는 메뉴에요",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": true,
+            "mainIngredient": "콩·두부·계란"
+        },
+        "author": ""
+    },
+    {
+        "id": "270e844c-9605-43b6-81d5-f1a2970146a8",
+        "title": "간장 계란밥",
+        "uniquePoint": "간단한 재료로 조리 시간 또한 짧으며, 짭조름한 간장과 계란의 조화로 편한 한 끼 메뉴에요",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": true,
+            "mainIngredient": "콩·두부·계란"
+        },
+        "author": ""
+    },
+    {
+        "id": "542ccc52-8191-400f-a969-7ee614b3d20d",
+        "title": "양배추 오믈렛",
+        "uniquePoint": "양배추와 계란, 치즈 등이 어우러져 식감과 영양을 동시에 챙길 수 있는 메뉴에요",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": true,
+            "mainIngredient": "콩·두부·계란"
+        },
+        "author": ""
+    },
+    {
+        "id": "9f3421f9-c210-4eff-a7fa-2345c3ec2a7f",
+        "title": "두부 카프리제",
+        "uniquePoint": "치즈 대신 두부를 넣고 허브, 토마토를 활용해 건강하고 상큼한 샐러드 스타일의 메뉴에요",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": true,
+            "mainIngredient": "콩·두부·계란"
+        },
+        "author": ""
+    },
+    {
+        "id": "602949e3-e059-42f3-9324-6e4027b36212",
+        "title": "오징어순대",
+        "uniquePoint": "바삭한 밥전과 탱글한 오징어의 식감이 어우러져 든든하면서도 색다른 한끼를 즐길 수 있어요",
+        "attributes": {
+            "isPortable": true,
+            "isCookable": false,
+            "mainIngredient": "생선/해산물"
+        },
+        "author": ""
+    },
+    {
+        "id": "a8b49db2-ee92-42cd-8da1-f5ccfaf17ffe",
+        "title": "참치 김밥",
+        "uniquePoint": "참치의 풍부한 단백질과 오메가3 등 다양한 영양소를 김밥으로 간편하게 즐길 수 있어요",
+        "attributes": {
+            "isPortable": true,
+            "isCookable": false,
+            "mainIngredient": "생선/해산물"
+        },
+        "author": ""
+    },
+    {
+        "id": "768a7035-5efe-4c38-adc5-afd5eb1b5959",
+        "title": "연어포케",
+        "uniquePoint": "깍둑썰기한 연어회를 각종 채소 샐러드, 견과류, 현미밥, 소스와 곁들여 먹는 한끼 식사에요 ",
+        "attributes": {
+            "isPortable": true,
+            "isCookable": false,
+            "mainIngredient": "생선/해산물"
+        },
+        "author": ""
+    },
+    {
+        "id": "c455e116-6b3f-45dc-a8d6-aedf9619411f",
+        "title": "참치포케",
+        "uniquePoint": "깍둑썰기한 참치회를 각종 채소 샐러드, 견과류, 현미밥, 소스와 곁들여 먹는 한끼 식사에요",
+        "attributes": {
+            "isPortable": true,
+            "isCookable": false,
+            "mainIngredient": "생선/해산물"
+        },
+        "author": ""
+    },
+    {
+        "id": "325ae61d-1d73-4039-a883-8c48b21b7d76",
+        "title": "연어초밥",
+        "uniquePoint": "오메가3와 단백질이 풍부한 연어 초밥은 혈관 건강과 면역력 강화에 좋아요",
+        "attributes": {
+            "isPortable": true,
+            "isCookable": false,
+            "mainIngredient": "생선/해산물"
+        },
+        "author": ""
+    },
+    {
+        "id": "f5e5ac84-5b26-4c9c-8dc4-e39e8236b0cf",
+        "title": "어묵 김밥",
+        "uniquePoint": "쫄깃한 어묵과 알찬 속재료가 어우러져 누구나 쉽게 먹을 수 있는 간편한 김밥이에요",
+        "attributes": {
+            "isPortable": true,
+            "isCookable": false,
+            "mainIngredient": "생선/해산물"
+        },
+        "author": ""
+    },
+    {
+        "id": "f0549f02-c512-46f6-938e-4cc271cda556",
+        "title": "멘보샤",
+        "uniquePoint": "바삭한 튀김옷과 새우의 고소함이 조화되어 한 입에 쏙 들어오는 음식이에요",
+        "attributes": {
+            "isPortable": true,
+            "isCookable": false,
+            "mainIngredient": "생선/해산물"
+        },
+        "author": ""
+    },
+    {
+        "id": "5d042aa5-5902-434c-870d-8ec065df6001",
+        "title": "날치알 주먹밥",
+        "uniquePoint": "톡톡 터지는 날치알의 식감이 밥과 어우러져 간편하면서도 재미있는 맛을 제공해요",
+        "attributes": {
+            "isPortable": true,
+            "isCookable": true,
+            "mainIngredient": "생선/해산물"
+        },
+        "author": ""
+    },
+    {
+        "id": "0fdeb52a-6cf0-43ff-ac45-da27f50e467b",
+        "title": "참치마요 주먹밥",
+        "uniquePoint": "참치와 마요네즈의 조화로 고소하고 영양이 풍부하며 간편하게 즐길 수 있어요",
+        "attributes": {
+            "isPortable": true,
+            "isCookable": true,
+            "mainIngredient": "생선/해산물"
+        },
+        "author": ""
+    },
+    {
+        "id": "eda498ac-dc5c-4c6a-bd68-8431f62821d6",
+        "title": "깻잎 크래미전",
+        "uniquePoint": "달달한 크래미의 기본 맛과 간단한 조리법으로 누구나 쉽게 만들 수 있는 간편 음식이에요",
+        "attributes": {
+            "isPortable": true,
+            "isCookable": true,
+            "mainIngredient": "생선/해산물"
+        },
+        "author": ""
+    },
+    {
+        "id": "b3856250-13ae-49d9-8e0c-495d8c4b50e4",
+        "title": "명란젓 주먹밥",
+        "uniquePoint": "단백질과 비타민B12가 풍부한 명란젓 주먹밥은 근육 형성과 뼈건강에 좋아요",
+        "attributes": {
+            "isPortable": true,
+            "isCookable": true,
+            "mainIngredient": "생선/해산물"
+        },
+        "author": ""
+    },
+    {
+        "id": "b1052810-61cb-4b99-b31f-db4dfd591d71",
+        "title": "참치 야채 샌드위치",
+        "uniquePoint": "고단백, 저지방 참치와 신선한 채소가 어우러져 간편하면서도 균형 잡힌 영양을 섭취할 수 있어요",
+        "attributes": {
+            "isPortable": true,
+            "isCookable": true,
+            "mainIngredient": "생선/해산물"
+        },
+        "author": ""
+    },
+    {
+        "id": "c4927e54-2dbe-4288-a207-39844288be95",
+        "title": "연어 샐러드",
+        "uniquePoint": "오메가3가 풍부한 연어와 다양한 채소로 영양 밸런스를 잡을 수 있어요",
+        "attributes": {
+            "isPortable": true,
+            "isCookable": true,
+            "mainIngredient": "생선/해산물"
+        },
+        "author": ""
+    },
+    {
+        "id": "391df733-cd60-4e68-8cdf-8ba9e6823dad",
+        "title": "계란참치전",
+        "uniquePoint": "부드러운 계란과 참치의 조화로 누구나 좋아하는 반찬이에요",
+        "attributes": {
+            "isPortable": true,
+            "isCookable": true,
+            "mainIngredient": "생선/해산물"
+        },
+        "author": ""
+    },
+    {
+        "id": "b2f01a43-2424-486d-9851-d8bd40cc46dd",
+        "title": "고등어조림",
+        "uniquePoint": "오메가3와 단백질이 풍부해 심혈관 건강에 좋고, 무의 감칠맛을 함께 즐기며 포만감이 오래가요",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": false,
+            "mainIngredient": "생선/해산물"
+        },
+        "author": ""
+    },
+    {
+        "id": "d84eb159-4362-4c7d-a9c7-bd3092f9fb66",
+        "title": "낙곱새",
+        "uniquePoint": "낙지, 곱창, 새우의 다양한 식감이 어우러져 씹는 재미와 감칠맛을 동시에 느낄 수 있어요",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": false,
+            "mainIngredient": "생선/해산물"
+        },
+        "author": ""
+    },
+    {
+        "id": "b7d986da-ab33-4ca1-b6ed-c431cac343a2",
+        "title": "전복죽",
+        "uniquePoint": "전복에 풍부한 단백질과 무기질이 있어 영양 보양식이며, 소화가 잘 되고 회복식으로도 좋아요",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": false,
+            "mainIngredient": "생선/해산물"
+        },
+        "author": ""
+    },
+    {
+        "id": "17628ef1-1650-49af-80a8-5a3ab05c1ef7",
+        "title": "간장게장, 양념게장",
+        "uniquePoint": "고단백, 저칼로리 게살과 발효 간장 또는 매콤한 양념의 조화로 밥도둑이라 불릴 만큼 감칠맛이 뛰어나요",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": false,
+            "mainIngredient": "생선/해산물"
+        },
+        "author": ""
+    },
+    {
+        "id": "a154e4cb-0512-4273-be14-0f1de1614c48",
+        "title": "아귀찜",
+        "uniquePoint": "고단백, 저칼로리 아귀와 미더덕, 콩나물 등 다양한 재료가 어우러져 영양과 포만감 모두 느낄 수 있어요",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": false,
+            "mainIngredient": "생선/해산물"
+        },
+        "author": ""
+    },
+    {
+        "id": "5734e1d9-3bdd-4ca1-8523-835905f929f2",
+        "title": "크림새우",
+        "uniquePoint": "새우의 쫄깃함과 부드러운 크림소스가 어우러져 고급스러운 식감을 제공해요",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": false,
+            "mainIngredient": "생선/해산물"
+        },
+        "author": ""
+    },
+    {
+        "id": "1b1709f6-689d-423d-a10b-1fba4d6e8163",
+        "title": "감바스",
+        "uniquePoint": "새우와 마늘을 주재료로 한 스페인 요리로 빵과 곁들여 먹을 수 있는 메뉴에요",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": false,
+            "mainIngredient": "생선/해산물"
+        },
+        "author": ""
+    },
+    {
+        "id": "5ddf2d9a-de8a-45cc-a077-3fc3b03c3bc2",
+        "title": "새우 볶음밥",
+        "uniquePoint": "새우와 채소가 어우러져 다양한 영양소를 한 번에 섭취할 수 있으며, 여러 식감을 느낄 수 있어요",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": true,
+            "mainIngredient": "생선/해산물"
+        },
+        "author": ""
+    },
+    {
+        "id": "e765a230-f180-45e3-9a2d-0a59ec272d4a",
+        "title": "게살 볶음밥",
+        "uniquePoint": "부드러운 게살과 고소한 밥이 어우러져 누구나 부담 없이 즐길 수 있어요",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": true,
+            "mainIngredient": "생선/해산물"
+        },
+        "author": ""
+    },
+    {
+        "id": "0d0fa190-2967-4264-8d77-c328bae50b57",
+        "title": "해물 누룽지탕",
+        "uniquePoint": "누룽지에 여러 가지 해물을 기호에 맞게 넣어 걸쭉하게 끓인 탕으로 별미에요",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": true,
+            "mainIngredient": "생선/해산물"
+        },
+        "author": ""
+    },
+    {
+        "id": "2b71c7ee-d56b-45e6-8488-862bedcded79",
+        "title": "골뱅이 무침",
+        "uniquePoint": "고단백·저지방 골뱅이와 채소가 어우러져 단백질 보충과 피부 건강에 효과적이에요",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": true,
+            "mainIngredient": "생선/해산물"
+        },
+        "author": ""
+    },
+    {
+        "id": "5b5d51a1-08d9-47d5-8f20-87647d1b09fc",
+        "title": "훈제 연어 월남쌈",
+        "uniquePoint": "신선한 채소와 훈제 연어가 어우러져 가볍고 산뜻하게 즐길 수 있는 건강식이에요",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": true,
+            "mainIngredient": "생선/해산물"
+        },
+        "author": ""
+    },
+    {
+        "id": "af103385-1a77-490a-a27c-efff2d5e8178",
+        "title": "오징어 볶음",
+        "uniquePoint": "쫄깃한 오징어와 매콤한 양념이 어우러져 입맛을 돋우어요",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": true,
+            "mainIngredient": "생선/해산물"
+        },
+        "author": ""
+    },
+    {
+        "id": "fbd25291-89b0-4f1d-85e6-5baf60ded9b1",
+        "title": "고등어구이",
+        "uniquePoint": "오메가3와 단백질이 풍부해 구워서 고소한 맛과 건강을 동시에 챙길 수 있어요",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": true,
+            "mainIngredient": "생선/해산물"
+        },
+        "author": ""
     },
     {
         "id": "962566a8-42eb-4a24-8237-fe7f12f5dd5f",
@@ -52,7 +668,7 @@
             "isCookable": false,
             "mainIngredient": "소고기/돼지고기"
         },
-        "author": "민볼"
+        "author": ""
     },
     {
         "id": "c14b0894-ea9f-4fd4-82e0-491304a7fa19",
@@ -96,191 +712,26 @@
             "isCookable": false,
             "mainIngredient": "소고기/돼지고기"
         },
-        "author": "민볼"
+        "author": ""
     },
     {
-        "id": "c9e4169f-130e-4cef-a492-55d9ee61f432",
-        "title": "닭가슴살 또띠아 랩",
-        "uniquePoint": "소화가 편한 닭고기와 다양한 재료로 맛과 영양, 휴대성을 모두 챙긴 메뉴에요.",
+        "id": "0561afc7-733c-40df-80e5-560dd7a5ba7e",
+        "title": "불고기 버거",
+        "uniquePoint": "달콤짭짤한 불고기 양념이 빵과 채소 사이에 잘 어우러져, 한입에 한국식 정서와 패스트푸드 감성을 동시에 느낄 수 있어요.",
         "attributes": {
             "isPortable": true,
             "isCookable": false,
-            "mainIngredient": "닭고기/오리고기"
-        },
-        "author": "민볼"
-    },
-    {
-        "id": "602949e3-e059-42f3-9324-6e4027b36212",
-        "title": "오징어순대",
-        "uniquePoint": "바삭한 밥전과 탱글한 오징어의 식감이 어우러져 든든하면서도 색다른 한끼를 즐길 수 있어요",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": false,
-            "mainIngredient": "생선/해산물"
-        },
-        "author": "민볼"
-    },
-    {
-        "id": "a8b49db2-ee92-42cd-8da1-f5ccfaf17ffe",
-        "title": "참치 김밥",
-        "uniquePoint": "참치의 풍부한 단백질과 오메가3 등 다양한 영양소를 김밥으로 간편하게 즐길 수 있어요",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": false,
-            "mainIngredient": "생선/해산물"
-        },
-        "author": "민볼"
-    },
-    {
-        "id": "768a7035-5efe-4c38-adc5-afd5eb1b5959",
-        "title": "연어포케",
-        "uniquePoint": "깍둑썰기한 연어회를 각종 채소 샐러드, 견과류, 현미밥, 소스와 곁들여 먹는 한끼 식사에요 ",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": false,
-            "mainIngredient": "생선/해산물"
-        },
-        "author": "민볼"
-    },
-    {
-        "id": "c455e116-6b3f-45dc-a8d6-aedf9619411f",
-        "title": "참치포케",
-        "uniquePoint": "깍둑썰기한 참치회를 각종 채소 샐러드, 견과류, 현미밥, 소스와 곁들여 먹는 한끼 식사에요",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": false,
-            "mainIngredient": "생선/해산물"
-        },
-        "author": "민볼"
-    },
-    {
-        "id": "325ae61d-1d73-4039-a883-8c48b21b7d76",
-        "title": "연어초밥",
-        "uniquePoint": "오메가3와 단백질이 풍부한 연어 초밥은 혈관 건강과 면역력 강화에 좋아요",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": false,
-            "mainIngredient": "생선/해산물"
-        },
-        "author": "민볼"
-    },
-    {
-        "id": "a1b012c6-f3b0-497a-a3d7-1fb9859352b5",
-        "title": "프렌치토스트",
-        "uniquePoint": "우유와 계란에 빵을 적셔서 버터에 두른 팬에 구워낸 음식으로 부드러운 식감이 특징이에요",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": false,
-            "mainIngredient": "콩·두부·계란"
+            "mainIngredient": "소고기/돼지고기"
         },
         "author": ""
     },
     {
-        "id": "92c3b301-4316-4fbe-ac02-7bbc06ce9353",
-        "title": "두부김밥",
-        "uniquePoint": "야채와 두부를 넣어 담백하면서도 건강을 챙길 수 있는 웰빙 김밥이에요",
+        "id": "10e49b5e-0241-4848-a6cb-f2b91ee89ed8",
+        "title": "소고기 고로케",
+        "uniquePoint": "바삭한 튀김 옷 속에 감자와 소고기의 조화로움을 느낄 수 있어요.",
         "attributes": {
             "isPortable": true,
             "isCookable": false,
-            "mainIngredient": "콩·두부·계란"
-        },
-        "author": "민볼"
-    },
-    {
-        "id": "5ac21efc-11b0-4ced-a5ba-28d26e1c8630",
-        "title": "두부포케",
-        "uniquePoint": "두부를 각종 채소 샐러드, 견과류, 현미밥, 소스와 곁들여 먹는 한끼 식사에요 ",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": false,
-            "mainIngredient": "콩·두부·계란"
-        },
-        "author": "민볼"
-    },
-    {
-        "id": "15b8d038-1a19-4b6c-98da-9cb316974e56",
-        "title": "계란빵",
-        "uniquePoint": "부드럽고 촉촉한 식감에 단백질과 탄수화물이 어우러져 누구나 즐길 수 있는 간편한 음식이에요",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": false,
-            "mainIngredient": "콩·두부·계란"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "339a3df9-cb56-4fe9-8a40-faee866a634d",
-        "title": "키토 김밥",
-        "uniquePoint": "밥 대신 계란 지단을 넣어 다이어트와 혈당 조절에 효과적인 김밥이에요",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": false,
-            "mainIngredient": "콩·두부·계란"
-        },
-        "author": ""
-    },
-    {
-        "id": "6e3ecbc6-b681-4312-ac4e-e210d6993e4b",
-        "title": "닭가슴살 샌드위치",
-        "uniquePoint": "소화가 편해서 부담없이 먹을 수 있어요.",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "닭고기/오리고기"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "e4874438-0974-43f5-a54b-5d141c5e2f88",
-        "title": "냉동 가라아게",
-        "uniquePoint": "바삭바삭 재밌는 식감을 간단한 조리로 느낄 수 있어요",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "닭고기/오리고기"
-        },
-        "author": ""
-    },
-    {
-        "id": "1d51ef22-4278-4887-bb7b-988901413870",
-        "title": "닭가슴살 동그랑땡",
-        "uniquePoint": "한 입에 쏙 들어가는 닭가슴살 동그랑땡, 담백하면서도 씹는 재미가 있어요.",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "닭고기/오리고기"
-        },
-        "author": ""
-    },
-    {
-        "id": "1ccd4ec4-1b0c-4067-9524-d9fb65fb92bf",
-        "title": "오리 훈제 샐러드",
-        "uniquePoint": "훈제향이 입맛을 돋우며, 채소와의 조합으로 식감과 영양을 모두 잡았어요.",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "닭고기/오리고기"
-        },
-        "author": ""
-    },
-    {
-        "id": "0f93ef89-545d-4968-bf37-3d528e2df39a",
-        "title": "닭가슴살 샐러드",
-        "uniquePoint": "닭가슴살에 아삭한 야채가 곁들여져 다채로운 식감",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "닭고기/오리고기"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "018650a0-ab18-41ab-9301-ecb8b89647ca",
-        "title": "스팸 무스비",
-        "uniquePoint": "뭉쳐놓은 밥 위에 스팸을 올려두고 김으로 싸서 주먹밥 형태로 만든 음식이에요",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
             "mainIngredient": "소고기/돼지고기"
         },
         "author": ""
@@ -305,7 +756,7 @@
             "isCookable": true,
             "mainIngredient": "소고기/돼지고기"
         },
-        "author": "밥"
+        "author": ""
     },
     {
         "id": "6e4ef6ad-5b06-411e-b1bb-9de2769e5fae",
@@ -316,7 +767,7 @@
             "isCookable": true,
             "mainIngredient": "소고기/돼지고기"
         },
-        "author": "밥"
+        "author": ""
     },
     {
         "id": "49790f51-f8ab-4a16-936b-fd025efda9ce",
@@ -327,128 +778,29 @@
             "isCookable": true,
             "mainIngredient": "소고기/돼지고기"
         },
-        "author": "밥"
-    },
-    {
-        "id": "5d042aa5-5902-434c-870d-8ec065df6001",
-        "title": "날치알 주먹밥",
-        "uniquePoint": "톡톡 터지는 날치알의 식감이 밥과 어우러져 간편하면서도 재미있는 맛을 제공해요",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "생선/해산물"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "0fdeb52a-6cf0-43ff-ac45-da27f50e467b",
-        "title": "참치마요 주먹밥",
-        "uniquePoint": "참치와 마요네즈의 조화로 고소하고 영양이 풍부하며 간편하게 즐길 수 있어요",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "생선/해산물"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "eda498ac-dc5c-4c6a-bd68-8431f62821d6",
-        "title": "크래미전",
-        "uniquePoint": "달달한 크래미의 기본 맛과 간단한 조리법으로 누구나 쉽게 만들 수 있는 간편 음식이에요",
-        "attributes": {
-            "isPortable": false,
-            "isCookable": true,
-            "mainIngredient": "생선/해산물"
-        },
-        "author": "에린"
-    },
-    {
-        "id": "b3856250-13ae-49d9-8e0c-495d8c4b50e4",
-        "title": "명란젓 주먹밥",
-        "uniquePoint": "단백질과 비타민B12가 풍부한 명란젓 주먹밥은 근육 형성과 뼈건강에 좋아요",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "생선/해산물"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "b1052810-61cb-4b99-b31f-db4dfd591d71",
-        "title": "참치 야채 샌드위치",
-        "uniquePoint": "고단백, 저지방 참치와 신선한 채소가 어우러져 간편하면서도 균형 잡힌 영양을 섭취할 수 있어요",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "생선/해산물"
-        },
-        "author": "밥"
-    },
-    {
-        "id": "89da1829-86f4-42b2-87e5-1573236cfd91",
-        "title": "유부초밥",
-        "uniquePoint": "바쁜 일상에 간편하게 만들 수 있으며 든든한 한 끼 식사로 손색이 없어요",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "콩·두부·계란"
-        },
-        "author": "민볼"
-    },
-    {
-        "id": "e95b12ab-7352-480b-a3f9-582446f69fa8",
-        "title": "계란 샌드위치",
-        "uniquePoint": "고소한 계란이 듬뿍 들어가 단백질을 풍부하게 섭취할 수 있어요",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "콩·두부·계란"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "255c90aa-cd6d-4207-924d-a972a6c7d558",
-        "title": "삶은계란 샐러드",
-        "uniquePoint": "간단하게 만들 수 있으면서도 신선한 채소와 계란으로 영양 밸런스를 맞출 수 있어요",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "콩·두부·계란"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "2caabc88-27b0-4ef9-a7c7-419455b1cbd9",
-        "title": "야채 계란말이",
-        "uniquePoint": "다양한 채소와 계란이 어우러져 색감과 식감이 뛰어나요",
-        "attributes": {
-            "isPortable": true,
-            "isCookable": true,
-            "mainIngredient": "콩·두부·계란"
-        },
         "author": ""
     },
     {
-        "id": "50f93403-3579-4507-8357-8cab3697be05",
-        "title": "계란 주먹밥",
-        "uniquePoint": "한입 크기로 간편하게 먹을 수 있어 도시락이나 간식으로 적합해요",
+        "id": "018650a0-ab18-41ab-9301-ecb8b89647ca",
+        "title": "스팸 무스비",
+        "uniquePoint": "짭조름하고 고소한 스팸과 따뜻한 밥, 그리고 김의 조화로 간편하면서도 든든한 한 끼를 손쉽게 즐길 수 있어요",
         "attributes": {
             "isPortable": true,
             "isCookable": true,
-            "mainIngredient": "콩·두부·계란"
+            "mainIngredient": "소고기/돼지고기"
         },
-        "author": "산들"
+        "author": "사진 추가"
     },
     {
-        "id": "18b96977-9cbe-44d1-9929-3baf5779659a",
-        "title": "닭볶음탕",
-        "uniquePoint": "닭고기와 채소를 함께 끓여 부드럽게 먹을 수 있어요.",
+        "id": "ada0813c-092f-4980-ae95-9870d2a1727f",
+        "title": "두부쇠고기조림",
+        "uniquePoint": "단백질이 풍부하고 다진 소고기와 두부가 씹기 편해요.",
         "attributes": {
-            "isPortable": false,
-            "isCookable": false,
-            "mainIngredient": "닭고기/오리고기"
+            "isPortable": true,
+            "isCookable": true,
+            "mainIngredient": "소고기/돼지고기"
         },
-        "author": "요시"
+        "author": ""
     },
     {
         "id": "4a7492f3-9f57-4bc9-9c8f-c8865d35c89b",
@@ -492,7 +844,7 @@
             "isCookable": false,
             "mainIngredient": "소고기/돼지고기"
         },
-        "author": "요시"
+        "author": ""
     },
     {
         "id": "64d85a53-f460-41f7-93fa-8c9edd47a19b",
@@ -503,161 +855,29 @@
             "isCookable": false,
             "mainIngredient": "소고기/돼지고기"
         },
-        "author": "요시"
+        "author": ""
     },
     {
-        "id": "07e23be3-4228-4561-95e5-8bfd9e3a9421",
-        "title": "닭갈비",
-        "uniquePoint": "매콤한 양념으로 느끼하지 않게, 닭고기와 채소를 함께 먹을 수 있어요.",
+        "id": "d4771eeb-e42f-4866-ad91-c6a095292a7b",
+        "title": "소고기 스테이크 솥밥",
+        "uniquePoint": "재료에 따라 무궁무진한 솥밥의 변화를 느낄 수 있을거에요.",
         "attributes": {
             "isPortable": false,
             "isCookable": false,
-            "mainIngredient": "닭고기/오리고기"
-        },
-        "author": "요시"
-    },
-    {
-        "id": "08443300-2cce-46bf-8fe0-73fda9f07d63",
-        "title": "오리백숙",
-        "uniquePoint": "진한 보양섭취에 좋아요.",
-        "attributes": {
-            "isPortable": false,
-            "isCookable": false,
-            "mainIngredient": "닭고기/오리고기"
+            "mainIngredient": "소고기/돼지고기"
         },
         "author": ""
     },
     {
-        "id": "d0ba6af0-fdce-486d-ba7b-5d09b798813e",
-        "title": "삼계탕",
-        "uniquePoint": "속 편한 영양으로 부담없이 즐기기 좋은 보양식이에요.",
+        "id": "645163e2-31cb-44ef-bda5-455920d7d215",
+        "title": "수육국밥",
+        "uniquePoint": "부드러운 수육과 따끈하고 맑은 국물이 속을 편안하고 든든하게 채워줘요.",
         "attributes": {
             "isPortable": false,
             "isCookable": false,
-            "mainIngredient": "닭고기/오리고기"
+            "mainIngredient": "소고기/돼지고기"
         },
         "author": ""
-    },
-    {
-        "id": "9d561be2-ec4c-4aec-a508-0fee820e67d0",
-        "title": "찜닭",
-        "uniquePoint": "자극적이지 않게 닭고기와 채소를 함께 먹을 수 있어요.",
-        "attributes": {
-            "isPortable": false,
-            "isCookable": false,
-            "mainIngredient": "닭고기/오리고기"
-        },
-        "author": "요시"
-    },
-    {
-        "id": "b2f01a43-2424-486d-9851-d8bd40cc46dd",
-        "title": "고등어조림",
-        "uniquePoint": "오메가3와 단백질이 풍부해 심혈관 건강에 좋고, 무의 감칠맛을 함께 즐기며 포만감이 오래가요",
-        "attributes": {
-            "isPortable": false,
-            "isCookable": false,
-            "mainIngredient": "생선/해산물"
-        },
-        "author": "요시"
-    },
-    {
-        "id": "d84eb159-4362-4c7d-a9c7-bd3092f9fb66",
-        "title": "낙곱새",
-        "uniquePoint": "낙지, 곱창, 새우의 다양한 식감이 어우러져 씹는 재미와 감칠맛을 동시에 느낄 수 있어요",
-        "attributes": {
-            "isPortable": false,
-            "isCookable": false,
-            "mainIngredient": "생선/해산물"
-        },
-        "author": "요시"
-    },
-    {
-        "id": "b7d986da-ab33-4ca1-b6ed-c431cac343a2",
-        "title": "전복죽",
-        "uniquePoint": "전복에 풍부한 단백질과 무기질이 있어 영양 보양식이며, 소화가 잘 되고 회복식으로도 좋아요",
-        "attributes": {
-            "isPortable": false,
-            "isCookable": false,
-            "mainIngredient": "생선/해산물"
-        },
-        "author": "요시"
-    },
-    {
-        "id": "17628ef1-1650-49af-80a8-5a3ab05c1ef7",
-        "title": "간장게장, 양념게장",
-        "uniquePoint": "고단백, 저칼로리 게살과 발효 간장 또는 매콤한 양념의 조화로 밥도둑이라 불릴 만큼 감칠맛이 뛰어나요",
-        "attributes": {
-            "isPortable": false,
-            "isCookable": false,
-            "mainIngredient": "생선/해산물"
-        },
-        "author": "요시"
-    },
-    {
-        "id": "a154e4cb-0512-4273-be14-0f1de1614c48",
-        "title": "아귀찜",
-        "uniquePoint": "고단백, 저칼로리 아귀와 미더덕, 콩나물 등 다양한 재료가 어우러져 영양과 포만감 모두 느낄 수 있어요",
-        "attributes": {
-            "isPortable": false,
-            "isCookable": false,
-            "mainIngredient": "생선/해산물"
-        },
-        "author": "요시"
-    },
-    {
-        "id": "92c18eda-7a14-4ff0-9b7f-87f9452949d0",
-        "title": "마파두부",
-        "uniquePoint": "부드러운 두부와 매콤한 소스가 어우러져 입맛을 돋우어요",
-        "attributes": {
-            "isPortable": false,
-            "isCookable": false,
-            "mainIngredient": "콩·두부·계란"
-        },
-        "author": "산들"
-    },
-    {
-        "id": "6097615d-fa70-486b-ab93-31f23643143b",
-        "title": "유부전골",
-        "uniquePoint": "유부와 각종 재료가 국물에 우러나 깊고 담백한 맛을 즐길 수 있어요",
-        "attributes": {
-            "isPortable": false,
-            "isCookable": false,
-            "mainIngredient": "콩·두부·계란"
-        },
-        "author": "요시"
-    },
-    {
-        "id": "394baf35-a08f-4b62-a25d-4c11d54284f9",
-        "title": "두부조림",
-        "uniquePoint": "단백질이 풍부하고, 고소한 두부를 졸여 감칠맛을 느낄 수 있어요",
-        "attributes": {
-            "isPortable": false,
-            "isCookable": false,
-            "mainIngredient": "콩·두부·계란"
-        },
-        "author": ""
-    },
-    {
-        "id": "8efcb63b-7008-4e46-a8b0-e16a7a6126aa",
-        "title": "오므라이스",
-        "uniquePoint": "볶음밥과 계란이 조화되어 한 그릇에 다양한 맛과 영양을 담았어요",
-        "attributes": {
-            "isPortable": false,
-            "isCookable": false,
-            "mainIngredient": "콩·두부·계란"
-        },
-        "author": "에린"
-    },
-    {
-        "id": "d609b908-b41b-4ef8-a391-eb8f5dbf042e",
-        "title": "에그 인 헬",
-        "uniquePoint": "토마토 소스에 반숙 계란을 넣어 만든 음식으로 부드러운 식빵과 밥에 곁들여 먹는 이국적이면서도 든든한 한끼에요",
-        "attributes": {
-            "isPortable": false,
-            "isCookable": false,
-            "mainIngredient": "콩·두부·계란"
-        },
-        "author": "에린"
     },
     {
         "id": "3dd8a264-5bc9-4118-8e09-67a084e9342d",
@@ -701,7 +921,7 @@
             "isCookable": true,
             "mainIngredient": "소고기/돼지고기"
         },
-        "author": "에린"
+        "author": ""
     },
     {
         "id": "d8807110-d7a1-412e-a01e-bd14d95606c6",
@@ -712,7 +932,249 @@
             "isCookable": true,
             "mainIngredient": "소고기/돼지고기"
         },
-        "author": "에린"
+        "author": ""
+    },
+    {
+        "id": "0480d3f3-70fa-403a-802a-d00666ddf61c",
+        "title": "돼지고기 양배추볶음",
+        "uniquePoint": "저칼로리 양배추와 고단백 돼지고기가 어우러져 포만감이 높으면서도 식이섬유와 영양소가 풍부해요",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": true,
+            "mainIngredient": "소고기/돼지고기"
+        },
+        "author": ""
+    },
+    {
+        "id": "fa91614a-e13e-4925-8bae-5ebb7509724d",
+        "title": "소고기 샤브샤브",
+        "uniquePoint": "원하는 재료로 때에 맞춰 조절해서 먹기 좋아요.",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": true,
+            "mainIngredient": "소고기/돼지고기"
+        },
+        "author": ""
+    },
+    {
+        "id": "40949894-896c-4a62-acf0-9b69214601c9",
+        "title": "닭강정",
+        "uniquePoint": "바삭바삭, 달콤한 맛을 느낄 수 있어요.",
+        "attributes": {
+            "isPortable": true,
+            "isCookable": false,
+            "mainIngredient": "닭고기/오리고기"
+        },
+        "author": ""
+    },
+    {
+        "id": "db7a9345-97b9-498e-b6ed-45b22eefe8c9",
+        "title": "닭다리살 오븐구이",
+        "uniquePoint": "겉은 바삭하고, 속은 촉촉하고 부드러워 입안에서 육즙이 풍부하게 퍼져요.",
+        "attributes": {
+            "isPortable": true,
+            "isCookable": false,
+            "mainIngredient": "닭고기/오리고기"
+        },
+        "author": ""
+    },
+    {
+        "id": "abe56bd0-a0c0-4127-b2ac-d861b05616ef",
+        "title": "닭가슴살 스틱",
+        "uniquePoint": "간편하게 단백질을 섭취하기 용이해요.",
+        "attributes": {
+            "isPortable": true,
+            "isCookable": false,
+            "mainIngredient": "닭고기/오리고기"
+        },
+        "author": ""
+    },
+    {
+        "id": "3be3613a-dd5b-4904-b96c-332572920fb6",
+        "title": "닭꼬치",
+        "uniquePoint": "매콤달콤한 양념이 매력적이에요.",
+        "attributes": {
+            "isPortable": true,
+            "isCookable": false,
+            "mainIngredient": "닭고기/오리고기"
+        },
+        "author": ""
+    },
+    {
+        "id": "c9e4169f-130e-4cef-a492-55d9ee61f432",
+        "title": "닭가슴살 또띠아 랩",
+        "uniquePoint": "소화가 편한 닭고기와 다양한 재료로 맛과 영양, 휴대성을 모두 챙긴 메뉴에요.",
+        "attributes": {
+            "isPortable": true,
+            "isCookable": false,
+            "mainIngredient": "닭고기/오리고기"
+        },
+        "author": ""
+    },
+    {
+        "id": "c2cfda28-c83a-45d7-9275-c4601f1141f1",
+        "title": "치킨피자",
+        "uniquePoint": "치즈와 닭고기가 함께있어 단백질이 풍부해요.",
+        "attributes": {
+            "isPortable": true,
+            "isCookable": false,
+            "mainIngredient": "닭고기/오리고기"
+        },
+        "author": ""
+    },
+    {
+        "id": "9085bdab-3995-4f42-a398-7e7a003c1c5d",
+        "title": "치킨타코",
+        "uniquePoint": "단백한 가벼운 한끼로 추천해요. 치킨 대신 새우, 소고기, 돼지고기 등 다양한 재료로 대체할 수 있어요. ",
+        "attributes": {
+            "isPortable": true,
+            "isCookable": false,
+            "mainIngredient": "닭고기/오리고기"
+        },
+        "author": ""
+    },
+    {
+        "id": "6e3ecbc6-b681-4312-ac4e-e210d6993e4b",
+        "title": "닭가슴살 샌드위치",
+        "uniquePoint": "소화가 편해서 부담없이 먹을 수 있어요.",
+        "attributes": {
+            "isPortable": true,
+            "isCookable": true,
+            "mainIngredient": "닭고기/오리고기"
+        },
+        "author": ""
+    },
+    {
+        "id": "e4874438-0974-43f5-a54b-5d141c5e2f88",
+        "title": "냉동 가라아게",
+        "uniquePoint": "조리가 간편해요.",
+        "attributes": {
+            "isPortable": true,
+            "isCookable": true,
+            "mainIngredient": "닭고기/오리고기"
+        },
+        "author": ""
+    },
+    {
+        "id": "1d51ef22-4278-4887-bb7b-988901413870",
+        "title": "닭가슴살 동그랑땡",
+        "uniquePoint": "한 입에 쏙 들어가는 닭가슴살 동그랑땡, 담백하면서도 씹는 재미가 있어요.",
+        "attributes": {
+            "isPortable": true,
+            "isCookable": true,
+            "mainIngredient": "닭고기/오리고기"
+        },
+        "author": ""
+    },
+    {
+        "id": "1ccd4ec4-1b0c-4067-9524-d9fb65fb92bf",
+        "title": "오리 훈제 샐러드",
+        "uniquePoint": "훈제향이 입맛을 돋우며, 채소와의 조합으로 식감과 영양을 모두 잡았어요.",
+        "attributes": {
+            "isPortable": true,
+            "isCookable": true,
+            "mainIngredient": "닭고기/오리고기"
+        },
+        "author": ""
+    },
+    {
+        "id": "0f93ef89-545d-4968-bf37-3d528e2df39a",
+        "title": "닭가슴살 샐러드",
+        "uniquePoint": "닭가슴살에 아삭한 야채가 곁들여져 다채로운 식감",
+        "attributes": {
+            "isPortable": true,
+            "isCookable": true,
+            "mainIngredient": "닭고기/오리고기"
+        },
+        "author": ""
+    },
+    {
+        "id": "af082a12-7b5b-459a-b424-7cd5c5558d0f",
+        "title": "닭고기 주먹밥",
+        "uniquePoint": "오리고기, 돼지고기 등 다양한 재료로 대체 가능해요!",
+        "attributes": {
+            "isPortable": true,
+            "isCookable": true,
+            "mainIngredient": "닭고기/오리고기"
+        },
+        "author": ""
+    },
+    {
+        "id": "18b96977-9cbe-44d1-9929-3baf5779659a",
+        "title": "닭볶음탕",
+        "uniquePoint": "닭고기와 채소를 함께 끓여 부드럽게 먹을 수 있어요.",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": false,
+            "mainIngredient": "닭고기/오리고기"
+        },
+        "author": ""
+    },
+    {
+        "id": "07e23be3-4228-4561-95e5-8bfd9e3a9421",
+        "title": "닭갈비",
+        "uniquePoint": "매콤한 양념으로 느끼하지 않게, 닭고기와 채소를 함께 먹을 수 있어요.",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": false,
+            "mainIngredient": "닭고기/오리고기"
+        },
+        "author": ""
+    },
+    {
+        "id": "08443300-2cce-46bf-8fe0-73fda9f07d63",
+        "title": "오리백숙",
+        "uniquePoint": "진한 보양섭취에 좋아요.",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": false,
+            "mainIngredient": "닭고기/오리고기"
+        },
+        "author": ""
+    },
+    {
+        "id": "d0ba6af0-fdce-486d-ba7b-5d09b798813e",
+        "title": "삼계탕",
+        "uniquePoint": "속 편한 영양으로 부담없이 즐기기 좋은 보양식이에요.",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": false,
+            "mainIngredient": "닭고기/오리고기"
+        },
+        "author": ""
+    },
+    {
+        "id": "9d561be2-ec4c-4aec-a508-0fee820e67d0",
+        "title": "찜닭",
+        "uniquePoint": "자극적이지 않게 닭고기와 채소를 함께 먹을 수 있어요.",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": false,
+            "mainIngredient": "닭고기/오리고기"
+        },
+        "author": ""
+    },
+    {
+        "id": "19ae2cf0-3f05-4c72-851a-0cf7a34dc6ae",
+        "title": "오리주물럭",
+        "uniquePoint": "불포화 지방산이 많아 우리 몸의 산성화를 막아줘요.",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": false,
+            "mainIngredient": "닭고기/오리고기"
+        },
+        "author": ""
+    },
+    {
+        "id": "95606491-9b95-4784-94c3-b5c1d5786722",
+        "title": "닭고기 죽순 솥밥",
+        "uniquePoint": "꼬들꼬들한 죽순의 식감과 담백한 닭고기가 잘 어울려요.",
+        "attributes": {
+            "isPortable": false,
+            "isCookable": false,
+            "mainIngredient": "닭고기/오리고기"
+        },
+        "author": ""
     },
     {
         "id": "6326c8e1-ee06-443e-890f-9fe87a651f1b",
@@ -734,7 +1196,7 @@
             "isCookable": true,
             "mainIngredient": "닭고기/오리고기"
         },
-        "author": "에린"
+        "author": ""
     },
     {
         "id": "d833c697-8395-416c-bb7a-cbd7afbf9799",
@@ -756,7 +1218,7 @@
             "isCookable": true,
             "mainIngredient": "닭고기/오리고기"
         },
-        "author": "밥"
+        "author": ""
     },
     {
         "id": "bcc80ed7-8963-41e3-a813-37205b4744ad",
@@ -767,116 +1229,28 @@
             "isCookable": true,
             "mainIngredient": "닭고기/오리고기"
         },
-        "author": "에린"
+        "author": ""
     },
     {
-        "id": "5ddf2d9a-de8a-45cc-a077-3fc3b03c3bc2",
-        "title": "새우 볶음밥",
-        "uniquePoint": "새우와 채소가 어우러져 다양한 영양소를 한 번에 섭취할 수 있으며, 여러 식감을 느낄 수 있어요",
+        "id": "9a3ed658-bfac-4f45-9ff7-a779acfce6ec",
+        "title": "훈제오리단호박찜",
+        "uniquePoint": "단호박 안에 들어가는 채소를 다양하게 바꿔보세요! 새로운 맛을 발견하실 수 있을거에요. 치즈를 추가하면 더 풍부한 맛을 느낄수 있어요.",
         "attributes": {
             "isPortable": false,
             "isCookable": true,
-            "mainIngredient": "생선/해산물"
+            "mainIngredient": "닭고기/오리고기"
         },
-        "author": "에린"
+        "author": ""
     },
     {
-        "id": "e765a230-f180-45e3-9a2d-0a59ec272d4a",
-        "title": "게살 볶음밥",
-        "uniquePoint": "부드러운 게살과 고소한 밥이 어우러져 누구나 부담 없이 즐길 수 있어요",
+        "id": "69caabd8-088d-4e89-ac2d-be7bd4d73e28",
+        "title": "오야꼬동",
+        "uniquePoint": "다시와 간장, 설탕으로 양념한 계란과 닭고기가 밥 위에 올라가있어, 한 그릇으로 든든한 식사를 할 수 있어요. ",
         "attributes": {
             "isPortable": false,
             "isCookable": true,
-            "mainIngredient": "생선/해산물"
+            "mainIngredient": "닭고기/오리고기"
         },
-        "author": "에린"
-    },
-    {
-        "id": "0d0fa190-2967-4264-8d77-c328bae50b57",
-        "title": "해물 누룽지탕",
-        "uniquePoint": "누룽지에 여러 가지 해물을 기호에 맞게 넣어 걸쭉하게 끓인 탕으로 별미에요",
-        "attributes": {
-            "isPortable": false,
-            "isCookable": true,
-            "mainIngredient": "생선/해산물"
-        },
-        "author": "에린"
-    },
-    {
-        "id": "2b71c7ee-d56b-45e6-8488-862bedcded79",
-        "title": "골뱅이 무침",
-        "uniquePoint": "고단백·저지방 골뱅이와 채소가 어우러져 단백질 보충과 피부 건강에 효과적이에요",
-        "attributes": {
-            "isPortable": false,
-            "isCookable": true,
-            "mainIngredient": "생선/해산물"
-        },
-        "author": "에린"
-    },
-    {
-        "id": "5b5d51a1-08d9-47d5-8f20-87647d1b09fc",
-        "title": "훈제 연어 월남쌈",
-        "uniquePoint": "신선한 채소와 훈제 연어가 어우러져 가볍고 산뜻하게 즐길 수 있는 건강식이에요",
-        "attributes": {
-            "isPortable": false,
-            "isCookable": true,
-            "mainIngredient": "생선/해산물"
-        },
-        "author": "에린"
-    },
-    {
-        "id": "8000086b-8c3a-4ddc-81dd-52332c6c8e97",
-        "title": "순두부찌개",
-        "uniquePoint": "부드러운 순두부와 얼큰한 국물이 속을 편안하게 해주어요",
-        "attributes": {
-            "isPortable": false,
-            "isCookable": true,
-            "mainIngredient": "콩·두부·계란"
-        },
-        "author": "웬디"
-    },
-    {
-        "id": "368d623f-2043-4b59-9e84-56795f9cb18c",
-        "title": "두부김치",
-        "uniquePoint": "담백한 두부와 매콤한 김치가 어우러져 부드러우면서도 아삭한 식감을 동시에 느낄 수 있어요",
-        "attributes": {
-            "isPortable": false,
-            "isCookable": true,
-            "mainIngredient": "콩·두부·계란"
-        },
-        "author": "웬디"
-    },
-    {
-        "id": "6fb333c7-ffb6-46bb-87a0-b581c075977b",
-        "title": "계란찜",
-        "uniquePoint": "부드럽고 촉촉한 식감으로 누구나 부담 없이 먹을 수 있어요",
-        "attributes": {
-            "isPortable": false,
-            "isCookable": true,
-            "mainIngredient": "콩·두부·계란"
-        },
-        "author": "웬디"
-    },
-    {
-        "id": "8d4b23c9-5abd-418d-9dc5-f4b4178f9329",
-        "title": "계란카레덮밥",
-        "uniquePoint": "카레와 계란이 어우러져 풍미와 영양을 동시에 잡았어요",
-        "attributes": {
-            "isPortable": false,
-            "isCookable": true,
-            "mainIngredient": "콩·두부·계란"
-        },
-        "author": "웬디"
-    },
-    {
-        "id": "c3484389-c632-4cd4-99ff-c6c933f259e4",
-        "title": "계란죽",
-        "uniquePoint": "소화가 잘 되고 부담이 없어 아플 때나 아침 식사로 적합해요",
-        "attributes": {
-            "isPortable": false,
-            "isCookable": true,
-            "mainIngredient": "콩·두부·계란"
-        },
-        "author": "웬디"
+        "author": ""
     }
 ]

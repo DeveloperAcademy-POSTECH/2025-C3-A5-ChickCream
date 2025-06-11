@@ -25,6 +25,9 @@ struct ResultsView: View {
     @State private var resultFoods: [Food] = []
     @State private var hasMoreRecommendations: Bool = true
     
+    private let cardWidth = UIScreen.main.bounds.width * 0.816
+    private let cardHeight = UIScreen.main.bounds.height * 0.37
+    
     var body: some View {
         VStack {
             UserAnswerView(
@@ -38,29 +41,37 @@ struct ResultsView: View {
             resultCarouselView
             cardNumberView
             Spacer()
-            HStack {
-                HBButton(configuration: .init(
-                    title: "찜한 메뉴",
-                    foregroundColor: .hbPrimary,
-                    backgroundColor: .hbPrimaryLighten
-                )) {
+            HStack(spacing: 16) {
+                //FIXME: HBButton 수정 후 다시 사용
+                Button {
                     router.push(.favorite)
+                } label: {
+                    ZStack(alignment: .center) {
+                        RoundedRectangle(cornerRadius: 16)
+                            .foregroundStyle(Color.hbPrimaryLighten)
+                        Text("찜한 메뉴")
+                            .foregroundStyle(Color.hbPrimary)
+                            .font(.hbSubtitle)
+                    }
                 }
-                Spacer()
-                HBButton(configuration: .init(
-                    title: "다시 추천받기",
-                    foregroundColor: .hbPrimary,
-                    backgroundColor: .hbPrimaryLighten
-                )) {
+                Button {
                     hasLoaded = false
                     /// fixme: 뷰모델을 초기화하는 방법 고민
                     router.pop()
                     router.pop()
                     router.push(.question(id: UUID()))
+                } label: {
+                    ZStack(alignment: .center) {
+                        RoundedRectangle(cornerRadius: 16)
+                            .foregroundStyle(Color.hbPrimaryLighten)
+                        Text("다시 추천받기")
+                            .foregroundStyle(Color.hbPrimary)
+                            .font(.hbSubtitle)
+                    }
                 }
             }
-            .padding(.horizontal, 20)
-            .padding(.bottom, 27)
+            .frame(height: UIScreen.main.bounds.height * 0.0845)
+            .padding(.horizontal, 16)
         }
         .onAppear {
             if !hasLoaded {
@@ -68,6 +79,7 @@ struct ResultsView: View {
                 hasLoaded = true
             }
         }
+        .hbBackground()
         .HBNavigationBar(centerView: {
             Text("추천 결과")
                 .font(.hbTitle)
@@ -93,8 +105,7 @@ extension ResultsView {
                                 .scaleEffect(x: phase.isIdentity ? 1 : 0.8,
                                              y: phase.isIdentity ? 1 : 0.8)
                         }
-                        .frame(maxHeight: 320)
-                        .aspectRatio(CGSize(width: 321, height: 316), contentMode: .fit)
+                        .frame(width: cardWidth, height: cardHeight)
                     case .addCard:
                         if hasMoreRecommendations {
                             AddCard {
@@ -115,13 +126,12 @@ extension ResultsView {
             .scrollTargetLayout()
         }
         .contentMargins(.vertical, 16, for: .scrollContent)
-        .contentMargins(.horizontal, 36, for: .scrollContent)
+        .contentMargins(.horizontal, (UIScreen.main.bounds.width - cardWidth) / 2, for: .scrollContent)
         .scrollTargetBehavior(.viewAligned) // 카드 중간 focus
         .scrollPosition(id: $selectedItemID)
         .onChange(of: selectedItemID) {
             if let id = selectedItemID,
                let index = carouselItems.firstIndex(where: { $0.id == id }) {
-                print("현재 인덱스: \(index)")
                 selectedIndex = index
             }
         }

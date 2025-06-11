@@ -15,7 +15,7 @@ struct OnboardingView: View {
     @State var isPlayingLottie = false
     
     var body: some View {
-        ZStack {
+        VStack(spacing: 0) {
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHStack(spacing: 0) {
                     ForEach(contents.indices, id: \.self) { index in
@@ -29,26 +29,22 @@ struct OnboardingView: View {
             .scrollPosition($scrollPosition)
             .scrollTargetBehavior(.viewAligned)
             
-            VStack(spacing: 0) {
-                Spacer()
-                
-                OnboardingPageIndicator(count: contents.count, currentPage: $currentIndex)
-                    .padding(.bottom, 40)
-                
-                OnboardingNextButton(title: currentIndex == contents.count - 1 ? "메뉴 추천 받으러가기" : "다음") {
-                    guard currentIndex < contents.count - 1 else {
-                        UserDefaults.standard.set(true, forKey: UserDefaultsKey.onboardingShown.rawValue)
-                        shouldShowOnboarding = false
-                        return
-                    }
-                    
-                    withAnimation(.easeInOut(duration: 0.5)) {
-                        currentIndex += 1
-                        scrollPosition = ScrollPosition(id: currentIndex)
-                    }
+            OnboardingPageIndicator(count: contents.count, currentPage: $currentIndex)
+                .padding(.bottom, 40)
+            
+            OnboardingNextButton(title: currentIndex == contents.count - 1 ? "메뉴 추천 받으러가기" : "다음") {
+                guard currentIndex < contents.count - 1 else {
+                    UserDefaults.standard.set(true, forKey: UserDefaultsKey.onboardingShown.rawValue)
+                    shouldShowOnboarding = false
+                    return
                 }
-                .padding(.horizontal, 16)
+                
+                withAnimation(.easeInOut(duration: 0.5)) {
+                    currentIndex += 1
+                    scrollPosition = ScrollPosition(id: currentIndex)
+                }
             }
+            .padding(.horizontal, 16)
         }
         .onChange(of: currentIndex, { oldValue, newValue in
             scrollPosition = ScrollPosition(id: newValue)
@@ -59,6 +55,7 @@ struct OnboardingView: View {
                 self.currentIndex = currentIndex
             }
         })
+        .hbBackground()
     }
 }
 
