@@ -44,6 +44,7 @@ struct FavoriteListView: View {
                 }
             }
         )
+        .hbBackground()
         .HBNavigationBarBackButtonHidden(false)
     }
 }
