@@ -128,7 +128,15 @@ extension ResultsView {
     }
     
     private var cardNumberView: some View {
+        let total = carouselItems.filter {
+            if case .food = $0 { return true } else { return false }
+        }.count
+        
+        let displayIndex = min(selectedIndex + 1, total)
+        
+        return HStack {
             Spacer()
+            Text("\(displayIndex)/\(total)")
                 .font(.hbBody1)
                 .foregroundStyle(Color.hbTextSecondary)
             Spacer()
