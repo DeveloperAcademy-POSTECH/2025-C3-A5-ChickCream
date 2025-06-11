@@ -19,6 +19,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 
+## [0.0.6] - 2025-06-10
+
+- Academy Test
+
+## Changed
+
+- UX 라이팅 수정 - 달걀 -> 계란
+
+### Fixed
+
+- UserAnswerView의 checkmark 색상이 검정색으로 지정되어 있던 문제
+- 찜 리스트 뷰 스타일링
+- 추가 메뉴 카드 사이즈 조정
+- 홈 화면 버튼 뷰에 있던 불필요한 프린트를 제거
+
 ## [0.0.5] - 2025-06-09
 
 - Working App Milestone Preview
@@ -75,7 +90,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - MVP 기능 구현
 - 디자인 약 80% 반영
 
-[unreleased]: hhttps://github.com/DeveloperAcademy-POSTECH/2025-C3-A5-ChickCream/compare/v0.0.5...HEAD
+[unreleased]: hhttps://github.com/DeveloperAcademy-POSTECH/2025-C3-A5-ChickCream/compare/v0.0.6...HEAD
+[0.0.6]: hhttps://github.com/DeveloperAcademy-POSTECH/2025-C3-A5-ChickCream/releases/tag/v0.0.6
 [0.0.5]: hhttps://github.com/DeveloperAcademy-POSTECH/2025-C3-A5-ChickCream/releases/tag/v0.0.5
 [0.0.4]: hhttps://github.com/DeveloperAcademy-POSTECH/2025-C3-A5-ChickCream/releases/tag/v0.0.4
 [0.0.3]: hhttps://github.com/DeveloperAcademy-POSTECH/2025-C3-A5-ChickCream/releases/tag/v0.0.3
