@@ -1,4 +1,4 @@
-> PR 제목 예시: [PR/#110] AVRecorder의 음량 조절 기능 구현
+> PR 제목 예시: [Issue #16] 메뉴 상세보기 뷰 구현
 
 close #
 
