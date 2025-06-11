@@ -23,6 +23,7 @@ struct ResultsView: View {
     @State private var carouselItems: [CarouselItem] = []
     @State private var fetchedFoodIDs: Set<UUID> = []
     @State private var resultFoods: [Food] = []
+    @State private var hasMoreRecommendations: Bool = true
     
     private let cardWidth = UIScreen.main.bounds.width * 0.816
     private let cardHeight = UIScreen.main.bounds.height * 0.37
@@ -106,16 +107,19 @@ extension ResultsView {
                         }
                         .frame(width: cardWidth, height: cardHeight)
                     case .addCard:
-                        AddCard {
-                            loadOneMoreRecommendation()
+                        if hasMoreRecommendations {
+                            AddCard {
+                                loadOneMoreRecommendation()
+                            }
+                            .id(item.id)
+                            .scrollTransition(){ content, phase in
+                                content
+                                    .scaleEffect(x: phase.isIdentity ? 1 : 0.8,
+                                                 y: phase.isIdentity ? 1 : 0.8)
+                            }
+                            .frame(maxHeight: 320)
+                            .aspectRatio(CGSize(width: 321, height: 316), contentMode: .fill)
                         }
-                        .id(item.id)
-                        .scrollTransition(){ content, phase in
-                            content
-                                .scaleEffect(x: phase.isIdentity ? 1 : 0.8,
-                                             y: phase.isIdentity ? 1 : 0.8)
-                        }
-                        .frame(width: cardWidth, height: cardHeight)
                     }
                 }
             }
@@ -134,9 +138,15 @@ extension ResultsView {
     }
     
     private var cardNumberView: some View {
-        HStack {
+        let total = carouselItems.filter {
+            if case .food = $0 { return true } else { return false }
+        }.count
+        
+        let displayIndex = min(selectedIndex + 1, total)
+        
+        return HStack {
             Spacer()
-            Text("\(selectedIndex + 1)/\(carouselItems.count)")
+            Text("\(displayIndex)/\(total)")
                 .font(.hbBody1)
                 .foregroundStyle(Color.hbTextSecondary)
             Spacer()
@@ -160,10 +170,24 @@ extension ResultsView {
     
     func loadOneMoreRecommendation() {
         do {
-            let newFoods = try fetchMatchingFoods(limit: 1, excluding: fetchedFoodIDs)
-            guard let food = newFoods.first else { return }
-            fetchedFoodIDs.insert(food.id)
-            insertFoodBeforeAddCard(food)
+            let newFoods = try fetchMatchingFoods(limit: 2, excluding: fetchedFoodIDs)
+            
+            if newFoods.isEmpty {
+                hasMoreRecommendations = false
+                updateCarouselItems(with: resultFoods)
+                return
+            }
+            
+            let firstFood = newFoods[0]
+            fetchedFoodIDs.insert(firstFood.id)
+            resultFoods.append(firstFood)
+            insertFoodBeforeAddCard(firstFood)
+            
+            if newFoods.count == 1 {
+                hasMoreRecommendations = false
+                updateCarouselItems(with: resultFoods)
+            }
+            
         } catch {
             print("❌ Failed to load one more food: \(error)")
         }
@@ -187,11 +211,19 @@ extension ResultsView {
     }
 
     private func updateCarouselItems(with foods: [Food]) {
-        self.carouselItems = foods.map { .food($0) } + [.addCard]
+        if hasMoreRecommendations {
+            self.carouselItems = foods.map { .food($0) } + [.addCard]
+        } else {
+            self.carouselItems = foods.map { .food($0) }
+        }
     }
     
     private func insertFoodBeforeAddCard(_ food: Food) {
-        let index = max(carouselItems.count - 1, 0)
-        carouselItems.insert(.food(food), at: index)
+        if hasMoreRecommendations {
+            let index = max(carouselItems.count - 1, 0)
+            carouselItems.insert(.food(food), at: index)
+        } else {
+            carouselItems.append(.food(food))
+        }
     }
 }
